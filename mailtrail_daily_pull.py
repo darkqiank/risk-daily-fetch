@@ -81,7 +81,7 @@ current_time = datetime.now()
 days_ago = current_time - timedelta(days=3)
 
 # 格式化时间
-formatted_time_ago = three_days_ago.strftime('%Y-%m-%d %H:%M:%S')
+formatted_time_ago = days_ago.strftime('%Y-%m-%d %H:%M:%S')
 
 formatted_cur_day = current_time.strftime('%Y-%m-%d')
 infos = []
