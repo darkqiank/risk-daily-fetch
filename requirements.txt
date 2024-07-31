@@ -4,3 +4,4 @@ pandas
 tqdm
 gitpython
 openpyxl
+boto3

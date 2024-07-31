@@ -5,6 +5,7 @@ import ipaddress
 import tldextract
 import pandas as pd
 from tqdm import tqdm
+import boto3
 
 def is_url(input_str):
     return input_str.startswith('http://') or input_str.startswith('https://')
@@ -72,6 +73,16 @@ print(len(commits))
 max_rows_per_file = 100000  # 可以根据需要调整这个数值
 # 最近1000个commits
 max_commit_count = 1000
+
+# 获取当前时间
+current_time = datetime.now()
+# 计算3天前的时间
+days_ago = current_time - timedelta(days=3)
+
+# 格式化时间
+formatted_time_ago = three_days_ago.strftime('%Y-%m-%d %H:%M:%S')
+
+formatted_cur_day = current_time.strftime('%Y-%m-%d')
 infos = []
 
 i = 0
@@ -80,6 +91,9 @@ for commit in tqdm(commits):
     if i > max_commit_count:
         break
     commit_date = commit.committed_datetime.strftime('%Y-%m-%d %H:%M:%S')
+    if commit_date < formatted_time_ago:
+        #不是最新的提交时间
+        break
     # print(f'Commit: {commit.hexsha}')
     # print(f'Author: {commit.author.name} <{commit.author.email}>')
     # print(f'Date: {commit_date}')
@@ -125,17 +139,21 @@ for commit in tqdm(commits):
     i += 1
     # break
 
-# 计算需要多少个文件
+# 保存文件
 df_infos = pd.DataFrame(infos)
-num_files = (len(df_infos) // max_rows_per_file) + 1
+file_name = f"maltrail_iocs_{formatted_cur_day}.xlsx"
+df_infos.to_excel(file_name, index=False)
+print(f"Saved {file_name}")
 
-# 分割并保存为多个 Excel 文件
-for i in range(num_files):
-    start_row = i * max_rows_per_file
-    end_row = (i + 1) * max_rows_per_file
-    split_df = df_infos.iloc[start_row:end_row]
-    
-    # 保存到 Excel 文件
-    file_name = f"maltrail_iocs_part_{i+1}.xlsx"
-    split_df.to_excel(file_name, index=False)
-    print(f"Saved {file_name}")
+# 上传到s3
+# 从环境变量中获取 S3_BUCKET 名称
+s3_bucket = os.getenv('S3_BUCKET')
+endpoint_url = os.getenv('S3_ENDPOINT')
+
+s3 = boto3.client(
+    service_name = "s3",
+    endpoint_url = endpoint_url
+)
+
+s3.upload_file(file_name, s3_bucket, file_name)
+print(f"Saved to s3 {file_name}")
