@@ -156,5 +156,5 @@ s3 = boto3.client(
     endpoint_url = endpoint_url
 )
 
-s3.upload_file(file_name, s3_bucket, file_name)
+s3.upload_file(file_name, s3_bucket, os.path.join('risk/mailtrail',file_name))
 print(f"Saved to s3 {file_name}")
