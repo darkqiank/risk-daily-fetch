@@ -1,4 +1,5 @@
 from bs4 import BeautifulSoup
+from blog.items import LinkItem
 import scrapy
 
 
@@ -25,4 +26,5 @@ class DefaultSpider(scrapy.Spider):
         for item in items:
             a = item.findNext('a')
             link = f"{a['href']}"
-            yield {'link': link, 'source': self.name}
+            link_item = LinkItem(link=link, source=self.name)
+            yield link_item

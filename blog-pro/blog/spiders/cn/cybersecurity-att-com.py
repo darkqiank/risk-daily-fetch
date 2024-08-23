@@ -3,7 +3,7 @@ import scrapy
 
 
 class DefaultSpider(scrapy.Spider):
-    name = 'cybersecurity-att-com'
+    name = 'cybersecurity.att.com'
     custom_settings = {
         "DOWNLOAD_HANDLERS": {
             "http": "scrapy_impersonate.ImpersonateDownloadHandler",

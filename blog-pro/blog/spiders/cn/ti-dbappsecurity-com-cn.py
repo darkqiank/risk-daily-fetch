@@ -1,32 +1,30 @@
-import requests
-from curl_cffi import requests
 from bs4 import BeautifulSoup
+from blog.items import LinkItem
+import scrapy
 
 
-def get_links():
-    # 目标URL
-    url = 'https://ti.dbappsecurity.com.cn/blog/'
+class DefaultSpider(scrapy.Spider):
+    name = 'ti.dbappsecurity.com.cn'
+    custom_settings = {
+        "DOWNLOAD_HANDLERS": {
+            "http": "scrapy_impersonate.ImpersonateDownloadHandler",
+            "https": "scrapy_impersonate.ImpersonateDownloadHandler",
+        },
+        "TWISTED_REACTOR": "twisted.internet.asyncioreactor.AsyncioSelectorReactor",
+    }
 
-    # 发送HTTP请求
-    response = requests.get(url, impersonate="chrome")
-    response.encoding = 'utf-8'  # 设置编码
+    def start_requests(self):
+        url = 'https://ti.dbappsecurity.com.cn/blog/'
+        yield scrapy.Request(url, dont_filter=True,
+                             meta={"impersonate": "chrome"})
 
-    # print(response.text)
-    # 解析HTML
-    soup = BeautifulSoup(response.text, 'html.parser')
+    def parse(self, response):
+        soup = BeautifulSoup(response.text, 'html.parser')
+        items = soup.find_all('h2', class_="entry-title")
 
-    # 查找所有文章链接
-    items = soup.find_all('h2', class_="entry-title")
-
-    links = []
-
-    # 打印所有链接
-    for item in items:
-        a = item.findNext('a')
-        links.append(a['href'])
-
-    print(links)
-    return links
-
-
-get_links()
+        # 打印所有链接
+        for item in items:
+            a = item.findNext('a')
+            link = a['href']
+            link_item = LinkItem(link=link, source=self.name)
+            yield link_item

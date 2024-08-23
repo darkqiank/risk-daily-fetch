@@ -5,3 +5,12 @@ tqdm
 gitpython
 openpyxl
 boto3
+requests
+beautifulsoup4
+python-dateutil
+feedparser
+playwright
+drissionpage
+scrapy
+itemadapter
+scrapy-impersonate
