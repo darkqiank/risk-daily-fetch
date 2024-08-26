@@ -11,6 +11,3 @@ python-dateutil
 feedparser
 playwright
 drissionpage
-scrapy
-itemadapter
-scrapy-impersonate
