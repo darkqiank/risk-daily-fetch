@@ -5,7 +5,7 @@ name: blogs parse
 
 on:
   schedule:
-    - cron: '30 19 * * *'  # 每天UTC 19点 北京时间凌晨3点半 运行一次
+    - cron: '35 19 * * *'  # 每天UTC 19点 北京时间凌晨3点半 运行一次
   workflow_dispatch:  # 允许手动触发工作流
 
 jobs:
@@ -26,7 +26,7 @@ jobs:
     - name: run parse blogs
       run: |
         cd blogs
-        python save_items.py cn
+        python save_items.py en
       env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
