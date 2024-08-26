@@ -9,5 +9,4 @@ requests
 beautifulsoup4
 python-dateutil
 feedparser
-playwright
-drissionpage
+curl_cffi
