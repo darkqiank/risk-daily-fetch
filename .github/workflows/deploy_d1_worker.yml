@@ -16,5 +16,5 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           workingDirectory: d1
           preCommands: |
-            echo "*** start ***"
+            echo "start"
             echo '${{ secrets.D1_TOML }}' > wrangler.toml
