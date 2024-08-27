@@ -5,7 +5,7 @@ def get_links():
     url = 'https://www.trellix.com/corpcomsvc/getRecentBlogsFromWarpper?blogsCount=5'
 
     # 发送HTTP请求
-    response = requests.get(url)
+    response = requests.get(url, timeout=20)
 
     print(response.json())
     # 查找所有文章链接

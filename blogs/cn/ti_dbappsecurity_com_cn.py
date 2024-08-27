@@ -4,7 +4,7 @@ from curl_cffi import requests
 
 def get_links():
     url = 'https://ti.dbappsecurity.com.cn/blog/'
-    response = requests.get(url, impersonate="chrome")
+    response = requests.get(url, impersonate="chrome", timeout=20)
 
     soup = BeautifulSoup(response.text, 'html.parser')
     items = soup.find_all('h2', class_="entry-title")

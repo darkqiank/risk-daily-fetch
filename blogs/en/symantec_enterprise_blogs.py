@@ -6,7 +6,7 @@ def get_links():
     url = 'https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/'
 
     # 发送HTTP请求
-    response = requests.get(url)
+    response = requests.get(url, timeout=20)
     response.encoding = 'utf-8'  # 设置编码
 
     # 解析HTML

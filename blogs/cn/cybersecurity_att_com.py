@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 
 def get_links():
     url = 'https://cybersecurity.att.com/blogs/'
-    response = requests.get(url, impersonate="chrome")
+    response = requests.get(url, impersonate="chrome", timeout=20)
     soup = BeautifulSoup(response.text, 'html.parser')
     items = soup.find_all('div', class_="blog-card-cta")
 

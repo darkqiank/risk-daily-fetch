@@ -20,7 +20,7 @@ def get_links():
        'content-type': 'application/x-www-form-urlencoded'
     }
 
-    response = requests.request("POST", url, headers=headers, data=payload)
+    response = requests.request("POST", url, headers=headers, data=payload, timeout=20)
 
     res = response.json()
     hits = res['results'][0]["hits"]

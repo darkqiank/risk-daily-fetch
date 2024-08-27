@@ -6,7 +6,7 @@ def get_links():
     url = 'https://www.ic3.gov/Home/IndustryAlerts'
 
     # 发送HTTP请求
-    response = requests.get(url)
+    response = requests.get(url, timeout=20)
     response.encoding = 'utf-8'  # 设置编码
 
     # print(response.text)

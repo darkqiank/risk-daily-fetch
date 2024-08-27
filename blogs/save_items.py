@@ -93,7 +93,7 @@ def update_to_d1(data):
         'X-AUTH-KEY': d1_auth_key,
         'Content-Type': 'application/json'
     }
-    response = requests.post(d1_endpoint, headers=headers, data=payload)
+    response = requests.post(d1_endpoint, headers=headers, data=payload, timeout=20)
     if response.status_code == 201:
         print(f"All links have been saved to d1! {response.text}")
     else:

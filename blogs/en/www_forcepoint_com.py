@@ -7,7 +7,7 @@ def get_links():
     url = 'https://www.forcepoint.com/blog?page=1'
 
     # 发送HTTP请求
-    response = requests.get(url, impersonate="chrome")
+    response = requests.get(url, impersonate="chrome", timeout=20)
     response.encoding = 'utf-8'  # 设置编码
 
     # print(response.text)

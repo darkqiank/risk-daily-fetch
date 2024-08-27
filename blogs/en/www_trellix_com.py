@@ -10,7 +10,7 @@ def get_links():
     # 创建一个session
     session = requests.Session()
 
-    response = session.get(url, impersonate="chrome", headers=headers)
+    response = session.get(url, impersonate="chrome", headers=headers, timeout=20)
     response.encoding = 'utf-8'  # 设置编码
 
     # print(response.text)
