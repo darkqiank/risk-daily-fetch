@@ -16,8 +16,6 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           workingDirectory: d1
           preCommands: |
-            echo "start"
-            tee wrangler.toml << EOF
-            ${{ secrets.MULTILINE_SECRET }}
-            EOF
-            cat wrangler.toml
+            ls
+            cp ./wrangler.toml.example wrangler.toml
+            sed -i 's/database_id = ".*"/database_id = "${{ secrets.D1_DATABASE_ID }}"/' wrangler.toml
