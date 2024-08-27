@@ -4,25 +4,28 @@ import json
 import boto3
 from datetime import datetime
 import argparse
+import time
 
 
 # 动态导入模块并调用get_links函数
-def call_get_links(script_path):
-    try:
-        module_name = os.path.splitext(os.path.basename(script_path))[0]
-        spec = importlib.util.spec_from_file_location(module_name, script_path)
-        module = importlib.util.module_from_spec(spec)
-        spec.loader.exec_module(module)
+def call_get_links(script_path, retries=3, delay=2):
+    for attempt in range(retries):
+        try:
+            module_name = os.path.splitext(os.path.basename(script_path))[0]
+            spec = importlib.util.spec_from_file_location(module_name, script_path)
+            module = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(module)
 
-        # 调用get_links函数
-        if hasattr(module, 'get_links'):
-            links = module.get_links()
-            return links
-        else:
-            return []
-    except Exception as e:
-        print(f"Error in {script_path}: {str(e)}")
-        return []
+            # 调用get_links函数
+            if hasattr(module, 'get_links'):
+                links = module.get_links()
+                return links
+            else:
+                return []
+        except Exception as e:
+            print(f"Error in {script_path} (attempt {attempt + 1}): {str(e)}")
+            time.sleep(delay)
+    return []
 
 
 # 批量调用get_links
