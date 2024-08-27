@@ -1,23 +1,9 @@
-import { drizzle } from 'drizzle-orm/d1';
-import { t_blogs } from './schema';
+import blogs_handler from "./api/blogs_handler";
+import { Env } from './database';
 
-export interface Env {
-  DB: D1Database;
-}
 
 export default {
-	async fetch(request: Request, env: Env): Promise<Response> {
-		const { pathname } = new URL(request.url);
-
-		if (pathname === "/api/blogs") {
-		// If you did not use `DB` as your binding name, change it here
-			const db = drizzle(env.DB);
-			const result = await db.select().from(t_blogs).all();
-			return Response.json(result);
-		}
-
-		return new Response(
-		"Call /api/ to see everyone who works at Bs Beverages",
-		);
-	},
+    async fetch(request: Request, env: Env): Promise<Response> {
+        return blogs_handler.fetch(request, env);
+    },
 } satisfies ExportedHandler<Env>;
