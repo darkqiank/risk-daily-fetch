@@ -9,6 +9,3 @@ binding = "DB"
 database_name = "risk"
 database_id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 migrations_dir = "db/migrations"
-
-[vars]
-AUTH_VALUE = "572ce5667e425a"
