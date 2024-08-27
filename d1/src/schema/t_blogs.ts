@@ -1,6 +1,7 @@
 import { sql } from "drizzle-orm";
 import { sqliteTable, text, integer } from 'drizzle-orm/sqlite-core';
-import { Env, createDbInstance } from '../database'
+import { Env } from '..';
+import { createDbInstance } from '../database'
 
 export const t_blogs = sqliteTable('t_blogs', {
     id: integer('id', { mode: 'number' }).primaryKey({ autoIncrement: true }),

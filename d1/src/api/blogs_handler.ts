@@ -1,4 +1,4 @@
-import { Env} from '../database';
+import { Env } from '..';
 import { batchUpdateBlog, getLatestBlogs, getBlogByDate } from '../schema/t_blogs';
 
 export default {
