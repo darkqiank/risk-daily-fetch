@@ -23,18 +23,18 @@ export const createOrUpdateBlog = async (env: Env, link: string, source: string)
 	const existingBlog = await db.select().from(t_blogs).where(sql`${t_blogs.link} = ${link}`).get()
 	if (existingBlog) {
         // 如果存在，则更新现有条目
-		console.log("更新新条目")
+		// console.log("更新新条目")
         await db.update(t_blogs).set({ source }).where(sql`${t_blogs.link} = ${link}`).run();
     } else {
         // 如果不存在，则插入新条目
-		console.log("插入新条目")
+		// console.log("插入新条目")
         await db.insert(t_blogs).values({ link, source }).run();
     }
 };
 
 export const batchUpdateBlog = async (env: Env, blogs: { link: string, source: string }[]) => {
 	for (const blog of blogs) {
-		console.log(blog)
+		// console.log(blog)
 		await createOrUpdateBlog(env, blog.link, blog.source)
 	}
 }
