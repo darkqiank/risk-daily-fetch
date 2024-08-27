@@ -17,7 +17,7 @@ jobs:
           workingDirectory: d1
           preCommands: |
             echo "start"
-            cat << EOF > wrangler.toml
-                ${{ secrets.MULTILINE_SECRET }}
+            tee wrangler.toml << EOF
+            ${{ secrets.MULTILINE_SECRET }}
             EOF
             cat wrangler.toml
