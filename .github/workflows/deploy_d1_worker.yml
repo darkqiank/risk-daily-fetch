@@ -17,4 +17,4 @@ jobs:
           workingDirectory: d1
           preCommands: |
             echo "start"
-            echo '${{ secrets.D1_TOML }}' > wrangler.toml
+            echo "${{ secrets.D1_TOML }}" > wrangler.toml
