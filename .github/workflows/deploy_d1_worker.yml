@@ -18,3 +18,7 @@ jobs:
           preCommands: |
             echo "start"
             echo "${{ secrets.D1_TOML }}" > wrangler.toml
+            cat << EOF > wrangler.toml
+                ${{ secrets.MULTILINE_SECRET }}
+            EOF
+            cat wrangler.toml
