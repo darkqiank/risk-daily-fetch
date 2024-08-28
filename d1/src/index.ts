@@ -3,6 +3,7 @@ import blogs_handler from "./api/blogs_handler";
 export interface Env {
 	DB: D1Database;
 	AUTH_VALUE: string;
+	PG_DB: string;
   }
 
 export default {

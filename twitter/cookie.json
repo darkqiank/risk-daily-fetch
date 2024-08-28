@@ -1,0 +1,26 @@
+{
+  "headers" : {
+       "accept": "*/*",
+       "accept-language": "zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6",
+       "authorization": "Bearer AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs%3D1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA",
+       "priority": "u=1, i",
+       "referer": "x.com",
+       "sec-ch-ua": "\"Chromium\";v=\"128\", \"Not;A=Brand\";v=\"24\", \"Microsoft Edge\";v=\"128\"",
+       "sec-ch-ua-mobile": "?0",
+       "sec-ch-ua-platform": "\"macOS\"",
+       "sec-fetch-dest": "empty",
+       "sec-fetch-mode": "cors",
+       "sec-fetch-site": "same-origin",
+       "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 Edg/128.0.0.0",
+       "x-client-transaction-id": "oZtUPpgkhBTDDz3keg6QTaA/cc+9t+2LNjpo1NwsE5esXbSEelf4WSJxUjp2L0nj7d9D3aOzCAMhpzj4ihncPozHMgtTog",
+       "x-client-uuid": "ec4c6117-c52d-42c0-afdb-5326417fde55",
+       "x-csrf-token": "2f841ae92245857acb7a9e1a0319a50f772e5b2339becb9c49ed1f7ce4349654c63aca61137f85c5f0ccfa3eccb3df9f21bcf8544b0964f3af2640c4cab5217def2d0a9e36dccb3db7820a1bd4a28791",
+       "x-twitter-active-user": "yes",
+       "x-twitter-auth-type": "OAuth2Session",
+       "x-twitter-client-language": "zh-cn",
+       "Cookie": "lang=zh-cn; guest_id=v1%3A172431122674921180; night_mode=2; guest_id_marketing=v1%3A172431122674921180; guest_id_ads=v1%3A172431122674921180; g_state={\"i_l\":0}; external_referer=padhuUp37zjgzgv1mFWxJ5Xq0CLV%2BbpWuS41v6lN3QU%3D|0|8e8t2xd8A2w%3D; kdt=Yl4vIeq6CBr0APqJ18bASGJkU9cdBEZSpbR4TUud; auth_token=23eeb6783439170901b45fdce6382039f0921c1f; ct0=2f841ae92245857acb7a9e1a0319a50f772e5b2339becb9c49ed1f7ce4349654c63aca61137f85c5f0ccfa3eccb3df9f21bcf8544b0964f3af2640c4cab5217def2d0a9e36dccb3db7820a1bd4a28791; twid=u%3D1338452526; des_opt_in=Y; _ga=GA1.2.1222369251.1724312546; lang=zh-cn; personalization_id=\"v1_TSbGiy/UicSMfSskS3X/+A==\"",
+       "content-type": "application/json",
+       "Host": "x.com",
+       "Connection": "keep-alive"
+    }
+}
