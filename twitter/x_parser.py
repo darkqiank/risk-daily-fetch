@@ -59,7 +59,8 @@ def parse_timeline_tweet_item(entryId, itemContent):
                     url_tag = e_url.get('url')
                     if url_tag:
                         tmp_list = x_urls.get(url_tag, [])
-                        tmp_list.append(e_url.get('expanded_url'))
+                        if e_url.get('expanded_url') not in tmp_list:
+                            tmp_list.append(e_url.get('expanded_url'))
                         x_urls[url_tag] = tmp_list
             medias = entities.get("media")
             if medias:
@@ -67,7 +68,8 @@ def parse_timeline_tweet_item(entryId, itemContent):
                     media_tag = media.get('url')
                     if media_tag:
                         tmp_list = x_medias.get(media_tag, [])
-                        tmp_list.append(media.get('media_url_https'))
+                        if media.get('media_url_https') not in tmp_list:
+                            tmp_list.append(media.get('media_url_https'))
                         x_medias[media_tag] = tmp_list
 
         extended_entities = legacy.get('extended_entities')
@@ -78,7 +80,8 @@ def parse_timeline_tweet_item(entryId, itemContent):
                     url_tag = e_url.get('url')
                     if url_tag:
                         tmp_list = x_urls.get(url_tag, [])
-                        tmp_list.append(e_url.get('expanded_url'))
+                        if e_url.get('expanded_url') not in tmp_list:
+                            tmp_list.append(e_url.get('expanded_url'))
                         x_urls[url_tag] = tmp_list
             medias = extended_entities.get("media")
             if medias:
@@ -86,7 +89,8 @@ def parse_timeline_tweet_item(entryId, itemContent):
                     media_tag = media.get('url')
                     if media_tag:
                         tmp_list = x_medias.get(media_tag, [])
-                        tmp_list.append(media.get('media_url_https'))
+                        if media.get('media_url_https') not in tmp_list:
+                            tmp_list.append(media.get('media_url_https'))
                         x_medias[media_tag] = tmp_list
 
         x_data['urls'] = x_urls
