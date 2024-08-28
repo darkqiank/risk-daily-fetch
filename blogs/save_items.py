@@ -5,7 +5,6 @@ import boto3
 from datetime import datetime
 import argparse
 import time
-import requests
 
 
 # 动态导入模块并调用get_links函数
@@ -31,7 +30,7 @@ def call_get_links(script_path, retries=3, delay=2):
 
 # 批量调用get_links
 def collect_links(directory, specific_script=None):
-    all_links = []
+    all_links = {}
     stats = {}
     if specific_script:
         for file in specific_script.split(','):
@@ -43,7 +42,7 @@ def collect_links(directory, specific_script=None):
                 key = file
             links = call_get_links(script_path)
             stats[key] = len(links)
-            all_links.extend([{'link':link, 'source': key} for link in links])
+            all_links[key] = links
     else:
         for root, _, files in os.walk(directory):
             for file in files:
@@ -53,7 +52,7 @@ def collect_links(directory, specific_script=None):
                     # Remove the .py suffix from the key
                     key = os.path.splitext(file)[0]
                     stats[key] = len(links)
-                    all_links.extend([{'link':link, 'source': key} for link in links])
+                    all_links[key] = links
     print(f'爬取数据统计：{stats}')
     return all_links
 
@@ -85,21 +84,6 @@ def upload_to_s3(data, s3_file_name):
     print(f"All links have been uploaded to s3://{s3_bucket}/{s3_file_name}")
 
 
-def update_to_d1(data):
-    d1_endpoint = os.getenv('D1_ENDPOINT')
-    d1_auth_key = os.getenv('D1_AUTH_KEY')
-    payload = json.dumps(data, ensure_ascii=False)
-    headers = {
-        'X-AUTH-KEY': d1_auth_key,
-        'Content-Type': 'application/json'
-    }
-    response = requests.post(d1_endpoint, headers=headers, data=payload, timeout=20)
-    if response.status_code == 201:
-        print(f"All links have been saved to d1! {response.text}")
-    else:
-        print("failed save!!")
-
-
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Collect links from Python scripts and upload to S3.')
     parser.add_argument('spider_dir', type=str, help='Directory containing the spider scripts')
@@ -110,6 +94,5 @@ if __name__ == '__main__':
     formatted_cur_day = current_time.strftime('%Y-%m-%d')
     output_name = os.path.join('risk', 'blogs', args.spider_dir, f'{formatted_cur_day}.json')
     all_links = collect_links(args.spider_dir, args.script)
-    # upload_to_s3(all_links, output_name)
-    update_to_d1(all_links)
+    upload_to_s3(all_links, output_name)
 
