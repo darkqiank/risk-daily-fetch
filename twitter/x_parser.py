@@ -11,6 +11,8 @@ def parse_user_timeline(data):
             entries = instruction.get("entries")
             for entry in entries:
                 entryId = entry.get("entryId")
+                if str(entryId).startswith("who-to-follow"):
+                    continue
                 content = entry.get("content")
                 if content.get("entryType") == "TimelineTimelineItem":
                     itemContent = content.get("itemContent")
@@ -37,7 +39,7 @@ def parse_timeline_tweet_item(entryId, itemContent):
         tweet_results = itemContent.get("tweet_results").get("result")
         legacy = tweet_results.get('legacy')
         if not legacy:
-            legacy = tweet_results.get('tweet')
+            legacy = tweet_results.get('tweet').get('legacy')
         x_data = {}
         x_data['created_at'] = legacy.get('created_at')
         x_data['bookmark_count'] = legacy.get('bookmark_count')
@@ -94,9 +96,10 @@ def parse_timeline_tweet_item(entryId, itemContent):
 
         return x_item
 
-with open('./data.json', 'r', encoding='utf-8') as f:
-    data = json.load(f)
-    parse_user_timeline(data)
+
+# with open('./data.json', 'r', encoding='utf-8') as f:
+#     data = json.load(f)
+#     parse_user_timeline(data)
 
 
 

@@ -20,9 +20,9 @@ def xx(user_id, user_url):
     response = requests.request("GET", url, headers=headers, data=payload, impersonate="chrome124", timeout=30)
     if response.status_code == 200:
         # 将数据保存为JSON文件
-        with open('data.json', 'w', encoding='utf-8') as file:
-            json_str = json.dumps(response.json(), ensure_ascii=False, indent=4)
-            file.write(json_str)
+        # with open('data.json', 'w', encoding='utf-8') as file:
+        #     json_str = json.dumps(response.json(), ensure_ascii=False, indent=4)
+        #     file.write(json_str)
         return response.json()
 
 
@@ -51,7 +51,8 @@ def upload_to_s3(data, s3_file_name):
     s3.put_object(Bucket=s3_bucket, Key=s3_file_name, Body=json_data.encode('utf-8'))
     print(f"All links have been uploaded to s3://{s3_bucket}/{s3_file_name}")
 
-# xx("3433210978", "https://x.com/JAMESWT_MHT")
+# xx("129711053", "https://x.com/StopMalvertisin")
+# exit()
 
 with open('users.json', 'r', encoding='utf-8') as uf:
     users = json.load(uf)
