@@ -10,3 +10,4 @@ beautifulsoup4
 python-dateutil
 feedparser
 curl_cffi
+pytz

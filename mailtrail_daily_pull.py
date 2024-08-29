@@ -7,6 +7,8 @@ import pandas as pd
 from tqdm import tqdm
 import boto3
 from datetime import datetime, timedelta
+import pytz
+
 
 def is_url(input_str):
     return input_str.startswith('http://') or input_str.startswith('https://')
@@ -76,7 +78,8 @@ max_rows_per_file = 100000  # 可以根据需要调整这个数值
 max_commit_count = 1000
 
 # 获取当前时间
-current_time = datetime.now()
+timezone = pytz.timezone('Asia/Shanghai')
+current_time = datetime.now(timezone)
 # 计算3天前的时间
 days_ago = current_time - timedelta(days=3)
 

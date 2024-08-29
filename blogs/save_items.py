@@ -5,6 +5,7 @@ import boto3
 from datetime import datetime
 import argparse
 import time
+import pytz
 
 
 # 动态导入模块并调用get_links函数
@@ -90,7 +91,9 @@ if __name__ == '__main__':
     parser.add_argument('-s', '--script', type=str, help='Specific script to run，用逗号分割多个', default=None)
     args = parser.parse_args()
 
-    current_time = datetime.now()
+    # 创建一个时区对象
+    timezone = pytz.timezone('Asia/Shanghai')
+    current_time = datetime.now(timezone)
     formatted_cur_day = current_time.strftime('%Y-%m-%d')
     output_name = os.path.join('risk', 'blogs', args.spider_dir, f'{formatted_cur_day}.json')
     all_links = collect_links(args.spider_dir, args.script)

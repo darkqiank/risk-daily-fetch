@@ -5,6 +5,7 @@ import time
 import os
 import boto3
 from datetime import datetime
+import pytz
 
 
 with open('./cookie.json', 'r', encoding='utf-8') as file:
@@ -58,7 +59,8 @@ with open('users.json', 'r', encoding='utf-8') as uf:
     users = json.load(uf)
 
 
-current_time = datetime.now()
+timezone = pytz.timezone('Asia/Shanghai')
+current_time = datetime.now(timezone)
 formatted_cur_day = current_time.strftime('%Y-%m-%d')
 output_name = os.path.join('risk', 'twitter', f'{formatted_cur_day}.json')
 output_datas = {}
