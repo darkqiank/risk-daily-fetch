@@ -21,7 +21,7 @@ const TweetList = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("/api/x");
+        const response = await fetch("/api/x/");
         const jsonData = await response.json();
 
         setData(jsonData);
