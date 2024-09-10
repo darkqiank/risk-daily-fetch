@@ -8,7 +8,9 @@ export default async function handler(req: any, res: any) {
   }
 
   try {
-    const metadata = await getLinkPreview(url);
+    const metadata = await getLinkPreview(url, {
+      timeout: 3000,
+    });
 
     res.status(200).json(metadata);
   } catch (error) {

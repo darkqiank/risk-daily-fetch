@@ -1,3 +1,4 @@
+import { Avatar as MAvatar } from "@mui/material";
 import {
   Button,
   Card,
@@ -5,7 +6,7 @@ import {
   CardHeader,
   Link,
   Image,
-  Avatar,
+  Skeleton,
 } from "@nextui-org/react";
 
 export interface PreviewData {
@@ -18,11 +19,11 @@ export interface PreviewData {
   video: string;
 }
 
-const PreviewCard = (data: any) => {
+export const PreviewCard = (data: any) => {
   return (
     <Card
-      isFooterBlurred
-      className="w-full h-[300px] col-span-12 sm:col-span-7"
+      // isFooterBlurred
+      className="w-full h-[250px] col-span-12 sm:col-span-7"
     >
       <CardHeader className="absolute bg-black/40 z-10 top-0 flex-col items-start">
         <p className="text-tiny text-white/60 uppercase font-bold">
@@ -30,9 +31,12 @@ const PreviewCard = (data: any) => {
         </p>
         <Link isExternal href={data.url}>
           {" "}
-          <h4 className="text-white/90 font-medium text-xl">
-            {data.title?.length > 150
-              ? `${data.title.substring(0, 150)}...`
+          <h4
+            className="text-white/90 font-medium text-xl"
+            style={{ wordBreak: "break-all" }}
+          >
+            {data.title?.length > 100
+              ? `${data.title.substring(0, 100)}...`
               : data.title}
           </h4>{" "}
         </Link>
@@ -46,10 +50,9 @@ const PreviewCard = (data: any) => {
       />
       <CardFooter className="absolute bg-black/40 bottom-0 z-10 flex items-center justify-between gap-3">
         <div className="flex flex-grow gap-2 items-center">
-          <Avatar
-            alt="source logo"
+          <MAvatar
+            alt={data.publisher}
             className="w-12 h-12 bg-black"
-            name={data.publisher}
             src={
               data.logo || "https://nextui.org/images/breathing-app-icon.jpeg"
             }
@@ -72,4 +75,48 @@ const PreviewCard = (data: any) => {
   );
 };
 
-export default PreviewCard;
+export const SkeletonCard = () => {
+  return (
+    <Card
+      // isFooterBlurred
+      className="w-full h-[250px] col-span-12 sm:col-span-7"
+    >
+      <CardHeader className="absolute z-10 top-0 flex-col items-start gap-3">
+        {/* <Skeleton animation="wave" className="text-tiny w-1/2" variant="text" />
+        <Skeleton
+          animation="wave"
+          className="font-medium text-xl w-full"
+          variant="text"
+        /> */}
+        <Skeleton className="h-3 w-1/2 rounded-lg" />
+        <Skeleton className="h-10 w-full rounded-lg" />
+      </CardHeader>
+      <CardFooter className="absolute bottom-0 z-10 flex items-center justify-between gap-3">
+        <div className="flex flex-grow gap-2 items-center">
+          {/* <Skeleton
+            animation="wave"
+            height={40}
+            variant="circular"
+            width={40}
+          /> */}
+          <Skeleton className="flex rounded-full w-12 h-12 rounded-full" />
+
+          <div className="flex flex-col w-full gap-3">
+            {/* <Skeleton
+              animation="wave"
+              className="text-tiny w-1/2 "
+              variant="text"
+            />
+            <Skeleton
+              animation="wave"
+              className="text-tiny w-full "
+              variant="text"
+            /> */}
+            <Skeleton className="h-3 w-1/2 rounded-lg" />
+            <Skeleton className="h-3 w-full rounded-lg" />
+          </div>
+        </div>
+      </CardFooter>
+    </Card>
+  );
+};

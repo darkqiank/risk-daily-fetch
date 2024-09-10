@@ -1,7 +1,5 @@
 /* eslint-disable no-console */
 import React, { useEffect, useState } from "react";
-import { Snippet } from "@nextui-org/snippet";
-import { Code } from "@nextui-org/code";
 import {
   ScrollShadow,
   Card,
@@ -15,15 +13,17 @@ import {
   Pagination,
 } from "@nextui-org/react";
 
+import { GradientCircularProgress } from "../ui/progress";
+
 const TweetList = () => {
   const [data, setData] = useState(null);
   const [page, setPage] = useState(1);
   const [total, setTotal] = useState(0);
-
-  const [apiUrl, setApiUrl] = useState(""); // 获取当前主机名
+  const [loading, setLoading] = useState(false);
 
   const fetchData = async (page: any) => {
     try {
+      setLoading(true);
       const response = await fetch(`/api/x/?page=${page}`);
       const jsonData = await response.json();
 
@@ -35,6 +35,7 @@ const TweetList = () => {
     } catch (err) {
       console.error("Error fetching data:", err);
     }
+    setLoading(false);
   };
 
   const handlePageChange = (newPage: any) => {
@@ -44,29 +45,27 @@ const TweetList = () => {
 
   useEffect(() => {
     fetchData(page);
-    if (typeof window !== "undefined") {
-      // 确保在客户端环境中执行
-      const protocol = window.location.protocol; // 获取 HTTP 协议
-      const host = window.location.host; // 获取当前主机名
-
-      setApiUrl(`${protocol}//${host}/api/x`); // 设置 API URL
-    }
   }, [page]);
 
   // console.log(data);
-  if (!data) return <div>Loading...</div>;
+  if (!data)
+    return (
+      <div>
+        <GradientCircularProgress />
+      </div>
+    );
   const tweets = Object.values(data);
 
   return (
     <div className="flex flex-col items-center space-y-4">
-      <div className="flex flex-col space-y-4">
-        <Snippet hideSymbol codeString={apiUrl} variant="bordered">
-          <span>
-            Get datas by <Code color="primary">{apiUrl}</Code>
-          </span>
-        </Snippet>
-      </div>
-      <ScrollShadow className="w-[600px] h-[400px] p-4">
+      {loading && (
+        <div className="absolute inset-0 flex items-center justify-center bg-gray-100 bg-opacity-75 z-10">
+          <div className="loader">
+            <GradientCircularProgress />
+          </div>
+        </div>
+      )}
+      <ScrollShadow className="w-1/2 h-[500px] p-4">
         <div className="flex flex-col space-y-4">
           {tweets
             .filter(
@@ -251,6 +250,7 @@ const TweetList = () => {
       </ScrollShadow>
       <Pagination
         showControls
+        showShadow
         color="success"
         initialPage={1}
         total={total}

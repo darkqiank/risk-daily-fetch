@@ -16,17 +16,23 @@ export interface BlogFilters {
   date?: string;
 }
 
-// 批量上传数据，不更新
+// 批量上传数据
 export const batchInsertBlog = async (blogs: any) => {
-  return await db.insert(t_blog).values(blogs).onConflictDoNothing({
-    target: t_blog.url,
-  });
+  return await db
+    .insert(t_blog)
+    .values(blogs)
+    .onConflictDoUpdate({
+      target: t_blog.url,
+      set: {
+        info: sql`excluded.info`,
+      },
+    });
 };
 
 export const getPaginatedData = async (
   filters: BlogFilters,
   pn = 1,
-  ps = 5,
+  ps = 6,
 ) => {
   const offset = (pn - 1) * ps;
   let query = db

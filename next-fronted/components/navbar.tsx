@@ -17,10 +17,16 @@ import clsx from "clsx";
 
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
-import { GithubIcon, SearchIcon, Logo, RiskEyeLogo } from "@/components/icons";
+import { GithubIcon, SearchIcon, RiskEyeLogo } from "@/components/icons";
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [activeItem, setActiveItem] = React.useState("");
+
+  // const handleItemClick = (href: string) => {
+  //   setActiveItem(href);
+  //   localStorage.setItem("activeItem", href);
+  // };
 
   const searchInput = (
     <Input
@@ -43,6 +49,19 @@ export const Navbar = () => {
     />
   );
 
+  React.useEffect(() => {
+    // 从 localStorage 中读取当前活动的导航项
+    const savedActiveItem = localStorage.getItem("activeItem");
+
+    console.log("savedActiveItem:", savedActiveItem);
+
+    if (savedActiveItem) {
+      setActiveItem(savedActiveItem);
+    } else {
+      setActiveItem(siteConfig.navItems[0].href);
+    }
+  }, [siteConfig.navItems]);
+
   return (
     <NextUINavbar
       maxWidth="xl"
@@ -59,14 +78,17 @@ export const Navbar = () => {
         </NavbarBrand>
         <div className="hidden lg:flex gap-4 justify-start ml-2">
           {siteConfig.navItems.map((item) => (
-            <NavbarItem key={item.href}>
+            <NavbarItem
+              key={item.href}
+              className={clsx(
+                linkStyles({ color: "foreground" }),
+                "data-[active=true]:text-primary-500 data-[active=true]:font-medium data-[active=true]:font-bold",
+              )}
+              isActive={activeItem === item.href}
+            >
               <NextLink
-                className={clsx(
-                  linkStyles({ color: "foreground" }),
-                  "data-[active=true]:text-primary data-[active=true]:font-medium",
-                )}
-                color="foreground"
                 href={item.href}
+                // onClick={() => handleItemClick(item.href)}
               >
                 {item.label}
               </NextLink>

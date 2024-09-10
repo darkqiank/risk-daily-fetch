@@ -34,7 +34,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     const { blog_name, date, page, pageSize } = req.query;
 
     const pn = parseInt(page as string, 10) || 1;
-    const ps = parseInt(pageSize as string, 10) || 5;
+    const ps = parseInt(pageSize as string, 10) || 6;
 
     try {
       const filters: BlogFilters = {};

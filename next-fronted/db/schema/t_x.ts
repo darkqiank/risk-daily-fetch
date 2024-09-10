@@ -63,7 +63,7 @@ export const getPaginatedData = async (filters: XFilters, pn = 1, ps = 20) => {
   let query = db
     .select()
     .from(t_x)
-    .orderBy(desc(t_x.date))
+    .orderBy(desc(t_x.date), desc(t_x.x_id))
     .limit(ps)
     .offset(offset);
 
