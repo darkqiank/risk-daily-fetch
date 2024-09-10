@@ -12,25 +12,38 @@ import {
   CardHeader,
   Divider,
   Chip,
+  Pagination,
 } from "@nextui-org/react";
 
 const TweetList = () => {
   const [data, setData] = useState(null);
+  const [page, setPage] = useState(1);
+  const [total, setTotal] = useState(0);
+
   const [apiUrl, setApiUrl] = useState(""); // 获取当前主机名
 
+  const fetchData = async (page: any) => {
+    try {
+      const response = await fetch(`/api/x/?page=${page}`);
+      const jsonData = await response.json();
+
+      const total = (jsonData as any).totalPages;
+      const twitters = Object.values((jsonData as any).data) as any;
+
+      setData(twitters);
+      setTotal(total);
+    } catch (err) {
+      console.error("Error fetching data:", err);
+    }
+  };
+
+  const handlePageChange = (newPage: any) => {
+    setPage(newPage);
+    fetchData(newPage);
+  };
+
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch("/api/x/");
-        const jsonData = await response.json();
-
-        setData(jsonData);
-      } catch (err) {
-        console.error("Error fetching data:", err);
-      }
-    };
-
-    fetchData();
+    fetchData(page);
     if (typeof window !== "undefined") {
       // 确保在客户端环境中执行
       const protocol = window.location.protocol; // 获取 HTTP 协议
@@ -38,8 +51,9 @@ const TweetList = () => {
 
       setApiUrl(`${protocol}//${host}/api/x`); // 设置 API URL
     }
-  }, []);
-  console.log(data);
+  }, [page]);
+
+  // console.log(data);
   if (!data) return <div>Loading...</div>;
   const tweets = Object.values(data);
 
@@ -235,6 +249,13 @@ const TweetList = () => {
             })}
         </div>
       </ScrollShadow>
+      <Pagination
+        showControls
+        color="success"
+        initialPage={1}
+        total={total}
+        onChange={handlePageChange}
+      />
     </div>
   );
 };

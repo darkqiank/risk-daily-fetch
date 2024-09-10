@@ -10,15 +10,15 @@ export const siteConfig = {
     },
     {
       label: "Twitter",
-      href: "/x",
+      href: "/nav/x",
     },
     {
       label: "Blog",
-      href: "/blog",
+      href: "/nav/blog",
     },
     {
       label: "About",
-      href: "/about",
+      href: "/nav/about",
     },
   ],
   navMenuItems: [

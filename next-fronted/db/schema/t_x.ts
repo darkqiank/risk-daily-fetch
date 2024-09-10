@@ -1,5 +1,5 @@
 import { pgTable, text, jsonb } from "drizzle-orm/pg-core";
-import { desc, sql } from "drizzle-orm";
+import { desc, sql, count } from "drizzle-orm";
 
 import db from "../database";
 
@@ -18,7 +18,7 @@ export interface XFilters {
   date?: string;
 }
 
-// 批量上传数据
+// 批量上传更新数据
 export const batchUpsertX = async (twitters: any) => {
   return await db
     .insert(t_x)
@@ -33,6 +33,13 @@ export const batchUpsertX = async (twitters: any) => {
         user_link: sql`excluded.user_link`,
       },
     });
+};
+
+// 批量上传数据，不更新
+export const batchInsertX = async (twitters: any) => {
+  return await db.insert(t_x).values(twitters).onConflictDoNothing({
+    target: t_x.x_id,
+  });
 };
 
 // 获取最新3天数据
@@ -60,13 +67,33 @@ export const getPaginatedData = async (filters: XFilters, pn = 1, ps = 20) => {
     .limit(ps)
     .offset(offset);
 
+  // 构建总记录数查询
+  let countQuery = db.select({ value: count() }).from(t_x);
+
   if (filters.user_id) {
     query = query.where(sql`${t_x.user_id} = ${filters.user_id}`) as any;
+    countQuery = countQuery.where(
+      sql`${t_x.user_id} = ${filters.user_id}`,
+    ) as any;
   }
 
   if (filters.date) {
     query = query.where(sql`${t_x.date} = ${filters.date}`) as any;
+    countQuery = countQuery.where(sql`${t_x.date} = ${filters.date}`) as any;
   }
 
-  return await query;
+  // 执行查询
+  const [data, countResult] = await Promise.all([query, countQuery]);
+
+  // 计算总页数
+  const totalRecords = countResult[0].value;
+  const totalPages = Math.ceil(totalRecords / ps);
+
+  return {
+    data,
+    totalPages,
+    totalRecords,
+    pageNumber: pn,
+    pageSize: ps,
+  };
 };

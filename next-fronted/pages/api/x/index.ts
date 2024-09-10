@@ -1,19 +1,31 @@
 import { NextApiRequest, NextApiResponse } from "next";
 
-import { batchUpsertX, getPaginatedData, XFilters } from "@/db/schema/t_x";
+import { batchInsertX, getPaginatedData, XFilters } from "@/db/schema/t_x";
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === "POST") {
     const twitters = await req.body;
 
-    await batchUpsertX(twitters);
+    if (Array.isArray(twitters)) {
+      // 如果是 List 格式，直接输入 batchUpsertX/batchInsertX
+      await batchInsertX(twitters);
+    } else if (typeof twitters === "object" && twitters !== null) {
+      // 如果是 KV 格式，将所有 values 作为 List 输入 batchUpsertX/batchInsertX
+      const valuesList = Object.values(twitters);
+
+      await batchInsertX(valuesList);
+    } else {
+      res.status(400).json({ error: "Invalid data format" });
+
+      return;
+    }
     res.status(200).json({ success: "twitters updated!" });
   } else if (req.method === "GET") {
     // 获取日期参数
     const { user_id, date, page, pageSize } = req.query;
 
     const pn = parseInt(page as string, 10) || 1;
-    const ps = parseInt(pageSize as string, 10) || 30;
+    const ps = parseInt(pageSize as string, 10) || 20;
 
     try {
       const filters: XFilters = {};

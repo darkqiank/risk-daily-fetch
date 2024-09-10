@@ -11,3 +11,4 @@ python-dateutil
 feedparser
 curl_cffi
 pytz
+xlsxwriter

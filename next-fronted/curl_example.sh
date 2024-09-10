@@ -1,10 +1,10 @@
-curl -X GET "http://127.0.0.1:8787/api/blogs" \
+curl -X GET "http://127.0.0.1:8787/api/blog" \
 	-H "X-AUTH-KEY: 572ce5667e425a"
+curl -X GET "http://127.0.0.1:8787/api/blog/s3/cn"
 
-curl -X POST "http://127.0.0.1:8787/api/blogs" \
+curl -X POST "http://127.0.0.1:3000/api/blog" \
      -H "Content-Type: application/json" \
-	-H "X-AUTH-KEY: 572ce5667e425a" \
-     -d '[{"link": "https://example.com", "source": "Example Source 2"},{"link": "https://example1.com", "source": "Example Source 2"}]'
+     -d '[{"url": "https://example.com", "blog_name": "Example Source 2"},{"url": "https://example1.com", "blog_name": "Example Source 2"}]'
 
 curl -X GET "http://127.0.0.1:8787/api/blogs/2024-08-27" \
 	-H "X-AUTH-KEY: 572ce5667e425a"

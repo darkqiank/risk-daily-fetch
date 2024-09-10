@@ -16,7 +16,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
   const params = {
     Bucket: process.env.S3_BUCKET_NAME!,
-    Key: `risk/twitter/${dateParam}.json`,
+    Key: `risk/blogs/cn/${dateParam}.json`,
   };
 
   try {

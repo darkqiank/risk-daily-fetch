@@ -9,7 +9,6 @@ import boto3
 from datetime import datetime, timedelta
 import pytz
 
-
 def is_url(input_str):
     return input_str.startswith('http://') or input_str.startswith('https://')
 
@@ -146,7 +145,7 @@ for commit in tqdm(commits):
 # 保存文件
 df_infos = pd.DataFrame(infos)
 file_name = f"maltrail_iocs_{formatted_cur_day}.xlsx"
-df_infos.to_excel(file_name, index=False)
+df_infos.to_excel(file_name, index=False, engine='xlsxwriter')
 print(f"Saved {file_name}")
 
 # 上传到s3
