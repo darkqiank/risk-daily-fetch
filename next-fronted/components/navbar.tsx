@@ -14,6 +14,7 @@ import { Input } from "@nextui-org/input";
 import { link as linkStyles } from "@nextui-org/theme";
 import NextLink from "next/link";
 import clsx from "clsx";
+import { useRouter } from "next/router";
 
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
@@ -22,7 +23,7 @@ import { GithubIcon, SearchIcon, RiskEyeLogo } from "@/components/icons";
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [activeItem, setActiveItem] = React.useState("");
-
+  const router = useRouter();
   // const handleItemClick = (href: string) => {
   //   setActiveItem(href);
   //   localStorage.setItem("activeItem", href);
@@ -50,8 +51,8 @@ export const Navbar = () => {
   );
 
   React.useEffect(() => {
-    // 从 localStorage 中读取当前活动的导航项
-    const savedActiveItem = localStorage.getItem("activeItem");
+    // 读取当前活动的导航项
+    const savedActiveItem = router.pathname;
 
     console.log("savedActiveItem:", savedActiveItem);
 

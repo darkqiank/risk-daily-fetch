@@ -5,10 +5,6 @@ import BlogList from "@/components/feeds/bloglist";
 import DefaultLayout from "@/layouts/default";
 
 export default function DocsPage() {
-  React.useEffect(() => {
-    localStorage.setItem("activeItem", "/nav/blog");
-  }, []);
-
   return (
     <DefaultLayout>
       <section className="flex flex-col items-center justify-center gap-2 py-4 md:py-8">

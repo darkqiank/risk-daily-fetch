@@ -10,27 +10,6 @@ const BlogList = () => {
   const [total, setTotal] = useState(0);
   const [loading, setLoading] = useState(false);
 
-  const fetchUrlMeta = async (url: any) => {
-    const response = await fetch(`/api/proxy/?url=${encodeURIComponent(url)}`);
-
-    if (response.ok) {
-      const jsonData = await response.json();
-      const newJsonData = {
-        url: jsonData.url,
-        description: jsonData.description,
-        title: jsonData.title,
-        logo: jsonData.favicons?.[0],
-        image: jsonData.images?.[0],
-        publisher: jsonData.siteName,
-        video: jsonData.videos?.[0],
-      } as any;
-
-      return newJsonData;
-    }
-
-    return null;
-  };
-
   const fetchData = async (page: any) => {
     try {
       setLoading(true);

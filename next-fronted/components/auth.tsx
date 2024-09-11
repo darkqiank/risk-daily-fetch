@@ -14,7 +14,7 @@ export const verifyToken = (token: string) => {
   return jwt.verify(token, SECRET_KEY);
 };
 
-const PRESHARED_AUTH_HEADER_KEY = "X-AUTH-KEY";
+const PRESHARED_AUTH_HEADER_KEY = "x-auth-key";
 const PRESHARED_AUTH_HEADER_VALUE = process.env.AUTH_VALUE;
 
 export const authenticate = (req: NextApiRequest) => {

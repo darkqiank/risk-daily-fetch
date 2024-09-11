@@ -5,10 +5,6 @@ import DefaultLayout from "@/layouts/default";
 import TweetList from "@/components/feeds/xlist";
 
 export default function DocsPage() {
-  React.useEffect(() => {
-    localStorage.setItem("activeItem", "/nav/x");
-  }, []);
-
   return (
     <DefaultLayout>
       <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
