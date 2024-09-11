@@ -83,14 +83,14 @@ export const getMetaInfos = async (blogs: []) => {
               metaInfo.title === null || metaInfo.title.trim() === ""
                 ? blog.url
                 : metaInfo.title;
-            metaInfo.publisher = metaInfo.publisher || blog.blog_name;
+            metaInfo.siteName = metaInfo.siteName || blog.blog_name;
 
             return { ...blog, info: metaInfo };
           } else {
             blog.info = {
               url: blog.url,
               title: blog.url,
-              publisher: blog.blog_name,
+              siteName: blog.blog_name,
             };
           }
         } catch (error) {
@@ -98,7 +98,7 @@ export const getMetaInfos = async (blogs: []) => {
           blog.info = {
             url: blog.url,
             title: blog.url,
-            publisher: blog.blog_name,
+            siteName: blog.blog_name,
           };
         }
       }
