@@ -1,42 +1,45 @@
 import { NextApiRequest, NextApiResponse } from "next";
+import { getLinkPreview } from "link-preview-js";
 
 import {
   batchInsertBlog,
   BlogFilters,
   getPaginatedData,
 } from "@/db/schema/t_blog";
+import { authenticate } from "@/components/auth";
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
-  if (req.method === "POST") {
-    const blogs = await req.body;
+  try {
+    if (req.method === "POST") {
+      authenticate(req);
+      const blogs = await req.body;
 
-    if (Array.isArray(blogs)) {
-      // 如果是 List 格式，直接输入 batchUpsertX/batchInsertX
-      await batchInsertBlog(blogs);
-    } else if (typeof blogs === "object" && blogs !== null) {
-      // 如果是 KV 格式，将所有 values 作为 List 输入 batchUpsertX/batchInsertX
-      const valuesList = Object.entries(blogs).reduce(
-        (acc: object[], [key, values]: [string, any]) => {
-          values.forEach((value: string) => {
-            acc.push({ url: value, blog_name: key });
-          });
+      if (Array.isArray(blogs)) {
+        // 如果是 List 格式，直接输入 batchUpsertX/batchInsertX
+        await batchInsertBlog(blogs);
+      } else if (typeof blogs === "object" && blogs !== null) {
+        // 如果是 KV 格式，将所有 values 作为 List 输入 batchUpsertX/batchInsertX
+        const valuesList = Object.entries(blogs).reduce(
+          (acc: object[], [key, values]: [string, any]) => {
+            values.forEach((value: string) => {
+              acc.push({ url: value, blog_name: key });
+            });
 
-          return acc;
-        },
-        [],
-      );
+            return acc;
+          },
+          [],
+        );
 
-      await batchInsertBlog(valuesList);
-    }
-    res.status(200).json({ success: "blogs updated!" });
-  } else if (req.method === "GET") {
-    // 获取日期参数
-    const { blog_name, date, page, pageSize } = req.query;
+        await batchInsertBlog(valuesList);
+      }
+      res.status(200).json({ success: "blogs updated!" });
+    } else if (req.method === "GET") {
+      // 获取日期参数
+      const { blog_name, date, page, pageSize, withInfo } = req.query;
 
-    const pn = parseInt(page as string, 10) || 1;
-    const ps = parseInt(pageSize as string, 10) || 6;
+      const pn = parseInt(page as string, 10) || 1;
+      const ps = parseInt(pageSize as string, 10) || 6;
 
-    try {
       const filters: BlogFilters = {};
 
       if (typeof blog_name === "string") {
@@ -46,13 +49,69 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         filters.date = date;
       }
 
-      const res_data = await getPaginatedData(filters, pn, ps);
+      let res_data = await getPaginatedData(filters, pn, ps);
+
+      if (withInfo) {
+        // 如果需要更新metaInfo，则请求并返回
+        res_data.data = await getMetaInfos(res_data.data as any);
+      }
 
       res.status(200).json(res_data);
-    } catch (error: any) {
-      res.status(500).json({ error: error.message });
+    } else {
+      res.status(405).json({ message: "Method not allowed" });
     }
-  } else {
-    res.status(405).json({ message: "Method not allowed" });
+  } catch (error: any) {
+    res.status(500).json({ error: error.message });
   }
+};
+
+export const getMetaInfos = async (blogs: []) => {
+  let needUpdate = false;
+  const blogsWithInfo = (await Promise.all(
+    blogs.map(async (blog: any) => {
+      if (!blog.info) {
+        needUpdate = true;
+        try {
+          console.log(blog.url);
+          const metaInfo = await getLinkPreview(blog.url, {
+            timeout: 3000,
+          });
+
+          if (metaInfo) {
+            metaInfo.url = metaInfo.url || blog.url;
+            metaInfo.title =
+              metaInfo.title === null || metaInfo.title.trim() === ""
+                ? blog.url
+                : metaInfo.title;
+            metaInfo.publisher = metaInfo.publisher || blog.blog_name;
+
+            return { ...blog, info: metaInfo };
+          } else {
+            blog.info = {
+              url: blog.url,
+              title: blog.url,
+              publisher: blog.blog_name,
+            };
+          }
+        } catch (error) {
+          console.error(`Error fetching meta for ${blog.url}:`, error);
+          blog.info = {
+            url: blog.url,
+            title: blog.url,
+            publisher: blog.blog_name,
+          };
+        }
+      }
+
+      return blog;
+    }),
+  )) as any;
+
+  if (needUpdate) {
+    const updateRes = await batchInsertBlog(blogsWithInfo);
+
+    console.log(updateRes);
+  }
+
+  return blogsWithInfo;
 };
