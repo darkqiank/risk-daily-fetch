@@ -24,7 +24,8 @@ export const batchInsertBlog = async (blogs: any) => {
     .onConflictDoUpdate({
       target: t_blog.url,
       set: {
-        info: sql`excluded.info`,
+        // info: sql`excluded.info`,
+        info: sql`CASE WHEN excluded.info IS NOT NULL THEN excluded.info ELSE t_blog.info END`,
       },
     });
 };

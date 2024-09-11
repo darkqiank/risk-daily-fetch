@@ -52,7 +52,10 @@ const BlogList = () => {
 
               if (metaInfo) {
                 metaInfo.url = metaInfo.url || blog.url;
-                metaInfo.title = metaInfo.title || blog.url;
+                metaInfo.title =
+                  metaInfo.title === null || metaInfo.title.trim() === ""
+                    ? blog.url
+                    : metaInfo.title;
                 metaInfo.publisher = metaInfo.publisher || blog.blog_name;
 
                 return { ...blog, info: metaInfo };

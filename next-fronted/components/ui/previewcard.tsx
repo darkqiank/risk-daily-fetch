@@ -30,7 +30,6 @@ export const PreviewCard = (data: any) => {
           {data.publisher}
         </p>
         <Link isExternal href={data.url}>
-          {" "}
           <h4
             className="text-white/90 font-medium text-xl"
             style={{ wordBreak: "break-all" }}
@@ -38,7 +37,7 @@ export const PreviewCard = (data: any) => {
             {data.title?.length > 100
               ? `${data.title.substring(0, 100)}...`
               : data.title}
-          </h4>{" "}
+          </h4>
         </Link>
       </CardHeader>
       <Image
