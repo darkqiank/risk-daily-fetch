@@ -30,6 +30,7 @@ const TweetList = () => {
 
   const UserScroll: any = ({ userInfos }: any) => {
     const itemWidth = 40; // 每个 Avatar 的宽度，包括间距
+    let userCount = (userInfos as []).length;
     const totalNew = userInfos.reduce(
       (sum: any, user: any) => sum + user.new,
       0,
@@ -62,7 +63,8 @@ const TweetList = () => {
         : -1;
 
       if (index !== -1) {
-        setOffset(index * itemWidth);
+        setOffset(index);
+        console.log("offset", offset);
       }
     };
 
@@ -74,12 +76,12 @@ const TweetList = () => {
     return (
       <div className="relative w-1/3 h-[100px] overflow-hidden p-4">
         {/* Blurred edges */}
-        <div className="absolute left-0 top-0 bottom-0 w-[10px] bg-gradient-to-r from-background to-transparent z-10" />
-        <div className="absolute right-0 top-0 bottom-0 w-[10px] bg-gradient-to-l from-background to-transparent z-10" />
+        <div className="absolute left-0 top-0 bottom-0 w-[10px] bg-gradient-to-r from-background to-transparent z-10 cursor-pointer" />
+        <div className="absolute right-0 top-0 bottom-0 w-[10px] bg-gradient-to-l from-background to-transparent z-10 cursor-pointer" />
         <div className="px-10">
           <div
-            className="flex space-x-4 items-center justify-cente transition-transform duration-1000"
-            style={{ transform: `translateX(-${offset}px)` }}
+            className="flex space-x-4 items-center justify-cente transition-transform duration-500"
+            style={{ transform: `translateX(-${offset * itemWidth}px)` }}
           >
             <div>
               <Badge color="danger" content={`${totalNew}`}>
