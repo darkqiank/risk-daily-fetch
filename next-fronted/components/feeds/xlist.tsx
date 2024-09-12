@@ -21,6 +21,8 @@ const TweetList = () => {
   const [total, setTotal] = useState(0);
   const [loading, setLoading] = useState(false);
 
+  const base_images_url = process.env.BASE_IMAGES_URL;
+
   const fetchData = async (page: any) => {
     try {
       setLoading(true);
@@ -90,6 +92,9 @@ const TweetList = () => {
                   <Card key={item.x_id}>
                     <CardHeader className="flex items-center justify-between gap-3">
                       <User
+                        avatarProps={{
+                          src: `${base_images_url}${item.user_id}.png`,
+                        }}
                         description={
                           <Link isExternal href={item.user_link} size="sm">
                             @{item.username}
