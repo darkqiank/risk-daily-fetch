@@ -18,9 +18,17 @@ export interface BlogFilters {
 
 // 批量上传数据
 export const batchInsertBlog = async (blogs: any) => {
+  const uniqueBlogs = blogs.reduce((acc: any[], blog: any) => {
+    if (!acc.some((item) => item.url === blog.url)) {
+      acc.push(blog);
+    }
+
+    return acc;
+  }, []);
+
   return await db
     .insert(t_blog)
-    .values(blogs)
+    .values(uniqueBlogs)
     .onConflictDoUpdate({
       target: t_blog.url,
       set: {
