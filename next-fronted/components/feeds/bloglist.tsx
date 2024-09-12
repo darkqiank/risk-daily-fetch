@@ -30,7 +30,6 @@ const BlogList = () => {
 
   const handlePageChange = (newPage: any) => {
     setPage(newPage);
-    fetchData(newPage);
   };
 
   useEffect(() => {

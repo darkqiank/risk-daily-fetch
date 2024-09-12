@@ -11,7 +11,11 @@ import {
   Divider,
   Chip,
   Pagination,
+  Badge,
+  Avatar,
+  Tooltip,
 } from "@nextui-org/react";
+import GroupIcon from "@mui/icons-material/Group";
 
 import { GradientCircularProgress } from "../ui/progress";
 
@@ -20,12 +24,116 @@ const TweetList = () => {
   const [page, setPage] = useState(1);
   const [total, setTotal] = useState(0);
   const [loading, setLoading] = useState(false);
-  const [base_images_url, setBase] = useState("");
+  const [users, setUsers] = useState([]);
+  const [currentUser, setCurrentUsers] = useState(null);
+  const [offset, setOffset] = useState(0);
+
+  const UserScroll: any = ({ userInfos }: any) => {
+    const itemWidth = 40; // 每个 Avatar 的宽度，包括间距
+    const totalNew = userInfos.reduce(
+      (sum: any, user: any) => sum + user.new,
+      0,
+    );
+    const UserUpdateInfo = (userInfo: any) => {
+      return (
+        <Badge color="danger" content={`${userInfo.new}`}>
+          <Tooltip content={`${userInfo.username}`}>
+            <Avatar
+              data-hover
+              isFocusable
+              className={`w-[50px] h-[50px] transition-transform duration-200 transform
+             hover:scale-150 hover:border-2 hover:border-blue-500 cursor-pointer
+             ${(currentUser as unknown as string) === (userInfo.user_id as string) ? "scale-150 border-grey-500 border-2" : ""}
+             `}
+              src={`${process.env.NEXT_PUBLIC_BASE_IMAGES_URL}${userInfo.user_id}.png`}
+              onClick={() => handleUserSelect(userInfo.user_id)}
+              onMouseEnter={() => handleHover(userInfo.user_id)}
+            />
+          </Tooltip>
+        </Badge>
+      );
+    };
+
+    const handleHover = (userId: any) => {
+      const index = userId
+        ? userInfos.findIndex((user: any) => user.user_id === userId)
+        : -1;
+
+      if (index !== -1) {
+        setOffset(index * itemWidth);
+      }
+    };
+
+    const handleUserSelect = (user_id: any) => {
+      setCurrentUsers(user_id);
+      setPage(1);
+    };
+
+    return (
+      <div className="relative w-1/3 h-[100px] overflow-hidden p-4">
+        {/* Blurred edges */}
+        <div
+          style={{
+            position: "absolute",
+            left: 0,
+            top: 0,
+            bottom: 0,
+            width: "40px", // 调整宽度以改变模糊效果
+            background:
+              "linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0))",
+            zIndex: 1,
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            right: 0,
+            top: 0,
+            bottom: 0,
+            width: "40px", // 调整宽度以改变模糊效果
+            background:
+              "linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0))",
+            zIndex: 1,
+          }}
+        />
+        <div
+          className="flex space-x-4 items-center justify-cente transition-transform duration-200"
+          style={{ transform: `translateX(-${offset}px)` }}
+        >
+          <div>
+            <Badge color="danger" content={`${totalNew}`}>
+              <Avatar
+                data-hover
+                isFocusable
+                className={`bg-gradient-to-br from-[#FFB457] to-[#F31260] w-[50px] h-[50px] transition-transform duration-200 transform
+       hover:scale-150 hover:border-2 hover:border-blue-500 cursor-pointer
+       ${!currentUser ? "scale-150 border-grey-500 border-2" : ""}
+       `}
+                icon={<GroupIcon className="text-white" />}
+                onClick={() => handleUserSelect(null)}
+                onMouseEnter={() => handleHover(null)}
+              />
+            </Badge>
+          </div>
+          {userInfos.map((user: any) => {
+            return (
+              <div key={user.user_id}>
+                <UserUpdateInfo {...user} />
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    );
+  };
 
   const fetchData = async (page: any) => {
     try {
       setLoading(true);
-      const response = await fetch(`/api/x/?page=${page}`);
+      const url = currentUser
+        ? `/api/x/?page=${page}&user_id=${currentUser}`
+        : `/api/x/?page=${page}`;
+      const response = await fetch(url);
       const jsonData = await response.json();
 
       const total = (jsonData as any).totalPages;
@@ -39,15 +147,37 @@ const TweetList = () => {
     setLoading(false);
   };
 
+  const fetchUsers = async () => {
+    try {
+      const cachedUsers = localStorage.getItem("risk_x_users");
+      const cacheTime = localStorage.getItem("risk_x_cacheTime");
+      const now = new Date().getTime();
+
+      if (cachedUsers && cacheTime && now - parseInt(cacheTime) < 60000) {
+        // 1分钟有效期
+        console.log(cachedUsers);
+        setUsers(JSON.parse(cachedUsers));
+      } else {
+        const response = await fetch(`/api/x/?type=total`);
+        const jsonData = await response.json();
+
+        setUsers(jsonData);
+        localStorage.setItem("risk_x_users", JSON.stringify(jsonData));
+        localStorage.setItem("risk_x_cacheTime", now.toString());
+      }
+    } catch (err) {
+      console.error("Error fetching users:", err);
+    }
+  };
+
   const handlePageChange = (newPage: any) => {
     setPage(newPage);
-    fetchData(newPage);
   };
 
   useEffect(() => {
+    fetchUsers();
     fetchData(page);
-    setBase(process.env.NEXT_PUBLIC_BASE_IMAGES_URL as string);
-  }, [page]);
+  }, [page, currentUser]);
 
   // console.log(data);
   if (!data)
@@ -57,6 +187,7 @@ const TweetList = () => {
       </div>
     );
   const tweets = Object.values(data);
+  const x_users = Object.values(users as any);
 
   return (
     <div className="flex flex-col items-center space-y-4">
@@ -67,6 +198,9 @@ const TweetList = () => {
           </div>
         </div>
       )}
+
+      <UserScroll userInfos={x_users} />
+
       <ScrollShadow className="w-1/2 h-[500px] p-4">
         <div className="flex flex-col space-y-4">
           {tweets
@@ -93,7 +227,7 @@ const TweetList = () => {
                     <CardHeader className="flex items-center justify-between gap-3">
                       <User
                         avatarProps={{
-                          src: `${base_images_url}${item.user_id}.png`,
+                          src: `${process.env.NEXT_PUBLIC_BASE_IMAGES_URL}${item.user_id}.png`,
                         }}
                         description={
                           <Link isExternal href={item.user_link} size="sm">
@@ -171,6 +305,9 @@ const TweetList = () => {
                   <Card key={item.x_id}>
                     <CardHeader className="flex items-center justify-between gap-3">
                       <User
+                        avatarProps={{
+                          src: `${process.env.NEXT_PUBLIC_BASE_IMAGES_URL}${item.user_id}.png`,
+                        }}
                         description={
                           <Link isExternal href={item.user_link} size="sm">
                             @{item.username}

@@ -58,6 +58,20 @@ export const getXByDate = async (date: string) => {
     .where(sql`${t_x.date} = ${date}`);
 };
 
+// 获取user统计数据
+export const getUserXcount = async () => {
+  return await db
+    .select({
+      user_id: t_x.user_id,
+      username: t_x.username,
+      user_link: t_x.user_link,
+      total: sql<number>`cast(count(*) as int)`,
+      new: sql<number>`cast(COUNT(CASE WHEN CAST(${t_x.date} AS DATE) = CURRENT_DATE THEN 1 END) as int)`,
+    })
+    .from(t_x)
+    .groupBy(t_x.user_id, t_x.username, t_x.user_link);
+};
+
 export const getPaginatedData = async (filters: XFilters, pn = 1, ps = 20) => {
   const offset = (pn - 1) * ps;
   let query = db

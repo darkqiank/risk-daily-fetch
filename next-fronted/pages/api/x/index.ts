@@ -1,6 +1,11 @@
 import { NextApiRequest, NextApiResponse } from "next";
 
-import { batchInsertX, getPaginatedData, XFilters } from "@/db/schema/t_x";
+import {
+  batchInsertX,
+  getPaginatedData,
+  getUserXcount,
+  XFilters,
+} from "@/db/schema/t_x";
 import { authenticate } from "@/components/auth";
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
@@ -26,7 +31,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       res.status(200).json({ success: "twitters updated!" });
     } else if (req.method === "GET") {
       // 获取日期参数
-      const { user_id, date, page, pageSize } = req.query;
+      const { user_id, date, page, pageSize, type } = req.query;
 
       const pn = parseInt(page as string, 10) || 1;
       const ps = parseInt(pageSize as string, 10) || 20;
@@ -40,7 +45,13 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         filters.date = date;
       }
 
-      const res_data = await getPaginatedData(filters, pn, ps);
+      let res_data = {};
+
+      if (type === "total") {
+        res_data = await getUserXcount();
+      } else {
+        res_data = await getPaginatedData(filters, pn, ps);
+      }
 
       res.status(200).json(res_data);
 

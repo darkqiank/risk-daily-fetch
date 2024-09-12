@@ -16,6 +16,7 @@
 		"@aws-sdk/client-s3": "^3.637.0",
 		"@emotion/react": "^11.13.3",
 		"@emotion/styled": "^11.13.0",
+		"@mui/icons-material": "^6.1.0",
 		"@mui/material": "^6.0.2",
 		"@mui/x-charts": "^7.16.0",
 		"@nextui-org/button": "2.0.37",
