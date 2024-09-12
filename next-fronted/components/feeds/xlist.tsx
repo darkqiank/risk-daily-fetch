@@ -20,8 +20,7 @@ const TweetList = () => {
   const [page, setPage] = useState(1);
   const [total, setTotal] = useState(0);
   const [loading, setLoading] = useState(false);
-
-  const base_images_url = process.env.BASE_IMAGES_URL;
+  const [base_images_url, setBase] = useState("");
 
   const fetchData = async (page: any) => {
     try {
@@ -47,6 +46,7 @@ const TweetList = () => {
 
   useEffect(() => {
     fetchData(page);
+    setBase(process.env.NEXT_PUBLIC_BASE_IMAGES_URL as string);
   }, [page]);
 
   // console.log(data);
