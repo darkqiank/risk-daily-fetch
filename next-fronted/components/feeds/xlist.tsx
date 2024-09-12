@@ -13,9 +13,9 @@ import {
   Pagination,
   Badge,
   Avatar,
-  Tooltip,
 } from "@nextui-org/react";
 import GroupIcon from "@mui/icons-material/Group";
+import { Tooltip } from "@mui/material";
 
 import { GradientCircularProgress } from "../ui/progress";
 
@@ -37,17 +37,19 @@ const TweetList = () => {
     const UserUpdateInfo = (userInfo: any) => {
       return (
         <Badge color="danger" content={`${userInfo.new}`}>
-          <Tooltip content={`${userInfo.username}`}>
+          <Tooltip title={`${userInfo.username}`}>
             <Avatar
               data-hover
               isFocusable
               className={`w-[50px] h-[50px] transition-transform duration-200 transform
              hover:scale-150 hover:border-2 hover:border-blue-500 cursor-pointer
-             ${(currentUser as unknown as string) === (userInfo.user_id as string) ? "scale-150 border-grey-500 border-2" : ""}
+             ${(currentUser as unknown as string) === (userInfo.user_id as string) ? "scale-150 border-grey-500 border-2 z-5" : "z-1"}
              `}
               src={`${process.env.NEXT_PUBLIC_BASE_IMAGES_URL}${userInfo.user_id}.png`}
               onClick={() => handleUserSelect(userInfo.user_id)}
-              onMouseEnter={() => handleHover(userInfo.user_id)}
+              onMouseEnter={() => {
+                handleHover(userInfo.user_id);
+              }}
             />
           </Tooltip>
         </Badge>
@@ -72,56 +74,36 @@ const TweetList = () => {
     return (
       <div className="relative w-1/3 h-[100px] overflow-hidden p-4">
         {/* Blurred edges */}
-        <div
-          style={{
-            position: "absolute",
-            left: 0,
-            top: 0,
-            bottom: 0,
-            width: "40px", // 调整宽度以改变模糊效果
-            background:
-              "linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0))",
-            zIndex: 1,
-          }}
-        />
-        <div
-          style={{
-            position: "absolute",
-            right: 0,
-            top: 0,
-            bottom: 0,
-            width: "40px", // 调整宽度以改变模糊效果
-            background:
-              "linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0))",
-            zIndex: 1,
-          }}
-        />
-        <div
-          className="flex space-x-4 items-center justify-cente transition-transform duration-200"
-          style={{ transform: `translateX(-${offset}px)` }}
-        >
-          <div>
-            <Badge color="danger" content={`${totalNew}`}>
-              <Avatar
-                data-hover
-                isFocusable
-                className={`bg-gradient-to-br from-[#FFB457] to-[#F31260] w-[50px] h-[50px] transition-transform duration-200 transform
-       hover:scale-150 hover:border-2 hover:border-blue-500 cursor-pointer
-       ${!currentUser ? "scale-150 border-grey-500 border-2" : ""}
+        <div className="absolute left-0 top-0 bottom-0 w-[10px] bg-gradient-to-r from-background to-transparent z-10" />
+        <div className="absolute right-0 top-0 bottom-0 w-[10px] bg-gradient-to-l from-background to-transparent z-10" />
+        <div className="px-10">
+          <div
+            className="flex space-x-4 items-center justify-cente transition-transform duration-1000"
+            style={{ transform: `translateX(-${offset}px)` }}
+          >
+            <div>
+              <Badge color="danger" content={`${totalNew}`}>
+                <Avatar
+                  data-hover
+                  isFocusable
+                  className={`bg-gradient-to-br from-[#FFB457] to-[#F31260] w-[50px] h-[50px] transition-transform duration-200 transform
+       hover:scale-150 hover:border-2 hover:border-blue-500 hover:z-5 cursor-pointer
+       ${!currentUser ? "scale-150 border-grey-500 border-2 z-5" : "z-1"}
        `}
-                icon={<GroupIcon className="text-white" />}
-                onClick={() => handleUserSelect(null)}
-                onMouseEnter={() => handleHover(null)}
-              />
-            </Badge>
+                  icon={<GroupIcon className="text-white" />}
+                  onClick={() => handleUserSelect(null)}
+                  onMouseEnter={() => handleHover(null)}
+                />
+              </Badge>
+            </div>
+            {userInfos.map((user: any) => {
+              return (
+                <div key={user.user_id}>
+                  <UserUpdateInfo {...user} />
+                </div>
+              );
+            })}
           </div>
-          {userInfos.map((user: any) => {
-            return (
-              <div key={user.user_id}>
-                <UserUpdateInfo {...user} />
-              </div>
-            );
-          })}
         </div>
       </div>
     );
