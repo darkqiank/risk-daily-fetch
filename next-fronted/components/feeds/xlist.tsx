@@ -42,8 +42,8 @@ const TweetList = () => {
               data-hover
               isFocusable
               className={`w-[50px] h-[50px] transition-transform duration-200 transform
-             hover:scale-150 hover:border-2 hover:border-blue-500 hover:z-5 cursor-pointer
-             ${(currentUser as unknown as string) === (userInfo.user_id as string) ? "scale-150 border-grey-500 border-2 z-5" : "z-1"}
+             hover:scale-150 hover:border-2 hover:border-blue-200 hover:z-5 cursor-pointer
+             ${(currentUser as unknown as string) === (userInfo.user_id as string) ? "scale-150 border-blue-500 border-2 z-5" : "z-1"}
              `}
               src={`${process.env.NEXT_PUBLIC_BASE_IMAGES_URL}${userInfo.user_id}.png`}
               onClick={() => handleUserSelect(userInfo.user_id)}
@@ -54,16 +54,19 @@ const TweetList = () => {
     };
 
     return (
-      <MyScrollShadow hideScrollBar className="w-[150-px] h-[500px] px-8">
-        <div className="flex flex-col space-y-4 items-center py-8">
+      <MyScrollShadow
+        hideScrollBar
+        className="min-w-[70px] h-[500px] px-8 py-4"
+      >
+        <div className="flex flex-col space-y-4 items-center py-4">
           <div key={0} className="w-[100-px] h-[60-px]">
             <Badge color="danger" content={`${totalNew}`}>
               <Avatar
                 data-hover
                 isFocusable
                 className={`bg-gradient-to-br from-[#FFB457] to-[#F31260] w-[50px] h-[50px] transition-transform duration-200 transform
-       hover:scale-150 hover:border-2 hover:border-blue-500 hover:z-5 cursor-pointer
-       ${!currentUser ? "scale-150 border-grey-500 border-2 z-5" : "z-1"}
+       hover:scale-150 hover:border-2 hover:border-blue-200 hover:z-5 cursor-pointer
+       ${!currentUser ? "scale-150 border-blue-500 border-2 z-5" : "z-1"}
        `}
                 icon={<GroupIcon className="text-white" />}
                 onClick={() => handleUserSelect(null)}
@@ -178,7 +181,7 @@ const TweetList = () => {
           </div>
         )}
 
-        <ScrollShadow hideScrollBar className="w-1/2 h-[500px] p-4">
+        <ScrollShadow hideScrollBar className="w-3/4 h-[500px] p-4">
           <div className="flex flex-col space-y-4">
             {tweets
               .filter(
@@ -218,7 +221,10 @@ const TweetList = () => {
                         </span>
                       </CardHeader>
                       <Divider />
-                      <CardBody className="flex flex-col space-y-4">
+                      <CardBody
+                        className="flex flex-col space-y-4"
+                        style={{ wordBreak: "break-all" }}
+                      >
                         <span>{item.data.full_text}</span>
                         {item.data.urls &&
                           Object.keys(item.data.urls).length > 0 && (
@@ -301,7 +307,10 @@ const TweetList = () => {
                       {item.data.map((subItem: any) => (
                         <div key={subItem.x_id}>
                           <Divider />
-                          <CardBody className="flex flex-col space-y-4">
+                          <CardBody
+                            className="flex flex-col space-y-4"
+                            style={{ wordBreak: "break-all" }}
+                          >
                             <span>{subItem.data.full_text}</span>
                             {subItem.data.urls &&
                               Object.keys(subItem.data.urls).length > 0 && (

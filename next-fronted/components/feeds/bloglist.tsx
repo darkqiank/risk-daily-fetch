@@ -61,7 +61,8 @@ const BlogList = () => {
             console.log("info:", info);
 
             return (
-              <div key={item.url} className="w-[27vw]">
+              // <div key={item.url} className="w-[27vw]">
+              <div key={item.url} className="w-full">
                 <PreviewCard {...info} />
               </div>
             );

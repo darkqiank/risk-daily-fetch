@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const MyScrollShadow = ({
   children,
@@ -11,6 +11,8 @@ const MyScrollShadow = ({
 }) => {
   const scrollRef = useRef(null);
   const scrollPositionKey = "scrollPosition";
+  const [scrollTop, setScrollTop] = useState(false);
+  const [scrollBottom, setScrollBottom] = useState(false);
 
   // 从 localStorage 中获取上次的滑动位置
   const getScrollPosition = () => {
@@ -39,6 +41,8 @@ const MyScrollShadow = ({
     // 添加事件监听以保存滑动位置
     const handleScroll = () => {
       saveScrollPosition();
+      isTopScroll();
+      isBottomScroll();
     };
 
     const currentRef = scrollRef.current as any;
@@ -51,17 +55,43 @@ const MyScrollShadow = ({
     };
   }, []);
 
+  const isTopScroll = () => {
+    const currentRef = scrollRef.current as any;
+
+    console.log(
+      "currentRef.scrollTop",
+      currentRef ? currentRef.scrollTop : null,
+    );
+    setScrollTop(currentRef ? currentRef.scrollTop > 0 : false);
+  };
+
+  const isBottomScroll = () => {
+    const currentRef = scrollRef.current as any;
+
+    setScrollBottom(
+      currentRef
+        ? currentRef.scrollTop <
+            currentRef.scrollHeight - currentRef.clientHeight
+        : false,
+    );
+  };
+
+  // const isTopBottomScroll = () => {
+  //   return isTopScroll() && isBottomScroll();
+  // };
+
   return (
     <div
       ref={scrollRef}
       className={`${className} overflow-y-auto ${hideScrollBar ? "scrollbar-hide" : ""} 
-       [mask-image:linear-gradient(#000,#000,transparent_0,#000_40px,#000_calc(100%_-_40px),transparent)] `}
-      //   [mask-image:linear-gradient(0deg,#000_calc(100%_-_var(--scroll-shadow-size)),transparent)]
-      //   [mask-image:linear-gradient(180deg,#000_calc(100%_-_var(--scroll-shadow-size)),transparent)]
-      style={{
-        position: "relative",
-        willChange: "scroll-position, mask-image",
-      }}
+       data-[top-bottom-scroll=true]:[mask-image:linear-gradient(transparent_0px,#000_40px,#000_calc(100%_-_40px),transparent)] 
+       data-[bottom-scroll=true]:[mask-image:linear-gradient(0deg,#000_calc(100%_-_40px),transparent)]
+       data-[top-scroll=true]:[mask-image:linear-gradient(180deg,#000_calc(100%_-_40px),transparent)]
+       `}
+      data-bottom-scroll={!scrollBottom}
+      data-orientation="vertical"
+      data-top-bottom-scroll={scrollBottom && scrollTop}
+      data-top-scroll={!scrollTop}
     >
       {children}
     </div>
