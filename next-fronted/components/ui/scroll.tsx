@@ -60,6 +60,7 @@ const MyScrollShadow = ({
       //   [mask-image:linear-gradient(180deg,#000_calc(100%_-_var(--scroll-shadow-size)),transparent)]
       style={{
         position: "relative",
+        willChange: "scroll-position, mask-image",
       }}
     >
       {children}

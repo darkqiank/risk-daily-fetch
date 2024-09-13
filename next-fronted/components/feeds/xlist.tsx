@@ -162,7 +162,12 @@ const TweetList = () => {
   }
 
   return (
-    <div className="flex">
+    <div
+      className="flex"
+      style={{
+        position: "relative",
+      }}
+    >
       <UserScroll className="flex-shrink-0" userInfos={x_users} />
       <div className="flex flex-col items-center justify-center space-y-4 flex-grow">
         {loading && (
