@@ -48,7 +48,7 @@ const BlogList = () => {
       {loading ? (
         <div className="gap-2 grid sm:grid-cols-1 md:grid-cols-3">
           {Array.from({ length: 6 }).map((_, index) => (
-            <div key={index} className="w-[27vw]">
+            <div key={index} className="sm:w-[75vw] md:w-[27vw]">
               <SkeletonCard />
             </div>
           ))}
@@ -61,8 +61,7 @@ const BlogList = () => {
             console.log("info:", info);
 
             return (
-              // <div key={item.url} className="w-[27vw]">
-              <div key={item.url} className="w-full">
+              <div key={item.url} className="sm:w-[75vw] md:w-[27vw]">
                 <PreviewCard {...info} />
               </div>
             );
