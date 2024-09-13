@@ -54,8 +54,8 @@ const TweetList = () => {
     };
 
     return (
-      <MyScrollShadow hideScrollBar className="w-[150-px] h-[500px] p-8">
-        <div className="flex flex-col space-y-4 items-center">
+      <MyScrollShadow hideScrollBar className="w-[150-px] h-[500px] px-8">
+        <div className="flex flex-col space-y-4 items-center py-8">
           <div key={0} className="w-[100-px] h-[60-px]">
             <Badge color="danger" content={`${totalNew}`}>
               <Avatar
