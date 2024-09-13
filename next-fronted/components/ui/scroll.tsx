@@ -55,12 +55,11 @@ const MyScrollShadow = ({
     <div
       ref={scrollRef}
       className={`${className} overflow-y-auto ${hideScrollBar ? "scrollbar-hide" : ""} 
-       [mask-image:linear-gradient(#000,#000,transparent_0,#000_var(--scroll-shadow-size),#000_calc(100%_-_var(--scroll-shadow-size)),transparent)] `}
+       [mask-image:linear-gradient(#000,#000,transparent_0,#000_40px,#000_calc(100%_-_40px),transparent)] `}
       //   [mask-image:linear-gradient(0deg,#000_calc(100%_-_var(--scroll-shadow-size)),transparent)]
       //   [mask-image:linear-gradient(180deg,#000_calc(100%_-_var(--scroll-shadow-size)),transparent)]
       style={{
         position: "relative",
-        "--scroll-shadow-size": "40px",
       }}
     >
       {children}
