@@ -42,8 +42,8 @@ const TweetList = () => {
               data-hover
               isFocusable
               className={`w-[50px] h-[50px] transition-transform duration-200 transform
-            hover:border-2 hover:border-blue-500 hover:z-5 cursor-pointer
-             ${(currentUser as unknown as string) === (userInfo.user_id as string) ? "border-blue-500 border-2 z-5" : "z-1"}
+             hover:scale-150 hover:border-2 hover:border-blue-500 hover:z-5 cursor-pointer
+             ${(currentUser as unknown as string) === (userInfo.user_id as string) ? "scale-150 border-grey-500 border-2 z-5" : "z-1"}
              `}
               src={`${process.env.NEXT_PUBLIC_BASE_IMAGES_URL}${userInfo.user_id}.png`}
               onClick={() => handleUserSelect(userInfo.user_id)}
@@ -62,8 +62,8 @@ const TweetList = () => {
                 data-hover
                 isFocusable
                 className={`bg-gradient-to-br from-[#FFB457] to-[#F31260] w-[50px] h-[50px] transition-transform duration-200 transform
-       hover:border-2 hover:border-blue-500 hover:z-5 cursor-pointer
-       ${!currentUser ? "border-blue-500 border-2 z-5" : "z-1"}
+       hover:scale-150 hover:border-2 hover:border-blue-500 hover:z-5 cursor-pointer
+       ${!currentUser ? "scale-150 border-grey-500 border-2 z-5" : "z-1"}
        `}
                 icon={<GroupIcon className="text-white" />}
                 onClick={() => handleUserSelect(null)}
