@@ -46,7 +46,7 @@ const BlogList = () => {
   return (
     <div className="flex flex-col items-center space-y-4">
       {loading ? (
-        <div className="gap-2 grid grid-cols-3">
+        <div className="gap-2 grid sm:grid-cols-1 md:grid-cols-3">
           {Array.from({ length: 6 }).map((_, index) => (
             <div key={index} className="w-[27vw]">
               <SkeletonCard />
@@ -54,7 +54,7 @@ const BlogList = () => {
           ))}
         </div>
       ) : (
-        <div className="gap-2 grid grid-cols-3">
+        <div className="gap-2 grid sm:grid-cols-1 md:grid-cols-3">
           {(blogs as any).map((item: any) => {
             let info = item.info;
 
