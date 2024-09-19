@@ -85,6 +85,20 @@ def upload_to_s3(data, s3_file_name):
     print(f"All links have been uploaded to s3://{s3_bucket}/{s3_file_name}")
 
 
+def upload_to_db(data):
+    import requests
+    end_point = os.getenv("DB_ENDPOINT")
+    url = f'{end_point}/api/blog'
+    headers = {
+        'X-AUTH-KEY': os.getenv("DB_AUTH_KEY"),
+        'Content-Type': 'application/json'
+    }
+    payload = json.dumps(data, ensure_ascii=False)
+    response = requests.request("POST", url, headers=headers, data=payload, timeout=30)
+
+    print(response.text)
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Collect links from Python scripts and upload to S3.')
     parser.add_argument('spider_dir', type=str, help='Directory containing the spider scripts')
@@ -98,4 +112,5 @@ if __name__ == '__main__':
     output_name = os.path.join('risk', 'blogs', args.spider_dir, f'{formatted_cur_day}.json')
     all_links = collect_links(args.spider_dir, args.script)
     upload_to_s3(all_links, output_name)
+    upload_to_db(all_links)
 

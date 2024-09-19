@@ -52,6 +52,20 @@ def upload_to_s3(data, s3_file_name):
     s3.put_object(Bucket=s3_bucket, Key=s3_file_name, Body=json_data.encode('utf-8'))
     print(f"All links have been uploaded to s3://{s3_bucket}/{s3_file_name}")
 
+
+def upload_to_db(data):
+    import requests
+    end_point = os.getenv("DB_ENDPOINT")
+    url = f'{end_point}/api/blog'
+    headers = {
+        'X-AUTH-KEY': os.getenv("DB_AUTH_KEY"),
+        'Content-Type': 'application/json'
+    }
+    payload = json.dumps(data, ensure_ascii=False)
+    response = requests.request("POST", url, headers=headers, data=payload, timeout=30)
+
+    print(response.text)
+
 # xx("129711053", "https://x.com/StopMalvertisin")
 # exit()
 
@@ -84,3 +98,5 @@ for username in users:
 
 # 保存数据
 upload_to_s3(output_datas, output_name)
+
+upload_to_db(output_datas)

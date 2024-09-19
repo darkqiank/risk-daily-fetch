@@ -32,5 +32,5 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           S3_BUCKET: ${{ secrets.S3_BUCKET }}
           S3_ENDPOINT: ${{ secrets.S3_ENDPOINT }}
-          D1_ENDPOINT: ${{ secrets.D1_ENDPOINT }}
-          D1_AUTH_KEY: ${{ secrets.D1_AUTH_KEY }}
+          DB_ENDPOINT: ${{ secrets.DB_ENDPOINT }}
+          DB_AUTH_KEY: ${{ secrets.DB_AUTH_KEY }}
