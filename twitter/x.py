@@ -56,7 +56,7 @@ def upload_to_s3(data, s3_file_name):
 def upload_to_db(data):
     import requests
     end_point = os.getenv("DB_ENDPOINT")
-    url = f'{end_point}/api/blog'
+    url = f'{end_point}/api/x'
     headers = {
         'X-AUTH-KEY': os.getenv("DB_AUTH_KEY"),
         'Content-Type': 'application/json'
