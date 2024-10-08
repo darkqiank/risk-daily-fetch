@@ -42,9 +42,9 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 // Utility function to convert a ReadableStream to a string
 const streamToString = (stream: Readable): Promise<string> => {
   return new Promise((resolve, reject) => {
-    const chunks: Buffer[] = [];
+    const chunks: Uint8Array[] = [];
 
-    stream.on("data", (chunk: Buffer) => chunks.push(chunk));
+    stream.on("data", (chunk: Uint8Array) => chunks.push(chunk));
     stream.on("end", () => resolve(Buffer.concat(chunks).toString("utf-8")));
     stream.on("error", reject);
   });
