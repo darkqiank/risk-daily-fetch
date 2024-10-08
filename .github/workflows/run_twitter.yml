@@ -5,7 +5,7 @@ name: risk twitter
 
 on:
   schedule:
-    - cron: '40 19 * * *'  # 每天UTC 19点 北京时间凌晨3点半 运行一次
+    - cron: '30 * * * *'  # 每天UTC 每小时 运行一次
   workflow_dispatch:  # 允许手动触发工作流
 
 jobs:

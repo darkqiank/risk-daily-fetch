@@ -3,30 +3,37 @@ import json
 
 def parse_user_timeline(data):
     x_items = []
-    timelines = data.get("data").get("user").get("result").get("timeline_v2").get("timeline")
-    instructions = timelines.get("instructions")
+    try:
+        timelines = data.get("data").get("user").get("result").get("timeline_v2").get("timeline")
+        instructions = timelines.get("instructions")
+    except Exception as e:
+        print("获取timeline错误", e)
+        return x_items
     for instruction in instructions:
-        _type = instruction.get("type")
-        if _type == "TimelineAddEntries":
-            entries = instruction.get("entries")
-            for entry in entries:
-                entryId = entry.get("entryId")
-                if str(entryId).startswith("who-to-follow"):
-                    continue
-                content = entry.get("content")
-                if content.get("entryType") == "TimelineTimelineItem":
-                    itemContent = content.get("itemContent")
-                    x_item = parse_timeline_tweet_item(entryId, itemContent)
-                    # print(x_item)
-                    x_items.append(x_item)
-                elif content.get("entryType") == "TimelineTimelineModule":
-                    x_item = {'x_id': entryId, 'itemType': "TimelineTimelineModule", 'data': []}
-                    for item in content.get("items"):
-                        _entryId = item.get("entryId")
-                        _itemContent = item.get("item").get("itemContent")
-                        x_item['data'].append(parse_timeline_tweet_item(_entryId, _itemContent))
-                    # print(x_item)
-                    x_items.append(x_item)
+        try:
+            _type = instruction.get("type")
+            if _type == "TimelineAddEntries":
+                entries = instruction.get("entries")
+                for entry in entries:
+                    entryId = entry.get("entryId")
+                    if str(entryId).startswith("who-to-follow"):
+                        continue
+                    content = entry.get("content")
+                    if content.get("entryType") == "TimelineTimelineItem":
+                        itemContent = content.get("itemContent")
+                        x_item = parse_timeline_tweet_item(entryId, itemContent)
+                        # print(x_item)
+                        x_items.append(x_item)
+                    elif content.get("entryType") == "TimelineTimelineModule":
+                        x_item = {'x_id': entryId, 'itemType': "TimelineTimelineModule", 'data': []}
+                        for item in content.get("items"):
+                            _entryId = item.get("entryId")
+                            _itemContent = item.get("item").get("itemContent")
+                            x_item['data'].append(parse_timeline_tweet_item(_entryId, _itemContent))
+                        # print(x_item)
+                        x_items.append(x_item)
+        except Exception as e:
+            print("解析单条twitter 错误 ", e)
     return x_items
 
 
