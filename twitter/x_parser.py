@@ -1,5 +1,12 @@
 import json
+import re
 
+
+def extract_tweet_id(text):
+    match = re.search(r'(tweet-(\d+))', text)
+    if match:
+        return match.group(1)
+    return text
 
 def parse_user_timeline(data):
     x_items = []
@@ -25,11 +32,15 @@ def parse_user_timeline(data):
                         # print(x_item)
                         x_items.append(x_item)
                     elif content.get("entryType") == "TimelineTimelineModule":
+                        x_id_list = []
                         x_item = {'x_id': entryId, 'itemType': "TimelineTimelineModule", 'data': []}
                         for item in content.get("items"):
                             _entryId = item.get("entryId")
                             _itemContent = item.get("item").get("itemContent")
-                            x_item['data'].append(parse_timeline_tweet_item(_entryId, _itemContent))
+                            parsed_data = parse_timeline_tweet_item(_entryId, _itemContent)
+                            x_id_list.append(parsed_data['x_id'])
+                            x_item['data'].append(parsed_data)
+                        x_item['x_id'] = 'profile-conversation-' + '-'.join(x_id_list)
                         # print(x_item)
                         x_items.append(x_item)
         except Exception as e:
@@ -40,7 +51,7 @@ def parse_user_timeline(data):
 def parse_timeline_tweet_item(entryId, itemContent):
     itemType = itemContent.get('itemType')
     x_item = {}
-    x_item['x_id'] = entryId
+    x_item['x_id'] = extract_tweet_id(entryId)
     x_item['itemType'] = itemType
     if itemType == "TimelineTweet":
         tweet_results = itemContent.get("tweet_results").get("result")
@@ -108,9 +119,9 @@ def parse_timeline_tweet_item(entryId, itemContent):
         return x_item
 
 
-# with open('./data.json', 'r', encoding='utf-8') as f:
-#     data = json.load(f)
-#     parse_user_timeline(data)
+with open('./data.json', 'r', encoding='utf-8') as f:
+    data = json.load(f)
+    print(parse_user_timeline(data))
 
 
 
