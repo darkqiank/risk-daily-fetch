@@ -4,6 +4,7 @@ import { getLinkPreview } from "link-preview-js";
 import {
   batchInsertBlog,
   BlogFilters,
+  getBlogCount,
   getPaginatedData,
 } from "@/db/schema/t_blog";
 import { authenticate } from "@/components/auth";
@@ -35,7 +36,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       res.status(200).json({ success: "blogs updated!" });
     } else if (req.method === "GET") {
       // 获取日期参数
-      const { blog_name, date, page, pageSize, withInfo } = req.query;
+      const { blog_name, date, page, pageSize, withInfo, type } = req.query;
 
       const pn = parseInt(page as string, 10) || 1;
       const ps = parseInt(pageSize as string, 10) || 6;
@@ -49,11 +50,19 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         filters.date = date;
       }
 
-      let res_data = await getPaginatedData(filters, pn, ps);
+      let res_data = {};
 
-      if (withInfo) {
-        // 如果需要更新metaInfo，则请求并返回
-        res_data.data = await getMetaInfos(res_data.data as any);
+      if (type === "total") {
+        res_data = await getBlogCount();
+      } else {
+        res_data = await getPaginatedData(filters, pn, ps);
+
+        if (withInfo) {
+          // 如果需要更新metaInfo，则请求并返回
+          (res_data as any).data = await getMetaInfos(
+            (res_data as any).data as any,
+          );
+        }
       }
 
       res.status(200).json(res_data);
