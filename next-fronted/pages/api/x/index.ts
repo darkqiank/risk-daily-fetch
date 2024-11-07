@@ -7,6 +7,7 @@ import {
   XFilters,
 } from "@/db/schema/t_x";
 import { authenticate } from "@/components/auth";
+import { XDataParse } from "@/components/feeds/x_data_parse";
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   try {
@@ -49,6 +50,13 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
       if (type === "total") {
         res_data = await getUserXcount();
+      } else if (type === "feed") {
+        res_data = await getPaginatedData(filters, pn, ps);
+        const feed_data = XDataParse(Object.values((res_data as any).data));
+
+        res_data = {
+          url: feed_data,
+        };
       } else {
         res_data = await getPaginatedData(filters, pn, ps);
       }
