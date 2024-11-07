@@ -4,6 +4,7 @@ import { CircularProgress } from "@mui/material";
 import { Listbox, ListboxItem } from "@nextui-org/react";
 import RssFeedIcon from "@mui/icons-material/RssFeed";
 import BookmarkAddIcon from "@mui/icons-material/BookmarkAdd";
+import FilterAltIcon from "@mui/icons-material/FilterAlt";
 
 import { PreviewCardV2, SkeletonCard } from "../ui/previewcard";
 
@@ -100,48 +101,54 @@ const BlogList = () => {
 
   return (
     <div className="flex gap-2">
-      <ScrollShadow className="flex h-[600px] p-4">
-        <div>
-          <Listbox
-            disallowEmptySelection
-            aria-label="选择博客来源"
-            items={[
-              { blog_name: "all", total: totalSum, new: newSum },
-              ...websites,
-            ]}
-            selectionMode="single"
-            variant="flat"
-            onAction={handleSiteSelect}
-          >
-            {(item: any) => (
-              <ListboxItem
-                key={item.blog_name}
-                endContent={
-                  <div className="flex items-center gap-2">
-                    {item.new > 0 && (
-                      <Chip
-                        color="danger"
-                        radius="md"
-                        size="sm"
-                        startContent={<BookmarkAddIcon fontSize="small" />}
-                        variant="flat"
-                      >
-                        {item.new}
-                      </Chip>
-                    )}
-                    <Chip radius="md" size="sm" variant="dot">
-                      {item.total}
-                    </Chip>
-                  </div>
-                }
-                startContent={<RssFeedIcon fontSize="small" />}
-              >
-                {item.blog_name}
-              </ListboxItem>
-            )}
-          </Listbox>
+      <div className="flex flex-col p-3">
+        <div className="flex p-3">
+          <FilterAltIcon />
+          <p>当前选择：{currentSite && <Chip>{currentSite}</Chip>}</p>
         </div>
-      </ScrollShadow>
+        <ScrollShadow className="flex h-[600px] p-4">
+          <div>
+            <Listbox
+              disallowEmptySelection
+              aria-label="选择博客来源"
+              items={[
+                { blog_name: "all", total: totalSum, new: newSum },
+                ...websites,
+              ]}
+              selectionMode="single"
+              variant="flat"
+              onAction={handleSiteSelect}
+            >
+              {(item: any) => (
+                <ListboxItem
+                  key={item.blog_name}
+                  endContent={
+                    <div className="flex items-center gap-2">
+                      {item.new > 0 && (
+                        <Chip
+                          color="danger"
+                          radius="md"
+                          size="sm"
+                          startContent={<BookmarkAddIcon fontSize="small" />}
+                          variant="flat"
+                        >
+                          {item.new}
+                        </Chip>
+                      )}
+                      <Chip radius="md" size="sm" variant="dot">
+                        {item.total}
+                      </Chip>
+                    </div>
+                  }
+                  startContent={<RssFeedIcon fontSize="small" />}
+                >
+                  {item.blog_name}
+                </ListboxItem>
+              )}
+            </Listbox>
+          </div>
+        </ScrollShadow>
+      </div>
       <div className="flex flex-col items-center space-y-4">
         <ScrollShadow className="flex flex-col items-center space-y-4 h-[600px] p-4">
           {loading ? (
