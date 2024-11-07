@@ -66,7 +66,7 @@ export const getUserXcount = async () => {
       username: t_x.username,
       user_link: t_x.user_link,
       total: sql<number>`cast(count(*) as int)`,
-      new: sql<number>`cast(COUNT(CASE WHEN CAST(${t_x.date} AS DATE)  > CURRENT_DATE - INTERVAL '1 day' THEN 1 END) as int)`,
+      new: sql<number>`cast(COUNT(CASE WHEN CAST(${t_x.date} AS DATE)  > CURRENT_DATE - INTERVAL '3 day' THEN 1 END) as int)`,
     })
     .from(t_x)
     .groupBy(t_x.user_id, t_x.username, t_x.user_link);
