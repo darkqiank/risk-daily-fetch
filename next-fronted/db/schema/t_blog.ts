@@ -88,7 +88,7 @@ export const getBlogCount = async () => {
     .select({
       blog_name: t_blog.blog_name,
       total: sql<number>`cast(count(*) as int)`,
-      new: sql<number>`cast(COUNT(CASE WHEN CAST(${t_blog.date} AS DATE) = CURRENT_DATE THEN 1 END) as int)`,
+      new: sql<number>`cast(COUNT(CASE WHEN CAST(${t_blog.date} AS DATE)  >= CURRENT_DATE - INTERVAL '3 days' THEN 1 END) as int)`,
     })
     .from(t_blog)
     .groupBy(t_blog.blog_name);
