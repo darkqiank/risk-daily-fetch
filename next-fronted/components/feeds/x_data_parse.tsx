@@ -1,5 +1,5 @@
 export const XDataParse = (twitters: any) => {
-  const result: string[] = [];
+  const result: { url: string; source: string }[] = [];
 
   twitters.forEach((twitter: any) => {
     if (
@@ -11,7 +11,7 @@ export const XDataParse = (twitters: any) => {
         Object.values(twitter.data.urls).forEach((value) => {
           const urlList = value as string[];
 
-          urlList.forEach((url) => result.push(url));
+          urlList.forEach((url) => result.push({ url, source: twitter.x_id }));
         });
       }
 
@@ -20,7 +20,7 @@ export const XDataParse = (twitters: any) => {
           .replace(/https:\/\/t\.co\/\S+/g, "")
           .trim();
 
-        result.push(cleanText);
+        result.push({ url: cleanText, source: twitter.x_id });
       }
 
       // 如果 data 是数组（如 profile-conversation-），处理子元素
@@ -30,7 +30,9 @@ export const XDataParse = (twitters: any) => {
             Object.values(subItem.data.urls).forEach((value) => {
               const urlList = value as string[];
 
-              urlList.forEach((url) => result.push(url));
+              urlList.forEach((url) =>
+                result.push({ url, source: twitter.x_id }),
+              );
             });
           }
 
@@ -39,7 +41,7 @@ export const XDataParse = (twitters: any) => {
               .replace(/https:\/\/t\.co\/\S+/g, "")
               .trim();
 
-            result.push(cleanText);
+            result.push({ url: cleanText, source: twitter.x_id });
           }
         });
       }
