@@ -12,3 +12,6 @@ feedparser
 curl_cffi
 pytz
 xlsxwriter
+fastapi
+python-dotenv
+uvicorn
