@@ -17,6 +17,10 @@ export const siteConfig = {
       href: "/nav/blog",
     },
     {
+      label: "Threat",
+      href: "/nav/threat",
+    },
+    {
       label: "About",
       href: "/nav/about",
     },

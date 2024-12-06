@@ -72,6 +72,13 @@ export const getUserXcount = async () => {
     .groupBy(t_x.user_id, t_x.username, t_x.user_link);
 };
 
+export const getXDataById = async (x_id: string) => {
+  return await db
+    .select()
+    .from(t_x)
+    .where(sql`${t_x.x_id} = ${x_id}`);
+};
+
 export const getPaginatedData = async (filters: XFilters, pn = 1, ps = 20) => {
   const offset = (pn - 1) * ps;
   let query = db

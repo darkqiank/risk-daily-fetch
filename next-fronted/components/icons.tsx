@@ -248,3 +248,23 @@ export const RiskEyeLogo: React.FC<IconSvgProps> = ({
     />
   </svg>
 );
+
+export const VTLogo: React.FC<IconSvgProps> = ({
+  size = 12,
+  height,
+  ...props
+}) => (
+  <svg
+    fill="none"
+    height={size || height}
+    viewBox="0 0 100 89"
+    width={size || height}
+    {...props}
+  >
+    <path
+      d="M45.292 44.5L0 89h100V0H0l45.292 44.5zM90 80H22l35.987-35.2L22 9h68v71z"
+      fill="#0b4dda"
+      fillRule="evenodd"
+    />
+  </svg>
+);
