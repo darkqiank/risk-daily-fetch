@@ -9,7 +9,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     if (req.method === "GET") {
       // 获取日期参数
-      const { date, page, pageSize } = req.query;
+      const { date, sourceType, apt, eu, page, pageSize } = req.query;
 
       const pn = parseInt(page as string, 10) || 1;
       const ps = parseInt(pageSize as string, 10) || 20;
@@ -18,6 +18,18 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
       if (typeof date === "string") {
         filters.date = date;
+      }
+
+      if (typeof sourceType === "string") {
+        filters.sourceType = sourceType;
+      }
+
+      if (typeof apt === "string") {
+        filters.apt = apt;
+      }
+
+      if (typeof eu === "string") {
+        filters.eu = eu;
       }
 
       let res_data = {};

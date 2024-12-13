@@ -18,7 +18,7 @@ import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import FileCopyIcon from "@mui/icons-material/FileCopy";
 import copy from "copy-to-clipboard";
 
-import { VTLogo } from "../icons";
+import { MyLinkIcon, VTLogo, XLogo } from "../icons";
 
 const truncateText = (text: string, maxLength: number) => {
   if (text.length > maxLength) {
@@ -103,7 +103,15 @@ function Row(props: { record: any }) {
                       : "#"
                 }
               >
-                <p className="text-small">{truncateText(record.source, 15)}</p>
+                {/* <p className="text-small">{truncateText(record.source, 15)}</p> */}
+                {record.source.startsWith("tweet") ||
+                record.source.startsWith("profile-conversation") ? (
+                  <IconButton size="small" style={{ fontSize: "12px" }}>
+                    <XLogo fontSize="inherit" />
+                  </IconButton>
+                ) : (
+                  <MyLinkIcon height={15} width={15} />
+                )}
               </Link>
             </TableCell>
             <TableCell rowSpan={span}>
@@ -195,7 +203,7 @@ function Row(props: { record: any }) {
 const ThreatTable = ({ threats }: any) => {
   return (
     <Paper sx={{ width: "100%", overflow: "hidden" }}>
-      <TableContainer sx={{ maxHeight: 600 }}>
+      <TableContainer sx={{ maxHeight: 500 }}>
         <Table stickyHeader>
           <TableHead>
             <TableRow>
