@@ -12,7 +12,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
     const response = await new RequestBuilder()
     .url(newURL)
-    .preset({ name: "chrome", version: "110" })
+    // .preset({ name: "chrome", version: "110" })
     .send();
 
     console.log("res", response.response);
