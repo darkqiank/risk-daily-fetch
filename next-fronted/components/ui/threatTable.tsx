@@ -96,7 +96,7 @@ function Row(props: { record: any }) {
                 href={
                   record.source.startsWith("tweet") ||
                   record.source.startsWith("profile-conversation")
-                    ? `/api/x?x_id=${record.source}`
+                    ? `/nav/x/${record.source}`
                     : record.url.startsWith("http") ||
                         record.url.startsWith("https")
                       ? record.url
