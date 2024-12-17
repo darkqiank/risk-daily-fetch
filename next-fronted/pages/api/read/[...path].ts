@@ -46,6 +46,17 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
           </body>
         </html>
       `);
+    } else if (format == "html2") {
+      res.status(200).send(`
+        <html>
+          <head>
+            <meta charset="UTF-8">
+          </head>
+          <body>
+            <p>${article?.content}</p>
+          </body>
+        </html>
+      `);
     } else {
       res.setHeader("Content-Type", "application/json; charset=utf-8");
       res.status(200).json({
