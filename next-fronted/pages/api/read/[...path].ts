@@ -31,12 +31,29 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     const article = reader.parse();
 
     if (format == "html") {
-      res.status(200).send(article?.content);
+      res.status(200).send(`
+        <html>
+          <head>
+            <meta charset="UTF-8">
+            <title>${article?.title}</title>
+          </head>
+          <body>
+            <h1>${article?.title}</h1>
+            <p><small>Published: ${article?.publishedTime}</small></p>
+            <p><small>Author: ${article?.byline}</small></p>
+            <p>Description: ${article?.excerpt}</p>
+            <p>${article?.textContent}</p>
+          </body>
+        </html>
+      `);
     } else {
+      res.setHeader("Content-Type", "application/json; charset=utf-8");
       res.status(200).json({
         title: article?.title,
-        content: article?.textContent,
         publishedTime: article?.publishedTime,
+        author: article?.byline,
+        description: article?.excerpt,
+        content: article?.textContent,
       });
     }
   } catch (error) {
