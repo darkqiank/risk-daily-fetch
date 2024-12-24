@@ -50,6 +50,8 @@ def collect_links(directory, specific_script=None):
                 if file.endswith('.py') and file != '__init__.py':
                     script_path = os.path.join(root, file)
                     links = call_get_links(script_path)
+                    # 去重
+                    links = list(set(links))
                     # Remove the .py suffix from the key
                     key = os.path.splitext(file)[0]
                     stats[key] = len(links)
