@@ -5,7 +5,6 @@ tqdm
 gitpython
 openpyxl
 boto3
-requests
 beautifulsoup4
 python-dateutil
 feedparser
@@ -15,3 +14,6 @@ xlsxwriter
 fastapi
 python-dotenv
 uvicorn
+DrissionPage==4.1.0.15
+gne
+readability-lxml
