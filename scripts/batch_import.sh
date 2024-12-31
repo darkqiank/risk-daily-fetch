@@ -1,8 +1,11 @@
 #!/bin/bash
 
+export http_proxy="http://127.0.0.1:10808"
+export https_proxy="http://127.0.0.1:10808"
+
 # 设置开始和结束日期
-start_date="2024-08-28"
-end_date="2024-09-06"
+start_date="2024-09-16"
+end_date="2024-09-16"
 
 # 将日期格式化为秒数
 start=$(date -j -f "%Y-%m-%d" "$start_date" "+%s")
@@ -16,11 +19,12 @@ while [ $current -le $end ]; do
   echo $date
 
   # 执行 GET 请求并获取结果
-  result=$(curl -s -X GET "http://127.0.0.1:3000/api/blog/s3/en?date=$date")
+  result=$(curl -s -X GET "https://risk-daily-fetch.vercel.app/api/x/s3?date=$date")
 
   # 执行 POST 请求
-  curl -X POST "http://127.0.0.1:3000/api/blog" \
+  curl -X POST "https://risk-daily-fetch.vercel.app/api/x" \
        -H "Content-Type: application/json" \
+       -H "X-AUTH-KEY: 572ce5667e425a" \
        -d "$result"
 
   # 将当前日期增加一天

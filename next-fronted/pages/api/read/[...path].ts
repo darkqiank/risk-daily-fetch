@@ -3,6 +3,7 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { JSDOM } from "jsdom";
 import * as Readability from "@mozilla/readability";
 import { RequestBuilder } from "ts-curl-impersonate";
+import {Curl} from "curl-wrap-ciff";
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   try {
@@ -17,14 +18,25 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
     console.log("url", newURL);
 
-    const response = await new RequestBuilder()
-      .url(newURL)
-      .flag("--max-time", "20")
-      .send();
+    const curl = new Curl();
+    curl.impersonate('chrome');
+    curl.url(newURL);
+    curl.get();
+    curl.followRedirect(true);
+    curl.timeout(30);
 
-    console.log("res", response.response);
+    // const response = await new RequestBuilder()
+    //   .url(newURL)
+    //   .flag("--max-time", "20")
+    //   .send();
+    // console.log("res", response.response);
+    // const dom = new JSDOM(response.response);
+
+    const curl_res = await curl;
+
+    console.log("res", curl_res);
     // 创建一个虚拟 DOM
-    const dom = new JSDOM(response.response);
+    const dom = new JSDOM(curl_res.body);
 
     // 使用 Readability 解析 HTML 内容
     const reader = new Readability.Readability(dom.window.document);
