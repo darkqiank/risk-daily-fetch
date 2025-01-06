@@ -24,7 +24,7 @@ while [ $current -le $end ]; do
   # 执行 POST 请求
   curl -X POST "https://risk-daily-fetch.vercel.app/api/x" \
        -H "Content-Type: application/json" \
-       -H "X-AUTH-KEY: 572ce5667e425a" \
+       -H "X-AUTH-KEY: 1111111" \
        -d "$result"
 
   # 将当前日期增加一天
