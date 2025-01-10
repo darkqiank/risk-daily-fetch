@@ -2,36 +2,6 @@ import React, { useEffect, useState } from "react";
 import { List, Typography, Tag } from "antd";
 import { Pagination } from "@nextui-org/react";
 
-// 模拟数据
-const data = [
-  {
-    url: "https://example.com/1",
-    contentHash: "abc123",
-    sourceType: "新闻",
-    source: "BBC",
-    detail: {
-      运营商事件: "是",
-      原因: "政策变动",
-      国家: ["美国", "中国"],
-      摘要: "此事件影响了许多用户。",
-    },
-    date: "2025-01-01",
-  },
-  {
-    url: "https://example.com/2",
-    contentHash: "def456",
-    sourceType: "博客",
-    source: "TechCrunch",
-    detail: {
-      运营商事件: "否",
-      原因: "技术升级",
-      国家: ["日本", "德国"],
-      摘要: "相关更新较为平稳。",
-    },
-    date: "2025-01-02",
-  },
-];
-
 const ContentList = () => {
   const [datas, setDatas] = useState();
   const [page, setPage] = useState(1);
@@ -114,6 +84,22 @@ const ContentList = () => {
                     )}
                   </div>
                 </div>
+                {item.extractionResult && (
+                  <div className="flex gap-3">
+                    <div>
+                      <strong>APT：</strong>
+                      {item.extractionResult.data.APT}
+                    </div>
+                    <div>
+                      <strong>欧美：</strong>
+                      {item.extractionResult.data.欧美}
+                    </div>
+                    {/* <div>
+                      <strong>iocs：</strong>
+                      {item.extractionResult.data.iocs}
+                    </div> */}
+                  </div>
+                )}
                 <div>
                   <strong>摘要：</strong>
                   {item.detail.摘要}

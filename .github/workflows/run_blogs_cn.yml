@@ -5,9 +5,7 @@ name: blogs parse cn
 
 on:
   schedule:
-    - cron: '30 19 * * *'  # 每天UTC 19点 北京时间凌晨3点半 运行三次
-    - cron: '30 11 * * *'
-    - cron: '30 3 * * *'
+    - cron: '0 */3  * * *'  # 每天隔3小时运行一次
   workflow_dispatch:  # 允许手动触发工作流
 
 jobs:
