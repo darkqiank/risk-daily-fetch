@@ -9,6 +9,10 @@ export const siteConfig = {
       href: "/",
     },
     {
+      label: "Details",
+      href: "/nav/detail",
+    },
+    {
       label: "Twitter",
       href: "/nav/x",
     },
