@@ -1,4 +1,4 @@
-import { pgTable, text, jsonb, char } from "drizzle-orm/pg-core";
+import { pgTable, text, jsonb, char, serial } from "drizzle-orm/pg-core";
 import { desc, sql, count, eq } from "drizzle-orm";
 
 import db from "../database";
@@ -6,6 +6,7 @@ import db from "../database";
 import { threatIntelligence } from "./threat_intelligence";
 
 export const contentDetail = pgTable("content_detail", {
+  id: serial("id").primaryKey(),
   url: char("url", { length: 500 }).notNull(),
   content: text("content"),
   contentHash: text("content_hash").notNull().unique(),
@@ -41,7 +42,7 @@ export const getPaginatedData = async (
       threatIntelligence,
       eq(contentDetail.contentHash, threatIntelligence.url),
     )
-    .orderBy(desc(contentDetail.date))
+    .orderBy(desc(contentDetail.id))
     .offset(offset)
     .limit(ps);
 

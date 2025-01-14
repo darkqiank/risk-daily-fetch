@@ -1,0 +1,1 @@
+ALTER TABLE "content_detail" ADD COLUMN "id" serial PRIMARY KEY NOT NULL;
