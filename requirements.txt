@@ -4,7 +4,7 @@ pandas
 tqdm
 gitpython
 openpyxl
-boto3
+boto3==1.34.152
 beautifulsoup4
 python-dateutil
 feedparser
