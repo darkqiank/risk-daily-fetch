@@ -18,6 +18,9 @@ export const contentDetail = pgTable("content_detail", {
 
 export interface DetailFilters {
   date?: string;
+  op?: string;
+  apt?: string;
+  eu?: string;
 }
 
 export const getPaginatedData = async (
@@ -26,6 +29,7 @@ export const getPaginatedData = async (
   ps = 20,
 ) => {
   const offset = (pn - 1) * ps;
+
   let query = db
     .select({
       url: contentDetail.url,
@@ -41,20 +45,63 @@ export const getPaginatedData = async (
     .leftJoin(
       threatIntelligence,
       eq(contentDetail.contentHash, threatIntelligence.url),
-    )
-    .orderBy(desc(contentDetail.id))
-    .offset(offset)
-    .limit(ps);
+    );
 
   // 构建总记录数查询
-  let countQuery = db.select({ value: count() }).from(contentDetail);
+  let countQuery = db
+    .select({ value: count() })
+    .from(contentDetail)
+    .leftJoin(
+      threatIntelligence,
+      eq(contentDetail.contentHash, threatIntelligence.url),
+    );
+
+  let sql_list = [];
 
   if (filters.date) {
-    query = query.where(sql`${contentDetail.date} = ${filters.date}`) as any;
-    countQuery = countQuery.where(
-      sql`${contentDetail.date} = ${filters.date}`,
-    ) as any;
+    sql_list.push(sql`${contentDetail.date} = ${filters.date}`);
   }
+
+  if (filters.op !== undefined) {
+    if (filters.op == "true") {
+      sql_list.push(sql`${contentDetail.detail} ->>'运营商事件' = '是'`);
+    } else if (filters.op == "false") {
+      sql_list.push(sql`${contentDetail.detail} ->>'运营商事件' != '是'`);
+    }
+  }
+
+  if (filters.apt !== undefined) {
+    if (filters.apt == "true") {
+      sql_list.push(
+        sql`${threatIntelligence.extractionResult}->'data'->>'APT' = '是'`,
+      );
+    } else if (filters.apt == "false") {
+      sql_list.push(
+        sql`${threatIntelligence.extractionResult}->'data'->>'APT' != '是'`,
+      );
+    }
+  }
+
+  if (filters.eu !== undefined) {
+    if (filters.eu == "true") {
+      sql_list.push(
+        sql`${threatIntelligence.extractionResult}->'data'->>'欧美' = '是'`,
+      );
+    } else if (filters.eu == "false") {
+      sql_list.push(
+        sql`${threatIntelligence.extractionResult}->'data'->>'欧美' != '是'`,
+      );
+    }
+  }
+
+  if (sql_list.length > 0) {
+    let sql_condition = sql.join(sql_list, sql` and `);
+
+    query = query.where(sql_condition) as any;
+    countQuery = countQuery.where(sql_condition) as any;
+  }
+
+  query = query.orderBy(desc(contentDetail.id)).offset(offset).limit(ps) as any;
 
   // 执行查询
   const [data, countResult] = await Promise.all([query, countQuery]);
