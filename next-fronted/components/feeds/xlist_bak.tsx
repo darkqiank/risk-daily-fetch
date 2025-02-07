@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import { ScrollShadow, Pagination, Badge, Avatar } from "@nextui-org/react";
 import GroupIcon from "@mui/icons-material/Group";
 import { Tooltip } from "@mui/material";
-import { Select, Space } from "antd";
 
 import { GradientCircularProgress } from "../ui/progress";
 import MyScrollShadow from "../ui/scroll";
@@ -160,7 +159,7 @@ const TweetList = () => {
         position: "relative",
       }}
     >
-      {/* <UserScroll className="flex-shrink-0" userInfos={x_users} /> */}
+      <UserScroll className="flex-shrink-0" userInfos={x_users} />
       <div className="flex flex-col items-center justify-center space-y-4 flex-grow">
         {loading && (
           <div className="absolute inset-0 flex items-center justify-center z-10">

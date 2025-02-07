@@ -148,9 +148,16 @@ const ContentList = () => {
         renderItem={(item: any) => (
           <List.Item key={item.contentHash}>
             <Typography.Title level={5}>
-              <a href={item.url} rel="noopener noreferrer" target="_blank">
+              {item.detail && (
+                <div>
+                  <a href={item.url} rel="noopener noreferrer" target="_blank">
+                    {item.detail.摘要}{" "}
+                  </a>
+                </div>
+              )}
+              {/* <a href={item.url} rel="noopener noreferrer" target="_blank">
                 {item.url}
-              </a>
+              </a> */}
             </Typography.Title>
             <div className="flex gap-3">
               <div>
@@ -243,10 +250,6 @@ const ContentList = () => {
                     </div>
                   </div>
                 )}
-                <div>
-                  <strong>摘要：</strong>
-                  {item.detail.摘要}
-                </div>
               </div>
             )}
           </List.Item>
