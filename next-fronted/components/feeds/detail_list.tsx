@@ -160,28 +160,35 @@ const ContentList = () => {
         itemLayout="vertical"
         renderItem={(item: any) => (
           <List.Item key={item.contentHash}>
-            <Typography.Title level={5}>
-              {item.detail && (
-                <div>
-                  <a href={item.url} rel="noopener noreferrer" target="_blank">
-                    {item.detail.摘要}{" "}
+            <div className="flex flex-col gap-1">
+              <Typography.Title level={5}>
+                {item.detail && <div>{item.detail.摘要} </div>}
+              </Typography.Title>
+              <div>
+                {item.url.startsWith("http") && (
+                  <a
+                    className="text-blue-500 hover:underline truncate"
+                    href={item.url}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    title={item.url}
+                  >
+                    {item.url}
                   </a>
+                )}
+              </div>
+              <div className="flex gap-3">
+                <div>
+                  <strong>来源类型：</strong> {item.sourceType || "未知"}
                 </div>
-              )}
-            </Typography.Title>
-            <div className="flex gap-3">
-              <div>
-                <strong>来源类型：</strong> {item.sourceType || "未知"}
+                <div>
+                  <strong>来源：</strong> {item.source || "未知"}
+                </div>
+                <div>
+                  <strong>日期：</strong> {item.date}
+                </div>
               </div>
-              <div>
-                <strong>来源：</strong> {item.source || "未知"}
-              </div>
-              <div>
-                <strong>日期：</strong> {item.date}
-              </div>
-            </div>
-            {item.detail && (
-              <div>
+              {item.detail && (
                 <div className="flex gap-3">
                   <div>
                     <strong>家庭事件：</strong>
@@ -222,54 +229,54 @@ const ContentList = () => {
                     )}
                   </div>
                 </div>
-                {item.extractionResult && (
-                  <div className="flex gap-3">
-                    <div>
-                      <strong>APT：</strong>
-                      {/* {item.extractionResult.data.APT} */}
-                      <Tag
-                        color={
-                          item.extractionResult.data.APT === "是"
-                            ? "green"
-                            : "red"
-                        }
-                      >
-                        {item.extractionResult.data.APT}
-                      </Tag>
-                    </div>
-                    <div>
-                      <strong>欧美：</strong>
-                      {/* {item.extractionResult.data.欧美} */}
-                      <Tag
-                        color={
-                          item.extractionResult.data.欧美 === "是"
-                            ? "green"
-                            : "red"
-                        }
-                      >
-                        {item.extractionResult.data.欧美}
-                      </Tag>
-                    </div>
-                    <div>
-                      <strong>iocs: </strong>
-                      {Array.isArray(item.extractionResult.data.iocs) &&
-                      item.extractionResult.data.iocs.length > 0 ? (
-                        <Tag
-                          color="#f50"
-                          onClick={() =>
-                            showModal(item.extractionResult.data.iocs)
-                          }
-                        >
-                          {item.extractionResult.data.iocs.length}
-                        </Tag>
-                      ) : (
-                        <Tag color="default">0</Tag>
-                      )}
-                    </div>
+              )}
+              {item.extractionResult && (
+                <div className="flex gap-3">
+                  <div>
+                    <strong>APT：</strong>
+                    {/* {item.extractionResult.data.APT} */}
+                    <Tag
+                      color={
+                        item.extractionResult.data.APT === "是"
+                          ? "green"
+                          : "red"
+                      }
+                    >
+                      {item.extractionResult.data.APT}
+                    </Tag>
                   </div>
-                )}
-              </div>
-            )}
+                  <div>
+                    <strong>欧美：</strong>
+                    {/* {item.extractionResult.data.欧美} */}
+                    <Tag
+                      color={
+                        item.extractionResult.data.欧美 === "是"
+                          ? "green"
+                          : "red"
+                      }
+                    >
+                      {item.extractionResult.data.欧美}
+                    </Tag>
+                  </div>
+                  <div>
+                    <strong>iocs: </strong>
+                    {Array.isArray(item.extractionResult.data.iocs) &&
+                    item.extractionResult.data.iocs.length > 0 ? (
+                      <Tag
+                        color="#f50"
+                        onClick={() =>
+                          showModal(item.extractionResult.data.iocs)
+                        }
+                      >
+                        {item.extractionResult.data.iocs.length}
+                      </Tag>
+                    ) : (
+                      <Tag color="default">0</Tag>
+                    )}
+                  </div>
+                </div>
+              )}
+            </div>
           </List.Item>
         )}
         size="large"
