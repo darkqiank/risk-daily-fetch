@@ -7,6 +7,7 @@ const ContentList = () => {
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
   const [total, setTotal] = useState(0);
+  const [homeFilter, setHomeFilter] = React.useState("all");
   const [opFilter, setOpFilter] = React.useState("all");
   const [aptFilter, setAptFilter] = React.useState("all");
   const [euFilter, setEuFilter] = React.useState("all");
@@ -36,6 +37,10 @@ const ContentList = () => {
   //   setIsModalOpen(false);
   // };
 
+  const handleSelectionHomeChange = (e: any) => {
+    setHomeFilter(e);
+  };
+
   const handleSelectionOpChange = (e: any) => {
     setOpFilter(e);
   };
@@ -49,6 +54,7 @@ const ContentList = () => {
 
   const fetchData = async (
     page: any,
+    homeFilter: any,
     opFilter: any,
     aptFilter: any,
     euFilter: any,
@@ -56,6 +62,10 @@ const ContentList = () => {
     try {
       setLoading(true);
       let url = `/api/detail/?page=${page}`;
+
+      if (homeFilter != "all") {
+        url = url + `&home=${homeFilter}`;
+      }
 
       if (opFilter != "all") {
         url = url + `&op=${opFilter}`;
@@ -86,12 +96,25 @@ const ContentList = () => {
   };
 
   useEffect(() => {
-    fetchData(page, opFilter, aptFilter, euFilter);
-  }, [page, opFilter, aptFilter, euFilter]);
+    fetchData(page, homeFilter, opFilter, aptFilter, euFilter);
+  }, [page, homeFilter, opFilter, aptFilter, euFilter]);
 
   return (
     <div>
       <div className="flex  w-full gap-3 items-center">
+        <ASelect
+          className="max-w-xs"
+          defaultValue="all"
+          options={[
+            { value: "true", label: "是" },
+            { value: "false", label: "否" },
+            { value: "all", label: "不限" },
+          ]}
+          placeholder="select it"
+          prefix="家庭事件"
+          size="small"
+          onChange={handleSelectionHomeChange}
+        />
         <ASelect
           className="max-w-xs"
           defaultValue="all"
@@ -131,16 +154,6 @@ const ContentList = () => {
           size="small"
           onChange={handleSelectionEuChange}
         />
-        {/* <Modal
-          open={isModalOpen}
-          title="Basic Modal"
-          onCancel={handleCancel}
-          onOk={handleOk}
-        >
-          <p>Some contents...</p>
-          <p>Some contents...</p>
-          <p>Some contents...</p>
-        </Modal> */}
       </div>
       <List
         dataSource={datas}
@@ -155,9 +168,6 @@ const ContentList = () => {
                   </a>
                 </div>
               )}
-              {/* <a href={item.url} rel="noopener noreferrer" target="_blank">
-                {item.url}
-              </a> */}
             </Typography.Title>
             <div className="flex gap-3">
               <div>
@@ -173,6 +183,14 @@ const ContentList = () => {
             {item.detail && (
               <div>
                 <div className="flex gap-3">
+                  <div>
+                    <strong>家庭事件：</strong>
+                    <Tag
+                      color={item.detail["家庭事件"] === "是" ? "green" : "red"}
+                    >
+                      {item.detail["家庭事件"] === "是" ? "是" : "否"}
+                    </Tag>
+                  </div>
                   <div>
                     <strong>运营商事件：</strong>
                     {/* {item.detail["运营商事件"]} */}

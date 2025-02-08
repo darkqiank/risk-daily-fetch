@@ -1,0 +1,1 @@
+ALTER TABLE "threat_intelligence" ADD CONSTRAINT "threat_intelligence_url_unique" UNIQUE("url");

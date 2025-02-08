@@ -18,6 +18,7 @@ export const contentDetail = pgTable("content_detail", {
 
 export interface DetailFilters {
   date?: string;
+  home?: string;
   op?: string;
   apt?: string;
   eu?: string;
@@ -60,6 +61,14 @@ export const getPaginatedData = async (
 
   if (filters.date) {
     sql_list.push(sql`${contentDetail.date} = ${filters.date}`);
+  }
+
+  if (filters.home !== undefined) {
+    if (filters.home == "true") {
+      sql_list.push(sql`${contentDetail.detail} ->>'家庭事件' = '是'`);
+    } else if (filters.home == "false") {
+      sql_list.push(sql`${contentDetail.detail} ->>'家庭事件' != '是'`);
+    }
   }
 
   if (filters.op !== undefined) {

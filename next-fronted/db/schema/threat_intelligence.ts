@@ -12,7 +12,7 @@ import db from "../database";
 
 export const threatIntelligence = pgTable("threat_intelligence", {
   id: serial("id").primaryKey(),
-  url: char("url", { length: 255 }).notNull(),
+  url: char("url", { length: 255 }).notNull().unique(),
   content: text("content"),
   insertedAt: timestamp("inserted_at", { precision: 6 }).notNull(),
   source: char("source", { length: 255 }),
