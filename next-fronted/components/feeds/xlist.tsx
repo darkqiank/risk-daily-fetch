@@ -1,13 +1,10 @@
 /* eslint-disable no-console */
 import React, { useEffect, useState } from "react";
-import { ScrollShadow, Pagination, Badge, Avatar } from "@nextui-org/react";
-import GroupIcon from "@mui/icons-material/Group";
-import { Tooltip } from "@mui/material";
-import { Select, Space } from "antd";
+import { Pagination } from "antd";
 
 import { GradientCircularProgress } from "../ui/progress";
-import MyScrollShadow from "../ui/scroll";
 import XCard from "../ui/xcard";
+import MyScrollShadow from "../ui/scroll";
 
 const TweetList = () => {
   const [data, setData] = useState(null);
@@ -16,63 +13,6 @@ const TweetList = () => {
   const [loading, setLoading] = useState(false);
   const [users, setUsers] = useState([]);
   const [currentUser, setCurrentUsers] = useState(null);
-
-  const UserScroll: any = ({ userInfos }: any) => {
-    const itemWidth = 40; // 每个 Avatar 的宽度，包括间距
-    const totalNew = userInfos.reduce(
-      (sum: any, user: any) => sum + user.new,
-      0,
-    );
-    const UserUpdateInfo = (userInfo: any) => {
-      return (
-        <Badge color="danger" content={`${userInfo.new}`}>
-          <Tooltip placement="right" title={`${userInfo.username}`}>
-            <Avatar
-              data-hover
-              isFocusable
-              className={`w-[50px] h-[50px] transition-transform duration-200 transform
-             hover:scale-150 hover:border-2 hover:border-blue-200 hover:z-5 cursor-pointer
-             ${(currentUser as unknown as string) === (userInfo.user_id as string) ? "scale-150 border-blue-500 border-2 z-5" : "z-1"}
-             `}
-              src={`${process.env.NEXT_PUBLIC_BASE_IMAGES_URL}${userInfo.user_id}.png`}
-              onClick={() => handleUserSelect(userInfo.user_id)}
-            />
-          </Tooltip>
-        </Badge>
-      );
-    };
-
-    return (
-      <MyScrollShadow
-        hideScrollBar
-        className="min-w-[70px] h-[500px] px-8 py-4"
-      >
-        <div className="flex flex-col space-y-4 items-center py-4">
-          <div key={0} className="w-[100-px] h-[60-px]">
-            <Badge color="danger" content={`${totalNew}`}>
-              <Avatar
-                data-hover
-                isFocusable
-                className={`bg-gradient-to-br from-[#FFB457] to-[#F31260] w-[50px] h-[50px] transition-transform duration-200 transform
-       hover:scale-150 hover:border-2 hover:border-blue-200 hover:z-5 cursor-pointer
-       ${!currentUser ? "scale-150 border-blue-500 border-2 z-5" : "z-1"}
-       `}
-                icon={<GroupIcon className="text-white" />}
-                onClick={() => handleUserSelect(null)}
-              />
-            </Badge>
-          </div>
-          {userInfos.map((user: any) => {
-            return (
-              <div key={user.user_id} className="w-[100-px] h-[60-px]">
-                <UserUpdateInfo {...user} />
-              </div>
-            );
-          })}
-        </div>
-      </MyScrollShadow>
-    );
-  };
 
   const fetchData = async (page: any) => {
     try {
@@ -120,11 +60,6 @@ const TweetList = () => {
     }
   };
 
-  const handleUserSelect = (user_id: any) => {
-    setCurrentUsers(user_id);
-    setPage(1);
-  };
-
   const handlePageChange = (newPage: any) => {
     setPage(newPage);
   };
@@ -170,7 +105,7 @@ const TweetList = () => {
           </div>
         )}
 
-        <ScrollShadow hideScrollBar className="w-3/4 h-[500px] p-4">
+        <MyScrollShadow hideScrollBar className="w-3/4 h-[500px] p-4">
           <div className="flex flex-col space-y-4">
             {tweets
               .filter(
@@ -193,13 +128,11 @@ const TweetList = () => {
                 <XCard key={item.x_id} item={item} />
               ))}
           </div>
-        </ScrollShadow>
+        </MyScrollShadow>
         <Pagination
-          showControls
-          showShadow
-          color="success"
-          initialPage={1}
-          page={page}
+          current={page}
+          defaultCurrent={1}
+          showSizeChanger={false}
           total={total}
           onChange={handlePageChange}
         />

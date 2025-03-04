@@ -1,6 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { List, Typography, Tag, Select as ASelect, Modal, Table } from "antd";
-import { Pagination } from "@nextui-org/react";
+import { Pagination } from "antd";
+
+import MyScrollShadow from "../ui/scroll";
 
 const ContentList = () => {
   const [datas, setDatas] = useState();
@@ -11,6 +13,7 @@ const ContentList = () => {
   const [opFilter, setOpFilter] = React.useState("all");
   const [aptFilter, setAptFilter] = React.useState("all");
   const [euFilter, setEuFilter] = React.useState("all");
+  const scrollRef = useRef<{ scrollToTop: () => void } | null>(null);
 
   const showModal = (iocs: any) => {
     // console.log("iocs 数据类型：", Array.isArray(iocsArray));
@@ -93,6 +96,7 @@ const ContentList = () => {
 
   const handlePageChange = (newPage: any) => {
     setPage(newPage);
+    scrollRef.current?.scrollToTop(); // 翻页时滚动到顶部
   };
 
   useEffect(() => {
@@ -100,7 +104,7 @@ const ContentList = () => {
   }, [page, homeFilter, opFilter, aptFilter, euFilter]);
 
   return (
-    <div>
+    <div className="flex flex-col gap-4">
       <div className="flex  w-full gap-3 items-center">
         <ASelect
           className="max-w-xs"
@@ -155,141 +159,156 @@ const ContentList = () => {
           onChange={handleSelectionEuChange}
         />
       </div>
-      <List
-        dataSource={datas}
-        itemLayout="vertical"
-        renderItem={(item: any) => (
-          <List.Item key={item.contentHash}>
-            <div className="flex flex-col gap-1">
-              <Typography.Title level={5}>
-                {item.detail && <div>{item.detail.摘要} </div>}
-              </Typography.Title>
-              <div>
-                {item.url.startsWith("http") && (
-                  <a
-                    className="text-blue-500 hover:underline truncate"
-                    href={item.url}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    title={item.url}
-                  >
-                    {item.url}
-                  </a>
-                )}
-              </div>
-              <div className="flex gap-3">
-                <div>
-                  <strong>来源类型：</strong> {item.sourceType || "未知"}
-                </div>
-                <div>
-                  <strong>来源：</strong> {item.source || "未知"}
-                </div>
-                <div>
-                  <strong>日期：</strong> {item.date}
-                </div>
-              </div>
-              {item.detail && (
-                <div className="flex gap-3">
-                  <div>
-                    <strong>家庭事件：</strong>
-                    <Tag
-                      color={item.detail["家庭事件"] === "是" ? "green" : "red"}
-                    >
-                      {item.detail["家庭事件"] === "是" ? "是" : "否"}
-                    </Tag>
-                  </div>
-                  <div>
-                    <strong>运营商事件：</strong>
-                    {/* {item.detail["运营商事件"]} */}
-                    <Tag
-                      color={
-                        item.detail["运营商事件"] === "是" ? "green" : "red"
-                      }
-                    >
-                      {item.detail["运营商事件"] === "是" ? "是" : "否"}
-                    </Tag>
-                  </div>
-                  <div>
-                    <strong>原因：</strong>
-                    {item.detail.原因}
-                  </div>
-                  <div>
-                    <strong>国家：</strong>
-                    {/* {item.detail.国家.map((country: any) => (
-                      <Tag key={country}>{country}</Tag>
-                    ))} */}
-                    {Array.isArray(item.detail.国家) ? (
-                      item.detail.国家.map((country: any) => (
-                        <Tag key={country}>{country}</Tag>
-                      ))
-                    ) : item.detail.国家 ? (
-                      <span>{item.detail.国家}</span>
-                    ) : (
-                      "无"
-                    )}
-                  </div>
-                </div>
-              )}
-              {item.extractionResult && (
-                <div className="flex gap-3">
-                  <div>
-                    <strong>APT：</strong>
-                    {/* {item.extractionResult.data.APT} */}
-                    <Tag
-                      color={
-                        item.extractionResult.data.APT === "是"
-                          ? "green"
-                          : "red"
-                      }
-                    >
-                      {item.extractionResult.data.APT}
-                    </Tag>
-                  </div>
-                  <div>
-                    <strong>欧美：</strong>
-                    {/* {item.extractionResult.data.欧美} */}
-                    <Tag
-                      color={
-                        item.extractionResult.data.欧美 === "是"
-                          ? "green"
-                          : "red"
-                      }
-                    >
-                      {item.extractionResult.data.欧美}
-                    </Tag>
-                  </div>
-                  <div>
-                    <strong>iocs: </strong>
-                    {Array.isArray(item.extractionResult.data.iocs) &&
-                    item.extractionResult.data.iocs.length > 0 ? (
-                      <Tag
-                        color="#f50"
-                        onClick={() =>
-                          showModal(item.extractionResult.data.iocs)
-                        }
-                      >
-                        {item.extractionResult.data.iocs.length}
-                      </Tag>
-                    ) : (
-                      <Tag color="default">0</Tag>
-                    )}
-                  </div>
-                </div>
-              )}
-            </div>
-          </List.Item>
-        )}
-        size="large"
-      />
       <Pagination
-        showControls
-        showShadow
-        color="success"
-        initialPage={1}
-        page={page}
+        current={page}
+        defaultCurrent={1}
+        showSizeChanger={false}
         total={total}
         onChange={handlePageChange}
       />
+      <MyScrollShadow
+        ref={scrollRef}
+        className="w-full h-[500px] p-4"
+        hideScrollBar={false}
+      >
+        <List
+          dataSource={datas}
+          itemLayout="vertical"
+          renderItem={(item: any) => (
+            <List.Item key={item.contentHash}>
+              <div className="flex flex-col gap-1">
+                <Typography.Title
+                  className="whitespace-normal break-words" // 添加换行样式
+                  level={5}
+                  style={{ wordWrap: "break-word", margin: 0 }}
+                >
+                  {item.detail && <div>{item.detail.摘要} </div>}
+                </Typography.Title>
+                <div className="w-full">
+                  {item.url.startsWith("http") && (
+                    <a
+                      className="text-blue-500 hover:underline whitespace-normal break-words"
+                      href={item.url}
+                      rel="noopener noreferrer"
+                      style={{
+                        wordBreak: "break-all",
+                        display: "inline-block",
+                        maxWidth: "100%",
+                      }}
+                      target="_blank"
+                      title={item.url}
+                    >
+                      {item.url}
+                    </a>
+                  )}
+                </div>
+                <div className="flex flex-wrap gap-3">
+                  <div>
+                    <strong>来源类型：</strong> {item.sourceType || "未知"}
+                  </div>
+                  <div>
+                    <strong>来源：</strong> {item.source || "未知"}
+                  </div>
+                  <div>
+                    <strong>日期：</strong> {item.date}
+                  </div>
+                </div>
+                {item.detail && (
+                  <div className="flex flex-wrap gap-3">
+                    <div>
+                      <strong>家庭事件：</strong>
+                      <Tag
+                        color={
+                          item.detail["家庭事件"] === "是" ? "green" : "red"
+                        }
+                      >
+                        {item.detail["家庭事件"] === "是" ? "是" : "否"}
+                      </Tag>
+                    </div>
+                    <div>
+                      <strong>运营商事件：</strong>
+                      {/* {item.detail["运营商事件"]} */}
+                      <Tag
+                        color={
+                          item.detail["运营商事件"] === "是" ? "green" : "red"
+                        }
+                      >
+                        {item.detail["运营商事件"] === "是" ? "是" : "否"}
+                      </Tag>
+                    </div>
+                    <div>
+                      <strong>原因：</strong>
+                      {item.detail.原因}
+                    </div>
+                    <div>
+                      <strong>国家：</strong>
+                      {/* {item.detail.国家.map((country: any) => (
+                      <Tag key={country}>{country}</Tag>
+                    ))} */}
+                      {Array.isArray(item.detail.国家) ? (
+                        item.detail.国家.map((country: any) => (
+                          <Tag key={country}>{country}</Tag>
+                        ))
+                      ) : item.detail.国家 ? (
+                        <span>{item.detail.国家}</span>
+                      ) : (
+                        "无"
+                      )}
+                    </div>
+                  </div>
+                )}
+                {item.extractionResult && (
+                  <div className="flex flex-wrap gap-3">
+                    <div>
+                      <strong>APT：</strong>
+                      {/* {item.extractionResult.data.APT} */}
+                      <Tag
+                        color={
+                          item.extractionResult.data.APT === "是"
+                            ? "green"
+                            : "red"
+                        }
+                      >
+                        {item.extractionResult.data.APT}
+                      </Tag>
+                    </div>
+                    <div>
+                      <strong>欧美：</strong>
+                      {/* {item.extractionResult.data.欧美} */}
+                      <Tag
+                        color={
+                          item.extractionResult.data.欧美 === "是"
+                            ? "green"
+                            : "red"
+                        }
+                      >
+                        {item.extractionResult.data.欧美}
+                      </Tag>
+                    </div>
+                    <div>
+                      <strong>iocs: </strong>
+                      {Array.isArray(item.extractionResult.data.iocs) &&
+                      item.extractionResult.data.iocs.length > 0 ? (
+                        <Tag
+                          color="#f50"
+                          onClick={() =>
+                            showModal(item.extractionResult.data.iocs)
+                          }
+                        >
+                          {item.extractionResult.data.iocs.length}
+                        </Tag>
+                      ) : (
+                        <Tag color="default">0</Tag>
+                      )}
+                    </div>
+                  </div>
+                )}
+              </div>
+            </List.Item>
+          )}
+          size="large"
+        />
+      </MyScrollShadow>
     </div>
   );
 };

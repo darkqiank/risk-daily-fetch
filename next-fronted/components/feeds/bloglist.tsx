@@ -1,27 +1,40 @@
 import React, { useEffect, useState } from "react";
-import { Chip, Pagination, ScrollShadow } from "@nextui-org/react";
-import { CircularProgress } from "@mui/material";
-import { Listbox, ListboxItem } from "@nextui-org/react";
-import RssFeedIcon from "@mui/icons-material/RssFeed";
-import BookmarkAddIcon from "@mui/icons-material/BookmarkAdd";
-import FilterAltIcon from "@mui/icons-material/FilterAlt";
+import {
+  Tag,
+  Pagination,
+  Card,
+  Skeleton,
+  Flex,
+  Grid,
+  Select,
+  Space,
+  Typography,
+} from "antd";
+import { LoadingOutlined, FilterOutlined } from "@ant-design/icons";
 
-import { PreviewCardV2, SkeletonCard } from "../ui/previewcard";
+import { PreviewCardV2 } from "../ui/previewcard";
+
+const { useBreakpoint } = Grid;
+const { Text } = Typography;
 
 const BlogList = () => {
-  const [blogs, setBlogs] = useState();
+  const [blogs, setBlogs] = useState<any>();
   const [page, setPage] = useState(1);
   const [total, setTotal] = useState(0);
   const [loading, setLoading] = useState(false);
-  const [websites, setWebsites] = useState([]);
-  const [currentSite, setCurrentSite] = useState(null);
+  const [websites, setWebsites] = useState<any[]>([]);
+  const [currentSite, setCurrentSite] = useState<string>("all");
+  const screens = useBreakpoint();
+
+  // 保持原有的数据获取逻辑不变...
 
   const fetchData = async (page: any) => {
     try {
       setLoading(true);
-      const url = currentSite
-        ? `/api/blog/?page=${page}&withInfo=true&blog_name=${currentSite}`
-        : `/api/blog/?page=${page}&withInfo=true`;
+      const url =
+        currentSite != "all"
+          ? `/api/blog/?page=${page}&withInfo=true&blog_name=${currentSite}`
+          : `/api/blog/?page=${page}&withInfo=true`;
       const response = await fetch(url);
       const jsonData = await response.json();
 
@@ -63,15 +76,6 @@ const BlogList = () => {
     }
   };
 
-  const handleSiteSelect = (site: any) => {
-    if (site === "all") {
-      setCurrentSite(null);
-    } else {
-      setCurrentSite(site);
-    }
-    setPage(1);
-  };
-
   const handlePageChange = (newPage: any) => {
     setPage(newPage);
   };
@@ -81,112 +85,101 @@ const BlogList = () => {
     fetchData(page);
   }, [page, currentSite]);
 
-  // Calculate the total sum of all `total` and `new` values
-  const totalSum = (websites as any).reduce(
-    (sum: any, item: any) => sum + item.total,
-    0,
-  );
-  const newSum = (websites as any).reduce(
-    (sum: any, item: any) => sum + item.new,
-    0,
-  );
-
   // console.log(data);
   if (!blogs)
     return (
       <div>
-        <CircularProgress />
+        <LoadingOutlined />
       </div>
     );
 
+  // 处理选择器变化
+  const handleSiteSelect = (value: string) => {
+    setCurrentSite(value);
+    setPage(1);
+  };
+
+  // 生成选择器选项
+  const selectorItems = [
+    {
+      value: "all",
+      label: "全部博客",
+      total: websites.reduce((sum, item) => sum + item.total, 0),
+      new: websites.reduce((sum, item) => sum + item.new, 0),
+    },
+    ...websites.map((site) => ({
+      value: site.blog_name,
+      label: site.blog_name,
+      total: site.total,
+      new: site.new,
+    })),
+  ];
+
   return (
-    <div className="flex gap-2">
-      <div className="flex flex-col p-3">
-        <div className="flex p-3">
-          <FilterAltIcon />
-          <p>当前选择：{currentSite && <Chip>{currentSite}</Chip>}</p>
-        </div>
-        <ScrollShadow className="flex h-[600px] p-4">
-          <div>
-            <Listbox
-              disallowEmptySelection
-              aria-label="选择博客来源"
-              items={[
-                { blog_name: "all", total: totalSum, new: newSum },
-                ...websites,
-              ]}
-              selectionMode="single"
-              variant="flat"
-              onAction={handleSiteSelect}
-            >
-              {(item: any) => (
-                <ListboxItem
-                  key={item.blog_name}
-                  endContent={
-                    <div className="flex items-center gap-2">
-                      {item.new > 0 && (
-                        <Chip
-                          color="danger"
-                          radius="md"
-                          size="sm"
-                          startContent={<BookmarkAddIcon fontSize="small" />}
-                          variant="flat"
-                        >
-                          {item.new}
-                        </Chip>
-                      )}
-                      <Chip radius="md" size="sm" variant="dot">
-                        {item.total}
-                      </Chip>
-                    </div>
-                  }
-                  startContent={<RssFeedIcon fontSize="small" />}
-                >
-                  {item.blog_name}
-                </ListboxItem>
-              )}
-            </Listbox>
-          </div>
-        </ScrollShadow>
-      </div>
-      <div className="flex flex-col items-center space-y-4">
-        <ScrollShadow className="flex flex-col items-center space-y-4 h-[600px] p-4">
-          {loading ? (
-            <div className="gap-2 grid sm:grid-cols-1 md:grid-cols-1">
-              {Array.from({ length: 6 }).map((_, index) => (
-                <div key={index} className="sm:w-[50vw] md:w-[50vw]">
-                  <SkeletonCard />
-                </div>
-              ))}
-            </div>
-          ) : (
-            <div className="gap-2 grid sm:grid-cols-1 md:grid-cols-1">
-              {(blogs as any).map((item: any) => {
-                let info = item.info;
+    <Flex vertical gap={16} style={{ padding: 24 }}>
+      {/* 筛选控制栏 */}
+      <Flex
+        align="center"
+        gap={16}
+        justify="space-between"
+        style={{ marginBottom: 24 }}
+        wrap="wrap"
+      >
+        <Space>
+          <FilterOutlined />
+          <Text strong>博客筛选：</Text>
+          <Select
+            dropdownRender={(menu) => <div style={{ padding: 8 }}>{menu}</div>}
+            style={{ width: screens.md ? 280 : "100%" }}
+            value={currentSite}
+            onChange={handleSiteSelect}
+          >
+            {selectorItems.map((item) => (
+              <Select.Option key={item.value} value={item.value}>
+                <Flex align="center" justify="space-between">
+                  <Text ellipsis>{item.label}</Text>
+                  <Space size={8}>
+                    {item.new > 0 && (
+                      <Tag color="red" style={{ marginRight: 0 }}>
+                        +{item.new}
+                      </Tag>
+                    )}
+                    <Tag color="default">{item.total}</Tag>
+                  </Space>
+                </Flex>
+              </Select.Option>
+            ))}
+          </Select>
+        </Space>
 
-                info.date = item.date;
-                console.log("info:", info);
-
-                return (
-                  <div key={item.url} className="sm:w-[50vw] md:w-[50vw]">
-                    <PreviewCardV2 {...info} />
-                  </div>
-                );
-              })}
-            </div>
-          )}
-        </ScrollShadow>
         <Pagination
-          showControls
-          showShadow
-          color="success"
-          initialPage={1}
-          page={page}
-          total={total}
+          current={page}
+          showSizeChanger={false}
+          simple={!screens.md}
+          total={total} // 假设每页10条
           onChange={handlePageChange}
         />
+      </Flex>
+
+      {/* 内容区域 */}
+      <div style={{ minHeight: 600 }}>
+        {loading ? (
+          <Flex vertical gap={16}>
+            {[...Array(6)].map((_, i) => (
+              <Card key={i}>
+                <Skeleton active paragraph={{ rows: 3 }} />
+              </Card>
+            ))}
+          </Flex>
+        ) : (
+          <Flex vertical gap={16}>
+            {(blogs || []).map((item: any) => (
+              <PreviewCardV2 key={item.url} {...item.info} date={item.date} />
+            ))}
+          </Flex>
+        )}
       </div>
-    </div>
+    </Flex>
   );
 };
 

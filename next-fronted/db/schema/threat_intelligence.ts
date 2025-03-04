@@ -33,12 +33,7 @@ export const getPaginatedData = async (
   ps = 20,
 ) => {
   const offset = (pn - 1) * ps;
-  let query = db
-    .select()
-    .from(threatIntelligence)
-    .orderBy(desc(threatIntelligence.insertedAt))
-    .offset(offset)
-    .limit(ps);
+  let query = db.select().from(threatIntelligence);
 
   // 构建总记录数查询
   let countQuery = db.select({ value: count() }).from(threatIntelligence);
@@ -85,10 +80,18 @@ export const getPaginatedData = async (
       );
     }
   }
-  let sql_condition = sql.join(sql_list, sql` and `);
 
-  query = query.where(sql_condition) as any;
-  countQuery = countQuery.where(sql_condition) as any;
+  if (sql_list.length > 0) {
+    let sql_condition = sql.join(sql_list, sql` and `);
+
+    query = query.where(sql_condition) as any;
+    countQuery = countQuery.where(sql_condition) as any;
+  }
+
+  query = query
+    .orderBy(desc(threatIntelligence.insertedAt))
+    .offset(offset)
+    .limit(ps) as any;
 
   // 执行查询
   const [data, countResult] = await Promise.all([query, countQuery]);
