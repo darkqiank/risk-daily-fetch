@@ -5,6 +5,9 @@ import {
   WechatOutlined,
 } from "@ant-design/icons";
 import useSWR from "swr";
+import { Typography } from "antd";
+
+const { Title } = Typography;
 
 // 类型定义
 interface StatsItem {
@@ -50,6 +53,14 @@ const DashboardPage = () => {
 
   return (
     <div className="p-4">
+      <div>
+        <Title level={2} style={{ marginBottom: 24 }}>
+          欢迎使用情报收集系统
+        </Title>
+        <div>
+          <p>这里是系统主页，您可以通过侧边栏导航到不同功能模块</p>
+        </div>
+      </div>
       {/* 全局统计 - 添加可选链操作符 */}
       <Card className="mb-6">
         <Row gutter={16}>
@@ -97,20 +108,6 @@ const DashboardPage = () => {
                 <div className="text-right">
                   <div className="text-2xl font-bold">{item.total}</div>
                   <div className="text-green-500">+{item.new}</div>
-                </div>
-              </div>
-              <div className="mt-4">
-                <Progress
-                  percent={item.progress}
-                  showInfo={false}
-                  strokeColor={{
-                    "0%": "#108ee9",
-                    "100%": "#87d068",
-                  }}
-                />
-                <div className="flex justify-between text-sm text-gray-500 mt-1">
-                  <span>新增占比</span>
-                  <span>{item.progress}%</span>
                 </div>
               </div>
             </Card>

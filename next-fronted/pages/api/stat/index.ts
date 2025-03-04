@@ -44,7 +44,6 @@ export default async function handler(
         monitored: twitterStats.monitored,
         total: twitterStats.total,
         new: twitterStats.new,
-        progress: Math.round((twitterStats.new / twitterStats.total) * 100),
       },
       {
         title: "博客源监控",
@@ -52,7 +51,6 @@ export default async function handler(
         monitored: blogStats.monitored,
         total: blogStats.total,
         new: blogStats.new,
-        progress: Math.round((blogStats.new / blogStats.total) * 100),
       },
       {
         title: "微信公众号监控",
@@ -60,7 +58,6 @@ export default async function handler(
         monitored: wechatStats.monitored,
         total: wechatStats.total,
         new: wechatStats.new,
-        progress: Math.round((wechatStats.new / wechatStats.total) * 100),
       },
     ];
 
