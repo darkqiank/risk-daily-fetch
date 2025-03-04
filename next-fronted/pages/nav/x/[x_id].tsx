@@ -1,8 +1,8 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
-import DefaultLayout from "@/layouts/default";
 import XCard from "@/components/ui/xcard";
+import SubPageLayout from "@/layouts/subpage";
 
 const DynamicPage = () => {
   const router = useRouter();
@@ -30,13 +30,12 @@ const DynamicPage = () => {
   }, [x_id]);
 
   return (
-    <DefaultLayout>
+    <SubPageLayout pageTitle="详情页面">
       <div>
-        <h1>详情页面</h1>
         <p>详情id：{x_id}</p>
         {data && <XCard item={data} />}
       </div>
-    </DefaultLayout>
+    </SubPageLayout>
   );
 };
 

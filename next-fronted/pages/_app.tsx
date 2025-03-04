@@ -1,25 +1,29 @@
 import type { AppProps } from "next/app";
 
-import { NextUIProvider } from "@nextui-org/system";
-import { ThemeProvider as NextThemesProvider } from "next-themes";
-import { useRouter } from "next/router";
+import React from "react";
+import { ConfigProvider } from "antd";
+import zhCN from "antd/locale/zh_CN";
 
-import { fontSans, fontMono } from "@/config/fonts";
+import "antd/dist/reset.css";
 import "@/styles/globals.css";
+import AppLayout from "@/layouts/default";
 
-export default function App({ Component, pageProps }: AppProps) {
-  const router = useRouter();
-
+function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <NextUIProvider navigate={router.push}>
-      <NextThemesProvider>
+    <ConfigProvider
+      locale={zhCN}
+      theme={{
+        token: {
+          colorPrimary: "#1890ff",
+          borderRadius: 4,
+        },
+      }}
+    >
+      <AppLayout>
         <Component {...pageProps} />
-      </NextThemesProvider>
-    </NextUIProvider>
+      </AppLayout>
+    </ConfigProvider>
   );
 }
 
-export const fonts = {
-  sans: fontSans.style.fontFamily,
-  mono: fontMono.style.fontFamily,
-};
+export default MyApp;

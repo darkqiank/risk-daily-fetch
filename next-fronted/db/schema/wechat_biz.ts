@@ -64,3 +64,15 @@ export const getPaginatedData = async (
     pageSize: ps,
   };
 };
+
+// 获取blog统计数据
+export const getBizCount = async () => {
+  return await db
+    .select({
+      nickname: wechatBiz.nickname,
+      total: sql<number>`cast(count(*) as int)`,
+      new: sql<number>`cast(COUNT(CASE WHEN CAST(${wechatBiz.pubTime} AS DATE)  >= CURRENT_DATE - INTERVAL '3 days' THEN 1 END) as int)`,
+    })
+    .from(wechatBiz)
+    .groupBy(wechatBiz.nickname);
+};

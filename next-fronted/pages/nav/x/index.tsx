@@ -1,18 +1,15 @@
 // import { title } from "@/components/primitives";
 import React from "react";
 
-import DefaultLayout from "@/layouts/default";
 import TweetList from "@/components/feeds/xlist";
+import SubPageLayout from "@/layouts/subpage";
 
 export default function DocsPage() {
   return (
-    <DefaultLayout>
-      <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-        {/* <div className="inline-block max-w-lg text-center justify-center">
-          <h1 className={title()}>Twitter</h1>
-        </div> */}
+    <SubPageLayout>
+      <section className="flex flex-col items-center justify-center gap-4 py-2">
         <TweetList />
       </section>
-    </DefaultLayout>
+    </SubPageLayout>
   );
 }

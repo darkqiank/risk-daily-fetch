@@ -1,42 +1,49 @@
-// import { Link } from "@nextui-org/link";
+// import { Layout } from "antd";
 
-import { Head } from "./head";
+// import Sidebar from "@/layouts/sidebar";
 
-import { Navbar } from "@/components/navbar";
+// const AppLayout = ({ children }: { children: React.ReactNode }) => {
+//   return (
+//     <Layout hasSider>
+//       <Sidebar />
+//       <Layout style={{ marginLeft: 240 }}>
+//         <main>{children}</main>
+//       </Layout>
+//     </Layout>
+//   );
+// };
 
-export default function DefaultLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+// export default AppLayout;
+
+// components/Layout/index.tsx
+import React from "react";
+import { Layout } from "antd";
+
+import Sidebar from "@/layouts/sidebar";
+import Header from "@/layouts/header";
+
+const { Content } = Layout;
+
+const AppLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
-    <div className="relative flex flex-col h-screen">
-      <Head />
-      <Navbar />
-      <main className="container mx-auto max-w-7xl px-6 flex-grow pt-2 md:pt-4">
-        {children}
-      </main>
-      <footer className="w-full flex items-center justify-center py-3">
-        {/* <Link
-          isExternal
-          className="flex items-center gap-1 text-current"
-          href="https://catflix.cn"
-          title="catflix.cn homepage"
-        >
-          <span className="text-default-600">Powered by</span>
-          <p className="text-primary">CATFLIX</p>
-        </Link> */}
-        <a
-          className="flex items-center gap-1 text-current"
-          href="https://catflix.cn"
-          rel="noopener noreferrer"
-          target="_blank"
-          title="catflix.cn homepage"
-        >
-          <span className="text-default-600">Powered by</span>
-          <p className="text-primary">CATFLIX</p>
-        </a>
-      </footer>
-    </div>
+    <Layout hasSider style={{ minHeight: "100vh" }}>
+      <Sidebar />
+      <Layout style={{ marginLeft: 240 }}>
+        <Header />
+        <Content style={{ margin: "24px 16px 0", overflow: "initial" }}>
+          <div
+            style={{
+              padding: 24,
+              background: "#fff",
+              minHeight: "calc(100vh - 112px)",
+            }}
+          >
+            {children}
+          </div>
+        </Content>
+      </Layout>
+    </Layout>
   );
-}
+};
+
+export default AppLayout;

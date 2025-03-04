@@ -9,8 +9,9 @@ import {
   Select,
   Space,
   Typography,
+  Spin,
 } from "antd";
-import { LoadingOutlined, FilterOutlined } from "@ant-design/icons";
+import { FilterOutlined } from "@ant-design/icons";
 
 import { PreviewCardV2 } from "../ui/previewcard";
 
@@ -86,12 +87,13 @@ const BlogList = () => {
   }, [page, currentSite]);
 
   // console.log(data);
-  if (!blogs)
-    return (
-      <div>
-        <LoadingOutlined />
-      </div>
-    );
+  // if (!blogs)
+  //   return (
+  //     <div>
+  //       <LoadingOutlined />
+  //     </div>
+  //   );
+  if (!blogs) return <Spin />;
 
   // 处理选择器变化
   const handleSiteSelect = (value: string) => {

@@ -6,10 +6,12 @@ const MyScrollShadow = React.forwardRef(
       children,
       hideScrollBar,
       className,
+      showShadow = true, // 新增控制阴影的prop
     }: {
       children: any;
       hideScrollBar: any;
       className: any;
+      showShadow?: boolean; // 类型定义
     },
     ref,
   ) => {
@@ -79,18 +81,36 @@ const MyScrollShadow = React.forwardRef(
       },
     }));
 
+    // 新增阴影控制条件
+    const shadowClasses = showShadow
+      ? `
+      data-[top-bottom-scroll=true]:[mask-image:linear-gradient(transparent_0px,#000_40px,#000_calc(100%_-_40px),transparent)]
+      data-[bottom-scroll=true]:[mask-image:linear-gradient(0deg,#000_calc(100%_-_40px),transparent)]
+      data-[top-scroll=true]:[mask-image:linear-gradient(180deg,#000_calc(100%_-_40px),transparent)]
+    `
+      : "";
+
     return (
+      // <div
+      //   ref={scrollRef}
+      //   className={`${className} overflow-y-auto ${hideScrollBar ? "scrollbar-hide" : ""}
+      //   data-[top-bottom-scroll=true]:[mask-image:linear-gradient(transparent_0px,#000_40px,#000_calc(100%_-_40px),transparent)]
+      //   data-[bottom-scroll=true]:[mask-image:linear-gradient(0deg,#000_calc(100%_-_40px),transparent)]
+      //   data-[top-scroll=true]:[mask-image:linear-gradient(180deg,#000_calc(100%_-_40px),transparent)]
+      //   `}
+      //   data-bottom-scroll={!scrollBottom}
+      //   data-orientation="vertical"
+      //   data-top-bottom-scroll={scrollBottom && scrollTop}
+      //   data-top-scroll={!scrollTop}
+      // >
       <div
         ref={scrollRef}
         className={`${className} overflow-y-auto ${hideScrollBar ? "scrollbar-hide" : ""} 
-        data-[top-bottom-scroll=true]:[mask-image:linear-gradient(transparent_0px,#000_40px,#000_calc(100%_-_40px),transparent)] 
-        data-[bottom-scroll=true]:[mask-image:linear-gradient(0deg,#000_calc(100%_-_40px),transparent)]
-        data-[top-scroll=true]:[mask-image:linear-gradient(180deg,#000_calc(100%_-_40px),transparent)]
-        `}
-        data-bottom-scroll={!scrollBottom}
+      ${shadowClasses}`} // 应用条件样式
+        data-bottom-scroll={showShadow && !scrollBottom} // 增加条件判断
         data-orientation="vertical"
-        data-top-bottom-scroll={scrollBottom && scrollTop}
-        data-top-scroll={!scrollTop}
+        data-top-bottom-scroll={showShadow && scrollBottom && scrollTop}
+        data-top-scroll={showShadow && !scrollTop}
       >
         {children}
       </div>

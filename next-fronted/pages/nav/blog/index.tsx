@@ -2,17 +2,14 @@ import React from "react";
 
 import BlogList from "@/components/feeds/bloglist";
 // import { title } from "@/components/primitives";
-import DefaultLayout from "@/layouts/default";
+import SubPageLayout from "@/layouts/subpage";
 
 export default function DocsPage() {
   return (
-    <DefaultLayout>
-      <section className="flex flex-col items-center justify-center gap-2 py-4 md:py-8">
-        {/* <div className="inline-block max-w-lg text-center justify-center">
-          <h5 className={title()}>Blog</h5>
-        </div> */}
+    <SubPageLayout>
+      <section className="flex flex-col items-center justify-center gap-2 py-2">
         <BlogList />
       </section>
-    </DefaultLayout>
+    </SubPageLayout>
   );
 }

@@ -1,5 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
-import { List, Typography, Tag, Select as ASelect, Modal, Table } from "antd";
+import {
+  List,
+  Typography,
+  Tag,
+  Select as ASelect,
+  Modal,
+  Table,
+  Spin,
+} from "antd";
 import { Pagination } from "antd";
 
 import MyScrollShadow from "../ui/scroll";
@@ -103,8 +111,17 @@ const ContentList = () => {
     fetchData(page, homeFilter, opFilter, aptFilter, euFilter);
   }, [page, homeFilter, opFilter, aptFilter, euFilter]);
 
+  if (!datas) return <Spin />;
+
   return (
     <div className="flex flex-col gap-4">
+      {loading && (
+        <div className="absolute inset-0 flex items-center justify-center z-10">
+          <div className="loader">
+            <Spin />
+          </div>
+        </div>
+      )}
       <div className="flex  w-full gap-3 items-center">
         <ASelect
           className="max-w-xs"
@@ -168,8 +185,10 @@ const ContentList = () => {
       />
       <MyScrollShadow
         ref={scrollRef}
-        className="w-full h-[500px] p-4"
+        // className="w-full h-[500px] p-4"
+        className="w-full h-[800px] p-4"
         hideScrollBar={false}
+        showShadow={false}
       >
         <List
           dataSource={datas}

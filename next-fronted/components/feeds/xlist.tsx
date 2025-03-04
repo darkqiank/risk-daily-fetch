@@ -1,8 +1,10 @@
 /* eslint-disable no-console */
-import React, { useEffect, useState } from "react";
-import { Pagination } from "antd";
+import React, { useEffect, useRef, useState } from "react";
+import { Pagination, Spin } from "antd";
 
-import { GradientCircularProgress } from "../ui/progress";
+// import { GradientCircularProgress } from "../ui/progress";
+import { LoadingOutlined } from "@ant-design/icons";
+
 import XCard from "../ui/xcard";
 import MyScrollShadow from "../ui/scroll";
 
@@ -13,6 +15,7 @@ const TweetList = () => {
   const [loading, setLoading] = useState(false);
   const [users, setUsers] = useState([]);
   const [currentUser, setCurrentUsers] = useState(null);
+  const scrollRef = useRef<{ scrollToTop: () => void } | null>(null);
 
   const fetchData = async (page: any) => {
     try {
@@ -62,6 +65,7 @@ const TweetList = () => {
 
   const handlePageChange = (newPage: any) => {
     setPage(newPage);
+    scrollRef.current?.scrollToTop(); // 翻页时滚动到顶部
   };
 
   useEffect(() => {
@@ -70,12 +74,13 @@ const TweetList = () => {
   }, [page, currentUser]);
 
   // console.log(data);
-  if (!data)
-    return (
-      <div>
-        <GradientCircularProgress />
-      </div>
-    );
+  // if (!data)
+  //   return (
+  //     <div>
+  //       <LoadingOutlined />
+  //     </div>
+  //   );
+  if (!data) return <Spin />;
   const tweets = Object.values(data);
   const x_users = Object.values(users as any);
 
@@ -95,17 +100,27 @@ const TweetList = () => {
         position: "relative",
       }}
     >
-      {/* <UserScroll className="flex-shrink-0" userInfos={x_users} /> */}
       <div className="flex flex-col items-center justify-center space-y-4 flex-grow">
         {loading && (
           <div className="absolute inset-0 flex items-center justify-center z-10">
             <div className="loader">
-              <GradientCircularProgress />
+              <Spin />
             </div>
           </div>
         )}
-
-        <MyScrollShadow hideScrollBar className="w-3/4 h-[500px] p-4">
+        <Pagination
+          current={page}
+          defaultCurrent={1}
+          showSizeChanger={false}
+          total={total}
+          onChange={handlePageChange}
+        />
+        <MyScrollShadow
+          ref={scrollRef}
+          className="w-full h-[800px] p-2"
+          hideScrollBar={false}
+          showShadow={false}
+        >
           <div className="flex flex-col space-y-4">
             {tweets
               .filter(
@@ -129,13 +144,6 @@ const TweetList = () => {
               ))}
           </div>
         </MyScrollShadow>
-        <Pagination
-          current={page}
-          defaultCurrent={1}
-          showSizeChanger={false}
-          total={total}
-          onChange={handlePageChange}
-        />
       </div>
     </div>
   );

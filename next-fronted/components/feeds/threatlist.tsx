@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Spin, Pagination, Select } from "antd";
 
 import ThreatTable from "../ui/threatTable";
+import MyScrollShadow from "../ui/scroll";
 
 const { Option } = Select;
 
@@ -14,11 +15,17 @@ const ThreatList = () => {
   const [sourceFilter, setSourceFilter] = useState("all");
   const [aptFilter, setAptFilter] = useState("all");
   const [euFilter, setEuFilter] = useState("all");
+  const scrollRef = useRef<{ scrollToTop: () => void } | null>(null);
 
   const [loading, setLoading] = useState(false);
 
   const handleSelectionChange = (setter: any) => (value: any) => {
     setter(value);
+  };
+
+  const handlePageChange = (newPage: any) => {
+    setPage(newPage);
+    scrollRef.current?.scrollToTop(); // 翻页时滚动到顶部
   };
 
   const fetchData = async () => {
@@ -49,6 +56,13 @@ const ThreatList = () => {
 
   return (
     <div className="flex flex-col items-center space-y-4">
+      {loading && (
+        <div className="absolute inset-0 flex items-center justify-center z-10">
+          <div className="loader">
+            <Spin />
+          </div>
+        </div>
+      )}
       <div className="flex w-full gap-3 items-center">
         <Select
           className="max-w-xs"
@@ -97,12 +111,21 @@ const ThreatList = () => {
         current={page}
         pageSize={10}
         showSizeChanger={false}
-        total={total * 10}
-        onChange={setPage}
+        total={total}
+        onChange={handlePageChange}
       />
-      <div className="flex flex-col gap-2">
+      <MyScrollShadow
+        ref={scrollRef}
+        // className="w-full h-[500px] p-4"
+        className="w-full h-[800px] p-4"
+        hideScrollBar={false}
+        showShadow={false}
+      >
         <ThreatTable threats={threats} />
-      </div>
+      </MyScrollShadow>
+      {/* <div className="flex flex-col gap-2">
+        <ThreatTable threats={threats} />
+      </div> */}
     </div>
   );
 };

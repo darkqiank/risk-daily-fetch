@@ -1,69 +1,57 @@
-export type SiteConfig = typeof siteConfig;
+// config/site.ts
+import {
+  DashboardOutlined,
+  TeamOutlined,
+  DatabaseOutlined,
+} from "@ant-design/icons";
 
-export const siteConfig = {
-  name: "RISK EYE",
-  description: "Uncovering threats, securing futures.",
-  navItems: [
-    {
-      label: "Home",
-      href: "/",
-    },
-    {
-      label: "Details",
-      href: "/nav/detail",
-    },
-    {
-      label: "Twitter",
-      href: "/nav/x",
-    },
-    {
-      label: "Blog",
-      href: "/nav/blog",
-    },
-    {
-      label: "Threat",
-      href: "/nav/threat",
-    },
-    {
-      label: "About",
-      href: "/nav/about",
-    },
-  ],
-  navMenuItems: [
-    {
-      label: "Profile",
-      href: "/profile",
-    },
-    {
-      label: "Dashboard",
-      href: "/dashboard",
-    },
-    {
-      label: "Projects",
-      href: "/projects",
-    },
-    {
-      label: "Team",
-      href: "/team",
-    },
-    {
-      label: "Calendar",
-      href: "/calendar",
-    },
-    {
-      label: "Settings",
-      href: "/settings",
-    },
-    {
-      label: "Help & Feedback",
-      href: "/help-feedback",
-    },
-    {
-      label: "Logout",
-      href: "/logout",
-    },
-  ],
-  links: {
-    github: "https://github.com/darkqiank/risk-daily-fetch/",
+// 定义菜单项类型
+export interface MenuItem {
+  label: React.ReactNode;
+  key: string;
+  icon?: React.ComponentType;
+  href?: string;
+  subItems?: MenuItem[];
+}
+
+export const menuItems: MenuItem[] = [
+  {
+    label: "仪表盘",
+    key: "/nav/dashboard",
+    icon: DashboardOutlined,
+    href: "/nav/dashboard",
   },
-};
+  {
+    label: "数据查看",
+    key: "/nav",
+    icon: DatabaseOutlined,
+    subItems: [
+      {
+        label: "输出详情",
+        key: "/nav/detail",
+        href: "/nav/detail",
+      },
+      {
+        label: "twitter",
+        key: "/nav/x",
+        href: "/nav/x",
+      },
+      {
+        label: "博客源",
+        key: "/nav/blog",
+        href: "/nav/blog",
+      },
+      {
+        label: "ioc列表",
+        key: "/nav/threat",
+        href: "/nav/threat",
+      },
+    ],
+  },
+  {
+    label: "关于",
+    key: "/nav/about",
+    icon: TeamOutlined,
+    href: "/nav/about",
+  },
+];

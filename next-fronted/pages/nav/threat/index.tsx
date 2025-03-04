@@ -2,13 +2,14 @@
 import React from "react";
 
 import ThreatList from "@/components/feeds/threatlist";
+import SubPageLayout from "@/layouts/subpage";
 
 export default function DocsPage() {
   return (
-    // <DefaultLayout>
-    <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-      <ThreatList />
-    </section>
-    // </DefaultLayout>
+    <SubPageLayout>
+      <section className="flex flex-col items-center justify-center gap-4 py-2">
+        <ThreatList />
+      </section>
+    </SubPageLayout>
   );
 }
