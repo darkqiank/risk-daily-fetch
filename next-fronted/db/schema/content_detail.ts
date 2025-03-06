@@ -18,6 +18,7 @@ export const contentDetail = pgTable("content_detail", {
 
 export interface DetailFilters {
   date?: string;
+  sourceType?: string;
   home?: string;
   op?: string;
   apt?: string;
@@ -61,6 +62,10 @@ export const getPaginatedData = async (
 
   if (filters.date) {
     sql_list.push(sql`${contentDetail.date} = ${filters.date}`);
+  }
+
+  if (filters.sourceType) {
+    sql_list.push(sql`${contentDetail.sourceType} = ${filters.sourceType}`);
   }
 
   if (filters.home !== undefined) {

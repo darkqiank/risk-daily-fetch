@@ -17,6 +17,7 @@ const ContentList = () => {
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
   const [total, setTotal] = useState(0);
+  const [sourceTypeFilter, setSourceTypeFilter] = React.useState("all");
   const [homeFilter, setHomeFilter] = React.useState("all");
   const [opFilter, setOpFilter] = React.useState("all");
   const [aptFilter, setAptFilter] = React.useState("all");
@@ -48,23 +49,33 @@ const ContentList = () => {
   //   setIsModalOpen(false);
   // };
 
+  const handleSelectionSourceTypeChange = (e: any) => {
+    setSourceTypeFilter(e);
+    setPage(1);
+  };
+
   const handleSelectionHomeChange = (e: any) => {
     setHomeFilter(e);
+    setPage(1);
   };
 
   const handleSelectionOpChange = (e: any) => {
     setOpFilter(e);
+    setPage(1);
   };
 
   const handleSelectionAptChange = (e: any) => {
     setAptFilter(e);
+    setPage(1);
   };
   const handleSelectionEuChange = (e: any) => {
     setEuFilter(e);
+    setPage(1);
   };
 
   const fetchData = async (
     page: any,
+    sourceTypeFilter: any,
     homeFilter: any,
     opFilter: any,
     aptFilter: any,
@@ -73,6 +84,10 @@ const ContentList = () => {
     try {
       setLoading(true);
       let url = `/api/detail/?page=${page}`;
+
+      if (sourceTypeFilter != "all") {
+        url = url + `&sourceType=${sourceTypeFilter}`;
+      }
 
       if (homeFilter != "all") {
         url = url + `&home=${homeFilter}`;
@@ -91,11 +106,12 @@ const ContentList = () => {
       const response = await fetch(url);
       const jsonData = await response.json();
 
-      const total = (jsonData as any).totalPages;
+      const total = (jsonData as any).totalRecords;
       let ds = jsonData.data;
 
       setDatas(ds);
       setTotal(total);
+      console.log('total', total);
     } catch (err) {
       console.error("Error fetching blog data:", err);
     }
@@ -108,8 +124,15 @@ const ContentList = () => {
   };
 
   useEffect(() => {
-    fetchData(page, homeFilter, opFilter, aptFilter, euFilter);
-  }, [page, homeFilter, opFilter, aptFilter, euFilter]);
+    fetchData(
+      page,
+      sourceTypeFilter,
+      homeFilter,
+      opFilter,
+      aptFilter,
+      euFilter,
+    );
+  }, [page, sourceTypeFilter, homeFilter, opFilter, aptFilter, euFilter]);
 
   if (!datas) return <Spin />;
 
@@ -123,6 +146,19 @@ const ContentList = () => {
         </div>
       )}
       <div className="flex  w-full gap-3 items-center">
+        <ASelect
+          className="max-w-xs"
+          defaultValue="all"
+          options={[
+            { value: "blog", label: "博客" },
+            { value: "biz", label: "微信公众号" },
+            { value: "all", label: "不限" },
+          ]}
+          placeholder="select it"
+          prefix="来源类型"
+          size="small"
+          onChange={handleSelectionSourceTypeChange}
+        />
         <ASelect
           className="max-w-xs"
           defaultValue="all"
@@ -179,6 +215,7 @@ const ContentList = () => {
       <Pagination
         current={page}
         defaultCurrent={1}
+        pageSize={20}
         showSizeChanger={false}
         total={total}
         onChange={handlePageChange}
@@ -186,7 +223,7 @@ const ContentList = () => {
       <MyScrollShadow
         ref={scrollRef}
         // className="w-full h-[500px] p-4"
-        className="w-full h-[800px] p-4"
+        className="w-full h-[500px] p-4"
         hideScrollBar={false}
         showShadow={false}
       >

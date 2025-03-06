@@ -21,6 +21,7 @@ const ThreatList = () => {
 
   const handleSelectionChange = (setter: any) => (value: any) => {
     setter(value);
+    setPage(1);
   };
 
   const handlePageChange = (newPage: any) => {
@@ -72,6 +73,7 @@ const ThreatList = () => {
           onChange={handleSelectionChange(setSourceTypeFilter)}
         >
           <Option value="twitter">推特</Option>
+          <Option value="biz">微信公众号</Option>
           <Option value="blog">博客</Option>
           <Option value="all">不限</Option>
         </Select>
@@ -117,7 +119,7 @@ const ThreatList = () => {
       <MyScrollShadow
         ref={scrollRef}
         // className="w-full h-[500px] p-4"
-        className="w-full h-[800px] p-4"
+        className="w-full h-[500px] p-4"
         hideScrollBar={false}
         showShadow={false}
       >

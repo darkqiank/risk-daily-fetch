@@ -52,11 +52,17 @@ export const getPaginatedData = async (
     sql_list.push(
       sql`(${threatIntelligence.source} like 'tweet%' or ${threatIntelligence.source} like 'profile-conversation%')`,
     );
+  } else if (filters.sourceType == "biz") {
+    sql_list.push(
+      sql`${threatIntelligence.source} like 'https://mp.weixin.qq.com%'`,
+    );
   } else if (filters.sourceType == "blog") {
     sql_list.push(
-      sql`${threatIntelligence.source} not like 'tweet%' and ${threatIntelligence.source} not like 'profile-conversation%'`,
+      sql`${threatIntelligence.source} not like 'tweet%' and ${threatIntelligence.source} not like 'profile-conversation%' 
+      and ${threatIntelligence.source} not like '微信公众号%'`,
     );
   }
+
   if (filters.apt !== undefined) {
     if (filters.apt == "true") {
       sql_list.push(

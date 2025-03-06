@@ -117,7 +117,7 @@ const TweetList = () => {
         />
         <MyScrollShadow
           ref={scrollRef}
-          className="w-full h-[800px] p-2"
+          className="w-full h-[500px] p-2"
           hideScrollBar={false}
           showShadow={false}
         >

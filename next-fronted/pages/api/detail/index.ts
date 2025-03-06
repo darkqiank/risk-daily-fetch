@@ -6,7 +6,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     if (req.method === "GET") {
       // 获取日期参数
-      const { date, home, op, apt, eu, page, pageSize } = req.query;
+      const { date, sourceType, home, op, apt, eu, page, pageSize } = req.query;
 
       const pn = parseInt(page as string, 10) || 1;
       const ps = parseInt(pageSize as string, 10) || 20;
@@ -15,6 +15,10 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
       if (typeof date === "string") {
         filters.date = date;
+      }
+
+      if (typeof sourceType === "string") {
+        filters.sourceType = sourceType;
       }
 
       if (typeof home === "string") {
