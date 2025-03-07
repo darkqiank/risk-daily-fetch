@@ -59,7 +59,7 @@ export const getPaginatedData = async (
   } else if (filters.sourceType == "blog") {
     sql_list.push(
       sql`${threatIntelligence.source} not like 'tweet%' and ${threatIntelligence.source} not like 'profile-conversation%' 
-      and ${threatIntelligence.source} not like '微信公众号%'`,
+      and ${threatIntelligence.source} not like 'https://mp.weixin.qq.com%'`,
     );
   }
 
