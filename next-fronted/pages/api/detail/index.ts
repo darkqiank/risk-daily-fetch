@@ -1,17 +1,27 @@
 import { NextApiRequest, NextApiResponse } from "next";
 
 import { DetailFilters, getPaginatedData } from "@/db/schema/content_detail";
+import searchClient from "@/db/search";
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     if (req.method === "GET") {
       // 获取日期参数
-      const { date, sourceType, home, op, apt, eu, page, pageSize } = req.query;
+      const { date, sourceType, home, op, apt, eu, query, page, pageSize } =
+        req.query;
 
       const pn = parseInt(page as string, 10) || 1;
       const ps = parseInt(pageSize as string, 10) || 20;
 
       const filters: DetailFilters = {};
+
+      if (typeof query === "string") {
+        const searchResult = await searchClient
+          .index("meilisearch_index_content_detail")
+          .search(query as string);
+
+        filters.ids = searchResult.hits.map((item: any) => item.id);
+      }
 
       if (typeof date === "string") {
         filters.date = date;

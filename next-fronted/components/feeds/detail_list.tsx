@@ -7,10 +7,13 @@ import {
   Modal,
   Table,
   Spin,
+  Input,
 } from "antd";
 import { Pagination } from "antd";
 
 import MyScrollShadow from "../ui/scroll";
+
+const { Search } = Input;
 
 const ContentList = () => {
   const [datas, setDatas] = useState();
@@ -22,6 +25,8 @@ const ContentList = () => {
   const [opFilter, setOpFilter] = React.useState("all");
   const [aptFilter, setAptFilter] = React.useState("all");
   const [euFilter, setEuFilter] = React.useState("all");
+  const [query, setQuery] = useState();
+
   const scrollRef = useRef<{ scrollToTop: () => void } | null>(null);
 
   const showModal = (iocs: any) => {
@@ -72,6 +77,10 @@ const ContentList = () => {
     setEuFilter(e);
     setPage(1);
   };
+  const handleSearch = (e: any) => {
+    setQuery(e);
+    setPage(1);
+  };
 
   const fetchData = async (
     page: any,
@@ -80,6 +89,7 @@ const ContentList = () => {
     opFilter: any,
     aptFilter: any,
     euFilter: any,
+    query: any,
   ) => {
     try {
       setLoading(true);
@@ -103,6 +113,9 @@ const ContentList = () => {
       if (euFilter != "all") {
         url = url + `&eu=${euFilter}`;
       }
+      if (query != undefined && query != null && query != "") {
+        url = url + `&query=${query}`;
+      }
       const response = await fetch(url);
       const jsonData = await response.json();
 
@@ -111,7 +124,7 @@ const ContentList = () => {
 
       setDatas(ds);
       setTotal(total);
-      console.log('total', total);
+      console.log("total", total);
     } catch (err) {
       console.error("Error fetching blog data:", err);
     }
@@ -131,8 +144,17 @@ const ContentList = () => {
       opFilter,
       aptFilter,
       euFilter,
+      query,
     );
-  }, [page, sourceTypeFilter, homeFilter, opFilter, aptFilter, euFilter]);
+  }, [
+    page,
+    sourceTypeFilter,
+    homeFilter,
+    opFilter,
+    aptFilter,
+    euFilter,
+    query,
+  ]);
 
   if (!datas) return <Spin />;
 
@@ -210,6 +232,14 @@ const ContentList = () => {
           prefix="欧美"
           size="small"
           onChange={handleSelectionEuChange}
+        />
+        <Search
+          allowClear
+          enterButton
+          className="w-[400px]"
+          loading={loading}
+          placeholder="全文搜索..."
+          onSearch={handleSearch}
         />
       </div>
       <Pagination

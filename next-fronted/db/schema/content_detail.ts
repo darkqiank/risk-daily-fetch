@@ -23,6 +23,7 @@ export interface DetailFilters {
   op?: string;
   apt?: string;
   eu?: string;
+  ids?: any;
 }
 
 export const getPaginatedData = async (
@@ -59,6 +60,10 @@ export const getPaginatedData = async (
     );
 
   let sql_list = [];
+
+  if (filters.ids && filters.ids.length > 0) {
+    sql_list.push(sql`${contentDetail.id} IN ${filters.ids}`);
+  }
 
   if (filters.date) {
     sql_list.push(sql`${contentDetail.date} = ${filters.date}`);
