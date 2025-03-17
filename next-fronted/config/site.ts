@@ -36,11 +36,11 @@ export const menuItems: MenuItem[] = [
         key: "/nav/x",
         href: "/nav/x",
       },
-      {
-        label: "博客源",
-        key: "/nav/blog",
-        href: "/nav/blog",
-      },
+      // {
+      //   label: "博客源",
+      //   key: "/nav/blog",
+      //   href: "/nav/blog",
+      // },
       {
         label: "ioc列表",
         key: "/nav/threat",
