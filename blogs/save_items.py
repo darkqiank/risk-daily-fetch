@@ -42,6 +42,8 @@ def collect_links(directory, specific_script=None):
                 script_path = os.path.join(directory, file, '.py')
                 key = file
             links = call_get_links(script_path)
+            # 去重
+            links = list(set(links))
             stats[key] = len(links)
             all_links[key] = links
     else:
@@ -113,6 +115,6 @@ if __name__ == '__main__':
     formatted_cur_day = current_time.strftime('%Y-%m-%d')
     output_name = os.path.join('risk', 'blogs', args.spider_dir, f'{formatted_cur_day}.json')
     all_links = collect_links(args.spider_dir, args.script)
-    upload_to_s3(all_links, output_name)
+    # upload_to_s3(all_links, output_name)
     upload_to_db(all_links)
 
