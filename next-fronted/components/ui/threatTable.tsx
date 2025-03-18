@@ -26,7 +26,34 @@ const ThreatTable = ({ threats }: any) => {
 
   const expandedRowRender = (record: any) => {
     const columns = [
-      { title: "IOC", dataIndex: "IOC", key: "IOC", width: 200 },
+      {
+        title: "IOC",
+        dataIndex: "IOC",
+        key: "IOC",
+        width: 300,
+        render: (_: any, ioc: any) => (
+          <div key={ioc.IOC}>
+            <Space>
+              <Text ellipsis={{ tooltip: ioc.IOC }} style={{ maxWidth: 200 }}>
+                {truncateText(ioc.IOC, 30)}
+              </Text>
+              <Button
+                icon={<CopyOutlined />}
+                size="small"
+                type="text"
+                onClick={() => handleCopy(ioc.IOC)}
+              />
+              <Button
+                href={`https://www.virustotal.com/gui/search/${ioc.IOC}`}
+                icon={<VTLogo style={{ fontSize: 14 }} />}
+                size="small"
+                target="_blank"
+                type="text"
+              />
+            </Space>
+          </div>
+        ),
+      },
       { title: "类型", dataIndex: "类型", key: "类型", width: 120 },
       { title: "端口", dataIndex: "端口", key: "端口", width: 80 },
       { title: "威胁等级", dataIndex: "威胁等级", key: "威胁等级", width: 100 },
