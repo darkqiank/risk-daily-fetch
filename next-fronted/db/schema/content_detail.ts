@@ -23,6 +23,7 @@ export interface DetailFilters {
   op?: string;
   apt?: string;
   eu?: string;
+  ioc?: string;
   ids?: any;
 }
 
@@ -35,6 +36,7 @@ export const getPaginatedData = async (
 
   let query = db
     .select({
+      id: contentDetail.id,
       url: contentDetail.url,
       content: contentDetail.content,
       contentHash: contentDetail.contentHash,
@@ -109,6 +111,18 @@ export const getPaginatedData = async (
     } else if (filters.eu == "false") {
       sql_list.push(
         sql`${threatIntelligence.extractionResult}->'data'->>'欧美' != '是'`,
+      );
+    }
+  }
+
+  if (filters.ioc !== undefined) {
+    if (filters.ioc == "true") {
+      sql_list.push(
+        sql`jsonb_array_length(${threatIntelligence.extractionResult} -> 'data' -> 'iocs') > 0`,
+      );
+    } else if (filters.ioc == "false") {
+      sql_list.push(
+        sql`jsonb_array_length(${threatIntelligence.extractionResult} -> 'data' -> 'iocs') = 0`,
       );
     }
   }

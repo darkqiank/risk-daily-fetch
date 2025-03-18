@@ -25,6 +25,7 @@ const ContentList = () => {
   const [opFilter, setOpFilter] = React.useState("all");
   const [aptFilter, setAptFilter] = React.useState("all");
   const [euFilter, setEuFilter] = React.useState("all");
+  const [iocFilter, setIocFilter] = React.useState("all");
   const [query, setQuery] = useState();
 
   const scrollRef = useRef<{ scrollToTop: () => void } | null>(null);
@@ -77,6 +78,12 @@ const ContentList = () => {
     setEuFilter(e);
     setPage(1);
   };
+
+  const handleSelectionIOCChange = (e: any) => {
+    setIocFilter(e);
+    setPage(1);
+  };
+
   const handleSearch = (e: any) => {
     setQuery(e);
     setPage(1);
@@ -89,6 +96,7 @@ const ContentList = () => {
     opFilter: any,
     aptFilter: any,
     euFilter: any,
+    iocFilter: any,
     query: any,
   ) => {
     try {
@@ -112,6 +120,9 @@ const ContentList = () => {
       }
       if (euFilter != "all") {
         url = url + `&eu=${euFilter}`;
+      }
+      if (iocFilter != "all") {
+        url = url + `&ioc=${iocFilter}`;
       }
       if (query != undefined && query != null && query != "") {
         url = url + `&query=${query}`;
@@ -144,6 +155,7 @@ const ContentList = () => {
       opFilter,
       aptFilter,
       euFilter,
+      iocFilter,
       query,
     );
   }, [
@@ -153,6 +165,7 @@ const ContentList = () => {
     opFilter,
     aptFilter,
     euFilter,
+    iocFilter,
     query,
   ]);
 
@@ -232,6 +245,19 @@ const ContentList = () => {
           prefix="欧美"
           size="small"
           onChange={handleSelectionEuChange}
+        />
+        <ASelect
+          className="max-w-xs"
+          defaultValue="all"
+          options={[
+            { value: "true", label: "有" },
+            { value: "false", label: "无" },
+            { value: "all", label: "不限" },
+          ]}
+          placeholder="select it"
+          prefix="ioc"
+          size="small"
+          onChange={handleSelectionIOCChange}
         />
         <Search
           allowClear
@@ -388,6 +414,14 @@ const ContentList = () => {
                       )}
                     </div>
                   </div>
+                )}
+                {item.snippet && (
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: `...${item.snippet}...`,
+                    }}
+                    className="text-gray-600"
+                  />
                 )}
               </div>
             </List.Item>
