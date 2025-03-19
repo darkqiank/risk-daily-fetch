@@ -26,14 +26,16 @@ export const batchInsertBlog = async (blogs: any) => {
     return acc;
   }, []);
 
-  return await db.insert(t_blog).values(uniqueBlogs).onConflictDoNothing;
-  // .onConflictDoUpdate({
-  //   target: t_blog.url,
-  //   set: {
-  //     // info: sql`excluded.info`,
-  //     info: sql`CASE WHEN excluded.info IS NOT NULL THEN excluded.info ELSE t_blog.info END`,
-  //   },
-  // });
+  return await db
+    .insert(t_blog)
+    .values(uniqueBlogs)
+    .onConflictDoUpdate({
+      target: t_blog.url,
+      set: {
+        // info: sql`excluded.info`,
+        info: sql`CASE WHEN excluded.info IS NOT NULL THEN excluded.info ELSE t_blog.info END`,
+      },
+    });
 };
 
 export const getPaginatedData = async (
