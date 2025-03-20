@@ -2,7 +2,7 @@ import feedparser
 
 def get_links():
     # 解析 RSS 源
-    rss_url = "https://www.bitdefender.com/blog/api/rss/businessinsights/"
+    rss_url = "https://www.bitdefender.com/nuxt/api/en-us/rss/labs/"
     feed = feedparser.parse(rss_url)
     # 打印 RSS 源的标题和条目
     print(f"Feed Title: {feed.feed.title}")
