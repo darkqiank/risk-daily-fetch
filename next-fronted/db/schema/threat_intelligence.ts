@@ -33,7 +33,17 @@ export const getPaginatedData = async (
   ps = 20,
 ) => {
   const offset = (pn - 1) * ps;
-  let query = db.select().from(threatIntelligence);
+  let query = db
+    .select({
+      id: threatIntelligence.id,
+      url: threatIntelligence.url,
+      content: threatIntelligence.content,
+      // 关键修改：将无时区字段声明为北京时间
+      insertedAt: sql<string>`${threatIntelligence.insertedAt}::timestamp AT TIME ZONE 'Asia/Shanghai'`,
+      source: threatIntelligence.source,
+      extractionResult: threatIntelligence.extractionResult,
+    })
+    .from(threatIntelligence);
 
   // 构建总记录数查询
   let countQuery = db.select({ value: count() }).from(threatIntelligence);

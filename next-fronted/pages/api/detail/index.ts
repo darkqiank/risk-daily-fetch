@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from "next";
 
 import { DetailFilters, getPaginatedData } from "@/db/schema/content_detail";
-import searchClient from "@/db/search";
+import searchClient, { extractHighlightSnippets } from "@/db/search";
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   try {
@@ -37,48 +37,17 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
             limit: 1000,
           });
 
-        // 优化后的高亮处理函数
-        const extractHighlightSnippets = (hit: any) => {
-          const rawContent = hit._formatted?.content || hit.content || "";
-
-          // 清理换行符和多余空格
-          const cleanContent = rawContent
-            .replace(/[\n\r]/g, " ")
-            .replace(/\s+/g, " ")
-            .trim();
-
-          // 匹配所有高亮片段
-          const highlightRegex = /__hl__(.*?)__\/hl__/g;
-          const highlights = [];
-          let match;
-
-          // 遍历所有高亮匹配项
-          while ((match = highlightRegex.exec(cleanContent)) !== null) {
-            const start = Math.max(0, match.index - 20); // 关键词前20字符
-            const end = match.index + match[0].length + 20; // 关键词后20字符
-
-            // 截取上下文片段
-            const snippet = cleanContent
-              .substring(start, end)
-              .replace(
-                /__hl__/g,
-                '<em class="bg-yellow-200 font-bold not-italic">',
-              ) // 转换高亮标签
-              .replace(/__\/hl__/g, "</em>");
-
-            highlights.push(snippet);
-            // 当收集到3个片段时立即停止
-            if (highlights.length >= 3) {
-              break;
-            }
-          }
-
-          return highlights.join(" ... ");
-        };
-
         searchHits = searchResult.hits.map((item: any) => ({
           id: item.id,
-          snippet: extractHighlightSnippets(item),
+          snippet: extractHighlightSnippets(
+            [
+              item._formatted?.url ?? "",
+              item._formatted?.source ?? "",
+              item._formatted?.content ?? "",
+            ]
+              .filter(Boolean) // 自动过滤空字符串
+              .join(" ... "), // 用空格连接非空内容
+          ),
         }));
 
         filters.ids = searchHits.map((item) => item.id);
