@@ -3,16 +3,18 @@ import { NextApiRequest, NextApiResponse } from "next";
 import { getBlogCount } from "@/db/schema/t_blog";
 import { getUserXcount } from "@/db/schema/t_x";
 import { getBizCount } from "@/db/schema/wechat_biz";
+import { getIOCCount } from "@/db/schema/threat_intelligence";
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {
   try {
-    const [bizData, blogData, userData] = await Promise.all([
+    const [bizData, blogData, userData, iocData] = await Promise.all([
       getBizCount(),
       getBlogCount(),
       getUserXcount(),
+      getIOCCount(),
     ]);
 
     // 微信公众号统计
@@ -34,6 +36,12 @@ export default async function handler(
       monitored: userData.length,
       total: userData.reduce((sum, user) => sum + user.total, 0),
       new: userData.reduce((sum, user) => sum + user.new, 0),
+    };
+
+    // ioc统计
+    const iocStats = {
+      total: iocData.reduce((sum, item) => sum + item.total, 0),
+      new: iocData.reduce((sum, item) => sum + item.new, 0),
     };
 
     // 构建统计数据
@@ -63,6 +71,7 @@ export default async function handler(
 
     res.status(200).json({
       stats: statsData,
+      iocStats: iocStats,
       totals: {
         monitoredTotal: statsData.reduce(
           (sum, item) => sum + item.monitored,

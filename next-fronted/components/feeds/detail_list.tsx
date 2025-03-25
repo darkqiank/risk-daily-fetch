@@ -371,43 +371,51 @@ const ContentList = () => {
                 )}
                 {item.extractionResult && (
                   <div className="flex flex-wrap gap-3">
+                    {/* 通用安全访问组件 */}
                     <div>
                       <strong>APT：</strong>
-                      {/* {item.extractionResult.data.APT} */}
                       <Tag
                         color={
-                          item.extractionResult.data.APT === "是"
+                          item.extractionResult?.data?.APT?.trim() === "是"
                             ? "green"
                             : "red"
                         }
                       >
-                        {item.extractionResult.data.APT}
+                        {/* 带默认值的显示 */}
+                        {item.extractionResult?.data?.APT || "无"}
                       </Tag>
                     </div>
+
                     <div>
                       <strong>欧美：</strong>
-                      {/* {item.extractionResult.data.欧美} */}
                       <Tag
                         color={
-                          item.extractionResult.data.欧美 === "是"
+                          item.extractionResult?.data?.["欧美"]?.trim() === "是"
                             ? "green"
                             : "red"
                         }
                       >
-                        {item.extractionResult.data.欧美}
+                        {/* 处理特殊字符属性名 */}
+                        {item.extractionResult?.data?.["欧美"] || "无"}
                       </Tag>
                     </div>
+
                     <div>
-                      <strong>iocs: </strong>
-                      {Array.isArray(item.extractionResult.data.iocs) &&
-                      item.extractionResult.data.iocs.length > 0 ? (
+                      <strong>IOCs：</strong>
+                      {/* 数组安全检测 + 默认值 */}
+                      {(Array.isArray(item.extractionResult?.data?.iocs)
+                        ? item.extractionResult.data.iocs
+                        : []
+                      ).length > 0 ? (
                         <Tag
                           color="#f50"
                           onClick={() =>
-                            showModal(item.extractionResult.data.iocs)
+                            // 安全传递参数
+                            showModal(item.extractionResult?.data?.iocs || [])
                           }
                         >
-                          {item.extractionResult.data.iocs.length}
+                          {/* 显示安全数量 */}
+                          {item.extractionResult?.data?.iocs?.length || 0}
                         </Tag>
                       ) : (
                         <Tag color="default">0</Tag>
@@ -415,6 +423,7 @@ const ContentList = () => {
                     </div>
                   </div>
                 )}
+
                 {item.snippet && (
                   <div
                     dangerouslySetInnerHTML={{

@@ -124,3 +124,21 @@ export const getPaginatedData = async (
     pageSize: ps,
   };
 };
+
+// 获取ioc统计数据
+export const getIOCCount = async () => {
+  return await db
+    .select({
+      total: sql<number>`cast(COALESCE(SUM(jsonb_array_length(${threatIntelligence.extractionResult}->'data'->'iocs')), 0) as int)`,
+      new: sql<number>`cast(
+        COALESCE(SUM(
+          CASE 
+            WHEN CAST(${threatIntelligence.insertedAt} AS DATE) >= CURRENT_DATE - INTERVAL '3 days' 
+            THEN jsonb_array_length(${threatIntelligence.extractionResult}->'data'->'iocs')
+            ELSE 0 
+          END
+        ), 0) as int
+      )`,
+    })
+    .from(threatIntelligence);
+};

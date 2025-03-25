@@ -1,8 +1,9 @@
-import { Card, Row, Col, Statistic, Progress } from "antd";
+import { Card, Row, Col, Statistic } from "antd";
 import {
   XOutlined,
   FileSearchOutlined,
   WechatOutlined,
+  AlertOutlined,
 } from "@ant-design/icons";
 import useSWR from "swr";
 import { Typography } from "antd";
@@ -21,6 +22,10 @@ interface StatsItem {
 
 interface DashboardData {
   stats: StatsItem[];
+  iocStats: {
+    total: number;
+    new: number;
+  };
   totals: {
     monitoredTotal: number;
     contentTotal: number;
@@ -64,24 +69,31 @@ const DashboardPage = () => {
       {/* 全局统计 - 添加可选链操作符 */}
       <Card className="mb-6">
         <Row gutter={16}>
-          <Col md={8} xs={24}>
+          <Col md={6} xs={24}>
             <Statistic
               prefix={<FileSearchOutlined className="text-blue-500" />}
               title="总监控源数量"
               value={data.totals?.monitoredTotal || 0}
             />
           </Col>
-          <Col md={8} xs={24}>
+          <Col md={6} xs={24}>
             <Statistic
               prefix={<FileSearchOutlined className="text-blue-500" />}
               title="总内容数量"
               value={data.totals?.contentTotal || 0}
             />
           </Col>
-          <Col md={8} xs={24}>
+          <Col md={6} xs={24}>
             <Statistic
               prefix={<FileSearchOutlined className="text-blue-500" />}
               title="近3天新增"
+              value={data.iocStats.new || 0}
+            />
+          </Col>
+          <Col md={6} xs={24}>
+            <Statistic
+              prefix={<AlertOutlined className="text-red-500" />}
+              title="近3天新增IOC"
               value={data.totals?.newTotal || 0}
             />
           </Col>
