@@ -14,6 +14,4 @@ xlsxwriter
 fastapi
 python-dotenv
 uvicorn
-DrissionPage==4.1.0.15
-gne
 readability-lxml
