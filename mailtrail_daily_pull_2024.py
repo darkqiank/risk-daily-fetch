@@ -88,32 +88,6 @@ formatted_time_ago = days_ago.strftime('%Y-%m-%d %H:%M:%S')
 formatted_cur_day = current_time.strftime('%Y-%m-%d')
 infos = []
 
-
-def parse_ioc_refs(content):
-    references = []
-    ioc_refs = {}
-    new_ref_flag = False
-    for cline in content.split('\n'):
-        cline = cline.strip()
-        if cline.startswith('# Reference:'):
-            if new_ref_flag:
-                # 如果是新ref块，则重置references
-                references = []
-                new_ref_flag = False
-            ref_array = cline.split('# Reference: ')
-            if len(ref_array) > 1:
-                url = cline.split('# Reference: ')[1].strip()
-                references.append(url)
-        elif cline.startswith('#'):
-            references = []
-        elif cline != '':
-            ioc = cline
-            ioc_refs[ioc] = references.copy()
-            # 意味着下次遇到ref要重新开始了
-            new_ref_flag = True
-    return ioc_refs
-
-
 i = 0
 # 打印提交记录
 for commit in tqdm(commits):
@@ -141,12 +115,6 @@ for commit in tqdm(commits):
             if a_path:
                 match = pattern.search(diff.a_path)
                 if match:
-                    try:
-                        current_content = repo.git.show(f'{commit.hexsha}:{a_path}')
-                    except git.exc.GitCommandError:
-                        current_content = ''
-
-                    ioc_ref_map = parse_ioc_refs(current_content)
                     target, t_file = match.groups()
                     ioc_org, _ = os.path.splitext(t_file)
                     # print(f'Matched path: {a_path}')
@@ -164,8 +132,7 @@ for commit in tqdm(commits):
                                     "threaten": target,
                                     "ioc_org": ioc_org,
                                     "ioc_type": label,
-                                    "ioc": s_line,
-                                    "references": ioc_ref_map[s_line]
+                                    "ioc": s_line
                                 }
                                 # print(info)
                                 infos.append(info)
@@ -180,3 +147,16 @@ df_infos = pd.DataFrame(infos)
 file_name = f"maltrail_iocs_{formatted_cur_day}.xlsx"
 df_infos.to_excel(file_name, index=False, engine='xlsxwriter')
 print(f"Saved {file_name}")
+
+# 上传到s3
+# 从环境变量中获取 S3_BUCKET 名称
+s3_bucket = os.getenv('S3_BUCKET')
+endpoint_url = os.getenv('S3_ENDPOINT')
+
+s3 = boto3.client(
+    service_name = "s3",
+    endpoint_url = endpoint_url
+)
+
+s3.upload_file(file_name, s3_bucket, os.path.join('risk/mailtrail',file_name))
+print(f"Saved to s3 {file_name}")
