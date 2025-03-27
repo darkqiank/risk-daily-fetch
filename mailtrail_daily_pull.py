@@ -180,3 +180,14 @@ df_infos = pd.DataFrame(infos)
 file_name = f"maltrail_iocs_{formatted_cur_day}.xlsx"
 df_infos.to_excel(file_name, index=False, engine='xlsxwriter')
 print(f"Saved {file_name}")
+
+s3_bucket = os.getenv('S3_BUCKET')
+endpoint_url = os.getenv('S3_ENDPOINT')
+
+s3 = boto3.client(
+    service_name = "s3",
+    endpoint_url = endpoint_url
+)
+
+s3.upload_file(file_name, s3_bucket, os.path.join('risk/mailtrail',file_name))
+print(f"Saved to s3 {file_name}")
