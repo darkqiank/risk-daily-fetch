@@ -68,7 +68,7 @@ export const getPaginatedData = async (
   }
 
   if (filters.date) {
-    sql_list.push(sql`${contentDetail.date} = ${filters.date}`);
+    sql_list.push(sql`LEFT(${contentDetail.date}, 10) = ${filters.date}`);
   }
 
   if (filters.sourceType) {
