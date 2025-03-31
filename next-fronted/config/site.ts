@@ -49,6 +49,18 @@ export const menuItems: MenuItem[] = [
     ],
   },
   {
+    label: "设备识别",
+    key: "/dev",
+    icon: DatabaseOutlined,
+    subItems: [
+      {
+        label: "识别日志",
+        key: "/dev/identify",
+        href: "/dev/identify",
+      },
+    ],
+  },
+  {
     label: "关于",
     key: "/nav/about",
     icon: TeamOutlined,

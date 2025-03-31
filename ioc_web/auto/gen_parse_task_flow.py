@@ -98,6 +98,7 @@ def parse_directory(url):
             if 'get_links' in namespace:
                 links = namespace['get_links'](html)  # 调用 get_links 函数
                 print("Extracted Links:", links)
+                return links
         except Exception as e:
             print(f"链接提取代码执行失败: {str(e)}")
             return []
@@ -155,11 +156,11 @@ def parse_article(url):
 # ================= 使用示例 =================
 if __name__ == "__main__":
     # 目录解析示例
-    # directory_url = "https://www.anquanke.com/"
-    # article_links = parse_directory(directory_url)
-    # print(f"发现 {len(article_links)} 篇文章")
+    directory_url = "https://www.anquanke.com/"
+    article_links = parse_directory(directory_url)
+    print(f"发现 {len(article_links)} 篇文章")
 
-    article_link = "https://www.anquanke.com/post/id/305690"
-    # 正文解析示例
-    article = parse_article(article_link)
-    print(json.dumps(article, indent=2, ensure_ascii=False))
+    # article_link = "https://www.anquanke.com/post/id/305690"
+    # # 正文解析示例
+    # article = parse_article(article_link)
+    # print(json.dumps(article, indent=2, ensure_ascii=False))
