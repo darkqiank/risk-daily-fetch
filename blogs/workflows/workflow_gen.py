@@ -148,4 +148,4 @@ def code_generation_flow(blog_url: str, blog_name: str):
 
 if __name__ == "__main__":
     # 运行解析代码生成任务流
-    code_generation_flow("https://www.freebuf.com", "www_freebuf_com")
+    code_generation_flow("https://1275.ru/ioc", "ru_1275")
