@@ -165,7 +165,7 @@ for commit in tqdm(commits):
                                     "ioc_org": ioc_org,
                                     "ioc_type": label,
                                     "ioc": s_line,
-                                    "references": ioc_ref_map[s_line]
+                                    "references": ioc_ref_map.get(s_line)
                                 }
                                 # print(info)
                                 infos.append(info)
