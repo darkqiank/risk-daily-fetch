@@ -1,14 +1,14 @@
 import os
 import json
-import requests
-import re
-from bs4 import BeautifulSoup
+import time
+
 from openai import OpenAI
-from prefect import flow, task
-from prefect.task_runners import ConcurrentTaskRunner
 from pathlib import Path
-from template import create_module
-from fetch_utils import fetch_url_content, compress_html
+from fetch_utils import compress_html, detect_content_type
+from utils import create_module, run_code, extract_code_block, load_blog_module
+from urllib.parse import urlparse
+from typing import List, Union
+
 
 client = OpenAI(
     api_key=os.environ.get("OPENAI_API_KEY"),
@@ -21,23 +21,12 @@ TEMP_DIR = Path("./.generated_code")
 TEMP_DIR.mkdir(exist_ok=True)
 
 
-@task
-def fetch_url_html(url):
-    """请求URL获取HTML"""
-    html = fetch_url_content(url)
-    if html:
-        compressed_html = compress_html(html)
-        return html, compressed_html
-    else:
-        return None, None
-
-
-@task
 def call_llm_api(prompt):
     """调用 OpenAI 生成代码"""
     try:
         completion = client.chat.completions.create(
             model=base_model,
+            stream=False,
             messages=[
                 {"role": "system", "content": "你是数据采集代码助手"},
                 {"role": "user", "content": prompt},
@@ -48,52 +37,66 @@ def call_llm_api(prompt):
         return f"API调用失败: {str(e)}"
 
 
-@task
-def gen_parse_directory_code(url, html):
-    """生成提取博客列表的代码"""
-    prompt = f"""请生成Python代码用于解析以下HTML，从中提取正文文章链接列表：
-    - 包装在一个函数中，函数名称为get_links, 输入参数为html_content
-    - 常量base_url为{url}
-    - 只提取博客文章列表的所有文章链接，不要提取其他额外的链接
-    - 函数返回格式：links = [...] 的Python列表, 判断link是否是http开头，若不是则使用base_url进行拼接
-    - 你的返回只包含代码不要有额外信息
-    HTML内容片段：
-    {html}..."""
+def gen_parse_directory_code(base_netloc: str, content: str, content_type="html") -> Union[str, None]:
+
+    if content_type == "html":
+        """生成提取博客列表的代码"""
+        prompt = f"""请生成Python代码用于解析以下HTML，从中提取正文文章链接列表：
+        - 包装在一个函数中，函数名称为get_links, 输入参数为str格式的_content
+        - 常量base_netloc为{base_netloc}
+        - 只提取正文中博客文章列表中的链接（通常按时间顺序排列），不要提取边栏、推荐、标签等部分的文章链接和多媒体链接
+        - 函数返回格式：links = [...] 的Python列表, 判断link是否是http开头，若不是则使用base_netloc进行拼接
+        - 你的返回只包含代码不要有额外信息
+        HTML内容片段：
+        {content}..."""
+    else:
+        prompt = f"""请生成Python代码用于解析以下JSON数据，从中提取正文文章链接列表：
+        - 包装在一个函数中，函数名称为get_links, 输入参数为str格式的_content
+        - 常量base_netloc为{base_netloc}
+        - 从数据结构中提取正文文章链接列表，不要提取多媒体链接
+        - 返回格式：links = [...]（使用base_netloc拼接相对链接）
+        - JSON内容片段: 
+        {content}..."""
 
     code = call_llm_api(prompt)
-    match = re.search(r'```python\n(.*?)\n```', code, re.DOTALL)
-    return match.group(1) if match else None
+    print("大模型输出结果：", code)
+    return extract_code_block(code)
 
 
-@task
-def gen_parse_article_code(html):
+def gen_parse_article_code(content: str, content_type="html") -> Union[str, None]:
     """生成提取文章内容的代码"""
-    prompt = f"""请生成Python代码从以下HTML中提取：
-    - 文章标题（title）
-    - 发布时间（pub_date）
-    - 正文内容（content）
-    要求：
-    1. 使用BeautifulSoup解析
-    2. 包装在一个函数中，函数名称为get_content, 输入参数为html_content
-    3. 返回字典格式：article = {{...}}
-    4. 你的返回只包含代码不要有额外信息
-    HTML内容片段：
-    {html}..."""
+    if content_type == "html":
+        prompt = f"""请生成Python代码从以下HTML中提取：
+        - 文章标题（title）
+        - 发布时间（pub_date）（时间格式 YYYY-MM-DD）
+        - 正文内容（content）
+        要求：
+        1. 使用BeautifulSoup解析或者正则代码提取
+        2. 包装在一个函数中，函数名称为get_content, 输入参数为str格式的_content
+        3. 正文中的文本内容、表格内容，均用回车符进行拼接，保证ioc等内容不粘连
+        4. 要考虑不同文章可能结构不一样，保证代码的通用性
+        5. 返回字典格式：article = {{...}}
+        6. 你的返回只包含代码不要有额外信息
+        HTML内容片段：
+        {content}..."""
+    else:
+        prompt = f"""请生成Python代码从以下JSON中提取：
+        - 文章标题（title）
+        - 发布时间（pub_date）（时间格式 YYYY-MM-DD）
+        - 正文内容（content）
+        要求：
+        1. 包装在一个函数中，函数名称为get_content, 输入参数为str格式的_content
+        2. 正文中的文本内容、表格内容，用回车符进行拼接，保证ioc等内容不粘连
+        3. 返回字典格式：article = {{...}}
+        4. 你的返回只包含代码不要有额外信息
+        JSON内容片段：
+        {content}..."""
 
     code = call_llm_api(prompt)
-    match = re.search(r'```python\n(.*?)\n```', code, re.DOTALL)
-    return match.group(1) if match else None
+    print("大模型输出结果：", code)
+    return extract_code_block(code)
 
 
-@task
-def run_code(code, func_name, arg1):
-    """执行代码并调用函数"""
-    namespace = {}
-    exec(code, namespace)
-    return namespace[func_name](arg1) if func_name in namespace else {"error": "执行失败"}
-
-
-@task
 def save_code_to_temp(file_path, code):
     """临时存储解析代码"""
     with open(file_path, "w", encoding="utf-8") as f:
@@ -101,7 +104,6 @@ def save_code_to_temp(file_path, code):
     return str(file_path)
 
 
-@task
 def load_code_from_temp(filename):
     """读取临时存储的代码"""
     file_path = TEMP_DIR / filename
@@ -111,41 +113,117 @@ def load_code_from_temp(filename):
     return None
 
 
-@flow(task_runner=ConcurrentTaskRunner())
-def code_generation_flow(blog_url: str, blog_name: str):
-    """Prefect 3 解析代码生成 & 测试任务流"""
+def init_module(module_name, url, base_netloc=None, output_dir=TEMP_DIR, fetch="curl_cffi", overwrite=False):
+    module_path, module =  create_module(module_name, url, base_netloc, output_dir, fetch, overwrite)   
+    return module_path, module
 
-    # 在临时目录创建模块
-    module_path = create_module(blog_name, blog_url, TEMP_DIR)
 
-    links = None
-    html, compressed_html = fetch_url_html(blog_url)
-    if not html:
-        print("❌ 获取网页失败")
-        return
+def gen_links_code_flow(blog_name: str):
+    """
+        生成博客文章链接：
+        1. 获取博客首页HTML
+        2. 生成目录解析代码并保存
+        3. 执行生成的代码获取文章链接列表
+    """
+    module = load_blog_module(TEMP_DIR, blog_name)
 
-    # 生成 & 存储目录解析代码
-    dir_code = gen_parse_directory_code(blog_url, compressed_html)
-    if dir_code:
-        save_code_to_temp(module_path / "get_links.py", dir_code)
-        links = run_code(dir_code, "get_links", compressed_html)
-        print("【目录解析结果】", json.dumps(links, indent=2, ensure_ascii=False))
-    else:
-        print("❌ 目录解析失败")
+    def fetch_url(url):
+        # 获取内容
+        _c = module.fetch_url(url)
+        # 获取内容类型
+        _c_type = detect_content_type(_c)
+        if _c and _c_type == "html":
+            _compress_c = compress_html(_c)
+            return _c, _c_type, _compress_c
+        return _c, _c_type, _c
 
-    if links:
-        sample_html, compressed_sample_html = fetch_url_html(links[0])
-        if sample_html:
-            # 生成 & 存储文章解析代码
-            art_code = gen_parse_article_code(compressed_sample_html)
-            if art_code:
-                save_code_to_temp(module_path / "get_content.py", art_code)
-                article_content = run_code(art_code, "get_content", sample_html)
-                print("【正文解析结果】", json.dumps(article_content, indent=2, ensure_ascii=False))
-    else:
-        print("❌ 正文解析失败")
+    _content, _content_type, _compressed_content = fetch_url(module.BASE_URL)
+    if not _content:
+        print("❌ 获取博客首页失败")
+        return None
+
+    dir_code = gen_parse_directory_code(module.BASE_NETLOC , _compressed_content, content_type=_content_type)
+    if not dir_code:
+        print("❌ 目录解析代码生成失败")
+        return None
+
+    # 保存生成的代码供调试和后续复用
+    save_code_to_temp(Path(TEMP_DIR) / blog_name / "get_links.py", dir_code)
+    links = run_code(dir_code, "get_links", _content=_content)
+    print("【目录解析结果】", json.dumps(links, indent=2, ensure_ascii=False))
+    return links
+
+
+def gen_article_code_flow(article_urls: List[str], blog_name: str, delay=5):
+    """
+    提取单篇文章内容：
+    1. 获取文章HTML
+    2. 生成正文解析代码并保存
+    3. 执行生成的代码提取文章标题、发布时间和正文内容
+    """
+    if len(article_urls) == 0:
+        print("❌ 请输入至少1条url")
+        return None
+
+    module = load_blog_module(TEMP_DIR, blog_name)
+
+    def fetch_url(url):
+        # 获取内容
+        _c = module.fetch_url(url)
+        # 获取内容类型
+        _c_type = detect_content_type(_c)
+        if _c and _c_type == "html":
+            _compress_c = compress_html(_c)
+            return _c, _c_type, _compress_c
+        return _c, _c_type, _c
+
+    _content, _content_type, _compressed_content = fetch_url(article_urls[0])
+    if not _content:
+        print("❌ 获取文章页面失败")
+        return None
+
+    art_code = gen_parse_article_code(_compressed_content, content_type=_content_type)
+    if not art_code:
+        print("❌ 正文解析代码生成失败")
+        return None
+
+    # 测试代码结果
+    articles = []
+    article_content = run_code(art_code, "get_content", _content=_content)
+    articles.append(article_content)
+
+    for article_url in article_urls[1:]:
+        _content, _content_type, _compressed_content = fetch_url(article_url)
+        if not _content:
+            articles.append({"error": "url未获取到html"})
+        article_content = run_code(art_code, "get_content", _content=_content)
+        articles.append(article_content)
+        time.sleep(delay)
+
+    # 保存生成的代码供调试和后续复用
+    save_code_to_temp(Path(TEMP_DIR) / blog_name / "get_content.py", art_code)
+    print("【正文解析结果】", json.dumps(articles, indent=2, ensure_ascii=False))
+    return articles
 
 
 if __name__ == "__main__":
     # 运行解析代码生成任务流
-    code_generation_flow("https://1275.ru/ioc", "ru_1275")
+    blog_url = "https://www.freebuf.com"
+    blog_name = "www_freebuf_com"
+
+    # 初始化
+    init_module(blog_name, blog_url, fetch="curl_cffi", base_netloc="https://www.freebuf.com")
+
+    links = gen_links_code_flow(blog_name)
+
+    if len(links) > 0:
+
+        # 选取文章篇数进行解析测试
+        # Calculate 1/3 of the links, ensuring it's between 3 and 6
+        num_to_select = max(3, min(6, len(links) // 3))
+        # Uniformly select articles by stepping through the list
+        step = len(links) / num_to_select
+        selected_indices = [int(i * step) for i in range(num_to_select)]
+        selected_links = [links[i] for i in selected_indices]
+
+        gen_article_code_flow(selected_links, blog_name)

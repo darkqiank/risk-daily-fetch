@@ -1,16 +1,16 @@
-import requests
 from bs4 import BeautifulSoup
+from template import FETCH_TEMPLATES
+from utils import run_code
+import json
 
-
-def fetch_url_content(url):
+def fetch_url(url, fetch="default"):
     """请求URL获取HTML"""
-    try:
-        response = requests.get(url)
-        response.raise_for_status()
-        return response.text
-    except Exception as e:
-        print(f"获取失败: {str(e)}")
-        return None
+    fetch_code = FETCH_TEMPLATES.get(fetch)
+    if fetch_code:
+        html = run_code(fetch_code, "fetch_url", url)
+        if html:
+            return html
+    return None
 
 
 def compress_text(text, max_length):
@@ -40,3 +40,12 @@ def compress_html(html, max_length=10000):
             node.replace_with(compress_text(node, int(len(node) * ratio)))
 
     return str(soup)
+
+
+def detect_content_type(content: str) -> str:
+    """检测内容类型，返回'html'或'json'"""
+    try:
+        json.loads(content)
+        return "json"
+    except json.JSONDecodeError:
+        return "html"

@@ -5,7 +5,9 @@ from bs4 import BeautifulSoup
 def get_links():
     # 目标URL
     urls = ['https://securelist.com/categories/',
-            'https://securelist.com/category/apt-reports/'
+            'https://securelist.com/category/apt-reports/',
+            'https://securelist.com/category/malware-descriptions/',
+            'https://securelist.com/category/malware-reports/'
             ]
     links = []
     for url in urls:
