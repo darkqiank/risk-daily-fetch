@@ -27,35 +27,32 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
       let searchHits: Array<{ id: string; snippet: string }> = [];
 
-      // if (typeof query === "string" && query.trim()) {
-      //   const searchResult = await searchClient
-      //     .index("meilisearch_index_content_detail")
-      //     .search(query, {
-      //       attributesToHighlight: ["*"],
-      //       highlightPreTag: "__hl__",
-      //       highlightPostTag: "__/hl__",
-      //       limit: 1000,
-      //     });
-
-      //   searchHits = searchResult.hits.map((item: any) => ({
-      //     id: item.id,
-      //     snippet: extractHighlightSnippets(
-      //       [
-      //         item._formatted?.url ?? "",
-      //         item._formatted?.source ?? "",
-      //         item._formatted?.content ?? "",
-      //       ]
-      //         .filter(Boolean) // 自动过滤空字符串
-      //         .join(" ... "), // 用空格连接非空内容
-      //     ),
-      //   }));
-
-      //   filters.ids = searchHits.map((item) => item.id);
-      // }
-
       if (typeof query === "string" && query.trim()) {
-        filters.search = query;
+        const searchResult = await searchClient
+          .index("meilisearch_index_content_detail")
+          .search(query, {
+            attributesToHighlight: ["*"],
+            highlightPreTag: "__hl__",
+            highlightPostTag: "__/hl__",
+            limit: 1000,
+          });
+
+        searchHits = searchResult.hits.map((item: any) => ({
+          id: item.id,
+          snippet: extractHighlightSnippets(
+            [
+              item._formatted?.url ?? "",
+              item._formatted?.source ?? "",
+              item._formatted?.content ?? "",
+            ]
+              .filter(Boolean) // 自动过滤空字符串
+              .join(" ... "), // 用空格连接非空内容
+          ),
+        }));
+
+        filters.ids = searchHits.map((item) => item.id);
       }
+
 
       if (typeof date === "string") {
         filters.date = date;
@@ -90,17 +87,17 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       res_data = await getPaginatedData(filters, pn, ps);
 
       // 合并高亮信息
-      // if (searchHits.length > 0) {
-      //   const hitMap = new Map(searchHits.map((hit) => [hit.id, hit]));
+      if (searchHits.length > 0) {
+        const hitMap = new Map(searchHits.map((hit) => [hit.id, hit]));
 
-      //   res_data = {
-      //     ...res_data,
-      //     data: res_data.data.map((item: any) => ({
-      //       ...item,
-      //       snippet: hitMap.get(item.id)?.snippet || null, // 改为数组
-      //     })),
-      //   };
-      // }
+        res_data = {
+          ...res_data,
+          data: res_data.data.map((item: any) => ({
+            ...item,
+            snippet: hitMap.get(item.id)?.snippet || null, // 改为数组
+          })),
+        };
+      }
 
       res.status(200).json(res_data);
     } else if (req.method === "POST") {

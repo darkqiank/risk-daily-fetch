@@ -150,3 +150,8 @@ export const getPaginatedData = async (
     pageSize: ps,
   };
 };
+
+
+export const batchInsertContentDetail = async (data: any) => {
+  await db.insert(contentDetail).values(data);
+};
