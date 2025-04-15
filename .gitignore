@@ -6,3 +6,4 @@ blogs/.generated_code
 blogs/workflows/.generated_code
 blogs/workflows/.chainlit
 blogs/workflows/.files
+blogs/workflows/.luigi_status

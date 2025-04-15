@@ -2,9 +2,9 @@
 import os
 from curl_cffi import requests
 
-def fetch_url(url, headers=None, timeout=20):
+def fetch_url(url, headers=None, timeout=20, use_proxy=False):
     proxy_url = os.getenv("PROXY_URL", "").strip()
-    proxies = {"http": proxy_url, "https": proxy_url} if proxy_url else None
+    proxies = {"http": proxy_url, "https": proxy_url} if proxy_url and use_proxy else None
     try:
         response = requests.get(url, headers=headers, proxies=proxies, impersonate="chrome", timeout=timeout)
         response.raise_for_status()

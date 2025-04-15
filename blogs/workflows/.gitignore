@@ -1,0 +1,7 @@
+.generated_code
+.env
+*.log
+logs/
+task_outputs/
+.DS_Store
+*.toml

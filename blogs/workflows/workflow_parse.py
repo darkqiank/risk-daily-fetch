@@ -53,8 +53,8 @@ def crawler_article_flow(m_dir, blog_name, _links):
 
 
 if __name__ == "__main__":
-    links = crawler_links_flow(".generated_code", "www_recordedfuture_com_intelligence_reports")  # 运行 blog1 爬虫
+    links = crawler_links_flow("./tasks", "www_recordedfuture_com_intelligence_reports")  # 运行 blog1 爬虫
     print(links)
     if links:
-        art = crawler_article_flow(".generated_code", "www_recordedfuture_com_intelligence_reports", [links[0]])
+        art = crawler_article_flow("./tasks", "www_recordedfuture_com_intelligence_reports", [links[0]])
         print(art)

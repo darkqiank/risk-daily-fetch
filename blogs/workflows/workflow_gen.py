@@ -6,7 +6,6 @@ from openai import OpenAI
 from pathlib import Path
 from fetch_utils import compress_html, detect_content_type
 from utils import create_module, run_code, extract_code_block, load_blog_module
-from urllib.parse import urlparse
 from typing import List, Union
 
 

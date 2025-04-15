@@ -15,3 +15,15 @@ fastapi
 python-dotenv
 uvicorn
 readability-lxml
+
+# Additional dependencies for blog scraper
+luigi
+sqlalchemy
+psycopg2-binary
+toml
+jinja2
+schedule
+croniter
+httpx
+requests
+playwright

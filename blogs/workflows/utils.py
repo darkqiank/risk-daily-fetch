@@ -8,6 +8,7 @@ from typing import Union
 import shutil
 from datetime import datetime
 import json
+from urllib.parse import urlparse
 
 
 def create_module(module_name, url, base_netloc=None, output_dir=".generated_code", fetch="default", overwrite=False):
@@ -31,7 +32,7 @@ def create_module(module_name, url, base_netloc=None, output_dir=".generated_cod
         # 特殊处理__init__.py文件
         if filename == "__init__.py":
             if not base_netloc:
-                parsed_url = urlparse(blog_url)
+                parsed_url = urlparse(url)
                 base_netloc = f"{parsed_url.scheme}://{parsed_url.netloc}"
             formatted_content = content.format(base_url_repr=repr(url), base_netloc_repr=repr(base_netloc))
         elif filename == "fetch_url.py":

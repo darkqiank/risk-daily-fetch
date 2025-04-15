@@ -54,6 +54,8 @@ def init_session_state():
         st.session_state.article_content_type = ""
     if "article_code" not in st.session_state:
         st.session_state.article_code = ""
+    if "use_proxy" not in st.session_state:
+        st.session_state.use_proxy = False
 
 
 # 获取已有模块列表
@@ -184,12 +186,15 @@ else:
             
             fetch_col1, fetch_col2 = st.columns(2)
             with fetch_col1:
+                use_proxy = st.toggle("启用代理", value=st.session_state.use_proxy, key="use_proxy_toggle_1")
+                st.session_state.use_proxy = use_proxy
+            with fetch_col2:
                 if st.button("获取内容", key="fetch_dir", use_container_width=True):
                     with st.spinner("正在获取内容..."):
                         try:
                             module = load_blog_module(TEMP_DIR, st.session_state.blog_name)
                             
-                            content = module.fetch_url(url_to_fetch)
+                            content = module.fetch_url(url_to_fetch, use_proxy=st.session_state.use_proxy)
                             content_type = detect_content_type(content)
                             
                             if content:
@@ -322,7 +327,10 @@ else:
                     index=0
                 )
                 
-                fetch_col1, fetch_col2 = st.columns([5, 1])
+                fetch_col1, fetch_col2 = st.columns(2)
+                with fetch_col1:
+                    use_proxy = st.toggle("启用代理", value=st.session_state.use_proxy, key="use_proxy_toggle_2")
+                    st.session_state.use_proxy = use_proxy
                 with fetch_col2:
                     if st.button("获取文章内容", key="fetch_article", use_container_width=True) and st.session_state.selected_link:
                         with st.spinner("正在获取文章内容..."):
@@ -330,7 +338,7 @@ else:
                                 module = load_blog_module(TEMP_DIR, st.session_state.blog_name)
                                 
                                 # 定义获取URL内容的函数
-                                content = module.fetch_url(st.session_state.selected_link)
+                                content = module.fetch_url(st.session_state.selected_link, use_proxy=st.session_state.use_proxy)
                                 content_type = detect_content_type(content)
                                 
                                 if content:
@@ -439,7 +447,7 @@ else:
                                     for i, url in enumerate(st.session_state.selected_links):
                                         st.write(f"处理 {i+1}/{len(st.session_state.selected_links)}: {url}")
                                         
-                                        content = module.fetch_url(url)
+                                        content = module.fetch_url(url, use_proxy=st.session_state.use_proxy)
                                         content_type = detect_content_type(content)
                                         
                                         if not content:
