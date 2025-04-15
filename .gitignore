@@ -1,6 +1,6 @@
 .env
 .idea
-mailtrail/*
+maltrail/*
 *.pyc
 blogs/.generated_code
 blogs/workflows/.generated_code
