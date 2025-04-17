@@ -57,7 +57,7 @@ def categorize_input(input_str):
 pattern = re.compile(r'trails/static/([^/]+)/([^/]+)')
 
 # 设置仓库路径
-repo_path = './maltrail'
+repo_path = './maltrail_repo'
 
 # 打开仓库ss
 if not os.path.exists(repo_path):
