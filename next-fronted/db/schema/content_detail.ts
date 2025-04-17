@@ -153,5 +153,19 @@ export const getPaginatedData = async (
 
 
 export const batchInsertContentDetail = async (data: any) => {
-  await db.insert(contentDetail).values(data);
+  // 有值才更新
+  await db.insert(contentDetail).values(data).onConflictDoUpdate({
+    target: contentDetail.contentHash,
+    set: {
+      url: sql`CASE WHEN excluded.url IS NOT NULL AND excluded.url != '' THEN excluded.url ELSE ${contentDetail.url} END`,
+      content: sql`CASE WHEN excluded.content IS NOT NULL THEN excluded.content ELSE ${contentDetail.content} END`,
+      source: sql`CASE WHEN excluded.source IS NOT NULL AND excluded.source != '' THEN excluded.source ELSE ${contentDetail.source} END`,
+      sourceType: sql`CASE WHEN excluded.source_type IS NOT NULL AND excluded.source_type != '' THEN excluded.source_type ELSE ${contentDetail.sourceType} END`,
+      detail: sql`CASE 
+        WHEN excluded.detail IS NOT NULL 
+        THEN ${contentDetail.detail} || excluded.detail
+        ELSE ${contentDetail.detail}
+        END`,
+    },
+  });
 };
