@@ -6,9 +6,10 @@ import {
   char,
   timestamp,
 } from "drizzle-orm/pg-core";
-import { desc, sql, count } from "drizzle-orm";
+import { desc, sql, count, eq } from "drizzle-orm";
 
 import db from "../database";
+import { contentDetail } from "./content_detail";
 
 export const threatIntelligence = pgTable("threat_intelligence", {
   id: serial("id").primaryKey(),
@@ -42,8 +43,13 @@ export const getPaginatedData = async (
       insertedAt: sql<string>`${threatIntelligence.insertedAt}::timestamp AT TIME ZONE 'Asia/Shanghai'`,
       source: threatIntelligence.source,
       extractionResult: threatIntelligence.extractionResult,
+      link: contentDetail.url,
     })
-    .from(threatIntelligence);
+    .from(threatIntelligence)
+    .leftJoin(
+      contentDetail,
+      eq(threatIntelligence.url, contentDetail.contentHash),
+    );
 
   // 构建总记录数查询
   let countQuery = db.select({ value: count() }).from(threatIntelligence);

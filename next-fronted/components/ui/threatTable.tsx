@@ -80,10 +80,13 @@ const ThreatTable = ({ threats }: any) => {
                     : record.url.startsWith("http") ||
                         record.url.startsWith("https")
                       ? record.url
-                      : record.source.startsWith("http") ||
-                          record.source.startsWith("https")
-                        ? record.source
-                        : "#"
+                      : record.link.startsWith("http") ||
+                          record.link.startsWith("https")
+                        ? record.link
+                        : record.source.startsWith("http") ||
+                              record.source.startsWith("https")
+                            ? record.source
+                            : "#"
                 }
                 icon={
                   record.source.startsWith("tweet") ||
@@ -266,12 +269,16 @@ const ThreatTable = ({ threats }: any) => {
             record.source.startsWith("tweet") ||
             record.source.startsWith("profile-conversation")
               ? `/nav/x/${record.source}`
-              : record.url.startsWith("http") || record.url.startsWith("https")
+              : record.url.startsWith("http") ||
+                  record.url.startsWith("https")
                 ? record.url
-                : record.source.startsWith("http") ||
-                    record.source.startsWith("https")
-                  ? record.source
-                  : "#"
+                : record.link.startsWith("http") ||
+                    record.link.startsWith("https")
+                  ? record.link
+                  : record.source.startsWith("http") ||
+                        record.source.startsWith("https")
+                      ? record.source
+                      : "#"
           }
           icon={
             record.source.startsWith("tweet") ||

@@ -163,7 +163,7 @@ export const batchInsertContentDetail = async (data: any) => {
       sourceType: sql`CASE WHEN excluded.source_type IS NOT NULL AND excluded.source_type != '' THEN excluded.source_type ELSE ${contentDetail.sourceType} END`,
       detail: sql`CASE 
         WHEN excluded.detail IS NOT NULL 
-        THEN ${contentDetail.detail} || excluded.detail
+        THEN COALESCE(${contentDetail.detail}, '{}'::jsonb) || excluded.detail
         ELSE ${contentDetail.detail}
         END`,
     },
