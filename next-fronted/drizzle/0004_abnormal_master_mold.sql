@@ -1,0 +1,2 @@
+CREATE INDEX IF NOT EXISTS "idx_extraction_result_gin" ON "threat_intelligence" USING gin ("extraction_result");--> statement-breakpoint
+CREATE INDEX IF NOT EXISTS "idx_extraction_result_ioc_path_gin" ON "threat_intelligence" USING gin (("extraction_result" -> 'data' -> 'iocs') jsonb_path_ops);
