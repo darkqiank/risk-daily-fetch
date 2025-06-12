@@ -208,7 +208,20 @@ export const searchByIOC = async (iocValue: string, pn = 1, ps = 20) => {
           -- 其他情况从contentDetail获取meta信息
           ELSE
             jsonb_build_object(
-              'desc', TRIM(${contentDetail.detail}->>'摘要'),
+              'title', TRIM(${contentDetail.detail}->>'摘要'),
+              'desc', CASE
+                WHEN ${contentDetail.content} IS NULL THEN ''
+                WHEN POSITION(UPPER(${iocValue}) IN UPPER(${contentDetail.content})) > 0 THEN
+                  -- 找到IOC值的位置，返回前后100字符的上下文
+                  '...' || SUBSTRING(
+                    ${contentDetail.content},
+                    GREATEST(1, POSITION(UPPER(${iocValue}) IN UPPER(${contentDetail.content})) - 100),
+                    200 + LENGTH(${iocValue})
+                  ) || '...'
+                ELSE
+                  -- 找不到IOC值，返回开头100字符
+                  SUBSTRING(TRIM(${contentDetail.content}), 1, 100) || '...'
+              END,
               'source', TRIM(${contentDetail.source}),
               'source_type', TRIM(${contentDetail.sourceType})
             )
