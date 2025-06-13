@@ -74,23 +74,23 @@ const ThreatTable = ({ threats }: any) => {
             children: (
               <Button
                 href={
-                  record.source.startsWith("tweet") ||
-                  record.source.startsWith("profile-conversation")
+                  (record.source && (record.source.startsWith("tweet") ||
+                  record.source.startsWith("profile-conversation")))
                     ? `/nav/x/${record.source}`
-                    : record.url.startsWith("http") ||
-                        record.url.startsWith("https")
+                    : (record.url && (record.url.startsWith("http") ||
+                        record.url.startsWith("https")))
                       ? record.url
-                      : record.link.startsWith("http") ||
-                          record.link.startsWith("https")
+                      : (record.link && (record.link.startsWith("http") ||
+                          record.link.startsWith("https")))
                         ? record.link
-                        : record.source.startsWith("http") ||
-                              record.source.startsWith("https")
+                        : (record.source && (record.source.startsWith("http") ||
+                              record.source.startsWith("https")))
                             ? record.source
                             : "#"
                 }
                 icon={
-                  record.source.startsWith("tweet") ||
-                  record.source.startsWith("profile-conversation") ? (
+                  (record.source && (record.source.startsWith("tweet") ||
+                  record.source.startsWith("profile-conversation"))) ? (
                     <XLogo style={{ fontSize: 14 }} />
                   ) : (
                     <LinkOutlined style={{ fontSize: 14 }} />
@@ -266,23 +266,23 @@ const ThreatTable = ({ threats }: any) => {
       render: (_: any, record: any) => (
         <Button
           href={
-            record.source.startsWith("tweet") ||
-            record.source.startsWith("profile-conversation")
+            (record.source && (record.source.startsWith("tweet") ||
+            record.source.startsWith("profile-conversation")))
               ? `/nav/x/${record.source}`
-              : record.url.startsWith("http") ||
-                  record.url.startsWith("https")
+              : (record.url && (record.url.startsWith("http") ||
+                  record.url.startsWith("https")))
                 ? record.url
-                : record.link.startsWith("http") ||
-                    record.link.startsWith("https")
+                : (record.link && (record.link.startsWith("http") ||
+                    record.link.startsWith("https")))
                   ? record.link
-                  : record.source.startsWith("http") ||
-                        record.source.startsWith("https")
+                  : (record.source && (record.source.startsWith("http") ||
+                        record.source.startsWith("https")))
                       ? record.source
                       : "#"
           }
           icon={
-            record.source.startsWith("tweet") ||
-            record.source.startsWith("profile-conversation") ? (
+            (record.source && (record.source.startsWith("tweet") ||
+            record.source.startsWith("profile-conversation"))) ? (
               <XLogo style={{ fontSize: 14 }} />
             ) : (
               <LinkOutlined style={{ fontSize: 14 }} />
