@@ -1,0 +1,8 @@
+from .get_links import get_links
+from .get_content import get_content
+from .fetch_url import fetch_url, a_fetch_url
+
+BASE_URL = 'https://cert.gov.ua/api/articles/all?page=0&lang=uk'
+BASE_NETLOC = 'https://cert.gov.ua'
+
+__all__ = ['get_links', 'get_content', 'fetch_url','a_fetch_url', 'BASE_URL']

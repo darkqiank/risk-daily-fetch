@@ -1,0 +1,9 @@
+curl_cffi
+httpx
+bs4
+playwright
+aiohttp
+asyncio
+streamlit
+openai
+python-dotenv

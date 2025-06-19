@@ -1,0 +1,1148 @@
+id	alias	apt	attack_country	attack_means	attack_target	belong_country	create_time	creation_date	note	update_time	status
+58	Ajax Security Team,Operation Saffron Rose,Thamar Reservoir,TEMP.Beanie,Flying Kitten,Rocket Kitten,Operation Woolen Goldfish,Operation Woolen-Goldfish,Timberworm	AjaxTM				伊朗	2022-04-27		Ajax Security Team是一个至少自2010年以来一直活跃的组织，据信其活动范围不在伊朗。到2014年，Ajax Security Team从网站破坏行动转变为基于恶意软件的网络间谍活动，目标是美国国防工业基地和伊朗用户的反审查技术.	2022-11-01	保留
+61	APT14,APT 14,ALUMINUM,QAZTeam	AnchorPanda				中国	2022-04-27		PLA NavyAnchor Panda是一个攻击者，CrowdStrike在去年广泛跟踪了绿色/棕色水域的民用和军事海上行动，主要是在中国人民解放军海军南海舰队的行动区域。除了在这一地区的海上行动，Anchor Panda还重点针对美国、德国、瑞典、英国和澳大利亚的西方公司，以及其他涉及海事卫星系统的国家，航空航天公司和国防承包商。毫不奇怪，该地区的大使馆和外交使团、外国情报机构和有太空计划的外国政府也成为攻击目标.	2022-11-17	保留
+64	Empire Monkey,CobaltGoblin,ANTHROPOID SPIDER	AnthropoidSpider					2022-04-27		被公众称为帝国猴子”的ANTHROPOID SPIDER在2019年2月和3月开展了钓鱼活动，欺骗了法国、挪威和伯利兹的金融监管机构和机构。这些活动使用了支持宏功能的微软文档来交付PowerShell Empire后开发框架。ANTHROPOID SPIDER可能导致了一起据称涉及通过SWIFT网络进行欺诈性转账的入侵事件.	2022-11-01	保留
+67	Antlion	蚁狮				中国	2022-04-27		Antlion是中国政府支持的advanced persistent threat (APT)组织，其目标是台湾的金融机构。这种持续的运动已经持续了至少18个月.	2022-11-01	保留
+70	Comment Group,Brown Fox,Comment Panda,Byzantine Candor,Shanghai Group,Group 3,GIF89a,Advanced Persistent Threat 1,APT 1,TG-8223,PLA Unit 61398,ShadyRAT,Comment Crew	APT1		钓鱼邮件	以英语为主要工作语言的机构	中国	2022-04-27	NULL	APT1是一个中国的威胁组织，被认为是来自人民解放军总参谋部(GSD)第三部门第二局，通常被称为其军事单位掩护指示器(MUCD) 61398部队.	2022-04-27	保留
+73	happyyongzi,Stone Panda,Menupass Team,APT 10,MenuPass,Red Apollo，TA429,menuPass,HOGFISH,POTASSIUM,Red Apollo,CVNX,DustStorm,Cloud Hopper,BRONZE RIVERSIDE,Cicada,menuPass Team,apt_menupass,MirrorFace	APT10		钓鱼邮件	医疗保健|国防|航空航天、政府部门	中国	2022-04-27		menuPass是一个至少自2006年以来一直活跃的威胁组织。据悉，menuPass的个人成员与中国国家安全部天津国家安全局有联系，并为华英海泰科技发展公司工作。\nmenuPass的目标是全球的医疗保健、国防、航空航天、金融、海事、生物技术、能源和政府部门，重点是日本的组织。据悉，在2016年和2017年，该集团的目标是管理信息技术(msp)、制造、矿业企业、大学等。”	2023-07-14	保留
+76	Crimson Iron,Numbered Panda,DynCalc,DNSCALC,Calc Team,APT 12,BRONZE GLOBE,BeeBus,DNSCalc,TG-2754,IXESHE,Group 22	APT12	欧盟|俄罗斯|韩国|美国	利用Dropbox等云存储工具	社交媒体|美国和台湾政府机构|大型公司|国防承包商	中国	2022-04-27	NULL	APT12是一个被认为来自中国的威胁组织。该组织针对各种受害者，包括但不限于媒体机构、高科技公司和多个政府。	2022-04-27	保留
+79	Ke3chang,Social Network Team,Playful Dragon,Ke3Chang,GREF,Mirage,Metushy,Lurid,APT 15,Royal APT,Vixen Panda,BRONZE PALACE,RoyalAPT	APT15				中国	2022-04-27	NULL	该威胁行为人使用网络钓鱼技术，以间谍为目的，破坏欧洲国家外交部门的网络.	2022-04-27	保留
+82	SVCMONDR	APT16	日本|台湾	钓鱼邮件	媒体机构	中国	2022-04-27	NULL	APT16是一个总部位于中国大陆的威胁组织，它针对日本和台湾的组织发起了钓鱼活动。\n2015年11月26日至12月1日期间，已知和可疑的中国APT组织针对日本和台湾高科技、政府服务、媒体和金融服务行业的组织发起了几次鱼叉式网络钓鱼攻击。每次活动都发布了一个恶意的Microsoft Word文档，利用上述EPS dict copy - use- free漏洞和Windows本地特权升级漏洞CVE-2015-1701。对这两个漏洞的成功利用导致了我们称之为IRONHALO的下载程序或称为ELMER的后门程序的	2022-04-27	保留
+85	Deputy Dog,Hidden Lynx,Aurora Panda,Dogfish,Group 8,APT 17,Tailgater Team,BRONZE KEYSTONE	APT17	美国	网络钓鱼	政府实体|国防工业|律师事务所|信息技术公司|矿业公司|非政府组织	中国	2022-04-27	NULL	APT17是一个总部位于中国的威胁组织，它曾对美国政府实体、国防工业、律师事务所、信息技术公司、矿业公司和非政府组织进行网络入侵	2022-04-27	保留
+88	PLA Navy,Dynamite Panda,SCANDIUM,APT 18,Wekby,Threat Group-0416,TG-0416	APT18	China	phishingemail|waterhole	govnment		2022-04-27	NULL	APT18是一个至少从2009年就开始运作的威胁组织，袭击了一系列行业，包括技术、制造业、人权组织、政府和医疗。	2022-04-27	保留
+91	Codoso,Black Vine,Sh3llCr3w,Deep Panda,KungFu Kittens,C0d0so0,BRONZE FIRESTONE,Group 13,Codoso Team,PinkPanther,Shell Crew,APT 19,WebMasters,Sunshop Group	APT19	澳洲	钓鱼邮件	国防|金融|能源|制药|电信|高科技|教育	中国	2022-04-27	NULL	APT19是一个总部位于中国的威胁组织，目标涉及多个行业，包括国防、金融、能源、制药、电信、高科技、教育、制造业和法律服务。2017年，一场网络钓鱼运动被用于攻击7家法律和投资公司。一些分析人士认为APT19和Deep Panda是同一个组织，但从开源信息来看，这两个组织是否相同尚不清楚。	2022-04-27	保留
+94	4HCrew,APT 2,SULPHUR,SearchFire,Putter Panda,PLA Unit 61486,TG-6952,MSUpdater,APT-2,Group 36	APT2				中国	2022-04-27	NULL	Putter Panda 是中国的一个威胁组织，被认为是解放军第三总参谋部第十二局61486部队的成员.	2022-04-27	保留
+97	Twivy,TH3Bug,APT 20,Violin Panda	APT20				中国	2022-04-27	NULL	Violin Panda组织利用水坑攻击传播Poison Ivy，主要攻击目标包括美国的制造业，大学和电信行业	2022-04-27	保留
+100	APT 21,NetTraveler,TravNet	APT21				中国	2022-04-27	NULL	NetTraveler组织最早活跃于2004年。主要通过发送带有恶意Microsoft Office附件的鱼叉式网络钓鱼电子邮件来感染受害者。攻击主要的目标实体为蒙古，俄罗斯，印度，哈萨克斯坦，吉尔吉斯斯坦，中国，塔吉克斯坦，韩国，西班牙和德国	2022-04-27	保留
+103	BRONZE OLIVE	APT22	美国		生物医学、制药和医疗保健实体	中国	2022-04-27	NULL	APT22在2014年初至2015年中期对印度政府和商业组织进行了长期的间谍活动。该组织使用了一系列定制工具（ Angryrebel、DestroyRAT）并结合了韩国移动运营商的失窃证书来进行入侵	2022-04-27	保留
+106	Tropic Trooper,BRONZE HOBART,Pirate Panda,APT 23,TropicTrooper,KeyBoy,apt_23	APT23				中国	2022-04-27		一个针对台湾和菲律宾政府、国防和重工业的APT组织	2023-07-07	保留
+109	pfinet,pacifierapt,bronzeexpress,turla,venomousbear,turbinepanda,waterbug,jerseymikes,sig23,uroburos,turlateam,popeye,tag_0530,group88,belugasturgeon,ironhunter,hippoteam,whitebear,wraith,snake,makersmark,turlagroup,krypton,bronze,apt-c-29,APT-Q-78	APT26	中国、中东、欧洲、北美、南美	通过水坑攻击，漏洞攻击, 鱼叉攻击安装恶意软件程序攻击各类机构	针对中东、欧洲、北美和南美以及前苏联国家政府机构，大使馆，以及医学研究和制药公司等重点部门和机构发起攻击	俄罗斯	2022-04-27		Turla Group是一个俄罗斯APT组织，自2014年以来已感染超过45个国家数百台计算机，其中包括政府、军事、外交、教育和医药行业。该组织攻击的规模和手段堪称史诗级别，最初的攻击阶段就包括四种不同的方法：Adobe PDF漏洞来欺骗电子邮件，.SCR扩展名的恶意软件安装程序，Java漏洞、Flash漏洞或Internet Explorer 6,7,8漏洞的水坑攻击和依靠社会工程来诱骗用户运行假冒的Flash Player恶意软件安装程序的水坑攻击。若受害目标为攻击者所感兴趣的，将会升级更复杂的后门：	2023-10-17	保留
+112	Budworm,Iron Tiger,TEMP.Hippo,Emissary Panda,APT 27,LuckyMouse,TG-3390,Threat Group-3390,ZipToken,Red Phoenix,Lucky Mouse,BRONZE UNION,EMISSARY PANDA,Group 35,熊猫使者	APT27		水坑攻击	航空航天|政府|国防|科技|能源、制造业、金融服务公司	中国	2022-04-27		Threat Group-3390 是一个中国威胁组，广泛使用战略Web折衷目标受害者。该组织至少自2010年以来一直很活跃，目标是航空航天、政府、国防、技术、能源和制造业等领域的组织.	2024-01-08	保留
+115	IRON TWILIGHT,PawnStorm,TAG_0700,Grizzly Steppe,Threat Group-4127,Tsar Team,TG-4127,APT 28,TsarTeam,Pawn Storm,Fancy Bear,Swallowtail,Sofacy,Sednit,STRONTIUM,SIG40,SNAKEMACKEREL,apt_sofacy,Group-4127,Group 74,APT28,APT-C-20,Sofacy Group,TsarTeam,T-APT-12	奇幻熊	中国、美国	通过钓鱼邮件,鱼叉攻击,水坑攻击窃取并曝光秘密资料	针对美国政府，军队及安全机构以及各国政府机构窃取重要信息	俄罗斯	2022-04-27		APT28是一个威胁组织，被认为是俄罗斯总参谋部主要情报理事会(GRU)第85主要特别服务中心(GTsSS)军事单位26165的成员。这个组织至少从2004年就开始活跃了。\n据报道，APT28在2016年试图干预美国总统选举，损害了希拉里·克林顿竞选团队、民主党全国委员会和民主党国会竞选委员会的利益。2018年，美国起诉了与APT28有关的5名GRU 26165部队官员，他们在2014年至2018年期间对世界反兴奋剂机构(WADA)、美国反兴奋剂机构、美国一个核设施、禁止化学武器组织(OPCW)、斯皮兹瑞	2023-10-17	保留
+118	duke,CozyDuke,Group100,GrizzlySteppe,NOBELIUM,YTTRIUM,OfficeMonkeys,CozyBear,Dukes,DarkHalo,HammerToss,Cozer,Minidionis,TheDukes,CozyBear,SeaDuke,UNC2452,CozyCar,EuroAPT,OfficeMonkeys,NobleBaron,StellarParticle,IronHemlock,SilverFish,apt_unc2452,APT29	舒适熊	中国、北约成员国	通过钓鱼邮件,鱼叉攻击,水坑攻击获取国家机密和相关政治利益	针对欧洲、北美、亚洲、非洲的多个地区和国家，主要攻击目标为包含美国、英国等在内的北约成员国以及欧洲地域邻近国家，具体攻击行业目标为政府实体、科研机构、智囊团、高技术企业、通信基础设施供应商等	俄罗斯	2022-04-27		APT29是一个被认为是俄罗斯对外情报局(SVR)的威胁组织。他们至少从2008年开始运作，经常针对欧洲和北约成员国的政府网络、研究机构和智库。据报道，APT29从2015年夏天开始损害了民主党全国委员会的利益。\n2021年4月，美国和英国政府将SolarWinds供应链破坏网络操作归咎于对外情报局;公开声明包括对APT29、Cozy Bear和The Dukes的引用。这场运动的受害者包括北美、欧洲、亚洲和中东的政府、咨询、技术、电信和其他组织。行业报道称参与这次活动的演员为UNC2452、NOBELI	2023-10-17	保留
+121	Threat Group-0110,APT 3,Group 6,TG-0110,Buckeye,Gothic Panda,BRONZE MAYFAIR,Boyusec,BORON,UPS Team,UPS,Pirpi	APT3		钓鱼邮件	航空航天、防御、建筑、工程和政府机构	中国	2022-04-27	NULL	APT3是一个总部设在中国的威胁组织，研究人员认为是中国国家安全部所为。这个组织负责被称为秘密狐狸行动”、秘密狼行动”和双叩行动”的活动。截至2015年6月，该组织似乎已从主要针对美国受害者转向主要针对香港的政治组织。\n2017年，MITRE开发了APT3对手模拟计划。”	2022-04-27	保留
+124	Hellsing,Lotus Panda,Naikon,APT 30,BRONZE GENEVA,PLA Unit 78020,Override Panda,Camerashy,APT.Naikon	APT30	东南亚、印度	钓鱼邮件	政治、军事、经济、领土纠纷和新闻媒体	中国	2022-04-27	NULL	APT 30是一个被怀疑与中国政府有关联的威胁组织。虽然Naikon和APT30有一些相同的特征，但这两组似乎并不完全匹配。	2022-04-27	保留
+127	ZIRCONIUM,JUDGMENT PANDA,BRONZE VINEWOOD	APT31				中国	2022-04-27	NULL	FireEye将APT31描述为专门从事知识产权盗窃的机构，专注于使特定组织在其领域具有竞争力的数据和项目。根据现有数据(2016年4月)，火眼评估APT31在中国政府的要求下进行网络运营。Crowdstrike还表示，该对手涉嫌继续攻击上游供应商(如律师事务所和管理服务提供商)，以支持针对知名资产的额外入侵。2018年，CrowdStrike发现这个对手使用鱼叉式网络钓鱼、URL网络漏洞”和计划任务来自动获取证书。	2022-04-27	保留
+130	APT32,OceanLotus,Cobalt Kitty,POND LOACH,Ocean Buffalo,SeaLotus,BISMUTH,APT 32,TIN WOODLAWN,APT-32,OceanLotus Group,APT-C-00,Ocean Lotus,Sea Lotus,OCEANLOTUSAPT,APT-Q-31	海莲花	柬埔寨、老挝、菲律宾、中国、沙特、巴基斯坦、越南、美国、韩国	通过水坑攻击，钓鱼邮件，鱼叉攻击实施符合越南国家利益的有针对性的操作	针对中国政府、海事机构、海域建设部门、科研院所和航运企业,展开了精密组织的网络攻击	越南	2022-04-27		APT32被怀疑是一个总部位于越南的威胁组织，至少从2014年以来一直很活跃。该组织针对多个私营行业以及外国政府、持不同政见者和记者，特别关注越南、菲律宾、老挝和柬埔寨等东南亚国家。他们广泛地使用策略性的网络妥协来伤害受害者。\n网络间谍，现在被FireEye指定为APT32 (OceanLotus Group)，正在对多个行业的私营企业进行入侵，也针对外国政府、持不同政见者和记者。FireEye评估APT32利用一套独特的全功能恶意软件，与商业工具结合，实施符合越南国家利益的有针对性的操作。”	2023-10-17	保留
+133	MAGNALLIUM,Refined Kitten,COBALT TRINITY,HOLMIUM,APT 33,Shamoon,Elfin,PeachSandstorm	APT33	中国、美国、沙特阿拉伯、韩国	通过钓鱼邮件,鱼叉攻击针对工业机构的IT网络进行信息收集活动	针对美国、沙特阿拉伯和韩国的多个行业组织，涉及军事和商业能力的航空部门组织进行攻击	伊朗	2022-04-27		APT33被怀疑是伊朗的一个威胁组织，至少从2013年起就开始实施行动。该组织针对的是美国、沙特阿拉伯和韩国多个行业的组织，其中对航空和能源行业尤为感兴趣。.	2024-02-06	保留
+136	COBALT GYPSY,Twisted Kitten,Helix Kitten,IRN2,HELIX KITTEN,OilRig,Crambus,APT 34,Cobalt Gypsy,Greenbug,Chrysene,Shamoon 2,PIPEFISH,APT-Q-57	APT34	中国、美国、中东、亚洲	通过钓鱼邮件,渗透攻击,供应链攻击窃取信息攻击目标	针对美国、中东及亚洲的某些国家发起了多次攻击，攻击目标为政府、金融、能源、电信等行业	伊朗	2022-04-27		OilRig是一个伊朗威胁组织，主要在中东地区运营，其目标是该地区不同行业的组织;然而，该组织偶尔也会针对中东以外的组织。OilRig还实施了供应链攻击，威胁集团利用组织之间的信任关系来攻击他们的主要目标。OilRig是一个活跃而有组织的威胁组织，这很明显，因为他们有系统地针对特定的组织，而这些组织似乎是出于战略目的而精心挑选的。这类攻击主要依靠社会工程来利用人而不是软件的漏洞;然而，这个组织有时会在他们的攻击的交付阶段使用最近修补过的漏洞。由于OilRig公司在其他方面的运营已经显示出了成熟，因此软件漏	2023-10-17	保留
+139	TG-2889,OperationCleaver,TEMP.Beanie,2889,TarhAndishan,Alibaba,COBALTILLUSION,Rocket_Kitten,Phosphorus,CuttingKitten,Newscaster,Group41,NewscasterTeam,ITG18,APT35,TA453,CobaltGypsy,CharmingKitten,Ghambar,MagicHound,Cleaver,Parastoo,iKittens,APT-Q-55	APT35	中国、美国、中东	通过钓鱼攻击,网站渗透开展长期、资源密集型行动以收集战略情报	针对美国和中东的军事、外交和政府人员、媒体组织、能源、商业服务和电信部门进行攻击	伊朗	2022-04-27		Cleaver”是一个由伊朗演员组成的威胁组织，其活动被追踪为Cleaver行动”。强有力的间接证据表明，Cleaver与2889威胁组(TG-2889)有关。	2023-10-17	保留
+142	TranGroup,TransparentAPT,Transparent,APT36,Mythic Leopard,ProjectM,Transparent Tribe,C-Major,Green Havildar,TMP.Lapis,COPPER FIELDSTONE,APT 36,Operation C-Major,TransparentTribe,apt_transparenttribe	透明部落	中国、印度	主要攻击手段是通过鱼叉式钓鱼邮件发起攻击	对印度政府、军事、金融等目标发起攻击	巴基斯坦	2022-04-27		该组织针对印度军队或在印度的相关资产，以及巴基斯坦的活动人士和公民社会。TrendMicro等人认为这与巴基斯坦有关	2023-10-17	保留
+145	APT 37,Reaper Group,Reaper,Ricochet Chollima,Group123,Red Eyes,Venus 121,Operation Daybreak,Operation Erebus,InkySquid,Group 123,ScarCruft,APT-C-28,APT-S-008,Geumseong121,TEMP.Reaper,sun team,APT-Q-3,apt_37	APT37	中国、韩国	通过钓鱼邮件,社工攻击,鱼叉攻击,水坑攻击收集情报，以支持朝鲜的军事、政治和经济利益	针对韩国的汽车制造，化学生产，航空航天等相关的行业发起攻击	朝鲜	2022-04-27		APT37可能至少自2012年以来一直很活跃，主要针对韩国的公共和私营部门。2017年，APT37将目标扩大到朝鲜半岛以外的日本、越南和中东地区，并扩展到更广泛的垂直行业，包括化工、电子、制造、航空航天、汽车和医疗保健实体	2023-10-17	保留
+148	TEMP.Hermit,Hermit,Alluring Pisces	APT38	中国、俄罗斯、韩国、日本	通过水坑攻击，常使用破坏性的恶意软件实施金融犯罪，从全球银行窃取美元	针对俄罗斯、韩国、日本及部分欧美国家的金融机构实施金融犯罪，入侵盗取美元并在事后彻底摧毁受攻击的机器	朝鲜	2022-04-27		APT38由国外安全厂商Fireeye在2018年10月命名，该组织疑似背后有朝鲜政权进行支持。目标是金融机构，窃取钱财。以支持朝鲜武器研发。 其从2014年起，APT38针对至少13个国家16个组织实施攻击活动。其主要攻击银行的SWIFT系统并拦截交易来窃取在线资金。APT38在受害者的网络中存活平均达到155天，最长时间长达两年。并且在金融机构窃取超过11亿美元。	2024-09-13	保留
+151	ITG07,COBALT HICKMAN,Chafer,REMIX KITTEN	APT39	中国、伊朗	通过钓鱼邮件广泛窃取个人信息为支持伊朗国家优先事项提供监控、跟踪	针对伊朗不同政见的机构、公司和个人，包括电信行业旅游业和其他高科技IT公司	伊朗	2022-04-27		创建APT39是为了将这个参与者使用的以前的活动和方法集合在一起，并且它的活动很大程度上与一个公开称为Chafer”的组保持一致。然而，由于组织跟踪活动的方式不同，公开报告的内容也有所不同。APT39主要利用了SEAWEED和CACHEMONEY后门，以及POWBAT后门的一种特定变体。虽然APT39的目标范围是全球性的，但其活动主要集中在中东地区。APT39将电信行业列为优先发展领域，并将旅游业和支持IT和高科技产业的IT公司列为重点发展领域	2023-10-17	保留
+154	MUDCARP,APT 40,GADOLINIUM,Gadolinium,TEMP.Periscope,Leviathan,Kryptonite Panda,TEMP.Jumper,BRONZE MOHAWK	APT40				中国	2022-04-27		Leviathan 是一名间谍，目标是国防和政府的组织和高价值目标。至少从2014年开始，该参与者对美国和西欧的海事行业、海军国防承包商和相关研究机构有着长期的兴趣	2024-01-04	保留
+157	WICKED PANDA,BARIUM,Winnti Group,APT 41,LEAD,WICKED SPIDER,Group 72,Red Kelpie,Suckfly,Blackfly,BRONZE ATLAS,Group72,BRONZE EXPORT,Winnti Umbrella,Axiom,Winnti,espionage,apt_barium,APT4	APT41	中国、法国、印度、朝鲜、南非、新西兰、泰国	APT41 经常使用带有恶意附件的网络钓鱼电子邮件作为初始感染媒介	攻击组织的目标是世界各地的组织，如旅游、电信、医疗保健、新闻和教育。	中国	2022-04-27		研究人员认为，APT41是一个受到中国政府支持的间谍组织，其活动也有经济动机。APT41至少从2012年开始活跃，已被观察到针对14个国家的医疗保健、电信、技术和视频游戏行业。APT41与bararium和Winnti Group等集团的公开报道至少有部分重叠。	2023-10-17	保留
+160	BRONZE FLEETWOOD,MANGANESE	APT5	东南亚	钓鱼邮件	电信、科技、国防		2022-04-27	NULL	我们观察到一个APT集团，我们称之为APT5，特别关注电信和技术公司。我们所观察到的被APT5盯上或破坏的组织中，有一半以上都在这些领域运作。APT5多次瞄准东南亚的组织和人员。APT5至少从2007年开始活跃。它似乎是一个巨大的威胁集团，由几个子集团组成，通常具有不同的战术和基础设施。APT5针对或侵入了多个行业的组织，但它的重点似乎是电信和技术公司，特别是有关卫星通信的信息。APT5的目标是一家销售工业和军事应用产品的电子公司的网络。该组织随后窃取了该公司与一个国家军方的商业关系相关的信息，包括他们提	2022-04-27	保留
+163		APT6	美国	钓鱼邮件	政府	中国	2022-04-27	NULL	美国联邦调查局发布了一份罕见的公告，承认一个名为高级持续威胁6”(APT6)的组织早在2011年就侵入了美国政府的计算机系统，多年来窃取了敏感数据。联邦调查局于今年2月发布了这一警报，但基本上没有引起注意。近一个月过去了，安全专家现在开始关注这起袭击事件背后的警报和神秘组织。这是一个罕见的警报和有点晚,但一个所有安全厂商的欢迎,因为它提供了一个机会来减轻他们的客户也在什么似乎是一个正在进行的进一步合作联邦调查局调查,深化德赛说,安全公司安全主任Zscaler Threatpost在一封电子邮件。有关实际攻	2022-04-27	保留
+166	Flowerlady/Flowershow,Flowerlady,Flowershow,APT 9,Nightshade Panda	APT9				中国	2022-04-27	NULL	一个针对媒体行业、非政府组织和大学的APT组织，主要通过钓鱼邮件投递PlugX和Poison Ivy	2022-04-27	保留
+169	Fallout Team,Luder,Shadow Crane,TUNGSTEN BRIDGE,DUBNIUM,DarkHotel,Nemim,Tapaoux,T-APT-02,Pioneer,SIG25,Karba,Nemin,APT-C-06,DarkHotel,Inexsmar,APT-Q-10,寄生兽	黑店	韩国、中国、日本、缅甸、俄罗斯、美国	以针对性的鱼叉式间谍软件和恶意软件传播活动实施网络间谍攻击	针对韩国、中国、日本、缅甸、俄罗斯和美国企业高管、政府机构、国防工业、电子工业等重要机构实施网络间谍攻击	朝鲜	2022-04-27		Darkhotel是一个疑似来自韩国的威胁组织，至少从2004年开始，该组织的目标主要是东亚地区。该组织的名称来源于通过酒店网络对旅行高管和其他精选客人进行的网络间谍活动。Darkhotel还通过点对点和文件共享网络进行了钓鱼活动，并感染了受害者。	2023-10-17	保留
+172	APT-C-08,BITTER,apt_bitter,苦象	蔓灵花	巴基斯坦、中国	通过漏洞攻击,鱼叉攻击针对特定目标进行长期的持续性网络攻击	主要针对巴基斯坦、中国两国，其攻击目标为政府部门、电力、军工业相关单位，意图窃取敏感资料	印度	2022-04-27		BITTER最早由国外安全厂商Forcepoint在2016年命名，该组织至少从2013年11月以来就开始活跃。最开始使用鱼叉钓鱼网络电子邮件，并通过Office漏洞CVE-21012-0158进行RAT的落地执行。主要目标针对于巴基斯坦的政府部门。 2016年11月，奇虎360公司在国内捕获到蔓灵花样本，受影响单位主要是涉及政府、电力和工业相关单位。 2018年11月，奇安信威胁情报中心在2018年12月首次发现该组织使用CVE-2017-12824 InPage漏洞，目标针对乌尔都语使用者，并与Con	2024-10-21	保留
+175	白象,Dropping Elephant,Chinastrats,MONSOON,Sarit,Hangover Group,APT-C-09,Monsoon,Patchwork,ZINC EMERSON,Operation Hangover,Quilted Tiger,APT-Q-36,摩诃草,白象,丰收行动,Hangover,VICEROY TIGER,The Dropping Elephant,apt_patchwork	摩诃草	中国、巴基斯坦	通过鱼叉式网络钓鱼或水坑式攻击进行网络间谍活动	针对中国、巴基斯坦和其他欧美国家，主要针对政府机构、科研教育领域进行攻击，其中以科研教育领域为主	印度	2022-04-27		drop Elephant(也被称为Chinastrats”和Patchwork”)是一个相对较新的威胁行动者，它使用一套自定义的攻击工具，针对各种高调的外交和经济目标。其受害者都以某种方式与中国的外交关系有关，通常是通过鱼叉式网络钓鱼或水坑式攻击被抓住的。	2023-10-17	保留
+178	Sapphire Mushroom,Sapphire Mushroom.APT-C-12,Blue Mushroom,NuclearCrisis,核危机	蓝宝菇	中国	通过鱼叉攻击,内网渗透对中国进行持续的网络间谍活动	针对中国政府、军工、科研、金融等重点单位和部门进行间谍活动，主要关注核工业和科研等相关信息	中国	2022-04-27		2011年以来，APT-C-12组织一直在中国政府、军工、科研和金融等重点单位和部门进行网络间谍活动。该组织主要关注与核工业有关的信息和科学研究	2023-10-17	保留
+181	ProjectSauron,Sauron,Strider,Project Sauron,APT-C-16,Sauron	索伦之眼	中国、俄罗斯	通过漏洞攻击等方式对多个国家进行网络间谍活动，其中以窃取敏感信息为主	针对中国、俄罗斯等多个国家进行攻击活动，主要关注科研教育和军事领域	美国	2022-04-27		ProjectSauron 是一个顶级模块化网络间谍平台的名称，旨在通过结合多种渗透方法的隐形生存机制来实现和管理长期行动。技术细节显示了攻击者如何从其他非常高级的参与者那里学习，以避免重复他们的错误。因此，所有的工件都是根据给定的目标定制的，减少了它们作为任何其他受害者妥协指标的价值。通常，APT活动具有地理联系，旨在提取特定区域或特定行业的信息。这通常会导致该地区国家或世界各地的目标行业出现数起感染。有趣的是，ProjectSauron似乎只专注于几个国家，专注于通过危害目标区域内几乎所有可能触及的关	2023-10-17	保留
+184	Sidewinder,APT-C-17,Rattlesnake,T-APT-04	响尾蛇	巴基斯坦、中国、阿富汗、尼泊尔、孟加拉	通过钓鱼网站，鱼叉攻击等方式窃取国家机密信息，具有强烈的政治背景	针对巴基斯坦、中国、阿富汗、尼泊尔、孟加拉等国家攻击，窃取政府外交、国防军事、高等教育机构等领域的机密信息	印度	2022-04-27		响尾蛇是一个疑似印度威胁演员组织，至少自2012年以来一直很活跃。据观察，他们的目标是整个亚洲的政府、军队和商业实体，主要集中在巴基斯坦、中国、尼泊尔和阿富汗。	2023-10-17	保留
+187	Arid Viper,Desert Falcon,APT-C-23,AridViper,desertfalcons,operation_arid_viper,twotailedscorpion,apt-q-63,Desert Falcons,Big Bang,BigBang,Mantis,apt_aridviper	双尾蝎	中国、巴勒斯坦	通过钓鱼邮件、鱼叉攻击、水坑攻击窃取目标信息或向特定目标人群进行攻击	针对巴勒斯坦的教育机构、军事机构等重要领域进行有组织、有计划、有针对性的长时间不间断攻击		2022-04-27		AridViper是一个针对中东地区相关国家的教育机构、军事机构等重要领域进行网络间谍活动，以窃取敏感信息为主的网络攻击组织。攻击平台主要包括 Windows 与 Android，最早的攻击活动可追溯到2016年。 2020年2月16日，以色列国防军IDF网站称，他们发现哈马斯的一系列网络攻击行动，通过制作了多个聊天工具相关的钓鱼网站，利用社交媒体伪装成美女诱骗以色列国防军士兵下载安装伪装成聊天工具的间谍软件，从而窃取以色列国防军的隐私信息，并最终认为AridViper组织有关	2023-10-17	保留
+190	NICKELGLADSTONE,NewRomanicCyberArmyTeam,BeagleBoyz,OperationAppleJeus,HiddenCobra,HastatiGroup,COVELLITE,Subgroup,Bluenoroff,OperationDarkSeoul,DarkSeoul,NickelAcademy,GuardiansofPeace,ZINC,Bureau121,Unit121,WhoisHackingTeam,LazarusGroup,APT-C-26,APT-Q-1	Lazarus	中国,韩国,美国,墨西哥,巴西,智利,尼日利亚,加蓬,印度,中国台湾,马来西亚	通过鱼叉攻击,社工攻击,水坑攻击针对特定目标进行长期的持续性网络攻击	针对韩国、美国，攻击目的主要以窃取资金为主，对银行、比特币交易所等金融机构及个人实施定向攻击	朝鲜	2022-04-27		Lazarus组织被认为是朝鲜人民军121局背景下的APT组织（Bureau 121），其主要动机是经济利益。CrowdStrike将其命名为STARDUST CHOLLIMA，CrowdStrike将与朝鲜相关组织命名为* CHOLLIMA。 该组织使用邮件鱼叉攻击和水坑攻击，在攻击过程会利用系统破坏或勒索软件干扰事件的分析，利用SMB协议漏洞或相关蠕虫工具实现横向移动和载荷投放。该组织使用的工具包括DDoS botnets, keyloggers, RATs，wiper malware，使用的恶意代码	2023-10-17	保留
+193	APT-C-27,GoldMouse,Golden RAT,APT-Q-64	黄金鼠	叙利亚、中东	钓鱼邮件,水坑攻击,社工	军事,政府		2022-04-27		2019年3月17日，360威胁情报中心截获了一起利用WinRAR漏洞(CVE-2018-20250[6])针对中东地区的目标攻击样本，疑似由Goldmouse APT集团实施攻击(APT- c -27)。档案中有一个关于恐怖袭击的诱饵Word文档，用来引诱受害者解压。当档案文件在易受攻击的计算机上解压后，嵌入的njRAT后门(Telegram Desktop.exe)将被解压到启动文件夹中，如果受害者重启计算机或重新登录，则会触发该后门程序执行。之后，攻击者就可以控制被攻击的设备	2023-01-18	保留
+196	Golden Falcon,APT-C-34,APT-Q-90,DustSquad	黄金雕	中国、哈萨克斯坦	通过社会工程学攻击手段，后门程序，商业间谍软件窃取机密文档	针对哈萨克斯坦国境内,主要涉及政府机关、航空航天、教育、军方、媒体和政府异见人士	哈萨克斯坦	2022-04-27		黄金雕组织的受害者广泛分布中亚地区，主要活跃在哈萨克斯坦国境内，涉及各行各业，包括教育、航空航天、政府机关、媒体工作人员等，其中部分受害者有中国背景，涉及中国与哈萨克合作项目，而极少数的人位于西北部地区。该组织背后疑似有政府实体机构支持其行动，在技术手段上，除了传统的后门程序，黄金雕组织还采购了 HackingTeam 和NSO 的商业间谍软件。该组织的 HackingTeam 后门版本号为 10.3.0，与“毒针”行动的后门版本号 相同。在攻击方式上，除了使用了传统的社会工程学等手段外，也大量使用了物理接触的方式投递恶意程序（例如U 盘等）；除此之外，其也有使用特殊侦查设备对目标直接进行窃听和信号获取的迹象	2024-03-22	保留
+199	APT-C-35,Donot Team,OPERATION HANGOVER,SectorE02,VICEROY TIGER,APT-Q-38,Donot,APTC35(Donot),apt_donot	肚脑虫	中国、巴基斯坦	通过鱼叉攻击,水坑攻击专注于针对特定目标进行长期的持续性网络攻击	针对中国、巴基斯坦和其他南亚地区国家政府机构、国防军事部门以及商务领域重要人士实施网络间谍活动	印度	2022-04-27		VICEROY TIGER 是一个与印度有联系的对手，历史上针对多个行业的实体。以往的活动针对多个部门和国家;然而，自2015年以来，这个对手似乎专注于巴基斯坦的实体，特别是政府和安全组织。这个对手一贯利用含有恶意Microsoft Office文档的鱼叉式网络钓鱼电子邮件、针对Android移动平台的恶意软件，以及旨在获取用户凭证的网络钓鱼活动。2017年3月，360追踪团队发现了一个有针对性的攻击样本，证实了此前未知的APT攻击行为样本，该组织现在至少可以追溯到2016年4月。追踪小组将攻击组织命名为	2023-10-17	保留
+202	Blind Eagle,APT-Q-98,APT-C-36,blindeagle,apt_blindeagle	盲眼鹰	中国、哥伦比亚、南美	通过鱼叉式钓鱼邮件攻击	主要目标位于哥伦比亚境内，以及南美其他的国家和地区，如厄瓜多尔和巴拿马		2022-04-27		APT-C-36是一个被怀疑是南美洲间谍组织的组织，至少从2018年起就一直活跃。该组织主要针对哥伦比亚政府机构以及金融部门、石油行业和专业制造业的重要企业。	2023-10-17	保留
+205	APT-C-37,APT-Q-67	拍拍熊	法国,土耳其,伊朗,伊拉克,埃及,巴基斯坦	水坑攻击	军事,政府,ISIS		2022-04-27		拍拍熊组织（APT-C-37从2015年10月起至今，开始针对某武装组织展开了有组织、有计划、针对性的长期不间断攻击。其攻击平台为Windows和Android，截止目前360烽火实验室（360 Beaconlab）一共捕获了Android平台攻击样本32个，Windows平台攻击样本13个，涉及的C&C域名7个。截至目前，360烽火实验室发现此次拍拍熊组织攻击活动影响到的国家共有11个，通过查询可以知悉这些国家均存在某武装组织组织人员。 某武装组织由于其自身的政治、宗教等问题，使其成为了众多黑客及国家的	2023-01-18	保留
+208	ZooPark,APT-Q-66,APT-C-38	军刀狮	中东,阿尔及利亚,埃及,土耳其,伊拉克,伊朗,阿富汗,约旦,黎巴嫩	社工攻击,鱼叉攻击,水坑攻击,Telegram频道	西亚中东某国的库尔德人,政府		2022-04-27		ZooPark是一项网络间谍行动，至少从2015年6月以来，该行动一直以中东为目标。ZooPark背后的威胁行动者使用v1-v4的几代恶意软件感染Android设备，其中v4是2017年部署的最新版本。	2023-01-18	保留
+211	APT-C-39,Lamberts,the Lamberts，APT-Q-92	Longhorn	中国、中东、欧洲、 亚洲、非洲	通过0-day漏洞，一系列后门木马来对目标进行攻击	针对中国、中东、欧洲、 亚洲和非洲等60多个国家和地区的金融，电信，能源，航空航天，信息技术，教育和自然资源部门的目标，渗透政府和国际机构	美国	2022-04-27		Longhorn 至少从2011年开始就很活跃。除了零日漏洞之外，它还使用了一系列后门木马来攻击目标。除了金融、电信、能源、航空航天、信息技术、教育和自然资源等领域的目标外，长角牛”还渗透到各国政府和国际运营组织。所有被攻击的组织都会引起国家攻击者的兴趣。长角牛已经感染了中东、欧洲、亚洲和非洲至少16个国家的40个目标。有一次，美国的一台计算机被感染，但在感染后，卸载程序在几个小时内启动，这可能表明该受害者是无意中感染的。据cfr称，这一威胁行为者为了间谍目的而损害政府、国际组织、学术机构以及金融、电信、	2023-10-17	保留
+214	APT-C-43 Machete,machete-apt,APT-Q-99,El Machete,APTC43	Machete	委内瑞拉,厄瓜多尔,哥伦比亚,秘鲁,俄罗斯,古巴,西班牙	鱼叉攻击	情报部门,军队,大使馆,政府机构		2022-04-27		Machete 是一个疑似说西班牙语的网络间谍组织，至少从2010年就开始活跃。它的业务主要集中在拉丁美洲，尤其是委内瑞拉，但也包括美国、欧洲、俄罗斯和亚洲部分地区。砍刀一般针对政府机构、情报机构和军事单位等知名组织，以及电信和电力公司。	2023-04-06	保留
+217	APT-C-44	北非狐	中国、阿拉伯语地区	主要利用钓鱼网站和第三方文件托管网站进行载荷投递，使用社交媒体进行传播	针对分布在阿拉伯语地区疑似具有军事背景的相关人员，目的是为了获取情报先机	阿尔及利亚	2022-04-27		北非狐是2020年披露的一个APT组织。该组织自2017年开始针对阿拉伯语地区长达三年的网络攻击活动，具备windows与Android双平台攻击能力。该组织主要利用钓鱼网站和第三方托管网站进行载荷投递，利用社交媒体进行传播。受害者集中在阿拉伯语地区，根据分析，其中包含疑似具有军事背景的相关人员	2023-10-17	保留
+220	ClickOnce,APT-C-47	旺刺	中国、朝鲜半岛地区	通过钓鱼邮件实施攻击，并通过ClickOnce安装方式植入后门程序	针对与朝鲜半岛地区有关联的实体机构和个人	朝鲜	2022-04-27		“旺刺”组织是由奇虎360公司首次披露并根据该组织擅长攻击技术的谐音“旺刺”进行命名的组织，并为其分配了内部编号APT-C-47。该组织来自于朝鲜半岛地区，并且以与半岛地区有关联的实体机构和个人作为主要攻击目标，根据数据分析显示，该组织的攻击活动最早可以追溯到2018年。 该组织通过向受害者投递包含伪装的安全插件升级钓鱼邮件实施攻击，当受害者点击伪装的升级钓鱼链接后会进入伪装的插件网页点击安装链接，会下载安装ClickOnce程序的部署文件（*.appref-ms），该文件包含了恶意的ClickOnce程	2023-10-17	保留
+223	穷奇,APT-Q-20,APT-C-01,绿斑,GreenSpot,白海豚,PoisonVine,apt_greenspot	毒云藤	中国	通过鱼叉攻击,水坑攻击,鱼叉邮件窃取政府、科研相关行业领域的资料数据	针对中国国防、政府、科技、教育以及海事机构等重点单位和部门进行网络间谍活动	中国	2022-04-27		毒云藤是在2015年6月被奇安信公开揭露出来由台湾发起的一个APT组织，其最早的活动可以追溯到2007年。 毒云藤组织对中国国防、政府、科技、教育以及海事机构等重点单位和部门进行了长达11年的网络间谍活动。该组织主要关注军工、中美关系、两岸关系和海洋相关领域，其关注的领域与海莲花（OceanLotus）APT组织有一定相似的地方。 该组织在初始攻击环节主要采用鱼叉式钓鱼邮件攻击，攻击之前对目标进行了深入调研和精心挑选，选用与目标所属行业或领域密切相关的内容构造诱饵文件和邮件，主要是采用相应具体领域相关会议	2023-10-17	保留
+226		AquaticPanda				中国	2022-04-27		AQUATIC PANDA”是一种位 于中国的目标入侵对手，具有情报收集和工业间谍的双重任务。它可能至少从2020年5月开始运行。AQUATIC PANDA业务主要集中在电信、技术和政府部门的实体。水生熊猫严重依赖于 Cobalt Strike，其工具集包括独特的 Cobalt Strike下载跟踪FishMaster。AQUATIC PANDA也被观察到向目标运送njRAT有效载荷。	2022-11-17	保留
+229	Lion Soldiers Team,Phantom Turk	AslanNeferlerTim				土耳其	2022-04-27		土耳其民族主义黑客组织，已经活跃了大约一年。据Domaintools称，该集团的网站自2015年12月以来注册，自2016年1月以来拥有一个活跃的Twitter账户。该组织对被认为对土耳其政策或领导层持批评态度的新闻机构和政府的网站进行分布式拒绝服务(DDoS)攻击和破坏，并声称其行动是为了捍卫伊斯兰教	2022-11-17	保留
+232		Attor					2022-04-27	NULL	针对外交使团和政府组织的敌对团体。	2022-04-27	保留
+235		Avivore				中国	2022-04-27	NULL	该集团的存在是在Context调查多起针对跨国企业的攻击事件期间曝光的，这些攻击危及了在其供应链中工作的小型工程服务和咨询公司	2022-04-27	保留
+238	Crescent and Star	Ayyıldız				土耳其	2022-04-27		Ayyıldız (Crescent and Star) Tim是一个成立于2002年的民族主义黑客组织。它对它认为镇压穆斯林少数民族或实施伊斯兰恐惧症政策的政府的网站进行污损和DDoS攻击。	2022-11-17	保留
+241		BackdoorDiplomacy					2022-04-27	NULL	BackdoorDiplomacy 是一个网络间谍威胁组织，至少自2017年以来一直活跃。BackdoorDiplomacy”的目标是非洲、欧洲、中东、亚洲等地的外交部和通信企业	2022-04-27	保留
+244		BambooSpider					2022-04-27		CrowdstrikeCrowdstrike将 Panda Zeus开发者称为BAMBOO SPIDER	2022-11-17	保留
+247		BelialDemon					2022-04-27	NULL	Mentioned 将攻击者称为 TriumphLoader 和Matanbuchus	2022-04-27	保留
+250		BigPanda				中国	2022-04-27		一个针对金融服务业的APT组织，暂时没有详细分析报告。	2022-11-17	保留
+253		Blackgear	日本、台湾、韩国	钓鱼邮件	个人用户		2022-04-27	NULL	BLACKGEAR是一个多年来针对台湾用户的间谍活动。在2012年ELIRKS被首次发现时，已经有多份文件和会谈报道了这一活动。它以使用博客和微博服务来隐藏其实际指挥控制服务器的位置而闻名。这允许攻击者通过更改这些帖子中的信息来快速更改C&C服务器。与大多数战役一样，BLACKGEAR也在不断发展。我们的研究表明，它已经开始瞄准日本用户。有两件事让我们得出了这个结论:第一，作为其感染程序一部分的假文件现在是用日语写的。其次，它现在使用日本的博客网站和微博服务来进行C&C活动。	2022-04-27	保留
+256		BlackOasis	伊拉克、阿富汗、巴林、约旦、沙特阿拉伯、伊朗、荷兰、英国、俄罗斯、尼日利亚、利比亚、突尼斯和安哥拉等国家和地区	0day漏洞	中东地区的政治人物、包括联合国人物、反对派博客写手和激进分子以及区域新闻记者等		2022-04-27	NULL	BlackOasis 是一个中东威胁组织据信是伽玛集团的客户。该组织对联合国的知名人士以及反对派博客、活动人士、地区新闻记者和智库都表现出了兴趣。据报道，一个被微软称为NEODYMIUM的组织与BlackOasis的运营密切相关，但尚无证据表明该组织的名字是别名。	2022-04-27	保留
+259	HUAPI,CIRCUIT PANDA,Temp.Overboard,Palmerworm	BlackTech	东亚|台湾|日本|香港	钓鱼邮件	金融	中国	2022-04-27		BlackTech是一个网络间谍组织，主要针对东亚地区的目标，特别是台湾，偶尔也会针对日本和香港。根据他们的一些C&C服务器的互斥锁和域名，BlackTech的行动可能是为了窃取他们目标的技术。随着他们的活动和演变的战术和技术，帮助我们发现了众所周知的red string of fate ，连接三个看似不同的战役: PLEAD，Shrouded Crossbow，和最近的Waterbear。 PLEAD”是一项窃取机密文件的信息活动。自2012年以来，该组织一直以台湾政府机构和私人组织为目标。他的工具集包	2022-11-17	保留
+262		BladeHawk					2022-04-27	NULL		2022-04-27	保留
+268	Emdivi,Cloudy Omega	BlueTermite				中国	2022-04-27		Blue Termite是活跃在日本的一群疑似源自中国的组织.	2022-11-17	保留
+271	玻色子蜘蛛,BOSON SPIDER	BosonSpider					2022-04-27		BOSON SPIDER玻色子蜘蛛(BOSON SPIDER)是一个网络犯罪组织，于2015年首次被发现，最近在2016年春天莫名其妙地消失了，似乎是一个在东欧活动的组织严密的组织。他们使用了各种各样的分发机制，比如臭名昭著(现在已经不存在了)的垂钓者利用工具包，以及模糊的JavaScript来减少反病毒解决方案的检测。	2022-11-17	保留
+274	GOLD LOWELL,	BossSpider					2022-04-27		2018年，CrowdStrike Intelligence跟踪BOSS SPIDER，因为它定期更新Samas勒索软件，并接收到已知比特币(BTC)地址的付款。这种持续的活动节奏在2018年11月底突然停止，当时美国司法部发布了一份起诉书，指控伊朗籍个人Faramarz Shahi Savandi和Mohammad Mehdi Shah Mansouri是该组织的成员。	2022-11-17	保留
+277		BoulderBear				俄罗斯	2022-04-27		2013年12月首次观测到活动。	2022-11-17	保留
+280		BouncingGolf					2022-04-27		Bouncing Golf是一场针对中东国家的网络间谍活动	2022-11-17	保留
+283	Budminer cyberespionage group	Budminer				中国	2022-04-27	NULL	Budminer最早是于2008年使用Taidoor恶意家族进行网络钓鱼，后续开发了自定义恶意软件Blugger。	2022-04-27	保留
+286	Buhtrap	BuhTrap	中国、俄罗斯	通过钓鱼邮件，后门软件和漏洞攻击窃取信息进行网络间谍活动	针对俄罗斯的金融机构和企业窃取金融机构资金为主，现改为网络间谍活动	俄罗斯	2022-04-27		Buhtrap自2014年以来一直很活跃，但他们对金融机构的第一次攻击直到2015年8月才被发现。早些时候，该集团只专注于瞄准银行客户。目前，众所周知，该组织的目标是俄罗斯和乌克兰的银行。从2015年8月到2016年2月，Buhtrap成功地对俄罗斯银行发动了13次攻击，总金额达18亿卢布(2570万美元)。针对乌克兰银行的成功攻击的数量尚未确定。Buhtrap是第一个使用网络蠕虫病毒感染整个银行基础设施的黑客组织，这大大增加了从网络中移除所有恶意功能的难度。因此，银行不得不关闭整个基础设施，这导致了客户	2023-10-17	保留
+289		Cadelle				伊朗	2022-04-27	NULL	Symantec的遥测技术发现，Cadelle和Chafer的活动可以追溯到2014年7月，但很可能早在这个日期之前就开始了。命令和控制(C&C)注册信息可能早在2011年就开始活动，而可执行编译时间则建议在2012年初。他们的攻击一直持续到今天。Symantec估计，每个团队由5到10人组成	2022-04-27	保留
+292	CallistoGroup	Callisto					2022-04-27		The Callisto Group是一个先进的威胁行动者，已知的目标包括欧洲和南高加索地区的军事人员、政府官员、智库和记者。他们的主要兴趣似乎是收集与东欧和南高加索地区的外交和安全政策有关的情报。	2024-03-26	保留
+295	Calypso group，Calypso APT,	Calypso					2022-04-27	NULL	2019年3月，PT专家安全中心的专家在检测网络威胁的工作中首次发现了Calypso小组的活动。其结果是获得了该群体的许多恶意软件样本，识别出了受影响的组织和入侵者的控制服务器。根据我们的数据，该组织至少自2016年9月以来一直很活跃。该组织的主要目标是窃取机密数据，主要受害者是巴西、印度、哈萨克斯坦、俄罗斯、泰国、土耳其的政府机构。我们的数据表明，这个群体起源于亚洲。描述从俄语翻译而来.	2022-04-27	保留
+298	Anunak,Carbanakgroup	Carbanak	中国、俄罗斯、美国、德国	通过鱼叉式网络钓鱼电子邮件和滥用各种谷歌服务窃取数据或金钱	针对位于俄罗斯、美国、德国和中国的金融公司进行攻击	乌克兰	2022-04-27		Carbanak是一个网络犯罪集团，至少从2013年开始就使用Carbanak恶意软件攻击金融机构。Carbanak可能与Cobalt Group和FIN7等被单独跟踪的组织有关，这些组织也使用了Carbanak的恶意软件。	2023-10-17	保留
+301		Careto				西班牙	2022-04-27	NULL	这个威胁行为者的目标是政府、外交使团、能源部门的私营公司和学术机构，目的是进行间谍活动。 The Mask是一个高级威胁行动者，至少从2007年开始就参与网络间谍活动。Mask”这个名字来自西班牙俚语Careto”(丑陋的脸”或面具”)，作者将其包含在一些恶意软件模块中。迄今为止，已在31个国家观察到380多名独特的受害者。《The Mask 》的特别之处在于攻击者所使用的工具集的复杂性。这包括一个极其复杂的恶意软件、一个rootkit、一个bootkit、32- 64位的Windows版本、Mac OS	2022-04-27	保留
+304	Parastoo,NewsBeef,Newscaster,iKittens,Newsbeef,Group 83	CharmingKitten				伊朗	2022-04-27		Charming Kitten(又名Parastoo，或者Newscaster)是一个涉嫌与伊朗有联系的组织，其目标是涉及政府、国防技术、军事和外交部门的组织	2022-11-17	保留
+307		Chimera					2022-04-27		Chimera是一个疑似总部位于中国大陆的威胁组织，至少自2018年以来一直活跃，目标是台湾的半导体行业以及航空业的数据	2022-11-11	保留
+310	Greenbug,OilRig	Chrysene				伊朗	2022-04-27		攻击者滥用ICS(基于Dragos Inc的攻击者列表)。这一威胁行为者以从事间谍活动为目的，针对主要在海湾地区从事石油、天然气和电力生产的组织。根据一家网络安全公司的说法，威胁行为者侵入目标机器，并将其传递给另一个威胁行为者进行进一步的利用	2022-11-11	保留
+313	CIRCUS SPIDER	CircusSpider				俄罗斯	2022-04-27		据Crowdstrike报道，NetWalker勒索软件是由一位名叫CIRCUS SPIDER的俄语演员开发和维护的。NetWalker最初于2019年9月发现，其编译时间可追溯到2019年8月28日，已被发现用于大型游戏狩猎(BGH)风格的操作，同时也通过垃圾邮件分发。CIRCUS SPIDER正在宣传NetWalkeras是一个封闭的附属程序，并在被接受为附属程序之前对申请人进行验证。要求范围从提供类似附属项目的收入证明，在该领域的经验，以及申请人的目标行业类型。	2022-11-17	保留
+316		CleverKitten				伊朗	2022-04-27		Clever Kitten主要攻击目标为那些违背伊朗国家利益的跨国企业，相比于其他APT组织倾向于进行PHP服务器端攻击，之所以存在这样的倾向可能与该组织具备绕过如数据执行保护（DEP）或地址空间布局随机化（ASLR）的能力相关。	2022-11-17	保留
+319	CLOCKWORK SPIDER	ClockworkSpider					2022-04-27		CLOCKWORD SPIDER是一个机会主义攻击者，通过在受害者上安装自定义根证书以支持中间人进行网络监视。	2022-11-17	保留
+322	GOLD KINGSWOOD,Cobalt Group,Cobalt Gang,COBALT SPIDER	Cobalt	东欧、中亚、东南亚、北美、西欧和南美	钓鱼邮件	金融机构		2022-04-27	NULL	Cobalt Group是一个以财务为动机的威胁集团，至少自2016年以来，其主要目标是金融机构。该组织通过针对ATM系统、银行卡处理系统、支付系统和SWIFT系统进行入侵，窃取资金。Cobalt集团主要瞄准东欧、中亚、东南亚的银行。其中一名头目于2018年初在西班牙被捕，但该组织似乎仍很活跃。众所周知，该组织以组织为目标，利用它们的访问权限，然后危害更多的受害者。报告显示，Cobalt集团与恶意软件Carbanak以及Carbanak集团之间可能存在联系	2022-04-27	保留
+325	COBALTJUNO	CobaltJuno					2022-04-27		COBALT JUNO至少从2013年开始运营，专注于位于中东地区的目标，包括伊朗、约旦、埃及和黎巴嫩。COBALT JUNO自制间谍软件家族SABER1和SABER2，包括监视功能和伪装为合法的软件工具，如Adobe Updater, StickyNote和ASKDownloader。反恐组的研究人员估计，COBALT JUNO至少从2015年年中开始运行ZooPark的Android间谍软件。2018年，zopark在供应商报告和C2服务器数据的高调泄露中公开暴露。COBALT JUNO与伊朗的一家私	2022-11-17	保留
+328	Hive0081 (IBM),xHunt,xHunt campaign (Palo Alto),SectorD01 (NHSC)	CobaltKatana					2022-04-27		COBALT KATANA至少自2018年3月以来一直很活跃，它的许多业务集中在基于科威特或与科威特有关的组织。该组织的目标是政府、物流和航运组织。攻击者通过DNS劫持、SMB强制认证和密码暴力攻击等方式获得对目标的初始访问权。COBALT KATANA运营一个称为Sakabota Framework的定制平台，也称为Sakabota Core，附带一套免费的模块化后门和附件工具，包括Gon, Hisoka, Hisoka Netero, Killua, Diezen和Eye。该组织已经在其恶意软件和恶意	2022-12-26	保留
+331	Nahr el bared,Nahr Elbard	ColdRiver					2022-04-27		Cold River”是一个复杂的威胁(参与者)，它利用DNS子域劫持、证书欺骗和隐蔽的隧道化命令和控制流量，结合复杂和令人信服的引诱文档和自定义植入	2024-03-26	保留
+334		CommonRaven					2022-04-27		威胁行为者Common Raven一直积极针对金融机构，破坏其SWIFT支付基础设施，发送欺诈性支付。	2022-11-17	保留
+337	Slayer Kitten	CopyKittens	以色列、沙特阿拉伯、土耳其、美国、约丹和德国	通过钓鱼邮件、Web应用程序攻击、水坑攻击窃取数据进行网络间谍活动	针对以色列、沙特阿拉伯、土耳其、美国、约旦与德国等地区的政府、国防与学术机构进行网络间谍活动	伊朗	2022-04-27		CopyKittens是伊朗的一个网络间谍组织，至少从2013年就开始运作了。它的目标国家包括以色列、沙特阿拉伯、土耳其、美国、约旦和德国。该组织发起了Wilted Tulip行动”	2023-10-17	保留
+340	TunisianCyberArmy	CorsairJackal				突尼斯国家	2022-04-27		Corsair Jackal组织最早活跃于2013年，针对金融、石油、天然气和航运部门进行了少数几次但备受瞩目的攻击。	2022-11-17	保留
+343		CostaRicto					2022-04-27	NULL	CostaRicto是一个疑似雇佣黑客的网络间谍活动，至少自2019年以来，该活动已针对全球多个行业。CostaRicto的目标大部分是金融机构，分布在欧洲、美洲、亚洲、澳大利亚和非洲，主要集中在南亚	2022-04-27	保留
+346	ITSecTeam,Ghambar,Magic Hound,TG-2889,Operation Cleaver,Threat Group 2889,2889,Tarh Andishan,Group 41,Cleaver,Cobalt Gypsy,Alibaba	CuttingKitten				伊朗	2022-04-27		Dell SecureWorks Counter threat Unit™(CTU)的研究人员在跟踪一个疑似以伊朗为基地的名为 Threat Group-2889[1] (TG-2889)的威胁组织时，发现了一个伪造的LinkedIn个人资料网络。这些令人信服的个人资料形成了一个貌似已建立的LinkedIn用户自我引用的网络。CTU的研究人员确信这个网络的目的是通过社会工程来锁定潜在的受害者。大多数与假账户相关的合法LinkedIn账户都属于中东地区的个人，反恐组的研究人员以中等的信心评估这些人可能是TG	2022-11-17	保留
+349		CyberBerkut				俄罗斯	2022-04-27		Cyber​​Berkut是一个亲俄罗斯的APT组织，他们从现已解散的乌克兰防暴警察那里借用了“Berkut”这个名字。Cyber​​Berkut主要针对亲西方政府的机构如北约，使用到的攻击技术有分布式拒绝服务攻击（DDOS），在2014年大选期间破坏乌克兰中央选举委员会的网络，入侵了乌克兰的广告牌并显示了亲俄罗斯的信息。另外该组织从入侵的网络中窃取电子邮件，文件和截获的乌克兰高层电话并公之于众	2022-11-17	保留
+352	Islamic State Hacking Division,CCA,United Cyber Caliphate,UUC,CyberCaliphate	CyberCaliphateArmy					2022-04-27		Cyber Caliphate Army自称是伊拉克和黎凡特伊斯兰国（ISIS）的数字部队，其攻击活动包括澳大利亚机场，法国TV5Monde，美国军事数据库，英国内阁高管电子邮箱。	2022-11-17	保留
+355	Fraternal Jackal	Cyber fighters of Izz Ad-Din Al Qassam				伊朗	2022-04-27	NULL	Cyber fighters of Izz Ad-Din Al Qassam组织主要通过分布式拒绝服务攻击对美国金融、银行和证券业进行攻击。	2022-04-27	保留
+358		Danti	哈萨克斯坦|吉尔吉斯斯坦|乌兹别克斯坦|缅甸|尼泊尔|菲律宾				2022-04-27	NULL	Danti组织最早活跃于2015年，主要针对印度政府，同时打击哈萨克斯坦、吉尔吉斯斯坦、乌兹别克斯坦、缅甸、尼泊尔和菲律宾等东南亚国家。2016年2月至3月监测到利用CVE-2015-2545分发带有DOCX附件的钓鱼邮件。	2022-04-27	保留
+361		DarkBasin					2022-04-27		Dark Basin是一个雇佣黑客组织，目标是六大洲的数千名个人和数百家机构。目标包括倡导团体和记者、民选和高级政府官员、对冲基金和多个行业。Dark Basin广泛针对美国的非营利组织，包括从事#ExxonKnew运动的组织，该运动声称埃克森美孚数十年来隐瞒了有关气候变化的信息。我们还认为，Dark Basin是网络中立倡导组织的网络钓鱼背后的组织，此前由电子前沿基金会报道。我们将Dark Basin与一家印度公司BellTroX InfoTech Services及其相关实体联系在一起	2022-11-11	保留
+364		DarkCaracal				黎巴嫩	2022-04-27		Lookout和电子前沿基金会(EFF)发现了Dark Caracal，一个执着而多产的攻击者，在写这篇文章的时候，他被认为在贝鲁特属于黎巴嫩安全总局的一栋大楼里管理。目前，我们掌握了来自21个以上国家、数千名受害者的数百gb数据被窃取。被盗数据包括企业知识产权和个人身份信息	2022-11-11	保留
+367	LazyMeerkat	DarkHydrus	中东	钓鱼邮件	政府、教育		2022-04-27		DarkHydrus是一个威胁组织，至少从2016年开始，它就以中东的政府机构和教育机构为目标。该组织大量利用开源工具和自定义负载进行攻击。	2022-11-11	保留
+370		DarkVishnya					2022-04-27	NULL	被称为DarkVishnya,袭击目标至少八个银行使用的上网本或便宜的笔记本电脑,Raspberry Pi mini-computers, or a Bash Bunny ——一块USB-sized硬件用于渗透测试，可以冒充一个键盘,闪存,网络适配器,或者任何串行设备	2022-04-27	保留
+373	SyrianElectronicArmy,SEA,SyrianElectronicArmy(SEA)	DeadeyeJackal		通过DDoS、恶意软件、网络钓鱼、垃圾邮件、网站污损等方式进行攻击	针对 BBC 新闻、美联社、国家公共广播电台、CBC 新闻、每日电讯报、华盛顿邮报等新闻网站进行攻击	叙利亚	2022-04-27		The Syrian Electronic Army (SEA)是一个电脑黑客组织，2011年首次出现在网上，支持叙利亚总统巴沙尔·阿萨德的政府。它使用垃圾邮件、网站污损、恶意软件、网络钓鱼和拒绝服务攻击，攻击目标是政治反对派组织、西方新闻机构、人权组织和对叙利亚冲突看似中立的网站。它还入侵了中东和欧洲的政府网站，以及美国的国防承包商。2011年，SEA成为第一个在国家网络上建立公共互联网军队，公开对敌人发动网络攻击的阿拉伯国家。SEA与叙利亚政府关系的确切性质随着时间的推移已经发生了变化，目前尚不清楚	2023-06-01	保留
+376		DextorousSpider					2022-04-27		一个针对零售业的APT组织，暂时没有详细的分析报告	2022-11-17	保留
+379	LadyBoyle,	DizzyPanda					2022-04-27		收录于MISP的APT组织，暂时未有详细分析报告	2022-11-17	保留
+382	COBALT EDGEWATER	DNSpionage					2022-04-27		Cisco Talos最近发现了一项针对黎巴嫩和阿拉伯联合酋长国(UAE)的新活动，影响。gov域名，以及黎巴嫩一家私人航空公司。根据我们的研究，很明显，这个对手花了时间了解受害者的网络基础设施，以便在攻击过程中不被发现并尽可能不引人注意。基于该参与者的基础设施和ttp，我们无法将其与最近观察到的任何其他活动或参与者联系起来。这次特别的活动利用了两个虚假、恶意的网站，其中包含招聘信息，这些网站被用来通过嵌入宏的恶意Microsoft Office文档攻击目标。该参与者使用的恶意软件，我们称之为DNSpio	2022-11-11	保留
+385	APT-C-50	DomesticKitten	中国，土耳其	利用app进行监控，分发途径源于各类社交网站和市场应用，包括宗教市场，反动派论坛等	针对可能对伊朗政府产生威胁的个人或团队，包括NCRI，ISIS支持者和反派相关人员等进行监视	伊朗	2022-04-27		一项广泛的监控行动针对特定群体的个人，他们使用恶意移动应用程序，收集设备上的敏感信息以及周围的语音录音。CheckPoint的研究人员发现了这种攻击，并将其命名为Domestic Kitten”。袭击目标是库尔德人和土耳其人，以及ISIS的支持者，所有伊朗公民。	2023-10-17	保留
+388	GoldHeron	DoppelSpider					2022-04-27		2019年6月，CrowdStrike Intelligence观察到BitPaymer的一个源代码分支，并开始追踪名为DoppelPaymer的新勒索软件菌株。进一步的技术分析显示，两种版本的Dridex之间的区别越来越大，新版本被称为DoppelDridex。基于这些证据，CrowdStrike Intelligence评估了一个新群体从INDRIK SPIDER中分离出来，形成了对手DOPPEL SPIDER。DOPPEL SPIDER成立后，CrowdStrike Intelligence观察到该	2022-11-17	保留
+391	CrouchingYeti,IRON LIBERTY,DYMALLOY,Beserk Bear,ALLANITE,Koala Team,Energetic Bear,Group 24,Crouching Yeti,CASTLE,Havex,TG-4192,BlackEnergy,Berserker Bear,APT-Q-80	Dragonfly	中国、美国	通过钓鱼邮件、水坑攻击部署Havex远程访问木马对目标进行攻击	针对美国和全球炼油厂、核设施和能源公司的工业控制系统(ICS)进行攻击	俄罗斯	2022-04-27		Dragonfly是一个网络间谍组织，至少从2011年就开始活跃。他们最初的目标是国防和航空公司，但在2013年初转向能源行业。他们还瞄准了与工业控制系统有关的公司。\n2015年出现了一个类似的组织，被Symantec识别为Dragonfly2.0。关于Dragonfly和Dragonfly2.0之间的重叠程度存在争议，但有足够的证据表明，它们被作为两个独立的群体进行跟踪。”	2023-10-17	保留
+394	IRON LIBERTY,DYMALLOY,Berserk Bear	Dragonfly2.0				俄罗斯	2022-04-27		Dragonfly 2.0 是一个疑似俄罗斯组织，至少自2015年12月以来，该组织一直以政府实体和美国多个关键基础设施部门为目标。关于Dragonfly2.0和Dragonfly之间的重叠程度存在争议，但有足够的证据表明，它们被作为两个独立的群体进行跟踪。	2022-11-11	保留
+397	Moafee,GREF,Moafee,BRONZE OVERBROOK,ke3chang,apt_ke3chang	DragonOK	日本、美国、台湾、俄罗斯	钓鱼邮件	高科技企业、制造业、能源行业、涉及南海政治问题的国家|组织以及个人	中国	2022-04-27		DragonOK”是一个以日本组织为目标的网络钓鱼组织。由于ttp重叠，包括类似的自定义工具，DragonOK被认为与Moafee威胁集团有直接或间接的关系。众所周知，它使用各种恶意软件，包括Sysget/HelloBridge, PlugX, PoisonIvy, FormerFirstRat, NFlog和NewCT。	2023-07-07	保留
+400		DungeonSpider					2022-04-27		DUNGEON SPIDER是一个犯罪组织，其运营的勒索软件通常被称为Locky”，自2016年2月以来一直活跃，最后一次被发现是在2017年底。Locky是一个使用组合加密算法加密文件的勒索软件工具:RSA的密钥大小为2048位，AES的密钥大小为128位。Locky以大量文件扩展名为目标，能够对共享网络驱动器上的数据进行加密。为了进一步影响受害者并防止文件恢复，Locky删除了机器上所有的影子卷副本。《DUNGEON SPIDER》主要依靠带有恶意附件的垃圾邮件进行传播。Locky是与这个攻击者相关的	2022-11-17	保留
+403		DustStorm					2022-04-27		Dust Storm是一个威胁组织，已经针对日本、韩国、美国、欧洲和几个东南亚国家的多个行业	2022-11-17	保留
+406	Elderwood Gang,Beijing Group,Sneaky Panda	Elderwood	美国	0day漏洞、水坑攻击	国防组织|供应链制造商|人权和非政府组织（NGO）|IT服务提供商		2022-04-27	NULL	Elderwood是一个疑似中国网络间谍组织，据报道，该组织对2009年被称为极光行动”(Operation Aurora)的谷歌入侵负责。该组织的目标是国防组织、供应链制造商、人权和非政府组织(ngo)以及IT服务提供商。	2022-04-27	保留
+409		ElectricPanda				中国	2022-04-27		一个针对电力行业的APT组织，暂时没有详细分析报告	2022-11-17	保留
+412		EloquentPanda				中国	2022-04-27			2022-11-17	保留
+415	EquationGroup,APT-C-40,PLATINUM TERMINAL,Five Eyes,EQGRP,Longhorn,Tilded Team,Lamberts,Equation,APT-Q-91	方程式	中国、俄罗斯、日本、意大利	通过水坑攻击,鱼叉攻击等感染了数千个，甚至上万个受害者	针对中国、俄罗斯、日本、意大利等45国，目标包括政府和外交机构、电信行业、航空行业、能源行业、核能研究机构企业等	美国	2022-04-27		The Equation Group是一个高度复杂的威胁行为者，被其在卡巴斯基实验室的发现者描述为世界上最复杂的网络攻击集团之一，与Stuxnet和Flame的创造者一起行动，但始终处于优势地位	2023-10-17	保留
+418	DeathStalker	Evilnum	中国、欧洲	Evilnum的代表性攻击手段是将恶意程序伪装成客户的身份证明文件，欺骗金融公司的工作人员运行这些程序，进而通过植入间谍木马获得受害者主机上的高价值信息。	主要攻击目标为金融科技公司		2022-04-27		ESET分析了Evilnum的操作，这个APT组织制造了恶意软件Evilnum，此前曾在针对金融科技公司的攻击中被发现。尽管上述恶意软件至少从2018年以来就在野外被发现，并在之前有记录，但关于其背后的组织及其运作方式的报道却很少。该组织的目标仍然是金融科技公司，但其工具集和基础设施已经发展，现在由定制的自制恶意软件和从恶意软件即服务(MaaS)提供商Golden Chickens购买的工具组成，后者臭名昭著的客户包括FIN6和Cobalt group。	2023-10-17	保留
+421		EvilPost	日本		国防		2022-04-27	NULL	EvilPost组织在2015年11月底针对日本和台湾的高科技、政府、媒体、金融行业发起多次鱼叉式网络钓鱼攻击，并附带利用CVE-2015-1701的恶意Microsoft Word文档。	2022-04-27	保留
+424		EvilTraffic					2022-04-27	NULL	CSE Cybsec的恶意软件专家发现了一个被称为EvilTraffic”的大规模广告活动，它利用了数万个被入侵的网站。不法分子利用一些CMS漏洞上传和执行任意的PHP页面，用于通过广告产生收入。	2022-04-27	保留
+427		FastCash					2022-04-27		Treasury发现了一个复杂的网络自动取款机取钱活动我们称之为"FASTCash"自2016年底以来，FASTCash一直活跃于非洲和亚洲的银行，远程攻击银行内的支付切换应用服务器，为欺诈交易提供便利，主要涉及atm机，窃取相当于数千万美元的现金。美国联邦调查局(FBI)将此次行动中使用的恶意软件归咎于朝鲜政府。我们预计FASTCash将继续瞄准易受远程攻击的零售支付系统。	2022-11-17	保留
+430		FerociousKitten					2022-04-27		Ferocious Kitten 是一个威胁组织，至少从2015年开始，它就主要针对伊朗说波斯语的人	2022-11-11	保留
+433		Fin1				俄罗斯	2022-04-27		FireEye首次发现这种行为是在最近对一家金融机构的调查中。他们发现了一个有经济动机的威胁组织FIN1，该组织在该组织的活动可以追溯到几年前。该威胁组织部署了大量恶意文件和实用程序，所有这些都是恶意软件生态系统的一部分，被恶意软件开发者称为Nemesis”，并使用这种恶意软件访问受害者环境，窃取持卡人数据。FIN1,可能位于俄罗斯还是讲俄语的国家根据他们的许多语言设置自定义工具,以窃取数据,很容易从银行等金融服务组织货币化,信用合作社、ATM业务和金融事务处理和金融商业服务公司。	2022-11-17	保留
+436		Fin10	加南大	钓鱼邮件	矿物公司、赌场		2022-04-27		FIN10是一个以财务为动机的威胁组织，至少从2013年到2016年，它一直针对北美的组织。该组织利用从受害者那里窃取的数据来敲诈组织。	2022-11-11	保留
+439	DEV-0950,Lace Tempest	Fin11					2022-04-27		FIN11是一个成立已久的金融犯罪集团，最近其业务重点是勒索软件和敲诈勒索。该组织自2017年以来一直很活跃，并被UNC902和后来的TEMP.Warlok跟踪。在某些方面，FIN11让人想起APT1;(FireEye) Mandiant也对许多FIN11入侵做出了回应，但我们只观察到该组织在少数情况下成功地通过访问获取了金钱。这可能表明，行为者在其钓鱼行动中撒下了广泛的网，然后根据行业、地理位置或感知的安全状况等特征选择进一步利用哪些受害者。最近，FIN11部署了CLOP勒索软件，并威胁要公布窃取的数据	2024-03-07	保留
+442		Fin13				俄罗斯	2022-04-27		自2017年以来，Mandiant一直在跟踪FIN13, FIN13是一个频繁和多样化的以财务为动机的威胁行为者，其活动时间最早可追溯到2016年。虽然他们的行动一直持续到今天，但在许多方面，FIN13的入侵就像过去传统金融网络犯罪的时间胶囊。不同于今天流行的打劫勒索软件团体，FIN13花时间收集信息来进行欺诈性的资金转移。大多数FIN13入侵没有严重依赖于像Cobalt Strike这样的攻击框架，而是大量使用定制的被动后门和工具，潜伏在环境中进行长期的攻击。	2022-11-17	保留
+445	Wolf Spider	Fin4	美国	钓鱼邮件	医疗保健、制药、咨询类公司		2022-04-27		FIN4是一个以财务为动机的威胁组织，至少自2013年以来，其目标是与公开金融市场有关的机密信息，特别是与医疗保健和制药公司有关的机密信息。FIN4的独特之处在于，它们不会用典型的持续恶意软件感染受害者，而是专注于捕获授权访问电子邮件和其他非公开通信的凭证。	2022-11-11	保留
+448		Fin5		渗透攻击	餐饮、游戏、酒店业		2022-04-27		FIN5是一个以财务为动机的威胁组织，目标是个人身份信息和支付卡信息。该组织至少自2008年以来一直很活跃，目标是餐厅、游戏和酒店行业。这个团体由来自俄罗斯的成员组成。	2022-11-17	保留
+451	MageCart Group 6,GOLD FRANKLIN,ITG08,White Giant,SKELETON SPIDER	Fin6	美国	钓鱼邮件	酒店、零售业		2022-04-27		FIN6是一个窃取支付卡数据并在地下市场出售牟利的网络犯罪集团。该集团积极瞄准酒店和零售行业的销售点(PoS)系统，并做出妥协。	2022-11-11	保留
+454	Calcium,ITG14,GOLD NIAGARA,CARBON SPIDER,Carbanak,Anunak,JokerStash,Carberp,APT-C-11,Sangria Tempest	Fin7	俄罗斯、美国、德国、中国	通过鱼叉式网络钓鱼电子邮件和滥用各种谷歌服务窃取数据或金钱	针对位于俄罗斯、美国、德国和中国的金融公司进行攻击	乌克兰	2022-04-27		FIN7是一个以财务为动机的威胁组织，自2013年以来一直活跃，主要针对美国零售、餐厅和酒店行业，经常使用销售点恶意软件。FIN7的一部分是由一家名为Combi Security的幌子公司运营的。自2020年以来，FIN7转向了大型游戏狩猎(BGH)的方法，包括使用REvil勒索软件和他们自己的勒索软件作为服务(RaaS)， Darkside。FIN7可能与Carbanak集团有关，但似乎有几个集团使用Carbanak恶意软件，因此被单独跟踪。	2024-01-05	保留
+457		Fin8	北美	钓鱼邮件	零售、餐饮、酒店业		2022-04-27		FIN8是一个以财务为动机的集团，目标是零售、酒店和娱乐行业。该行为者之前曾使用下载程序PUNCHBUGGY和POS恶意软件PUNCHTRACK进行过几次量身定制的钓鱼活动。	2022-11-11	保留
+460		FlashKitten					2022-04-27		从2016年12月到2018年7月公开披露，这个可疑的伊朗攻击者长期开展SWC活动。与其他以伊朗为基地的组织一样，FLASH KITTEN的目标范围似乎也集中在中东和北非地区。	2022-11-17	保留
+463	UNC757,Parisite,PIONEER KITTEN	FoxKitten				伊朗	2022-04-27		Fox Kitten被怀疑与伊朗政府有联系，至少自2017年以来一直活跃在中东、北非、欧洲、澳大利亚和北美的实体。Fox Kitten瞄准多个垂直行业，包括石油和天然气、技术、政府、国防、医疗保健、制造和工程。	2022-11-11	保留
+466		FoxyPanda				中国	2022-04-27		针对电信和技术组织的敌对团体。	2022-11-17	保留
+469		Frankenstein					2022-04-27	NULL	Frankenstein 是2019年1月至4月期间由未知威胁行为者发起的一场运动。活动名称来源于参与者将几个不相关的部分拼凑在一起的能力。	2022-04-27	保留
+472		Fxmsp	中国、美国	利用自定义的远控工具、后门程序以及高级恶意软件对目标网络渗透	针对美国等国家和地区的金融行业如银行、金融机构、支付网关等，同时也会针对其供应商和合作伙伴的安全漏洞进行渗透攻击		2022-04-27		在2017年和2018年，Fxmsp建立了一个可信的代理经销商网络，以促进他们对地下犯罪的破坏。一些已知的Fxmsp ttp包括通过外部可用的远程桌面协议(RDP)服务器和公开的活动目录访问网络环境。最近，这名攻击者声称已经开发了一个窃取证书的僵尸网络，能够感染知名目标，以窃取敏感用户名和密码。Fxmsp声称，开发这种僵尸网络并提高其从安全系统窃取信息的能力是他们的主要目标。	2023-10-17	保留
+475	Operation Soft Cell,SoftCell	Gallium					2022-04-27		GALLIUM是一个威胁组织，据信其目标是世界各地的电信供应商，主要是东南亚、欧洲和非洲。为了破坏目标网络，GALLIUM使用公开可用的漏洞来攻击未打补丁的面向互联网的服务，众所周知，它针对的是WildFly/JBoss中的漏洞。	2023-01-04	保留
+478		GallMaker	中国、东欧、中东	利用名为 "BISTROMATH" 的后门程序及网络钓鱼渗透到受害者的网络	针对东欧和中东地区的政府机构、科研机构、电信和能源行业等		2022-04-27		Gallmaker是一个以中东地区的受害者为目标的网络间谍组织，至少自2017年12月以来一直活跃。该组织主要针对国防、军事和政府部门的受害者。	2023-10-17	保留
+481	Shuckworm,Primitive Bear,ACTINIUM,APT-C-53,Gamaredon Group,APT-Q-82,SectorC08,Armageddon,Winterflounder,Iron Tilden,apt_gamaredon,Hive0051	Gamaredon	中国、乌克兰	通过利用恶意office文档、恶意htm附件、恶意SFX文件等攻击工具组合成三类不同的攻击流程	针对乌克兰地区进行攻击，尝试渗透乌克兰政府、军营、警局等重点机构	俄罗斯	2022-04-27		Gamaredon Group是一个至少自2013年以来一直活跃的威胁组织，其目标是可能与乌克兰政府有关的个人。Gamaredon Group这个名字来自单词Armageddon”的拼写错误，在对手早期的战役中发现了这个错误。	2024-04-29	保留
+484	Golden Chickens,Golden Chickens 01,Golden Chickens01	GC01					2022-04-27	NULL	GC01组织在2018年8月至2018年10月之间针对金融业多家公司进行多达九次的鱼叉式网络钓鱼攻击，该组织使用了恶意软件服务提供商Golden Chicken提供的Venom、Taurus和more_eggs后门工具	2022-04-27	保留
+487	Golden Chickens,Golden Chickens02,Golden Chickens 02	GC02					2022-04-27	NULL	GC02组织在2017年11月至2018年7月之间针对印度和美国公司进行了五次鱼叉式网络钓鱼攻击，该组织使用了恶意软件服务提供商Golden Chicken提供的Venom、Taurus和more_eggs后门工具	2022-04-27	保留
+490		Gcman	全球	利用一些公开和私有的漏洞来渗透到受害者的系统，以网络钓鱼、攻击网站和社交工程等方式欺骗受害者并带入后门程序	针对全球国家和地区的金融、零售、能源、物流等领域攻击	俄罗斯	2022-04-27		GCMAN是一个专门针对银行的威胁组织，目的是将资金转移到电子货币服务。	2023-10-17	保留
+493		Gelsemium					2022-04-27		Gelsemium集团至少从2014年开始就很活跃，过去曾有几家安全公司对其进行过描述。Gelsemium的名字来自一个可能的翻译ESET第一次发现在阅读一份报告来自VenusTech被称为狼毒草。它是一种属于明胶线虫科的开花植物的名字，明胶线虫是一种含有有毒化合物的物种，像明胶，明胶线虫和明胶线虫，ESET选择作为这个恶意软件家族的三个组成部分的名称。	2022-11-11	保留
+496		GhostJackal					2022-04-27		收录于MISP的APT组织，暂时未有详细分析报告。	2022-11-17	保留
+499	Snooping Dragon	GhostNet					2022-04-27		GhostNet最早活跃于2009年3月。GhostNet主要针对达赖喇嘛（西藏独立运动者）和中国西藏机构进行攻击入侵，以达到对藏人机构的监视和信息窃取。GhostNet涉及由1295个受感染主机组成的网络，30%受感染主机被认为是高价值目标，涉及领域包括外交部、政府、非政府组织、新闻媒体等。	2022-11-11	保留
+502	UNC1151,TA445,apt_unc1151	GhostWriter	中国、乌克兰、立陶宛、拉脱维亚、波兰、德国	通过鱼叉式网络钓鱼，Cobalt Strike Beacon恶意软件来攻击乌克兰国家实体	针对乌克兰、立陶宛、拉脱维亚、波兰和德国的政府和私营部门实体，以及白俄罗斯持不同政见者、媒体实体和记者	俄罗斯	2022-04-27		Ghostwriter被称为activity set”，通过重叠的行为特征和人物角色将各种事件联系在一起，而不是一个攻击者或群体。	2023-10-17	保留
+505		GibberishPanda				中国	2022-04-27			2022-11-17	保留
+508		GnosticPlayers					2022-04-27		Gnosticplayers最早活跃于2019年2月。Gnosticplayers主要以窃取用户数据为目标，通过暗网进行出售获利。	2022-11-17	保留
+511		GoldBurlap					2022-04-27		GOLD BURLAP是一个以经济为动机的犯罪集团，负责开发Pysa勒索软件，也被称为mespinosa。Pysa是一个跨平台的勒索软件，已知的版本用c++和Python编写。据报道，截至2020年12月，约有50个组织成为Pysa勒索软件攻击的目标。这些经营者利用name and shame”的策略对受害者施加额外的压力。截至2021年1月，CTU的研究人员在地下论坛上没有发现任何Pysa广告，这可能表明它不是作为一种服务勒索软件(RaaS)来运作的。	2022-11-17	保留
+514	Shakthak,TA551	GoldCabin					2022-04-27		GOLD CABIN是一个以经济为动机的网络犯罪威胁集团，自2018年以来代表众多客户运营恶意软件分发服务。GOLD CABIN使用恶意文件，通常包含在有密码保护的档案中，通过电子邮件发送来下载和执行有效载荷。第二阶段的有效载荷最常见的是Gozi ISFB (Ursnif)或IcedID (Bokbot)，有时使用像Valak这样的中间恶意软件。GOLD CABIN基础设施依赖于通过域生成算法(DGA)创建的人工出现和频繁变化的url。url驻留一个PHP对象，该对象将恶意软件作为DLL文件返回。	2022-11-11	保留
+517	SPRITE SPIDER	GoldDupont					2022-04-27		GOLD DUPONT是一个以经济为动机的网络犯罪威胁组织，专门使用777(又名Defray777或RansomExx)恶意软件进行入侵后的勒索软件攻击。GOLD DUPONT自2018年11月开始活动，使用窃取的凭据建立对受害者网络的初步访问，以远程访问虚拟桌面基础设施(VDI)或虚拟专用网(VPN)等服务。从2019年10月至2020年初，该组织在一些入侵中使用GOLD BLACKBURN的TrickBot恶意软件作为初始访问载体(IAV)。自2020年7月以来，该组织还在一些入侵中使用了GOLD S	2022-11-11	保留
+520		GoldEverGreen					2022-04-27		GOLD EVERGREEN是一个以财务为动机的网络犯罪威胁集团，直到2014年6月一直运营着Gameover Zeus(又名Mapp, P2P Zeus)僵尸网络。它包含了一个由自称为The Business Club”的个人组成的联盟从2000年代中期到2014年进行的广泛而长期的犯罪阴谋。GOLD EVERGREEN的技术操作主要是通过僵尸网络使用Zeus，JabberZeus，和 eventually Gameover Zeus恶意软件家族。这些恶意软件家族是由俄罗斯人Evgeniy Bogach	2022-11-17	保留
+523		GoldFairfax					2022-04-27		GOLD FAIRFAX是一个以财务为动机的网络犯罪威胁组织，负责创建、分发和运营Ramnit僵尸网络。Ramnit是核心模块内部名称RMNet的语音拼法，于2010年4月开始运行，2010年7月开始普及。早期Ramnit变体中有一种特别致命的文件感染组件，它通过修改可执行文件和HTML文件传播，导致了这些早期变体的持续流行。目前，Ramnit仍然是一个积极维护和分布的威胁。Ramnit的目的是通过修改浏览器行为(浏览器中的人”)来拦截和操纵在线金融交易。	2022-11-17	保留
+526		GoldFlanders					2022-04-27		GOLD FLANDERS是一个以财务为动机的组织，负责分布式拒绝服务(DDOS)攻击，该攻击与勒索电子邮件有关，要求5到30个比特币。攻击主要包括UDP分片报文(DNS和NTP反射)以及每个受害者可能不同的其他流量。勒索邮件的到达时间与DDOS攻击相吻合，DDOS攻击的流量在20gbps到200gbps之间，每秒1200 - 1500万个数据包，持续时间在20 - 70分钟之间，目标是特定的自治系统号(ASN)或IP地址组。在某些情况下，受害者组织回复了这些勒索邮件，并在20分钟内收到GOLD FLAN	2022-11-17	保留
+529		GoldGalleon					2022-04-27		GOLD GALLEON是一个以财务为动机的网络犯罪威胁组织，由至少20名犯罪伙伴组成，共同开展商业电子邮件折衷(BEC)和欺骗(BES)活动。该组织似乎专门针对海事组织及其客户。反恐组的研究人员观察到，GOLD GALLEON的目标公司分布在韩国、日本、新加坡、菲律宾、挪威、美国、埃及、沙特阿拉伯和哥伦比亚。这些威胁行为者利用的工具、策略和程序与CTU研究人员之前调查过的其他BEC/BES组织(如GOLD SKYLINE)使用的工具、策略和程序类似。这些组织使用了同样数量的公开可用恶意软件(廉价和商用远	2022-11-17	保留
+532		GoldGarden					2022-04-27		GOLD GARDEN是一个以经济为动机的网络犯罪威胁集团，在2018年1月至2019年5月期间创作和运营了GandCrab”勒索软件。GandCrab”的运作方式是勒索软件即服务”，众多附属公司分发恶意软件，并与核心运营商分享赎金。GOLD GARDEN独占了GandCrab和相关的指挥控制(C2)基础设施的开发。独立的附属机构，经常有十几家同时运作，通过垃圾邮件、网络漏洞工具包、按安装付费的僵尸网络和扫描利用式攻击来协调GandCrab”的传播。2019年5月31日，运营商宣布停止运营，不打算恢复，原	2022-11-17	保留
+535		GoldMansard					2022-04-27		GOLD MANSARD是一个以经济为动机的网络犯罪威胁集团，从2019年8月开始运营Nemty勒索软件。Nemty背后的威胁制造者在俄罗斯地下论坛上被称为jsworm”。Nemty是一个勒索软件作为服务(RaaS)的附属程序，其特色是一个name and shame”网站，窃取的受害者数据被泄露。2020年4月，jsworm似乎收购了新的合作伙伴，并让Nemty勒索软件退役。随后又推出了Nefilim勒索软件，该软件不以从属模式运作。Nefilim已经被用于对物流、电信、能源和其他行业组织的入侵后勒索软	2022-11-17	保留
+538		GoldNorthfield					2022-04-27		GOLD NORTHFIELD至少从2020年10月开始运营，是一个以经济为动机的网络犯罪威胁集团，利用GOLD SOUTHFIELD的REvil勒索软件进行攻击。为了做到这一点，威胁行为者将REvil勒索软件二进制配置替换为他们自己的配置，以重新利用勒索软件为他们的操作服务。 GOLD NORTHFIELD已经给这个修改REvil勒索软件变体的名字LV ransomware”。	2022-11-17	保留
+541		GOLD RIVERVIEW					2022-04-27	NULL	GOLD RIVERVIEW是一个以经济为动机的网络犯罪集团，代表其客户传播恶意软件和充满诈骗的垃圾邮件。这个威胁集团创作和出售Necurs rootkit开始于2014年初，包括GOLD EVERGREEN集成到Gameover Zeus。GOLD RIVERVIEW还运营着一个全球僵尸网络，俗称Necurs (CraP2P)，是2016年至2018年垃圾邮件的主要来源。Necurs分发恶意软件，如GOLD DRAKE的Dridex (Bugat v5)， GOLD BLACKBURN的TrickBot	2022-04-27	保留
+544		GOLD SKYLINE					2022-04-27	NULL	GOLD SKYLINE是一个以财务为动机的网络犯罪威胁集团，在尼日利亚运营，通过商业电子邮件妥协(BEC)和欺骗(BES)从事高价值的电信欺诈。GOLD SKYLINE也被称为Wire-Wire Group 1 (WWG1)，至少自2016年以来一直活跃，严重依赖被泄露的电子邮件帐户、社会工程和越来越多的恶意软件来转移组织间的资金转移。	2022-04-27	保留
+547		GOLD SOUTHFIELD					2022-04-27	NULL	GOLD SOUTHFIELD是一个以经济为动机的网络犯罪威胁集团，代表各种附属威胁集团编写和操作REvil(又名Sodinokibi)勒索软件。该组织自2019年4月开始运营，从GOLD GARDEN获得了GandCrab”的源代码，后者是GandCrab”的运营商，于2019年5月自愿从地下市场撤回了他们的勒索软件。GOLD SOUTHFIELD负责编写REvil软件，并操作附属公司(也称为合作伙伴)使用的后端基础设施，以创建恶意软件，并从受害者那里收取赎金。CTU的研究人员高度自信地认为GOLD S	2022-04-27	保留
+550		GOLD SYMPHONY					2022-04-27	NULL	GOLD SYMPHONY是一个有经济动机的网络犯罪集团，总部可能设在俄罗斯，负责开发和销售恶意软件Buer Loader的地下论坛。Buer Loader于2019年8月左右首次被发现，是一种恶意软件即服务(MasS)，并被一个使用memeos”句柄的威胁行为者宣传。客户包括恶意软件the TrickBot”的运营商GOLD BLACKBURN。据报道，除了TrickBot, Buer Loader还下载了Cobalt Strike和其他用于入侵后勒索软件攻击的工具。	2022-04-27	保留
+553		GOLD WATERFALL					2022-04-27	NULL	GOLD WATERFALL是一个有经济动机的网络罪犯集团，负责创建，分发，和运行的恶意勒索软件。自2020年8月以来，GOLD WATERFALL使用各种战术，技术和程序(ttp)渗透和横向移动的目标组织部署恶意的side勒索软件，其最有价值的资源。其中，利用通过电子邮件传递的恶意文件建立据点，利用窃取的凭证访问受害者的远程访问服务。2020年11月，有人观察到darksupp”在几个半专有的地下论坛上宣传一个附属项目，标志着GOLD WATERFALL进入了勒索软件即服务”(RaaS)领域。	2022-04-27	保留
+556		GoldWinter					2022-04-27		GOLD WINTER 是一个有经济动机的组织，总部可能在俄罗斯，他们运营着 Hades 勒索软件。 Hades 的活动最早是在2020年12月被发现的，它在地下论坛和市场上缺乏存在，这使得反恐组的研究人员得出结论，它不是在一个勒索软件的服务附属模式下运作的。GOLD WINTER 做雇佣点名批评策略,数据被盗和作为制衡的受害者,而不是单一的集中式泄漏网站反恐组研究人员观察组使用Tor网站定制为每个受害者,包括Tox聊天ID进行交流沟通,也为每个受害者似乎是唯一的。	2022-11-11	保留
+559		GozNym					2022-04-27	NULL	GozNym最早发现于2016年4月。GozNym是Nymaim和Gozi ISFB恶意软件衍生的Trojan混合体。GozNym主要针对超过24加美国和加拿大的银行进行攻击，以进行欺诈行为。GozNym充分利用Nymaim和Gozi ISFB恶意软件的优势来创建功能强大的Trojan，具有隐身性和持久性的特征，并带有银行木马的功能	2022-04-27	保留
+562		GreyEnergy	中国、乌克兰、波兰	利用一些自定义的远控工具和后门程序进行渗透及零日漏洞利用、网络钓鱼等方式攻击目标	针对乌克兰、波兰等国家的能源、电信、政府和军事行业和电力行业		2022-04-27		GreyEnergy是BlackEnergy组织的继任者，该组织几年前曾对乌克兰实施恐吓，直到2015年才潜伏起来，很有可能正在为破坏性攻击做准备。该组织还与负责NotPetya的TeleBots具有密切联系。相关联恶意家族包括：felixroot和grey_energy。	2023-10-17	保留
+565	GOLD ULRICK	GrimSpider					2022-04-27		GRIM SPIDER”是一个复杂的犯罪集团，自2018年8月以来一直在运营Ryuk勒索软件，目标是大型组织，以获得高额赎金。这种被称为大猎物狩猎”的方法标志着WIZARD SPIDER的运作方式发生了转变，而GRIM SPIDER似乎是这个犯罪集团的一个成员。威胁组织WIZARD SPIDER被称为银行恶意软件TrickBot的俄罗斯运营商，过去主要关注电汇欺诈。与Samas和BitPaymer类似，Ryuk专门用于企业环境。Ryuk和Hermes版本的代码比较表明，Ryuk源自Hermes源代码，自发	2022-11-17	保留
+568		Groundbait				乌克兰	2022-04-27	NULL	Groundbait是一个针对顿涅茨克和卢甘斯克人民共和国反政府分裂分子的组织。	2022-04-27	保留
+571		Group27				中国	2022-04-27		Group 27组织最早活跃于2015年，通过对缅甸选举网站进行水坑攻击传播PlugX。Group 27组织常用的工具包括两个不同版本的PlugX、两个不同版本的Trochilus RA、一个9002 RAT和一个EvilGrab RAT。	2022-11-17	保留
+574		Group5	叙利亚	钓鱼邮件、水坑攻击	叙利亚反对派人士		2022-04-27	NULL	Group5 是一个疑似与伊朗有联系的威胁组织，尽管这一归属并不明确。该组织通常以叙利亚和伊朗为主题，通过鱼叉钓鱼和酒吧攻击与叙利亚反对派有关的个人。Group5使用了两个常用的远程访问工具(RAT)， njRAT和NanoCore，以及一个Android RAT, DroidJack。	2022-04-27	保留
+577		GuruSpider					2022-04-27		2018年初，CrowdStrike Intelligence发现GURU SPIDER通过其旗舰恶意软件装载器Quant loader支持多个犯罪软件家族的传播。	2022-11-17	保留
+580		HackingTeam					2022-04-27		Hacking Team收集到的许多0-days”，在2015年他们的组织被攻破期间公开，自那以后被多个APT组织使用。自2003年成立以来，意大利间谍软件供应商Hacking Team因向世界各国政府及其机构出售监视工具而臭名昭著。其旗舰产品远程控制系统(RCS)的功能包括从目标设备提取文件，拦截电子邮件和即时消息，以及远程激活设备的摄像头和麦克风。该公司一直因将这些能力出售给威权政府而受到批评——该公司一直否认这一指控。2015年7月，形势发生了逆转，Hacking Team遭受了破坏性的黑客攻击，暴	2022-11-17	保留
+583	Operation Exchange Marauder	Hafnium				中国	2022-04-27		HAFNIUM主要针对美国多个工业部门的实体，包括传染病研究人员、律师事务所、高等教育机构、国防承包商、政策智库和非政府组织。微软威胁情报中心(MSTIC)认为这次行动是由HAFNIUM发起的，根据观察到的受害者特征、策略和程序，HAFNIUM被认为是由国家资助的，在中国境外运作。HAFNIUM以前曾利用面向互联网的服务器的漏洞伤害受害者，并使用合法的开源框架，如Covenant，用于命令和控制。一旦他们进入了受害者的网络，HAFNIUM通常会将数据泄露到像MEGA这样的文件共享网站。在与这些漏洞无关的活	2022-11-17	保留
+586	Zhenbao,,TEMP.Zhenbao	HammerPanda				中国	2022-04-27		Hammer Panda是一个疑似来自中国的组织，目标是俄罗斯的组织	2022-11-17	保留
+589		HazyTiger				印度	2022-04-27		Bitter威胁组织最初在他们的活动中使用RAT工具，因为2014年发布的第一个Android版本是基于AndroRAT框架。随着时间的推移，他们转向了自定义版本，自此被称为BitterRAT。	2022-11-17	保留
+592	Conimes,Cycldek,Goblin Panda	Hellsing	马来西亚、菲律宾、印度尼西亚、美国、印度	钓鱼邮件	政府、外交机构	中国	2022-04-27	NULL	这一威胁行为者使用鱼叉式网络钓鱼技术来破坏东南亚、印度和美国的外交目标。它似乎也瞄准了APT 30。可能使用和Mirage相同的基础设施	2022-04-27	保留
+595		HenBox				中国	2022-04-27	NULL	这名威胁者的目标是维吾尔族(主要位于中国西北部的少数民族)和中国手机制造商小米的设备，目的是进行间谍活动	2022-04-27	保留
+598	黑格莎,Higaisa（黑格莎）,黑格莎（Higaisa）,Higaisa	黑格莎	中国、朝鲜	通过钓鱼邮件等方式投递攻击载荷，释放木马文件窃取信息	针对跟朝鲜相关的外交实体、政府官员、人权组织、朝鲜海外居民、贸易往来人员等进行攻击	韩国	2022-04-27		Higaisa是一个被怀疑来自韩国的威胁组织。Higaisa的目标是朝鲜的政府、公共和贸易组织;然而，他们也在中国、日本、俄罗斯、波兰和其他国家发动过袭击。Higaisa在2019年初首次被公开，但被认为早在2009年就开始运营。	2023-10-17	保留
+601		HoneyBee	越南、新加坡、阿根廷、日本、印度尼西亚、加拿大	钓鱼邮件	人道主义援助组织		2022-04-27		Honeybee 是一个由不知名人士领导的运动，目标是人道主义援助组织，在越南、新加坡、阿根廷、日本、印度尼西亚和加拿大一直很活跃。自2017年8月至2018年2月，该项目一直处于活跃状态。	2022-11-17	保留
+604		HookAds					2022-04-27	NULL	HookAds是一种在成人网站、在线游戏或黑帽seo网站普遍使用的低质量广告网络上购买廉价广告空间的广告活动。这些广告将包括JavaScript，通过一系列看起来像充满原生广告、在线游戏或其他低质量页面的诱饵站点重定向访问者。在适当的情况下，访问者将无声地加载辐射利用工具包，该工具包将尝试并安装其恶意软件负载。	2022-04-27	保留
+607		HoundSpider					2022-04-27		据Crowdstrike报道， HOUND SPIDER”的分支机构于2017年12月在罗马尼亚被捕	2022-11-17	保留
+610		HummingBad				中国	2022-04-27	NULL	这个组织创建了一个恶意软件，它会控制Android设备，每个月产生30万美元的虚假广告收入。该组织有效地控制着全球8500多万台移动设备。有可能把这些设备的使用权卖给出价最高的人	2022-04-27	保留
+613	TEMP.Avengers	HurricanePanda				中国	2022-04-27		自2013年以来，我们一直在调查这些黑客的入侵行为，过去一年里，我们一直在不停地与几家大型电信和科技公司进行斗争。这个中国对手的决心确实令人印象深刻:他们就像闻到骨头的狗。HURRICANE PANDA首选的妥协和持久性的初始矢量是China Chopper webshell——一个很小的、容易混淆的70字节文本文件，它包含一个' eval() '命令，然后用来为攻击者提供完整的命令执行和文件上传/下载功能。这个脚本通常是通过一个SQL注入或WebDAV漏洞上传到web服务器上的，这在一个有大型外部网络存	2022-11-17	保留
+616	Dagger Panda,IceFog,Trident	IceFog				中国	2022-04-27		至少从2011年开始运营，在中国的几个地方运营，在韩国和日本也有会员。可能和 Onion Dog有关。这一威胁对象主要是日本和韩国的政府机构、军事承包商、海事和造船集团、电信运营商等。.	2022-11-11	保留
+619		ImpersonatingPanda				中国	2022-04-27			2022-11-17	保留
+622	Cloud Atlas,Inception Framework,CloudAtlas	Inception				俄罗斯	2022-04-27		Inception是一个网络间谍组织，至少从2014年就开始活动了。该组织的目标主要是俄罗斯的多个行业和政府实体，但也在美国以及整个欧洲、亚洲、非洲和中东地区很活跃。	2024-01-08	保留
+625		IndigoZebra					2022-04-27	NULL	IndigoZebra 是一个疑似中国网络间谍组织，至少从2014年起就开始针对中亚各国政府。	2022-04-27	保留
+628	Evil Corp,GOLD DRAKE	IndrikSpider	全球	通过钓鱼文档，漏洞攻击投放Dridex等银行木马窃取金钱及机密信息	针对全球（主要活动于美国）各类企业进行勒索获利	俄罗斯	2022-04-27		Indrik Spider是一个总部位于俄罗斯的网络犯罪组织，自2014年以来一直很活跃。Indrik Spider最初始于Dridex银行木马，然后到2017年，他们开始使用BitPaymer、WastedLocker和Hades勒索软件运行勒索软件。	2023-10-17	保留
+631	APT-Q-61,APT-C-07,Prince of Persia,Foudre,Operation Mermaid,Infy,Infy group	美人鱼	中国、丹麦	通过鱼叉攻击,水坑攻击等方式投递载荷进行网络间谍活动，窃取敏感信息	针对丹麦的政府机构	伊朗	2022-04-27		Infy因菲是一个疑似来自伊朗的组织。自2013年初以来，我们观察到一个独特的威胁行为者组织的活动，我们开始调查该组织，基于2015年初针对人权活动人士的活动增加。在本文件发布之前，我们对该活动进行了其他研究，为了与之保持一致，我们采用了Infy”这个名称，这是基于基础设施及其两个系列恶意软件代理使用的标签。感谢我们在研究过程中收集到的信息，例如该组织恶意软件的特征和开发周期，我们的研究强烈支持Infy组织来自伊朗并可能与伊朗政府有联系的说法。在其他事件的背景下，从2014年底开始，Infy成为最常被观察	2023-10-17	保留
+634		InvisiMole	中国、欧洲、南亚、东南亚	利用零日漏洞、定向钓鱼、仿造数字签名和重新编译已知恶意软件对目标进行攻击	针对欧洲、南亚和东南亚的政府、军事、能源、电信、教育到金融和媒体等各个领域攻击		2022-04-27		针对外交使团、政府和军事组织的敌对组织，主要在乌克兰。	2023-10-17	保留
+637		Iridium				伊朗	2022-04-27		Resecurity的研究表明对议会的攻击是一场多年的网络间谍活动的一部分由一个被称为 IRIDIUM的民族国家组织策划。这个角色的目标是敏感的政府、外交和军事资源，这些国家包括五眼”情报联盟(包括澳大利亚、加拿大、新西兰、英国和美国)。	2022-11-17	保留
+640	Iron Cyber Group,ironcybercrime	Iron					2022-04-27		Iron group针对Windows、Linux和Android平台开发了多种类型的恶意软件(后门软件、加密挖掘软件和勒索软件)。他们使用恶意软件成功地感染了至少几千名受害者。	2022-11-11	保留
+643		ItaDuke					2022-04-27	NULL	ItaDuke自2013年起就是一名攻击者。它利用PDF来释放恶意软件和Twitter帐户来存储C2服务器的url。2018年，一位名为DarkUniverse”的攻击者，在2009年至2017年期间活跃，被认为是卡巴斯基的itduke。	2022-04-27	保留
+646	temp.bottle	KeyholePanda				中国	2022-04-27			2022-11-17	保留
+649	Thallium,Black Banshee,Operation Stolen Pencil,Velvet Chollima,STOLEN PENCIL,Kimsuki,KimsukyGroup,APT-C-55,Mystery Baby,Baby Coin,Smoke Screen,Black Banshee,apt_kimsuky,APT43,Emerald Sleet,EmeraldSleet,TA427	Kimsuky	韩国	中国、韩国、美国、俄罗斯、欧洲	针对韩国、美国、俄罗斯和欧洲等国的跟朝鲜相关的政治目标、政府机关及智库、各领域专家	朝鲜	2022-04-27		Kimsuky”是一个总部位于朝鲜的网络间谍组织，至少自2012年以来一直很活跃。该团体起初以韩国政府机关、智库、各领域专家为对象，后来扩大到美国、俄罗斯、欧洲、联合国等国家。金石基的情报收集活动主要集中在与韩半岛有关的外交安保问题、核政策、制裁等方面。\nKimsuky被认为是2014年韩国水力原子能妥协案的负责人。其他著名的行动包括STOLEN PENCIL 行动(2018)，Kabar Cobra行动(2019)和Smoke Screen 行动(2019)。\n据悉，朝鲜对网络团体的定义有很大的重叠，一	2024-04-28	保留
+652		KnockoutSpider					2022-04-27		KNOCKOUT SPIDER针对参与加密货币的公司开展了小规模的鱼叉式网络钓鱼活动。.	2022-11-17	保留
+655		Lapsus					2022-04-27		一个对多个组织进行大规模社会工程和勒索活动的行动者团体，一些人看到了破坏性元素的证据。	2022-11-17	保留
+658	Raspite	LeafMiner	中东、美国、欧洲、东亚	水坑攻击、漏洞扫描	能源、政府、金融、通信		2022-04-27		Leafminer是一个伊朗威胁组织，至少从2017年初开始，它就以中东的政府组织和商业实体为目标。	2022-11-17	保留
+661	LibyanScorpions	利比亚蝎子	中国、利比亚	通过社会工程和网络钓鱼等方式入侵高影响力人士的Telegram账户进行网络间谍活动	针对利比亚多个城市的高层政治人物发起攻击，监视利比亚有影响力的政治人物	伊朗	2022-04-27		Libyan Scorpions 是自2015年9月以来使用的恶意软件，由一个具有政治动机的组织运营，其主要目的是收集情报，监视有影响力的人和政治人物，并在利比亚境内开展间谍活动。	2023-10-17	保留
+664	BRONZE ELGIN,ST Group,Esile,Spring Dragon,DRAGONFISH	LotusBlossom				中国	2022-04-27		Lotus Blossom 是一个以东南亚的政府和军事组织为目标的威胁组织。	2022-11-11	保留
+667	Luckycat,shadows	LuckyCat					2022-04-27		针对印度军事研究机构和南亚航运组织的一系列袭击表明，成功侵入目标并窃取敏感信息所需的最低程度的努力。攻击者使用非常简单的恶意软件，只需很少的开发时间或技能，再加上免费提供的Web托管，就可以实现高效的攻击。这是一个攻击者获得最大投资回报的案例。这种攻击表明，聪明的攻击者不需要特别熟练的技术就可以窃取他们想要获取的信息。通常情况下，攻击从发送给受害者的电子邮件开始。恶意文件被附加到电子邮件中，当加载时，就会激活恶意软件。攻击者使用量身定制的电子邮件鼓励受害者打开电子邮件。例如，发给一位学者的一封电子邮件声称	2022-11-11	保留
+670		LunarSpider					2022-04-27		据CrowdStrike报道，这名攻击者正在使用BokBok/IcedID，可能通过Emotet感染来购买发行。2019年3月17日，CrowdStrike Intelligence发现一种新的BokBot(由LUNAR SPIDER开发和运营)代理模块与TrickBot(由WIZARD SPIDER开发和运营)联合使用，该代理模块可能会向WIZARD SPIDER提供额外工具，窃取敏感信息并进行欺骗性电汇。这一活动也提供了进一步的证据，以支持这两个行为者之间存在着繁荣的关系。据报道， Lunar Spi	2022-11-17	保留
+673		Luoxk					2022-04-27		Luoxk是一个针对亚洲、欧洲和北美网络服务器的恶意软件活动。	2022-11-11	保留
+676	Spirlin,siamesekitten,COBALT LYCEUM,HEXANE	Lyceum					2022-04-27			2022-11-11	保留
+679	Ajacks	Madi	中国、澳大利亚、厄瓜多尔、希腊、伊朗、伊拉克、以色列、美国、越南	利用网络钓鱼和欺诈，窃取用户的登录信息、电子邮件和社交媒体信息对目标进行攻击	针对澳大利亚、厄瓜多尔、希腊、伊朗、伊拉克、以色列、美国、越南等国的政府机构、军队和大型企业、政府网站、能源公司和互联网服务提供商等机构进行网络攻击	伊朗	2022-04-27		卡巴斯基实验室和Seculert合作，将Madi Command & Control (C&C)服务器投入地下，以监控战役。卡巴斯基实验室和Seculert在过去8个月里确认了位于伊朗、以色列和全球部分国家与C&Cs有联系的800多名受害者。来自地洞的统计数据显示，受害者主要是从事伊朗和以色列关键基础设施项目的商人、以色列金融机构、中东工程专业的学生，以及在中东交流的各种政府机构。被监视的常见应用程序和网站包括Gmail、Hotmail和Yahoo!邮件、ICQ、Skype、谷歌+和Facebook。监控	2023-10-17	保留
+682		MageCart	日本、韩国、英国	钓鱼邮件	第三方服务提供商、金融机构、航空公司		2022-04-27	NULL	数字威胁管理公司RiskIQ对MageCart集团的活动进行了跟踪，并报告称，自2016年以来，MageCart集团使用了基于网络的信用卡扫描器。	2022-04-27	保留
+685	Group 42,VOYEUR	MagicKitten				伊朗	2022-04-27		最早的活动要追溯到2008年11月。一个建立在伊朗的网络攻击组织，在2013年开展了几次活动，包括针对政治异见人士和支持伊朗政治反对派的人的一系列攻击。	2022-11-17	保留
+688		MagneticSpider				俄罗斯	2022-04-27			2022-11-17	保留
+691		MallardSpider					2022-04-27		Crowdstrike将Qbot背后的运营商称为MALLARD SPIDER”	2022-11-17	保留
+694	Volatile Cedar,,Reuse team,Dancing Salome	MalwareReusers					2022-04-27		威胁组在使用其他团队的工具时进行网络间谍活动;就像Hacking Team和vmprotect一样。	2022-11-11	保留
+697		ManaTeam				中国	2022-04-27			2022-11-17	保留
+700		MaverickPanda				中国	2022-04-27			2022-11-17	保留
+703	SixLittleMonkeys	Microcin					2022-04-27	NULL	我们已经习惯了复杂的网络攻击使用0-day漏洞，绕过数字签名检查、虚拟文件系统、非标准加密算法和其他技巧。然而，有时候，所有这些都可以用更简单的方式来完成，就像我们不久前发现的恶意活动一样——我们将其命名为Microcin”，以microini命名，Microcin是其中使用的恶意组件之一。	2022-04-27	保留
+706		MimicSpider					2022-04-27		仅在两个摘要报告中提到了mimicspider	2022-11-17	保留
+709	Superman,BRONZE WALKER	MoFang	加拿大、德国、印度、缅甸、新加坡、韩国和美国		汽车、关键基础设施、国防、政府和武器工业	中国	2022-04-27		Mofang可能是一个总部位于中国的网络间谍组织，因其经常模仿受害者的基础设施而得名。至少从2012年5月起，这个敌人就开始对缅甸政府和关键基础设施，以及包括军事、汽车和武器工业在内的其他几个国家和行业进行集中攻击。	2022-11-17	保留
+712	Operation Molerats,Gaza Hackers Team,ALUMINUM SARATOGA,Gaza Cybergang,Extreme Jackal,Moonlight,Gaza cybergang,gaza,GazaTeam,GalerHackersTeam,GazaCyber​​gang,Molerats,灵猫	月光鼠	中国、以色列、巴勒斯坦	通过鱼叉式钓鱼邮件攻击	主要攻击目标为以色列地区、巴勒斯坦地区与政党相关的组织和个人		2022-04-27		Molerats是一个讲阿拉伯语、有政治动机的威胁组织，自2012年以来一直在运作。该组织的受害者主要分布在中东、欧洲和美国。	2023-10-17	保留
+715		MoneyTaker					2022-04-27	NULL	在不到两年的时间里，该组织已经成功地对美国、英国和俄罗斯的金融机构和法律事务所实施了20多次攻击。该集团的目标主要是信用卡处理系统，包括AWS CBR(俄罗斯银行间系统)和据称的SWIFT(美国银行间银行协会)。鉴于STAR在拉丁美洲的广泛使用，拉丁美洲的金融机构可能会受到MoneyTaker集团的潜在兴趣的特别影响。	2022-04-27	保留
+718		MontySpider					2022-04-27		垃圾邮件机器人在2019年继续下降，MONTY SPIDER的CraP2P垃圾邮件机器人在4月陷入沉默。	2022-11-17	保留
+721	Moses Staff,MosesStaff	蓝鲨	中国、意大利、印度、德国、智利、土耳其、阿联酋	通过欺骗邮件、钓鱼邮件和社交工程等方式来获取用户的登录证书，并从内部网络攻击公司和组织	针对意大利、印度、德国、智利、土耳其、阿联酋和美国的政府、军工、金融、医疗、能源、教育等重要机构窃取内部数据	俄罗斯	2022-04-27		“蓝鲨”（又名MosesStaff）是活跃于俄罗斯或欧洲地区的一个APT组织	2023-10-17	保留
+724	Seedworm,COBALT ULSTER,TEMP.Zagros,MERCURY,Earth Vetala,Static Kitten,MuddyWater,APT-Q-54,apt_muddywater	污水	中国、土耳其、以色列、伊拉克、阿联酋、巴基斯坦	通过钓鱼邮件,鱼叉攻击等方式对目标进行网络间谍攻击和知识产权窃取攻击	针对土耳其、以色列、伊拉克、阿联酋和巴基斯坦等国的政府、国防、教育、金融、科技企业和组织	伊朗	2022-04-27		MuddyWater是一个伊朗威胁组织，主要针对中东国家，也针对欧洲和北美国家。该组织的受害者主要是电信、政府(IT服务)和石油部门。该组织的活动此前与FIN7有关，但该组织被认为是一个不同的组织，其动机可能是间谍活动。	2023-10-17	保留
+727	TA542,GOLD CRESTWOOD	MummySpider					2022-04-27		MUMMY SPIDER是一个犯罪实体，与恶意软件Emotet或Geodo的核心开发有关。该恶意软件于2014年中期首次被发现，与Bugat(又名Feodo)银行木马共享代码。然而，MUMMY SPIDER”迅速开发了该恶意软件的功能，包括用于命令和控制(C2)通信的RSA密钥交换和模块化架构。MUMMY SPIDER并不遵循典型的犯罪行为模式。特别地，MUMMY SPIDER”通常会进行几个月的攻击，然后停止操作3到12个月，然后以新的变种或版本卷土重来。在中断10个月后，MUMMY SPIDER于20	2022-11-11	保留
+730	BRONZE PRESIDENT,HoneyMyte,Red Lich,TA416,RedDelta,apt_mustangpanda,Earth Preta,EarthPreta,PKPLUG	MustangPanda				中国	2022-04-27		Mustang Panda”是一家总部位于中国的网络间谍威胁组织，于2017年首次被发现，但可能至少自2014年以来就一直在开展活动。Mustang Panda”的目标是美国、德国、蒙古、缅甸、巴基斯坦和越南等国的政府机构、非营利组织、宗教和其他非政府组织。	2024-01-08	保留
+733	TA544,GOLD ESSEX,Ursnif Gang	NarwhalSpider					2022-04-27		NARWHAL SPIDER对Cutwail v2的运作仅限于针对特定国家的垃圾邮件活动，尽管在2019年底，该公司似乎试图通过引入INDRIK SPIDER作为客户来扩大业务。	2023-12-27	保留
+736	SIG37,FIN6	Nazar	中国、法国、英国	使用钓鱼邮件攻击、运用RDP漏洞利用来获取网络访问和各种攻击工具，如Emotet、TrickBot和Ryuk进行网络攻击	针对法国、英国等欧洲国家的运营商、加油站、医疗机构和制造商等能够支付大笔赎金的公司和组织		2022-04-27		这名攻击者是由来自SIG37集群的Juan Andres Guerrero-Saade在ShadowBrokers的'Lost in Translation”泄露中确认的。已知的最早的目击事件可能要追溯到2008年，在2010年至2013年之间有一个被证实的活动中心。角色名来自PDB调试字符串片段:'khzer'。受害者特征表明目标是伊朗，根据VT文件提交地点进行了低可信度评估。Nazar使用了一个模块化工具包，其中一个主拖拽器在Windows注册表中将多个dll静默地注册为OLE控件。功能包括键盘记录，	2023-10-17	保留
+739		Neodymium	土耳其、美国、德国、英国	0day漏洞、钓鱼邮件	土耳其公民		2022-04-27		NEODYMIUM 钕镨组织是一个众所周知的活动组织，它使用一种被微软检测到名为Wingbird的后门恶意软件。这个后门的特点与FinFisher(一款政府级商业监控软件)非常吻合。有关Wingbird ”活动的数据显示，它通常用于攻击个人电脑，而不是网络。	2022-11-17	保留
+742		NexusZeta					2022-04-27		当涉及到实现与SOAP相关的攻击时，Nexus Zeta并不陌生。在他的Satori僵尸网络项目中，已经观察到该威胁行为者实现了另外两个已知的与SOAP相关的漏洞，即CVE-2014-8361和CVE-2017-17215。第三个SOAP漏洞，TR-069漏洞以前也在物联网僵尸网络中被观察到。这使得EDB 38722成为第四个被物联网僵尸网络发现的与SOAP相关的漏洞。	2022-11-17	保留
+745		NightDragon				中国	2022-04-27		Night Dragon是一个活动名称，指的是一个主要源自中国的威胁组织的活动	2022-11-11	保留
+748	Covert Grove,,APT8	Nitro				中国	2022-04-27	NULL	这些攻击者是Symantec 在2011年发布的一份广泛报告的主题，该报告将攻击者称为Nitro，并表示:攻击者的目标似乎是收集知识产权，如设计文件、配方和制造流程。此外，同样的攻击者似乎有很长的操作历史，包括对其他行业和组织的攻击。对化学工业的攻击只是他们最新的攻击浪潮。作为调查的一部分，我们还找到并联系了其中一名攻击者，试图了解这些攻击背后的动机。”帕洛阿尔托网络公司(Palo Alto Networks)曾在2014年报道过攻击者的持续活动。	2022-04-27	保留
+751		NocturnalSpider					2022-04-27		在《CrowdStrike 2020年报告》中提到的MaaS运营商。	2022-11-17	保留
+754		NomadPanda					2022-04-27		2018年第一季度，CrowdStrike情报机构发现NOMAD PANDA活动以中亚国家为目标，利用8.t tool.	2022-11-17	保留
+757	DustSquad	NomadicOctopus					2022-04-27		Nomadic Octopus”是一个俄语的网络间谍威胁组织，至少从2014年开始，它的主要目标是中亚，包括地方政府、外交使团和个人。据观察，Nomadic Octopus”主要使用Delphi编程语言，开展涉及Android和Windows恶意软件的活动，并构建自定义变体。	2022-11-11	保留
+760		Notrobin	中国、欧美	利用弱口令和未修补的漏洞进入受害者的网络中，然后以破坏性方式向其发布勒索攻击	针对欧美的大型企业和机构进行攻击，专注于具有高度互联网连接性的行业		2022-04-27		FireEye的研究人员报告称，他们发现了一个名为NOTROBIN”的黑客组织，该组织将NetScaler服务器的缓解代码与自己的漏洞捆绑在一起。实际上，黑客利用这个漏洞进入服务器，杀死任何现有的恶意软件，建立自己的后门，然后通过缓解措施阻止这些漏洞代码在未来被利用。	2023-10-17	保留
+763		OnionDog	中国、韩国	主要利用了朝鲜语系国家流行办公软件Hangul的漏洞传播，并通过USB蠕虫摆渡攻击隔离网目标	针对韩国的能源、交通等基础行业进行网络渗透和情报窃取	韩国	2022-04-27		这一威胁行为者的目标是韩国政府、交通和能源部门。	2023-10-17	保留
+766		OperationBugDrop				俄罗斯	2022-04-27		这一威胁行为者的目标是石油和天然气部门的关键基础设施实体，主要是在乌克兰。威胁行为者部署BugDrop恶意软件，远程访问目标计算机的麦克风，窃听对话。	2022-11-11	保留
+769		OperationComando					2022-04-27		Operation Comando是一个纯粹的网络犯罪行动，可能源自巴西，具体而持久地关注酒店行业，这证明了一个威胁行动者是如何在保持低预算的情况下成功实现其目标的。使用DDNS服务、公开可用的远程访问工具以及对软件开发(在本例中是VB.NET)有最低限度的了解就足以开展持续一个月的活动，并可能收集信用卡信息和其他可能的数据。	2022-11-11	保留
+772		OperationKabarCobra					2022-04-27			2022-11-17	保留
+775		OperationParliament					2022-04-27		这一威胁行为者使用鱼叉式网络钓鱼技术，主要针对中东的议会、政府部门、学术界和媒体机构，以进行间谍活动。根据我们的调查结果，我们认为袭击者是一个之前不为人知的地缘政治威胁分子。这场运动始于2017年，当时攻击者所做的只是为了达到他们的目标。他们很可能在需要时使用其他工具，而且似乎可以使用世界各地敏感组织和人员，特别是易受伤害和未经训练的工作人员的详细联系数据库。受害系统范围从个人桌面或笔记本电脑系统到具有域控制器角色或类似角色的大型服务器。目标部委的性质各不相同，包括负责电信、卫生、能源、司法、财政等部门。	2022-11-17	保留
+778	APT-C-3,poisonneedles	OperationPoisonNeedles					2022-04-27		值得注意的是，据被泄露的综合诊所网站(http://www.p2f.ru)介绍，该机构成立于1965年，是由俄罗斯总统行政当局建立的。该多学科门诊机构主要服务于俄罗斯联邦最高行政、立法、司法当局的公务员以及著名的科学和艺术人物。这是360安全公司首次在全球范围内发现APT攻击，考虑到目标是医疗机构，我们将其命名为Operation Poison Needles”。目前，攻击者的身份仍在调查中。然而，综合诊所的特殊背景和它所服务的群体的敏感性都表明攻击是高度针对性的。同时，袭击事件发生在刻赤海峡事变的敏感时	2023-07-19	保留
+781		OperationShadowForce					2022-04-27		Operation Shadow Force是2013年至2020年以Shadow Force和Wgdrop为代表的恶意软件，是攻击韩国企业和组织的团体活动。该组织第一次被证实的攻击是在2013年3月，但考虑到恶意软件产生的日期，它很可能在2012年之前就开始活跃。由于他们主要使用的恶意软件是Shadow Force”，所以它被命名为Operation Shadow Force”，目前尚不确定攻击者是否与某个已知组织有关。	2022-11-17	保留
+784		OperationShadowHammer					2022-04-27		最新发现的利用华硕实时更新软件的供应链攻击。攻击的目标是一个未知的用户池，这些用户是通过网络适配器的MAC地址来识别的。为了达到这个目的，攻击者在被木马化的样本中硬编码了一个MAC地址列表，这个列表被用来识别这次大规模操作的实际目标。我们从这次攻击中使用的200多个样本中提取了600多个唯一的MAC地址。当然，可能会有其他样本在它们的列表中有不同的MAC地址。	2022-11-17	保留
+787		OperationSharpShooter					2022-04-27		基于McAfee®全球威胁情报，McAfee高级威胁研究团队和McAfee实验室恶意软件运营小组发现了一项针对核、国防、能源和金融公司的新的全球攻击。这个名为 Operation Sharpshoote”的活动，利用一个内存植入物来下载和检索第二阶段植入物——我们称之为Rising Sun”——以便进一步开发。根据我们的分析，Rising Sun植入使用了来自Lazarus集团2015年后门木马Duuzer的源代码在一个新的框架中渗透这些关键行业。Operation Sharpshoote”与Lazaru	2022-11-17	保留
+790		OperationSkeletonKey					2022-04-27		整个2019年，台湾高科技生态系统中的多家公司都是高级持续威胁(APT)攻击的受害者。由于这些APT攻击彼此具有类似的行为特征(类似的敌对技术、战术和程序或TTP)，以及以前记录的网络攻击，CyCraft高度自信地评估这些新的攻击是由相同的外国威胁actor进行的。在调查过程中，他们称这个威胁演员为Chimera。Chimera”代表的是他们所见过的黑客工具的合成，例如包含从Dumpert和Mimikatz中提取的代码的主干密钥恶意软件——因此就是Chimera。他们的操作-从2018年底到2019年底，	2022-11-17	保留
+793		OperationWizardOpium					2022-04-27		我们称这些攻击为 Operation WizardOpium。到目前为止，我们还无法确定与任何已知威胁行为者的确切联系。有一些与 Lazarus”攻击非常弱的代码相似之处，尽管这些很可能是一个错误的标志。目标网站的资料与早期的DarkHotel”攻击更一致，后者最近也部署了类似的假旗攻击。	2022-11-11	保留
+796		OperationWoCao					2022-04-27		Operation Wocao 描述了一个中国网络间谍对手所进行的活动。Operation Wocao 的目标是政府范围内的实体、管理的服务提供商、能源、医疗保健和技术部门，遍布多个国家，包括中国、法国、德国、英国和美国。Operation Wocao 使用了与APT20类似的ttp和工具，这表明可能存在重叠。	2022-11-17	保留
+799		OrangeWorm	中国、欧美	主要利用漏洞、网络钓鱼和社交工程等方式进行攻击	针对美国、欧洲和亚洲国家的医疗领域、物流和供应链公司及不同医疗机构窃取医疗领域的知识产权和机密信息		2022-04-27		Orangeworm是一个至少从2015年开始针对美国、欧洲和亚洲医疗保健行业组织的组织，可能是为了进行商业间谍活动。	2023-10-17	保留
+802		OurMine	全球	渗透攻击	个人社交账号、第三方社交账号管理平台		2022-04-27	NULL	OurMine因名人网络账户而闻名，经常会引发网络破坏行为，以宣传其商业服务。最近有报道称，HBO愿意支付25万美元，以换取黑客从其服务器窃取的1.5 tb数据。鉴于此，HBO发现自己面临着又一个安全漏洞。自封的白帽黑客组织OurMine以劫持知名社交媒体账户而闻名，该组织接管了该有线电视网络的多个经过认证的Twitter和Facebook账户。这些账户包括HBO电视剧的账户，如《权力的游戏》(Game of Thrones)、《女孩》(Girls)和《球手》(Ballers)。这已经不是OurMine第	2022-04-27	保留
+805		OutlawSpider					2022-04-27		2019年5月7日，市长伯纳德·"杰克"·杨证实，美国巴尔的摩(CoB)的网络被勒索软件感染，这一消息是通过推特发布的。这次感染后来被证实是由OUTLAW SPIDER进行的，它是RobbinHood勒索软件的幕后攻击者。该行为者要求每个受感染的系统支付3个比特币(约合当时的1.76万美元)，或13个比特币(约合当时的7.65万美元)，以恢复所有受感染的系统的文件。	2022-11-17	保留
+808		OverlordSpider					2022-04-27		OVERLORD SPIDER, 又名The Dark Overlord。与今天的勒索软件运营商类似，OVERLORD SPIDER可能购买了RDP访问地下论坛上被泄露服务器的权限，以便从企业网络中窃取数据。据悉，该行为人试图将数据卖回”给各自的受害者，并威胁如果受害者拒绝付款，就将数据卖给有关各方。至少有一个被确认的OVERLORD SPIDER在地下市场成功出售受害者数据的例子。	2022-11-17	保留
+811	XDSpy	Pacha	中国、拉丁美洲	主要包括网络钓鱼、恶意软件传播、利用漏洞攻击进行攻击，也善于使用社交工程技术和欺骗手段	针对拉丁美洲地区的政治、军事、情报和外交领域展开严重的针对性攻击	阿根廷	2022-04-27		2018年9月18日，Antd 是一名在野外被发现的矿工。最近，我们发现来自Antd的作者正在积极地发布更新的活动，部署大量的组件，其中大多数组件完全未被检测到，并且在受损的第三方Linux服务器中运行。此外，我们注意到，这个小组实施的一些技术是非常规的，它们有一个复杂的元素。我们认为这个恶意软件的作者来自中国。我们已经标记了未检测到的Linux。Antd变体,Linux。GreedyAntd并将威胁行为者归为Pacha集团。	2023-10-17	保留
+814		PackRAT					2022-04-27		一个活跃了至少7年的威胁组织使用恶意软件、网络钓鱼和虚假信息战术，以多个拉美国家的活动人士、记者、政治家和公众人物为目标。Citizen Lab”的研究员John Scott-Railton、Morgan Marquis-Boire、Claudio Guarnieri和Cyphort的研究员Marion Marschalek分析了这个被称为Packrat”的威胁制造者，因为它喜欢远程访问木马(RATs)，而且它已经使用相同的基础设施好几年了。最出名的是她对政府支持的威胁进行了广泛的分析。	2022-11-17	保留
+817		PalePanda				中国	2022-04-27			2022-11-17	保留
+820		PassCV				中国	2022-04-27	NULL	PassCV组仍然是利用大量被盗的authenticode签名证书的最成功和最活跃的威胁组之一。 Blue Coat Systems公司的Snorre Fagerland在一篇博客文章中首次创造了PassCV这个词。他的文章很好地介绍了该组织，并涵盖了一些较老的基础设施、被盗的代码签名证书重用，以及其他与PassCV恶意软件相关的连接。有一些线索表明，多个组可能使用了相同被盗的签名证书，但目前SPEAR认为，当前的攻击更有可能是由使用多个公开可用的远程管理工具(rat)的单个组实施的。PassCV团队一直	2022-04-27	保留
+823		PinchySpider					2022-04-27		第一次发现是在2018年1月，GandCrab”勒索软件很快开始激增，并从其开发者PINCHY SPIDER那里收到定期更新。在这一年中，PINCHY SPIDER与一组专门的附属机构建立了RaaS业务。CrowdStrike Intelligence最近发现PINCHY SPIDER子公司在企业环境中部署了GandCrab勒索软件，使用横向移动技术和工具，这些技术通常与国家敌对组织和渗透测试团队有关。这种战术上的改变使PINCHY SPIDER及其附属机构成为最新的犯罪对手，加入了有针对性的、低批量/高	2022-11-17	保留
+826	MANGANESE,PittyTiger	PittyPanda				中国	2022-04-27		The Pitty Tiger group皮蒂老虎基金会至少从2011年就开始活跃了。他们使用 HeartBleed”漏洞来直接获取有效的证书	2022-11-11	保留
+829		PizzoSpider				美国	2022-04-27			2022-11-17	保留
+832	TwoForOne,白金,PLATINUM,APT-C-30,APT-Q-32	潜行者	中国、东南亚、南亚、欧洲	利用零日漏洞、社交工程和网络钓鱼攻击等进行攻击	针对东南亚、南亚和欧洲等地区的政府、军事、航空、能源、高科技等领域		2022-04-27		PLATINUM 铂金公司至少从2009年就开始针对受害者，可能在那之前几年就已经很活跃了。它的活动不仅明显不同于那些典型的无目标攻击，也不同于许多有目标的攻击。很大一部分有针对性的攻击可以被描述为机会主义的:活动集团根据地缘政治季节改变目标概况和攻击地理位置，并可能攻击世界各地的机构。与许多此类组织一样，PLATINUM试图窃取与政府利益相关的敏感知识产权，但其首选目标范围始终限于南亚和东南亚的特定政府组织、国防机构、情报机构、外交机构和电信供应商。该组织持续使用鱼叉式网络钓鱼战术(针对特定个人的网络钓	2023-10-17	保留
+835	Evil Eye	PoisonCarp					2022-04-27		在2018年11月至2019年5月期间，Tibetan group的高级成员在单独定制的WhatsApp文本交流中收到了恶意链接，这些链接的运营商伪装成非政府组织工作人员、记者和其他虚假角色。这些链接导致了一些代码，这些代码利用浏览器漏洞在iOS和Android设备上安装间谍软件，在某些情况下还会用于OAuth钓鱼页面。这次行动似乎是由一个人实施的我们称之为POISON CARP.	2022-11-11	保留
+838		PoisonousPanda				中国	2022-04-27			2022-11-17	保留
+841		Poseidon				巴西	2022-04-27	NULL	Poseidon Group是一个讲葡萄牙语的威胁集团，至少从2005年开始就很活跃。该组织曾利用从受害者那里窃取的信息敲诈受害公司，使其与Poseidon Group签约，成为保安公司。	2022-04-27	保留
+844	IAmTheKing	PowerPool					2022-04-27	NULL	在这个漏洞的概念验证代码在线出现两天后，恶意软件开发人员已经开始使用Windows中的任务调度器组件的zero-day漏洞。8月27日，一位网名为SandboxEscaper的安全研究人员发布了源代码，用于利用Windows任务调度程序使用的高级本地过程调用(ALPC)接口中的安全漏洞。更具体地说，问题出在SchRpcSetSecurity API函数上，该函数未能正确检查用户权限，导致允许对c:\\ windows \\ task中的文件拥有写权限该漏洞影响Windows 7到10版本，攻击者可以利用该漏洞	2022-04-27	保留
+847		PredatorPanda				中国	2022-04-27			2022-11-17	保留
+850	StrongPity,APTC41,辟邪珠,恶魔之眼,APT-C-41,Promethium	蓝色魔眼	土耳其、比利时、意大利、叙利亚、埃及、欧洲	通过水坑攻击、0day漏洞、钓鱼邮件展开攻击用于监视和情报泄露目的	攻击区域聚焦在对意大利、土耳其、比利时、叙利亚、欧洲等地区	土耳其	2022-04-27		PROMETHIUM 钷是一个早在2012年就开始活跃的活动组织。该组织主要使用Truvasys，这是一种第一阶段的恶意软件，已经流通了好几年。Truvasys已经参与了几次攻击活动，在这些活动中，它伪装成一种常见的服务器计算机工具，包括WinUtils、TrueCrypt、WinRAR或SanDisk。在每一个活动中，Truvasys恶意软件都演化出了额外的功能——这表明活动背后的活动小组与恶意软件开发者之间的密切关系。	2024-01-10	保留
+853		RadioPanda				中国	2022-04-27			2022-11-17	保留
+856	Rancor group,Rancor Group	Rancor	东南亚	钓鱼邮件	政府	中国	2022-04-27	NULL	The Rancor group的攻击使用两个主要的恶意软件家族，命名为DDKONG和PLAINTEE。DDKONG在整个战役中被使用，而PLAINTEE似乎是这些攻击者工具包的新成员。Countries Unit 42已被Rancor”确定为这些恶意软件家族的目标，包括但不限于新加坡和柬埔寨。	2022-04-27	保留
+859		Raspite					2022-04-27		德拉戈斯已经确定了一个新的活动小组，目标是电力行业的接入操作。我们称这个活动群为RASPITE。对RASPITE策略、技术和程序(TTPs)的分析表明，该组织自2017年初至中期以来一直以某种形式活跃。RASPITE的目标客户包括美国、中东、欧洲和东亚的实体。目前针对电力公司的行动似乎仅限于美国。RASPITE利用策略性的网站妥协来获得对目标网络的初步访问。RASPITE使用与DYMALLOY和ALLANITE相同的方法，嵌入到资源的链接来提示SMB连接，从中获取Windows证书。然后，该组织部署恶意服	2022-11-17	保留
+862		RatpakSpider					2022-04-27		2018年7月，RATPAK SPIDER的恶意软件框架framework”源代码被匿名泄露。这个恶意软件被认为是针对俄罗斯金融部门的。与此相关的恶意软件Buhtrap在今年被发现与SWC的活动有关，该活动也针对俄罗斯用户。	2022-11-17	保留
+865		RebelJackal	中国、韩国、印度、美国	利用网络钓鱼、恶意软件攻击、勒索和泄漏威胁等手段进行攻击	针对韩国、印度、美国等国家和地区的政府、金融、科技和其他重要机构，特别是与韩国政府有关的目标	朝鲜	2022-04-27		这是一个支持伊斯兰教的组织，通常会根据现实世界的事件发动袭击，其成员认为穆斯林信仰的成员受到了冤枉。它的攻击通常涉及破坏网站;然而，该组织确实开发了一个RAT病毒，它被称为Fallaga RAT，但它似乎只是在中东/北非地区的黑客中流行的njRAT恶意软件的一个分支。	2023-10-17	保留
+868		RedOctober	中国、欧洲、中东	采用社交工程学、诱骗邮件、木马病毒、远程控制工具窃取企业的核心数据	针对欧洲和中东地区的政府机构、能源、金融等重要机构以及科研机构和高端技术企业	俄罗斯	2022-04-27		这个威胁行为者的目标是政府、外交使团、学术界、能源和航空航天组织，目的是进行间谍活动。也被称为Rocra，被认为是和Cloud Atlas一样的威胁制造者	2023-10-17	保留
+871		RedAlpha					2022-04-27	NULL	Recorded Future的Insikt Group已经确认了过去两年针对西藏社区的两起新的网络间谍活动。这些活动，我们统称为RedAlpha，结合了轻度侦察、选择性瞄准和各种恶意工具。我们发现这个活动的结果是一个新的恶意软件样本观察到目标是在印度的西藏社区。	2022-04-27	保留
+874		RedEcho					2022-04-27	NULL	RedEcho:该组织大量使用AXIOMATICASYMPTOTE，这是一个术语，我们使用它来跟踪包括ShadowPad C2s的基础设施，它被几个中国威胁活动组织共享	2022-04-27	保留
+877		RiddleSpider					2022-04-27		据Crowdstrike报道，RIDDLE SPIDER是avaddon勒索软件的幕后操作者	2022-11-17	保留
+880		RoamingMantis					2022-04-27		根据卡巴斯基的团队的新研究，Roaming Mantis 集团的在线犯罪活动自2018年4月首次发现以来一直在不断演变。作为他们活动的一部分，这个小组侵入可利用的路由器并更改它们的DNS配置。这使得攻击者可以将路由器用户的流量重定向到伪装成Facebook和Chrome的恶意Android应用程序，或被用于窃取苹果ID凭据的苹果钓鱼页面。最近，卡巴斯基发现该组织正在测试一种新的盈利方案，将iOS用户重定向到包含浏览器内挖掘脚本Coinhive的页面，而不是普通的苹果钓鱼页面。当用户被重定向到这些页面时，他	2022-11-11	保留
+883		RoamingTiger					2022-04-27			2022-11-11	保留
+886		Rocke	中东地区、美国、荷兰	0day漏洞	云服务		2022-04-27	NULL	Rocke据称是一个讲中文的对手，其主要目标似乎是加密劫持，或窃取受害者系统资源，用于挖掘加密货币。Rocke这个名字来自一个电子邮件地址rocke@live.cn”，这个电子邮件地址用来创建一个钱包，用来存放收集的加密货币。研究人员已经发现了Rocke和Iron网络犯罪集团之间的重叠，尽管这一归因尚未得到证实。	2022-04-27	保留
+889	Thamar Reservoir,TEMP.Beanie,Operation Woolen Goldfish,Operation Woolen-Goldfish,Timberworm	RocketKitten	中国、中东	通过使用钓鱼网站及各类不同工具持续进行网络恶意及间谍活动	针对中东地区，出发点是为了触及宗教、政策研究、外交与其它多种国际性事务	土耳其	2022-04-27		目标为沙特阿拉伯、以色列、美国、伊朗、高级国防官员、各个目标国家的大使馆、著名的伊朗研究人员、人权活动家、媒体和记者、学术机构和各种学者，包括物理和核科学领域的科学家。	2023-10-17	保留
+892		Rtm	俄罗斯及其周边国家	钓鱼邮件	银行、金融机构		2022-04-27		有几个组织积极地瞄准俄罗斯的企业，并从中获利。我们最近看到的一个趋势是，这些网络罪犯利用简单的后门在目标的网络中获得立足点。一旦他们获得了访问权限，很多工作都是手工完成的，慢慢地了解网络布局和部署罪犯可以用来从这些实体窃取资金的定制工具。最能体现这些趋势的公司有Buhtrap、Cobalt和Corkow。白皮书中讨论的小组是这一新趋势的一部分。我们称之为RTM;它使用的是用Delphi编写的自定义恶意软件，我们将在后面的章节中详细介绍。在我们的遥测数据中，该工具的首次踪迹可以追溯到2015年底。该组织还利	2022-11-11	保留
+895		SabrePanda				中国	2022-04-27			2022-11-17	保留
+898	Golroted	SaltySpider	中国、西欧、北欧、南亚、东南亚	使用钓鱼攻击、DDoS攻击、挖矿恶意软件以及勒索软件进行攻击	针对西欧、北欧、南亚、东南亚以及澳新等地区的金融网络和关键基础架构系统发起攻击行动	俄罗斯	2022-04-27		从2018年1月开始，一直持续到今年上半年，CrowdStrike Intelligence发现，长期运行的Sality僵尸网络的开发商和运营商SALTY SPIDER分发针对加密货币用户的恶意软件。	2023-10-17	保留
+901	PLA Navy,Wisp Team	SamuraiPanda				中国	2022-04-27			2022-11-17	保留
+904	APT-C-32	SandCat	中国、中东	使用FinFisher/FinSpy 间谍软件和 CHAINSHOT框架及0day漏洞窃取机密情报和从事各种间谍活动	针对中东地区，包括但不限于沙特阿拉伯从事间谍活动	乌兹别克斯坦	2022-04-27		另一方面，SandCat是卡巴斯基最近发现的一个组织。在针对中东和非洲的攻击中，FruityArmor和SandCat都利用了微软去年12月修补的一个Windows漏洞。SandCat一直在使用FinFisher/FinSpy间谍软件和CHAINSHOT，后者是Palo Alto Networks今年早些时候分析的一款恶意软件。该组织还使用了Windows的CVE-2018-8589和CVE-2018-8611漏洞进行攻击，这两个漏洞在微软发布补丁时都处于zero-day状态。	2023-10-17	保留
+907		SandsCasino				伊朗	2022-04-27			2022-11-17	保留
+910	TEMP.Noble,IRON VIKING,Voodoo Bear,Iron Viking,BlackEnergy,Black Energy,Sandworm Team,VOODOO BEAR,Telebots,ELECTRUM,BlackEnergy (Group),TeleBots,Quedagh,BlackEnergygroup,APT-C-13,Sandworm,APT-Q-79	沙虫	中国、波兰、乌克兰	通过钓鱼邮件,鱼叉攻击针对目标用户投放DCRat，Industroyer等恶意程序	针对波兰和乌克兰等国家实体及源基础设施进行攻击	俄罗斯	2022-04-27		Sandworm Team是一个破坏性的威胁组织，被认为是俄罗斯总参谋部主要情报理事会(GRU)主要特殊技术中心(GTsST)军事单位74455。这个组织至少从2009年开始就很活跃。\n2020年10月，美国起诉了6名GRU 74455分队的官员，他们与Sandworm Team有关，从事以下网络行动:2015年和2016年针对乌克兰电力公司和政府机构的袭击，2017年全球范围内针对2017年法国总统竞选的NotPetya袭击，2018年针对冬季奥运会的奥林匹克驱逐舰袭击，2018年针对禁止化学武器组织的	2023-10-17	保留
+913		SathıMüdafaa				土耳其	2022-04-27		土耳其黑客组织Sath-ı Müdafaa正在鼓励个人加入其DDoS for points平台，该平台提供针对一系列预定目标进行分布式拒绝服务(DDoS)攻击的积分和奖励。他们的DDoS工具也包含一个后门来攻击黑客。所以这个群体的首要动机和目的并不完全清楚。	2022-11-17	保留
+916		Scarab				中国	2022-04-27	NULL	Scarab APT于2015年首次被发现，但据信至少自2012年以来一直很活跃，在世界各地对包括俄罗斯和美国在内的少数人进行外科手术式袭击。Scarab在他们的战役中部署的后门通常被称为Scieron。	2022-04-27	保留
+919		ScarletMimic				中国	2022-04-27		Scarlet Mimic是一个针对少数族裔权利活动人士的威胁组织。该组织与政府没有直接联系，但该组织的动机似乎与中国政府的动机有重叠。虽然Scarlet Mimic和 Putter Panda，APT 2使用的IP地址有一些重叠，但还没有得出结论说这两组是相同的。袭击开始于四年多前，袭击目标的模式表明，这名敌人的主要任务是收集少数族裔权利活动人士的信息。我们没有证据直接将这些攻击与政府来源联系起来，但从这些活动中获得的信息支持这样一种评估，即涉及一个或多个动机与中国政府对这些目标的声明立场类似的组织。我	2022-11-11	保留
+922		ScullySpider					2022-04-27		在CrowdStrike的2020年报告中提到DanaBot运营商。	2024-07-15	保留
+925		SeaTurtle					2022-04-27		这篇博客文章讨论了国家支持的操纵DNS系统的攻击的技术细节。虽然这一事件仅限于主要针对国家安全组织在中东和北非,我们不想夸大这个特定活动的后果,我们担心此操作将导致成功的攻击者更广泛的攻击全球DNS系统。DNS是一种支持Internet的基础技术。操纵这个系统有可能破坏用户对互联网的信任。这种信任和DNS系统的稳定性作为一个整体推动了全球经济。负责任的国家应避免以这一体系为目标，共同努力建立一个公认的全球规范，禁止这一体系及其控制组织参与，并合作追查那些不负责任、以这一体系为目标的行为者。	2022-11-11	保留
+928		SectorJ04					2022-04-27	NULL	SectorJ04是一个总部位于俄罗斯的网络犯罪组织，大约5年前开始运作，利用银行木马和勒索软件等恶意软件，对欧洲、北美和西非的国家和工业部门进行黑客活动，以获取财务利润。2019年，SectorJ04集团将其黑客活动扩大到东南亚和东亚的多个行业，并正在改变攻击模式，从有针对性的攻击转向随机搜索受害者。本报告包括2019年j04部门主要黑客攻击目标的详细信息，这些目标是如何被黑客攻击的，今年他们的黑客活动的特点，以及最近j04部门黑客攻击的案例。	2022-04-27	保留
+931		ShadowNetwork					2022-04-27		Shadows in the Cloud记录了一个复杂的网络间谍生态系统，它系统地破坏了印度政府、企业、学术和其他计算机网络系统、达赖喇嘛办公室、联合国和其他几个国家。该报告还分析了从政治敏感目标窃取并在调查过程中恢复的数据。这些文件包括来自达赖喇嘛办公室和印度国家安全机构的文件。在调查过程中，包括许多第三方国家公民敏感信息在内的数据，以及个人、金融和商业信息也被窃取和恢复。该报告分析了 Shadows”攻击者使用的恶意软件生态系统，这些恶意软件利用了多个冗余的云计算系统、社交网络平台和免费的网络托管服务	2022-11-11	保留
+934	Cobalt Spider	SharkSpider	中国、欧美	使用钓鱼攻击、植入挖矿软件、线程注入等手段，窃取大量客户与机构的敏感数据和财务信息	针对欧美地区银行及其客户和金融机构等组织以及服务公司方面进行攻击	俄罗斯	2022-04-27		该组织的活动于2013年11月首次被观测到。它利用了一种银行木马，更常见的名字是Shylock，旨在破坏在线银行证书和比特币钱包相关的证书。	2023-10-17	保留
+937		SharpShooter					2022-04-27		Operation Sharpshooter是2018年10月发现的针对核、国防、能源、金融企业的网络间谍活动的名称。虽然这个对手和 Lazarus 集团之间有重叠的地方，但还没有建立明确的联系。	2022-11-17	保留
+940		SideCopy	中国、印度、阿富汗	通过钓鱼邮件等方式投递远控木马ReverseRAT来达到信息窃取、远程控制的目的	针对印度和阿富汗的政府部门进行网络攻击活动	巴基斯坦	2022-04-27		SideCopy APT是巴基斯坦的威胁行动者，至少自2019年以来一直在运作，主要针对南亚国家，更具体地说，是印度和阿富汗。它的名字来源于它试图模仿SideWinder APT的感染链。据报道，该actor与Transparent Tribe (APT36)有相似之处，可能是该actor的一个分支。Cisco Talos和Seqrite已经提供了有关该参与者活动的全面报告。	2023-10-17	保留
+943		Siesta					2022-04-27	NULL	FireEye最近深入研究了TrendMicro博客上讨论的活动，并将其称为Siesta”活动。此次行动中使用的工具、操作方法和基础设施呈现出两种可能性:要么是中国网络间谍机构APT1实施了这一活动，要么是另一个组织使用了与过去的APT1相同的战术和工具。Siesta运动强化了这样一个事实:分析人员和网络捍卫者应该继续关注已知的、公开的指标和共享的属性，这些属性允许安全专家用一个签名检测多个参与者。	2022-04-27	保留
+946	WHISPER SPIDER	Silence	中国、美国	主要在社交媒体平台和自由职业者招聘网站上传播恶意链接或文件，诱骗受害者下载和打开文件以获取控制受害者的计算机	针对美国、欧洲地区、非洲地区、亚洲地区的金融机构、公司和组织，攻击对象涉及各行各业，以窃取大量的敏感数据和财务信息		2022-04-27		自2016年中期以来，一个相对较新的威胁行为者已经曝光了由 Silence网络犯罪集团实施的攻击。虽然该团伙此前的目标是俄罗斯的银行，但group - ib的专家也发现了该集团在全球逾25个国家活动的证据。Group-IB发布了第一份关于Silence使用的战术和工具的详细报告。Group-IB安全分析师的假设是，该团伙至少有一名成员似乎是网络安全公司的前或现任雇员。 Silence”活动造成的确认损失估计为80万美元。 Silence”是一群说俄语的黑客，基于他们的命令语言，他们使用的基础设施的位置，以	2023-10-17	保留
+949	WHOis Team,Andariel,GOP,Guardian of Peace,Subgroup: Andariel,OperationTroy,Jumpy Pisces	Andariel	中国、韩国	利用恶意Word文档和伪装成PDF文档的文件作为感染媒介，传播恶意后门及勒索软件	针对韩国，目标行业涉及制造、家庭网络服务、媒体和建筑行业	韩国	2022-04-27		Andariel是一个由朝鲜政府支持的威胁组织，至少从2009年以来一直很活跃。Andariel主要针对韩国政府机构、军事组织和各种国内公司开展包括破坏性攻击在内的行动;他们还对atm机、银行和加密货币交易所进行了网络金融操作。Andariel的著名活动包括 Black Mine行动、GoldenAxe行动和Campaign Rifle行动。\nAndariel被认为是拉撒路集团(Lazarus Group)的子公司，被认为是朝鲜侦察总局(Reconnaissance General Bureau)的下属机	2024-09-13	保留
+952	COBALT DICKENS,TA407	SilentLibrarian				伊朗	2022-04-27		Silent Librarian是一个至少从2013年开始就在全球范围内针对大学、政府机构和私营部门公司的研究和专有数据的组织。据悉，Silent Librarian”的成员隶属于伊朗的马布纳研究所(Mabna Institute)，该研究所在伊朗政府，特别是伊斯兰革命卫队(IRGC)的命令下进行了网络入侵。	2022-11-11	保留
+955		SilverTerrier	全球	钓鱼邮件	高科技、教育、制造业		2022-04-27	NULL	SilverTerrier是尼日利亚的一个威胁组织，自2014年以来一直很活跃。SilverTerrier主要针对高科技、高等教育和制造业的组织。	2022-04-27	保留
+958		Sima			政治异见人士|人权积极分子|人权组织	伊朗	2022-04-27	NULL	Sima”是一个疑似来自伊朗的组织，目标是散居海外的伊朗人。2016年2月，关注伊朗的个人收到了据称来自人权观察(HRW)紧急事务主任的消息，要求他们阅读一篇关于伊朗敦促阿富汗难民在叙利亚作战的文章。在引用人权观察发表的真实报告时，提供的主任传记和文章链接将收件人引向其他地方的恶意软件。这些鱼叉式网络钓鱼的尝试代表了伊朗行动者基于他们的社会工程战术和狭窄的目标的进化。尽管这些信息中仍然有一些对母语人士来说显而易见的语法和文体错误，但演员们表现出了比以往更强的英语熟练程度，并且在尝试之前进行了更深入的背景研	2022-04-27	保留
+961		SingingSpider					2022-04-27			2022-11-17	保留
+964		Slingshot	肯尼亚|也门|利比亚|阿富汗|伊拉克|坦桑尼亚|约旦|毛里求斯|索马里|刚果民主共和国|土耳其|苏丹|阿联酋			美国	2022-04-27	NULL	在分析一个涉及可疑键盘记录器的事件时，我们识别了一个能够与虚拟文件系统交互的恶意库，这通常是高级APT actor的标志。这原来是一个名为Slingshot”的恶意加载程序，是一个新的、高度复杂的攻击平台的一部分，其复杂性堪比Project Sauron and Regin。虽然对于大多数受害者来说，Slingshot的感染载体仍然是未知的，但我们能够找到几个案例，攻击者访问MikroTik路由器，并放置了一个由Winbox Loader下载的组件，该组件是MikroTik路由器的管理套件。这又感染了路由	2022-04-27	保留
+967		SmokySpider					2022-04-27		在CrowdStrike的2020年报告中提到的SmokeLoader的运营商。	2022-11-17	保留
+970		SnakeWine					2022-04-27		在调查APT28/Sofacy日常使用的一些较小的名称服务器时，Cylance发现了另一个长期的活动，似乎专门针对日本公司和个人，始于2016年8月左右。后来的注册风格与之前注册的APT28域名惊人地接近，然而，在攻击中使用的恶意软件似乎根本没有排队。在我们的调查过程中，JPCERT公布了对该组织的一个后门的分析。Cylance在内部追踪这个威胁组织为Snake Wine”。Snake Wine集团已被证明是高度适应，并不断采用新的战术，以建立在受害者的环境。由于该组织刚刚开始建立和利用现有的攻击基础设施	2022-11-17	保留
+973	Animal Farm,Snowglobe,Snowglobe,雪豹,Snow leopard	艾叶豹	中国、巴基斯坦	一般利用钓鱼网站进行载荷投递，搭建Android应用软件商店或者选用和官方网站相近的域名进行载荷投递	针对巴基斯坦，其针对人群不仅具有广泛性的巴基斯坦人，还包含更具有特殊的巴基斯坦TLP政党	法国	2022-04-27		2014年，卡巴斯基实验室(Kaspersky Lab)的研究人员发现并报告了在野外被用于网络攻击的3个 zero-days”。其中两个 zero-days漏洞与一种高级威胁行动者有关，我们称之为Animal Farm”。在过去的几年里，Animal Farm已经瞄准了广泛的全球组织。该组织至少从2009年就开始活跃，有迹象表明早在2007年就开发出了较早的恶意软件版本。	2023-10-17	保留
+976		SolarSpider					2022-04-27		SOLAR SPIDER的网络钓鱼活动将JSOutProx RAT发送到非洲、中东、南亚和东南亚的金融机构。	2022-11-17	保留
+979		SowBug	南美、东南亚	钓鱼邮件	政府、外交机构		2022-04-27		Sowbug是一个威胁组织，至少从2015年开始，它就对南美和东南亚的组织，特别是政府实体进行有针对性的攻击。	2022-11-17	保留
+982		SpicyPanda				中国	2022-04-27			2022-11-17	保留
+985		StardustChollima					2022-04-27		据开源媒体报道，Hermes”勒索软件是由北韩团体STARDUST CHOLLIMA”开发的(该活动已被公开为Lazarus Group”的一部分)，因为在2017年10月FEIB的SWIFT协议中，Hermes”在一个主机上被处决。	2022-11-17	保留
+988	FruityArmor	StealthFalcon	中国、阿联酋	主要通过恶意软件以及社工方式来获取目标信息，感染目标设备	针对阿联酋的记者、活动家、持不同政见者进行攻击	阿拉伯联合酋长国	2022-04-27		Stealth Falcon 是一个威胁组织，至少从2012年开始，它就对阿联酋记者、活动人士和异见人士进行了针对性的间谍软件攻击。有间接证据表明，该组织与阿拉伯联合酋长国(UAE)政府之间可能存在联系，但这一说法尚未得到证实。	2023-10-17	保留
+991		StealthMangoAndTangelo				巴基斯坦	2022-04-27		Stealth Mango and Tangelo组织针对移动端的Android和IOS，对对阿富汗，印度，伊拉克，巴基斯坦和阿拉伯联合酋长国的政府官员，外交官，军事人员和激进分子进行间谍活动	2022-11-17	保留
+994		Sweed	中国、科威特	钓鱼邮件	金融、船运组织、政府、能源、制造业		2022-04-27		Cisco Talos最近发现了大量正在进行的恶意软件传播活动，这些活动与我们称之为SWEED”的威胁行为有关，包括Formbook、Lokibot和Agent Tesla等著名的恶意软件。根据我们的研究，SWEED——至少从2017年开始运营——主要通过窃取和远程访问木马攻击受害者。SWEED在他们的大多数活动中使用带有恶意附件的鱼叉式网络钓鱼邮件的做法保持一致。虽然这些活动使用了大量不同类型的恶意文件，但参与者主要试图用打包版的特工特斯拉(Agent Tesla)感染受害者——这是一种至少自2014年	2022-11-11	保留
+997	GOLD VILLAGE,Maze Team,TWISTED SPIDER	TA2101	德国、美国、意大利	钓鱼邮件	商业、IT业|制造业和卫生保健行业		2022-04-27	NULL	Proofpoint研究人员发现了一个相对较新的参与者发起的活动，该参与者在内部被追踪为TA2101，目标是德国的公司和组织，以提供和安装后门恶意软件。这位攻击者模仿德国联邦财政部发起了他们的活动，在邮件中使用相似的域名、词汇和被盗的品牌。对于他们在德国的活动，攻击者选择了Cobalt Strike，一个商业许可的软件工具，通常用于渗透测试，并模仿Metasploit使用的后门框架类型，一个类似的渗透测试工具。Proofpoint研究人员还观察到这个攻击者在分发Maze勒索软件，使用与Cobalt Str	2022-04-27	保留
+1000		TA2541					2022-04-27	NULL	多年来，持续的网络犯罪威胁主要针对航空、航天、运输、制造和国防工业。此威胁参与者一贯使用远程访问木马(rat)，可用于远程控制受威胁的计算机。这个威胁行为者使用与航空、交通和旅行相关的一致主题。自2017年以来，威胁制造者一直使用类似的主题和目标。	2022-04-27	保留
+1003		TA410					2022-04-27	NULL	2019年8月初，Proofpoint描述了一项似乎由国家资助的活动，该活动使用我们称为Lookback”的恶意软件针对美国公用事业部门。在2019年8月21日至8月29日期间，几封鱼叉式网络钓鱼邮件被发现针对的是公用事业行业的其他美国公司。这些钓鱼邮件似乎来自一个参与者控制的域名:globalenergycertification[.]net。这个域名，就像在以前的活动中使用的那些域名一样，冒充了一个与公用事业部门相关的许可机构。在这种情况下，它伪装成全球能源认证(GEC”)的合法域名。这些邮件包括一个	2022-04-27	保留
+1006		TA413				中国	2022-04-27	NULL	Proofpoint研究人员发现了一场冒充世界卫生组织(世卫组织)COVID-19关键准备指南的钓鱼活动，以提供一种新的恶意软件系列，研究人员将其称为Sepulcher”。该运动的目标是欧洲的外交和立法机构、非营利政策研究机构以及处理经济事务的全球组织。此外，在这次行动中发现的一封发送者电子邮件与历史上中国APT使用与LuckyCat恶意软件链接的有效载荷来攻击国际藏区有关。随后，从2020年7月开始，一场针对西藏异见人士的网络钓鱼活动被发现提供了相同类型的Sepulcher”恶意软件。在这次行动中确认的	2022-04-27	保留
+1009	Vicious Panda,Temp.Hex	TA428				中国	2022-04-27	NULL	Proofpoint研究人员已经确定了一个有针对性的APT活动，该活动利用恶意RTF文件向毫无防备的受害者发送定制恶意软件。我们将此活动命名为LagTime IT行动”，基于目标实体和注册到C&C IP基础设施的独特域名。从2019年初开始，这些威胁行为体瞄准了东亚一些监管政府信息技术、国内事务、外交事务、经济发展和政治进程的政府机构。我们确定，在这次活动中观察到的感染载体是鱼叉式网络钓鱼，来自免费电子邮件帐户和被泄露的用户帐户的电子邮件。攻击者依赖微软等式编辑器利用CVE-2018-0798发布了一个自	2022-04-27	保留
+1012		TA459	俄罗斯、白俄罗斯、蒙古、中亚	钓鱼邮件	金融机构、军事、航空航天	中国	2022-04-27	NULL	TA459是一个被认为在中国以外活动的威胁组织，目标包括俄罗斯、白俄罗斯、蒙古和其他国家。	2022-04-27	保留
+1015	Dudear,GOLD TAHOE,TEMP.Warlock,GRACEFUL SPIDER,Hive0065,SectorJ04 Group	TA505	全球	经常在攻击行动中使用Dridex和CLOP勒索软件，基于GoLang实现的Dropper	针对全球的零售业和银行业发起攻击	俄罗斯	2022-04-27		TA505是Proofpoint公司提供的名称，从事网络犯罪业务至少已有四年。这就是臭名昭著的Dridex银行木马和Locky勒索软件背后的组织，通过Necurs僵尸网络恶意发送电子邮件。其他与TA505相关的恶意软件包括Philadelphia和GlobeImposter勒索软件家族。	2023-10-17	保留
+1018		TA516					2022-04-27	NULL	该参与者通常分发SmokeLoader中间下载程序的实例，后者依次下载参与者选择的其他恶意软件——通常是银行木马。图3显示了11月活动中的一个引诱文档，在该文档中，TA516分发了带有恶意宏的虚假简历，如果启用这些宏，就会启动一个下载SmokeLoader的PowerShell脚本。在这个例子中，我们观察到SmokeLoader下载了Monero coinminer。自2017年年中以来，TA516一直使用类似的宏加载文档以及谷歌Drive上的恶意JavaScript，通过SmokeLoader发布Pan	2022-04-27	保留
+1021		TA530				中国	2022-04-27	NULL	TA530，我们之前调查了他与大规模个性化网络钓鱼活动的关系	2022-04-27	保留
+1024	Scully Spider,ScullySpider	TA547					2022-04-27		TA547至少从2017年11月开始负责许多其他活动。演员的其他活动通常是本地化的国家，如澳大利亚，德国，英国和意大利。交付的恶意软件包括ZLoader(又名Terdot)， Gootkit, Ursnif, Corebot, Panda Banker, Atmos, Mazar Bot和 Red Alert Android恶意软件。	2024-05-06	保留
+1027		TA554					2022-04-27	NULL	自2018年5月以来，Proofpoint的研究人员观察到使用一种名为sLoad的新下载程序的电子邮件活动。sLoad是一个PowerShell下载程序，它最频繁地提供Ramnit银行家，并包括值得注意的侦察功能。该恶意软件收集有关受感染系统的信息，包括运行进程的列表、Outlook的存在以及citrix相关文件的存在。sLoad还可以截屏并检查DNS缓存中的特定域(例如，目标银行)，以及加载外部二进制文件。虽然sLoad的最初版本出现在2018年5月，但我们至少从2017年初就开始跟踪这位演员(内部命名	2022-04-27	保留
+1030		TA555	乌克兰	钓鱼邮件	酒店、餐厅、电信、政府		2022-04-27	NULL	从2018年5月开始，Proofpoint研究人员观察到一个名为AdvisorsBot的以前无文件的下载程序出现在恶意电子邮件活动中。这些活动似乎主要以酒店、餐馆和电信为目标，并由我们追踪的一个名为TA555的参与者分发。到目前为止，我们已经观察到AdvisorsBot被用作第一阶段有效载荷，加载一个指纹模块，与Marap一样，该模块可能用于识别感兴趣的目标，从而进一步感染其他模块或有效载荷。AdvisorsBot正在积极开发中，我们还观察到该恶意软件的另一个版本在PowerShell和。net中完全重写	2022-04-27	保留
+1033		TA800					2022-04-27	NULL	这名攻击者是the Trick的附属分销商，也被称为Trickbot和BazaLoader。(有关附属机构如何工作的更多信息，请参阅TA573的描述)。TA800针对北美的多个行业，用银行木马和恶意软件加载程序(旨在将其他恶意软件下载到受损设备上的恶意软件)感染受害者。恶意邮件通常包括收件人的姓名、头衔和雇主，以及仿照目标公司设计的钓鱼网页。诱惑包括难以抗拒的主题，如有关支付，会议，终止，奖金和投诉的电子邮件的主题行或主体。	2022-04-27	保留
+1036		Taidoor	台湾	钓鱼邮件	政府、企业、智库		2022-04-27	NULL	Taidoor袭击者至少从2009年3月4日起就一直在积极进行有针对性的袭击。除了一些例外，Taidoor的活动经常使用台湾的IP地址作为C&C服务器和电子邮件地址，以发送带有恶意软件附件的社会工程电子邮件。Taidoor运动的主要目标之一似乎是台湾政府。攻击者伪造了台湾政府的电子邮件地址，用中文发送社交工程电子邮件，这些邮件通常利用台湾主题的问题。攻击者主动发送恶意文档，并维护多个IP地址用于命令和控制。作为社交工程策略的一部分，Taidoor攻击者在他们的电子邮件中附加了一个诱饵文档，当打开它时，它会	2022-04-27	保留
+1039		TeamSpyCrew				俄罗斯	2022-04-27		研究人员发现了一场长期的网络间谍活动，该活动使用合法软件包和商用恶意软件工具，以各种重工业、政府情报机构和政治活动人士为目标。研究人员表示，由于经常使用合法的TeamViewer应用程序作为其工具集的一部分，这些攻击者被称为TeamSpy成员，他们可能已经活跃了10年之久。这次攻击似乎是一场持续了数年的间谍活动，但分析过受害者资料、恶意软件组件和命令与控制基础设施的专家说，目前还不完全清楚攻击者想要的是哪种数据。不过，有一点是明确的，那就是攻击者已经这样做很长时间了，他们心中有特定的目标。匈牙利CrySy	2022-11-11	保留
+1045	CorporacaoXRat,CorporationXRat	TeamXRAT					2022-04-27			2022-11-17	保留
+1048	XENOTIME	TempVeles	沙特		基础设施（石油、天然气）		2022-04-27		TEMP.Veles是一个以俄罗斯为基地的威胁组织，目标是关键的基础设施。该组织被观察到利用TRITON，一种旨在操纵工业安全系统的恶意软件框架。	2022-11-17	保留
+1051	admin@338,MAGNESIUM,Team338,Admin338	TemperPanda				中国	2022-04-27		中国网络威胁组织。它以前曾利用有新闻价值的活动作为诱饵来发布恶意软件，并主要针对涉及金融、经济和贸易政策的组织，通常使用诸如PoisonIvy等公开可用的rat病毒，以及一些非公开的后门。这个威胁者的目标是香港的民主活动人士和组织、欧洲和国际金融机构以及美国的一个智库。	2022-11-11	保留
+1054		TempTick				中国	2022-04-27	NULL	这一威胁行为体以东亚的金融、国防、航空航天、技术、保健和汽车部门的组织以及媒体组织为目标进行间谍活动。据信是在唐纳德·j·特朗普(Donald J. Trump)和金正恩(Kim Jong-un)会面之前针对韩国攻击者的行动的幕后黑手	2022-04-27	保留
+1057		Terbium					2022-04-27		微软威胁情报部门发现，最近的这次攻击与2012年针对能源部门数万台计算机的攻击有相似之处。根据我们的内部惯例，微软威胁情报部门将这些攻击背后的活动小组称为TERBIUM。	2022-11-17	保留
+1060		TestPanda				中国	2022-04-27			2022-11-17	保留
+1063		TheBigBang					2022-04-27		虽然还不清楚攻击者到底在寻找什么，但可以确定的是，一旦他找到了，就会进行第二阶段的攻击，从命令与控制服务器获取额外的模块和/或恶意软件。这是一个正在进行的监视攻击，被称为Big Bang”，因为攻击者喜欢《生活大爆炸》(Big Bang Theory)电视节目，其中一些恶意软件的模块是根据电视剧命名的。	2022-11-11	保留
+1066	Gorgon,Gorgon Group,Subaat,thegorgon,gorgongroup	TheGorgon					2022-04-27		自2017年以来，研究人员一直在追踪攻击者Subaat。最近，Subaat引起了我们的注意，因为有针对性的袭击活动再次出现。监控Subaat的过程中，我们意识到他可能是一群人中的一员，这些人负责对全球政府组织进行有针对性的袭击。360和图伊塞克已经对一些袭击事件进行了技术分析，以及与巴基斯坦行动者的联系，他们在分析中发现了与42分队研究人员一直在追踪的一个更大的攻击集团有有趣的联系，我们称之为 Gorgon Group.	2022-12-28	保留
+1069	ShadowBrokers	TheShadowBrokers					2022-04-27		The Shadow Brokers (TSB)是一个黑客组织，首次出现在2016年夏天。他们公布了一些包含美国国家安全局(NSA)黑客工具的泄密文件，其中包括一些zero-day漏洞具体来说，这些漏洞针对的是企业防火墙、杀毒软件和微软产品。The Shadow Brokers”最初将泄密归咎于the Equation Group”的威胁行为者，此人与美国国家安全局的Tailored Access Operations”部门有关。	2022-12-29	保留
+1072	WhiteCompany	TheWhiteCompany					2022-04-27		The White Company白色公司很可能是国家资助的具有先进能力的威胁行为者。从2017年到2018年，该组织领导了一场名为沙欣行动”(Operation Shaheen)的间谍活动，目标是巴基斯坦的政府和军事组织。	2023-01-03	保留
+1075	TG-1314	ThreatGroup1314					2022-04-27		威胁组1314是一个未属性的威胁组，它使用被泄露的凭据登录到受害者的远程访问基础设施。	2022-11-17	保留
+1078	LOTUS PANDA,Lotus Panda	Thrip	美国、东南亚	钓鱼邮件	卫星通信、电信、国防承包商	中国	2022-04-27	NULL	Thrip是一个间谍组织，目标是美国和东南亚的卫星通信、电信和国防承包商公司。该组织使用自定义恶意软件以及自给自足”技术。	2022-04-27	保留
+1081	Nian,REDBALDKNIGHT,BRONZE BUTLER,STALKER PANDA,apt_tick	Tick	日本、韩国、俄罗斯、新加坡、中国			中国	2022-04-27		Tick是一个网络间谍组织，可能起源于中国，至少从2008年就开始活跃。该组织似乎与中国国防科技大学(National University of Defense and Technology)关系密切，后者可能与解放军有关。这一威胁行为者的目标是关键基础设施、重工业、制造业和国际关系部门的组织，以达到间谍目的。这些攻击似乎集中在政治、媒体和工程领域。STALKER PANDA已经被观察到对日本、台湾、香港和美国进行有针对性的攻击。	2023-07-07	保留
+1084		TinySpider					2022-04-27		据CrowdStrike报道，这名参与者正在使用TinyLoader和TinyPOS，可能通过Dridex感染购买访问权限。	2022-11-17	保留
+1087	BRONZE HUNTLEY,CactusPete,Karma Panda	TontoTeam				中国	2022-04-27		Tonto Team”是一个疑似由中国政府支持的网络间谍威胁组织，至少从2009年起，该组织主要针对韩国、日本、台湾和美国;到2020年，他们将业务扩大到包括其他亚洲和东欧国家。Tonto团队的目标是政府、军事、能源、矿业、金融、教育、医疗保健和技术组织，包括通过心跳运动”(2009-2012)和苦饼干行动”(2017)。	2022-11-11	保留
+1090	IMPERIAL KITTEN	Tortoiseshell					2022-04-27	NULL	一个以前没有记录的攻击组织正在使用自定义和现成的恶意软件来攻击沙特阿拉伯的IT供应商，似乎是对供应链的攻击，最终目的是损害IT供应商的客户。我们称之为龟甲(Tortoiseshell)的这个组织至少从2018年7月开始活跃。Symantec已经确认了11个被该组织攻击的组织，其中大多数位于沙特阿拉伯。在至少两个组织中，有证据表明攻击者获得了域管理级访问权限。	2022-04-27	保留
+1093		ToxicPanda				中国	2022-04-27		一个针对中国和边境异议团体的组织。	2022-11-17	保留
+1096		TracerKitten				伊朗	2022-04-27		2020年4月，Crowstrike Falcon OverWatch发现伊朗的对手TRACER KITTEN对欧洲、中东和非洲(EMEA)地区的一家电信公司的多个主机进行恶意交互活动。actor在有效的用户帐户下运行，使用自定义后门和用于C2的SSH隧道。敌手利用他们的立足点进行各种侦察活动，进行证书采集，并为数据泄露做准备。	2022-11-17	保留
+1099		TravelingSpider					2022-04-27		《Nemty》勒索软件的犯罪开发者名为《TRAVELING SPIDER》。据观察，该行为者利用单因素身份验证通过Citrix Gateway访问受害者组织，并使用受害者自己的Microsoft Office 365实例发送与勒索相关的电子邮件。	2022-11-17	保留
+1102		TurkHackTeam	中国、土耳其	通过DDoS攻击等手段对目标网站进行破坏，或篡改网页	针对不尊重土耳其或以其他方式轻视土耳其人的网站和群体，发动网络攻击活动	土耳其	2022-04-27		Turkhackteam成立于2004年，是土耳其历史最悠久、知名度最高的黑客组织之一。根据Turkhackteam论坛上汇编的一份名单，该组织已经针对外国政府和商业网站，包括国际公司的网站，开展了近30次高调的黑客活动。	2023-10-17	保留
+1105		UnionPanda				中国	2022-04-27			2022-11-17	保留
+1108		UnionSpider				俄罗斯	2022-04-27		针对制造业和产业组织的敌手。	2022-11-17	保留
+1111	Duqu Group	Unit8200				以色列	2022-04-27			2022-11-17	保留
+1114	badbullzvenom	VenomSpider					2022-04-27		VENOM SPIDER是一个大的工具集的开发，包括 SKID，VenomKit和Taurus Loader。绰号badbullzvenom”下,对手一直是一个活跃的成员俄罗斯地下论坛至少自2012年以来,专业识别漏洞和工具开发的后续发展,以及获得和维护受害者的机器和梳理服务的访问。最近的恶意软件广告显示，VENOM SPIDER”限制其工具的销售和使用，只向受信任的附属机构出售模块。这种偏好可以从以下事实中看出:使用这些工具的对手包括目标犯罪对手COBALT SPIDER、BGH对手WIZARD SPI	2022-11-11	保留
+1117		ViceLeaker					2022-04-27	NULL	2018年5月，我们发现了一场针对以色列公民的数十个安卓移动设备的活动。卡巴斯基间谍软件传感器捕捉到一名受害者的设备发出的攻击信号;和一个涉及的APK散列(Android应用程序)被标记在我们的样本提要中以供检查。一旦我们查看了该文件，我们很快就发现APK的内部工作包括一个嵌入在应用程序原始代码中的恶意负载。这是一个原始的间谍程序，旨在窃取几乎所有可访问的信息。在我们的研究过程中，我们注意到我们不是唯一发现手术的人。Bitdefender的研究人员还在一篇博文中发布了对其中一个样本的分析。虽然有些东西已经	2022-04-27	保留
+1120		VikingJackal				阿拉伯联合酋长国	2022-04-27			2022-11-17	保留
+1123		VikingSpider					2022-04-27		VIKING SPIDER是犯罪集团背后的Ragnar Locker勒索软件的发展和分发。虽然公开报道显示，该组织在2020年2月开始威胁泄露受害者数据，但直到2020年4月才观察到DLS。DLS托管在Tor上，和其他参与者一样，数据泄露的证据是在被窃取的数据完全泄露之前提供的。也有人指出，在2020年12月22日，一个新的贴子MountLocker勒索软件的tor托管的DLS题为卡特尔新闻”，包括一个VIKING SPIDER的Ragnar Locker的受害者的细节	2022-11-17	保留
+1126	Lebanese Cedar	VolatileCedar					2022-04-27		Volatile Cedar 是一个黎巴嫩威胁组织，其目标是全世界的个人、公司和机构。Volatile Cedar自2012年开始运营，受到政治和意识形态利益的驱使。	2022-11-17	保留
+1129		WetPanda				中国	2022-04-27			2022-11-17	保留
+1132		WhiteBear				俄罗斯	2022-04-27		作为我们卡巴斯基APT情报报告订阅的一部分，客户在2017年2月中旬收到了关于一些有趣的APT活动的更新，我们称之为WhiteBear。这里转载了该报告的大部分内容。WhiteBear是Skipper Turla活动集群的平行项目或第二阶段，记录在另一份私人情报报告Skipper Turla – the White Atlas framework”，自2016年年中。像以前的图拉活动一样，WhiteBear利用被入侵的网站和被劫持的卫星连接来进行指挥和控制(C2)基础设施。事实上，WhiteBear的基础	2022-11-17	保留
+1135		WhiteFly	新加坡、东南亚、俄罗斯	钓鱼邮件	医疗、媒体、通讯、国防、能源		2022-04-27		Whitefly是一个网络间谍组织，至少从2017年就开始运作了。该组织的目标主要是位于新加坡的各个行业的组织，他们主要感兴趣的是窃取大量敏感信息。该组织被认为与针对新加坡最大公共卫生组织新加坡健康”(SingHealth)的袭击有关。	2022-11-17	保留
+1138	APT-Q-62,APT-C-15,Sphinx Moth,Butterfly,Morpho,WildNeutron,Sphinx	人面狮	中国、埃及、以色列	通过社工攻击,鱼叉攻击,水坑攻击窃取目标敏感数据信息	针对埃及和以色列等国家的不同组织		2022-04-27		APT-C-15是一个来自于中东地区的境外APT组织。 APT-C-15组织主要针对埃及,以色列等中东地区进行网络间谍活动，以窃取敏感信息为主。 活跃时间主要集中在2014年6月到2015年11月期间，相关攻击活动最早可以追溯到2011年12月。主要采用利用社交网络进行水坑攻击	2023-10-17	保留
+1141		Windigo					2022-04-27	NULL	Windigo组织至少从2011年就开始运作，利用Ebury的SSH后门攻击了数千台Linux和Unix服务器，创建了一个垃圾邮件僵尸网络。尽管执法部门对创建者进行了干预，Windigo的运营商仍在2019年继续更新Ebury。	2022-04-27	保留
+1144	Windshift	Bahamut	巴基斯坦、印度、中国、埃及、伊朗、巴勒斯坦、土耳其、突尼斯、阿拉伯联合酋长国、沙特阿拉伯	通过网络钓鱼邮件攻击目标	针对中东和南亚的高级持续威胁（APT）组织，在移动端偏好使用钓鱼网站包括仿冒新闻网站、社交网站、VPN软件、聊天软件、色情软件网站分发移动端恶意木马进行攻击。		2022-04-27		Windshift是一个至少自2017年以来一直活跃的威胁组织，其目标是在中东地区的政府部门和关键基础设施进行监视的特定个人。	2023-10-17	保留
+1147		WinntiUmbrella				中国	2022-04-27		这个威胁行为者的目标是美国、中国、日本和韩国的软件公司和政治组织。它主要支持与中国情报机构有关联的其他威胁行为者进行的网络行动。据信与Axiom、APT 17和Mirage有关联。据信，他们与实施极光行动”(Operation Aurora)、2015年针对视频游戏公司、2015年针对泰国政府以及2017年针对中文新闻网站的威胁行为者使用相同的工具和基础设施	2022-11-17	保留
+1150	Wirtegroup	Wirte	中东	钓鱼邮件	国防、外交机构		2022-04-27		WIRTE是一个至少自2018年8月以来一直活跃的威胁组织。该组织主要针对中东国防和外交人员。	2022-11-11	保留
+1153	UNC1878,Grim Spider,GOLD BLACKBURN,FIN12,TEMP.MixMaster	WizardSpider	中国、乌克兰	通过利用恶意软件TrickBot、Ryuk、Conti和BazarLoader对目标进行攻击	针对乌克兰等国家和地区进行针对性强、回报率高的勒索软件活动	俄罗斯	2022-04-27		Wizard Spider是一个总部位于俄罗斯、以经济为动机的威胁组织，至少从2016年开始就以创造和部署恶作剧机器人而闻名。Wizard Spider拥有各种各样的工具库，并针对从大公司到医院的各种组织发起了勒索软件运动。	2023-10-17	保留
+1156		WolfSpider				罗马尼亚	2022-04-27		FIN4是一个以财务为动机的威胁组织，至少自2013年以来，其目标是与公开金融市场有关的机密信息，特别是与医疗保健和制药公司有关的机密信息。FIN4的独特之处在于，它们不会用典型的持续恶意软件感染受害者，而是专注于捕获授权访问电子邮件和其他非公开通信的凭证。	2022-11-17	保留
+1159	apt_xdspy	XDSpy					2022-04-27		很少有APT群体在9年内基本不被发现，但XDSpy就是这样;自2011年以来一直活跃的无证间谍组织。除了白俄罗斯CERT在2020年2月提出的一项建议外，它几乎没有引起公众的注意。在此期间，该组织已经让东欧和巴尔干地区的许多政府机构和私人公司做出了妥协。	2023-07-07	保留
+1162		YanbianGang					2022-04-27		据RiskIQ介绍，延边帮从2013年开始，以新韩储蓄银行、新村金金库、新韩金融、KB国民银行、NH储蓄银行等主要银行为对象，利用恶意的Android应用程序攻击韩国的Android手机银行客户。	2022-11-17	保留
+1165		ZombieSpider	#N/A		#N/A		2022-04-27		2017年4月7日，Pytor Levashov——主要使用别名Severa或Peter Severa， Falcon Intelligence追踪他为ZOMBIE SPIDER——在美国联邦调查局领导的国际执法行动中被捕。ZOMBIE SPIDER的专长是大规模分发垃圾邮件，这是网络犯罪行动的基本组成部分。Levashov是被称为Kelihos及其前身Waledac和Storm的僵尸网络背后的主要威胁参与者。除了逮捕莱瓦肖夫， Falcon Intelligence部门还开展了一项技术行动，以控制Kel	2022-11-17	保留
+1168	Confucius	魔罗桫	中国、巴基斯坦、尼泊尔	通过鱼叉攻击及网络钓鱼邮件等方式进行网络间谍攻击活动	针对中国，巴基斯坦，尼泊尔等进行网络间谍攻击活动，主要针对政府机构，军工企业，核能	印度	2022-04-27		2017年10月Confucius是Palo Alto Networks Unit 42最早发现的恶意家族，其使用网络钓鱼邮件针对巴基斯坦目标实施攻击。 在2017年末趋势命名Confucius为APT组织，并分析了其与Patchwork存在一些联系。趋势科技表示，至少从2013年就发现该组织活跃，使用Yahoo!和quora论坛作为C&C控制器，该组织可能来自于南亚。 该组织拥有对Windows，Android的攻击恶意代码，并常用Delphi作为其Dropper程序。 从奇安信威胁情报中心内部的威胁情	2023-10-17	保留
+1172		Bohrium		其成员会假装是招聘人员，以引诱标记在他们的 PC 上运行恶意软件	技术、交通、政府和教育		2022-06-10			2022-06-10	保留
+1175	L4ckyguy,unKn0wn,unk0w,_unkn0wn,x4kme	X4k		勒索软件			2022-06-17		HelloXD勒索软件家族的作者	2022-11-11	保留
+1178		ToddyCat		C&C	政府，军事组织		2022-06-23		一个较新的APT组织，使用多种技术手段，主要攻击东南亚的政府和军事组织，但也会攻击其他地区。	2022-06-23	保留
+1181		Konni	中国、俄罗斯、韩国	通过鱼叉式钓鱼邮件攻击	长期针对俄罗斯、韩国等国家进行定向攻击活动，擅长使用社会热点话题作为诱饵对目标进行鱼叉式网络钓鱼攻击		2022-07-04		疑似由朝鲜政府支持，多用鱼叉式钓鱼攻击，攻击目标多为俄罗斯和韩国政府、军事组织	2023-10-17	保留
+1184		RapperBot					2022-07-08			2022-07-08	保留
+1187		Keksec	全球	恶意软件、勒索软件			2022-07-14		Kek Security （Keksec）是一个极为活跃的黑客组织，Checkpoint和Netlab360的报告都对其进行了详细分析。Keksec利用多个漏洞，使用多态工具(包括Linux和Windows有效负载)自定义python恶意软件以攻击多个架构。目前该黑客组织正在积极构建IRC僵尸网络，用于DDoS攻击和勒索活动。本文详细介绍了Keksec利用的工具和使用的策略，以及相关黑客的信息。	2022-11-17	保留
+1190	OldFox	老狐狸	中国	通常利用 Web 侧漏洞、暴破等方式入侵目标企业的 Web 服务器，在部署自制后门木马窃取用户数据	针对中国的手机行业相关厂商、以银行为代表的金融行业，以及媒体机构，以窃取企业内部敏感信息为主要目的		2022-07-15		一个长期针对报社媒体企业实施定向攻击的 APT 团伙	2023-10-17	保留
+1192	8220MiningGang,8220挖矿团伙,8220minergroup,m8220_miner,Water Sigbin,WaterSigbin	8220		利用反序列化、未授权访问等漏洞攻击Windows和Linux服务器，随后通过下载僵尸网络程序、挖矿程序、端口扫描工具等对主机进行控制和恶意利用	挖矿是该团伙主要活跃领域，没有特定目标，所有主机都在其攻击范围		2022-07-20		“8220”是一个长期活跃并且擅长使用漏洞进行攻击并部署挖矿程序的组织，该组织早期使用Docker镜像传播挖矿木马，后来逐步利用多个漏洞进行攻击，如WebLogic漏洞、Redis未授权访问漏洞、Hadoop Yarn未授权访问漏洞和Apache Struts漏洞等。	2024-07-05	保留
+1195	DangerousPassword,cryptocore,“危险密码”（DangerousPassword）	危险密码	中国、美国、日本、俄罗斯	主要通过钓鱼邮件投递恶意文件下载链接，诱导收件者从仿冒的谷歌、微软、亚马逊云服务器下载木马压缩文件	针对中国、美国、日本、俄罗斯等国家和地区的加密货币公司	朝鲜	2022-07-26		日前，微步在线捕获了一个专门攻击加密货币公司的APT团伙，我们根据攻击手法将其命名为“危险密码”（DangerousPassword）。	2023-10-17	保留
+1198	APT-Q-11	虎木槿	中国、朝鲜	通过鱼叉邮件钓鱼，浏览器0day，内网水坑攻击等方式对目标进行渗透攻击	针对朝鲜的核心教育科研政府机构进行攻击	朝鲜	2022-07-28		2019年奇安信威胁情报中心发布《阻击“幻影”行动：奇安信斩断东北亚APT组织“虎木槿”伸向国内重要机构的魔爪》全网首次披露东亚APT团伙“虎木槿”，奇安信内部跟踪代号APT-Q-11,在此后的数年间我们一直对其保持高强度的跟踪，该团伙在2019-2021三年间使用了多个浏览器0day漏洞	2023-10-17	保留
+1201	APT-C-48,APTC48	CNC	中国	通过远控木马，钓鱼网站投递恶意程序发起攻击	针对中国军工和教育行业，医疗行业，科研机构、高等院校		2022-08-11		APT-C-48 （CNC）组织是于2019年新出现的组织，由于其使用的远程控制木马的PDB包含了“cnc_client“的字样，所以将该组织命名为CNC，该组织主要攻击对象为我国军工和教育行业。去年年初我国疫情爆发初期，CNC组织通过伪造疫情相关的文档以及钓鱼网站对医疗行业发起攻击。	2023-10-17	保留
+1204	apt_tengyunsnake,APT-C-61,tengyunsnake	腾云蛇	中国、巴基斯坦、孟加拉	通过鱼叉邮件配合社会工程学手段进行渗透，传播恶意程序，控制目标设备，窃取敏感文件	针对巴基斯坦、孟加拉等国家的国家机构、军工、科研、国防等重要领域进行攻击		2022-08-11		 在2020年起，我们发现南亚地区中新的境外APT组织活动，最早活跃可追溯到2020年1月，至今还很活跃。该APT组织的攻击活动主要针对巴基斯坦、孟加拉等国家的国家机构、军工、科研、国防等重要领域进行攻击。与南亚地区中活跃的蔓灵花、响尾蛇等APT组织暂无关联，属于新的攻击组织。 该APT组织通过鱼叉邮件配合社会工程学手段进行渗透，向目标设备传播恶意程序，暗中控制目标设备，持续窃取设备上的敏感文件。由于其使用的C2、载荷下发、窃取的数据存储等均依赖于云服务，且使用的木马为python语言编写，所以我们将其命名为腾云蛇，编号为APT-C-61。	2023-10-17	保留
+1207	APT-N-04,MURENSHARK	穆伦鲨	中国、土耳其	通过投递钓鱼文档与攻击线上服务渗透目标网络、窃取关键数据	针对土耳其，已发现的目标包括北塞浦路斯地区高校、土耳其军队和土耳其国家科研机构	中东	2022-08-22		2022年第二季度，绿盟科技伏影实验室监测到了一系列针对土耳其的网络攻击活动。经过分析，研究人员确认本轮攻击活动来自一个由伏影实验室于21年4月确认的新型威胁实体Actor210426。伏影实验室通过行为模式、攻击手法、攻击工具、攻击目标等线索，对该威胁实体进行了深入调查，确认了其独立性与高级威胁性质。  基于该威胁实体的活动区域与近期攻击目标（土耳其海军项目“MÜREN”），伏影实验室将其正式命名为穆伦鲨（MurenShark），对应绿盟科技高级威胁组织标识为APT-N-04。  已监测活动中，穆伦鲨的主要目标区域包括土耳其和北塞浦路斯地区，攻击范围覆盖高校、研究所和军队等领域的多个敏感目标，尤其对军工项目展现明显的兴趣，已经实施了成功的网络间谍活动。	2023-10-17	保留
+1210		UNC3890	中国、以色列	通过社会工程学引诱，水坑攻击窃取目标信息发起攻击	针对以色列的政府、航运、能源和医疗保健组织，全球性企业，航运企业开展网络间谍活动	伊朗	2022-08-24		在过去的一年里，Mandiant一直在跟踪UNC3890，这是一系列针对以色列航运，政府，能源和医疗保健组织的活动，通过社会工程诱饵和潜在的水坑。 Mandiant以适度的信心评估该演员与伊朗有关，鉴于对航运的强烈关注以及伊朗与以色列之间持续的海上冲突，这是值得注意的。 虽然我们相信这个参与者专注于情报收集，但收集的数据可能被用来支持各种活动，从黑客和泄漏，到实现动能战攻击，就像近年来困扰航运业的攻击一样。  Mandiant以适度的信心评估UNC3890进行间谍和情报收集活动，以支持伊朗的多种利益和行动。目标模式表明，对以色列各部门的实体和组织，包括政府、航运、能源和医疗保健，表现出浓厚的兴趣。我们观察到与伊朗的几个有限的技术联系，例如PDB字符串和波斯语工件。  该活动至少自2020年底以来一直处于活动状态，截至2022年年中仍在进行，尽管该活动具有区域性质，但目标实体包括全球公司。	2023-10-17	保留
+1213	COLDRIVER,Callisto,TA446,Star Blizzard, Nahrelbared, NahrElbard, Cobalt Edgewater,TAG-53, BlueCharlie, Blue Callisto	Seaborgium	中国、乌克兰、北约	通过网络钓鱼、滥用OneDrive服务进行凭证盗窃和数据盗窃	针对北约国家、波罗的海、北欧和东欧地区的国防和情报咨询公司、非政府组织和政府间组织进行攻击	俄罗斯	2022-08-24		Microsoft 威胁情报中心 (MSTIC) 已观察并采取行动来破坏 SEABORGIUM 发起的活动，这是 Microsoft 自 2017 年以来一直跟踪的行为者。SEABORGIUM 是来自俄罗斯的威胁行为者，其目标和受害方与俄罗斯国家利益密切相关。 其活动涉及持续的网络钓鱼和凭据盗窃活动，导致入侵和数据盗窃。 SEABORGIUM 入侵也与黑客和泄密活动有关，在这些活动中，被盗和泄露的数据被用来塑造目标国家的叙述。 虽然我们不能排除该组织的支持人员可能当前或以前与犯罪或其他非国家生态系统有联系，但 MSTIC 评估说，在 SEABORGIUM 入侵期间收集的信息可能支持传统的间谍目标和信息操作，而不是财务动机。	2024-01-26	保留
+1216		TA558	中国、拉丁美洲	利用网络钓鱼，Loda RAT、Vjw0rm和Revenge RAT等各种恶意软件攻击受害者系统	针对拉丁美洲出于经济动机对酒店和旅游机构进行攻击		2022-08-29		自 2018 年以来，Proofpoint 一直在追踪一个有经济动机的网络犯罪分子 TA558，其目标是位于拉丁美洲、有时是北美和西欧的酒店、旅游和相关行业。攻击者发送用葡萄牙语、西班牙语，有时是英语编写的恶意电子邮件。这些电子邮件使用以预订为主题的诱饵，并带有与业务相关的主题，例如酒店房间预订。这些电子邮件可能包含恶意附件或 URL，旨在分发至少 15 种不同的恶意软件有效负载之一，通常是远程访问木马 (RAT)，可以实现侦察、数据盗窃和后续有效负载的分发。	2023-10-17	保留
+1219	apt_noname05716	NoName057(16)	中国、乌克兰、爱沙尼亚、立陶宛、挪威、波兰	通过僵尸网络建立分布式拒绝服务(DDoS)网络攻击圈对目标发起攻击	针对乌克兰以及支持乌克兰的邻国的的政府、新闻机构、军队、供应商、电信公司、交通当局、金融机构等的网站		2022-09-09		乌克兰战争开始至今已经六个月了。从那时起，KillNet、Anonymous、乌克兰 IT 军队、Legion Spetsnaz RF 等亲俄罗斯和亲乌克兰的黑客组织进行了网络攻击。一个名为NoName057(16)的鲜为人知的组织是攻击乌克兰及其周边国家并与乌克兰站在一起的亲俄罗斯组织之一。  NoName057(16)正在对属于乌克兰政府、新闻机构、军队、供应商、电信公司、交通当局、金融机构等的网站以及支持乌克兰的邻国（如乌克兰本身、爱沙尼亚、立陶宛、挪威）进行 DDoS 攻击，和波兰。	2023-10-17	保留
+1222		APT42	中国、伊朗	通过鱼叉式网络钓鱼窃取账号凭据，访问设备存储和提取通信数据	针对伊朗政府官员、政策制定者、记者、全球学者和伊朗持不同政见者，进行长期的鱼叉式网络钓鱼活动	伊朗	2022-09-09		APT42 使用高度针对性的鱼叉式网络钓鱼和社会工程技术，旨在与受害者建立信任和融洽关系，以便访问他们的个人或公司电子邮件帐户或在他们的移动设备上安装 Android 恶意软件。此外，APT42 很少使用 Windows 恶意软件来补充其凭据收集和监视工作。  APT42 操作大致分为三类：  凭据收集： APT42 经常通过高度针对性的鱼叉式网络钓鱼活动来攻击企业和个人电子邮件帐户，特别强调在试图窃取其凭据之前与目标建立信任和融洽关系。Mandiant 也有迹象表明，该组织利用凭证收集来收集多重身份验证 (MFA) 代码以绕过身份验证方法，并使用受损凭证来访问网络、设备和初始雇主、同事和亲属的帐户受害者。 监视行动：至少在 2015 年末，APT42 基础设施的一个子集用作 Android 移动恶意软件的命令和控制 (C2) 服务器，旨在跟踪位置、监视通信并普遍监视伊朗感兴趣的个人的活动政府，包括伊朗境内的激进分子和持不同政见者。 恶意软件部署：虽然 APT42 主要更喜欢凭证收集而不是磁盘上的活动，但几个自定义后门和轻量级工具补充了它的武器库。当目标超出凭证收集时，该小组可能会将这些工具纳入其运营中。	2023-10-17	保留
+1225	APT-C-60	伪猎者	中国、韩国	通过鱼叉邮件诱导目标人员下载托管在服务器上的恶意文件	针对中国、韩国在内的人力资源和贸易相关机构，基金会代表和和政界人士		2022-09-19		伪猎者APT组织于2021年由国内安全厂商披露，据悉，其最早攻击时间可以追溯到2018年，历史攻击目标为包含中国在内的人力资源和贸易相关机构。近期微步情报局监控发现，该组织从2021年12月份至今依然活跃，在今年6月，该组织对韩国境内目标发起定向攻击活动。	2023-10-17	保留
+1228		Webworm					2022-09-19		Broadcom Software旗下的赛门铁克深入了解了我们称为 Webworm 的组织的当前活动。该小组开发了三种较旧的远程访问木马 (RAT) 的定制版本，包括 Trochilus、Gh0st RAT 和 9002 RAT。赛门铁克观察到的至少一项入侵指标 (IOC) 被用于针对在多个亚洲国家/地区运营的 IT 服务提供商的攻击，而其他指标似乎处于预部署或测试阶段。赛门铁克的 Webworm 与一个名为 Space Pirates 的组织有链接，该组织先前已记录在Positive Technologies 2022 年 5 月的一份报告中。很可能这两个群体是同一个群体。  至少从 2017 年开始，Webworm 就以俄罗斯、格鲁吉亚、蒙古和许多其他亚洲国家的 IT 服务、航空航天和电力行业的政府机构和企业为目标。  先前对该组织活动的研究发现，它使用隐藏在诱饵文件后面的自定义加载程序和已经存在很长时间的修改后门。这与赛门铁克最近观察到的网络蠕虫活动相符。	2022-09-19	保留
+1231	TG2729，Silent Ransom Group，SRG	LunaMoth					2022-09-29		Sygnia 事件响应团队确定了一个相对较新的威胁组织，该组织自 2022 年 3 月末开始运作。Sygnia 将此威胁参与者称为“Luna Moth”或 TG2729。 “Luna Moth”专注于数据泄露勒索攻击，如果不支付要求的赎金，就会威胁泄露被盗信息。 最初的妥协是通过在以 Zoho MasterClass 和 Duolingo 订阅为主题的网络钓鱼活动中欺骗受害者来实现的，从而导致在受感染主机上安装初始工具。 该组织使用商业远程管理工具 (RAT) 和公开可用的工具在受感染的设备上进行操作并保持持久性，再次证明了勒索攻击的简单性和有效性。 该组织以机会主义的方式行事和运作：即使网络中没有资产或设备可以入侵，他们也会 泄露任何可访问的数据；这强调了管理敏感公司信息的重要性	2022-11-11	保留
+1234	UAC-0056,UNC2589,TA471,SaintBear	圣贤熊	中国、乌克兰、格鲁吉亚	通过鱼叉邮件使用涉及军政、COVID疫苗等相关话题投递攻击诱饵对目标发起攻击	针对乌克兰、格鲁吉亚等俄罗斯西南方向地缘邻国，涉及军队、政府机构等行业单位	俄罗斯	2022-10-14		UAC-0056也被称为SaintBear、UNC2589和TA471，是一个自2021年初以来一直活跃的网络间谍组织，主要针对乌克兰和格鲁吉亚。据了解，该组织于2022年1月对多台乌克兰政府计算机和网站进行了擦除器攻击。	2023-10-17	保留
+1237		Polonium	中国、以色列	利用云服务进行命令和控制以及数据泄露， 滥用OneDrive和Dropbox发起攻击	针对以色列的制造业、信息技术行业和国防行业发起攻击	伊朗	2022-10-17		自2022年2月以来，MSTIC观察到POLONIUM的主要目标为以色列的核心制造业、信息技术和国防工业。POLONIUM对IT公司进行攻击，以此针对其下游的航空公司和律师事务所进行供应链攻击，依靠服务提供商的凭证来获得对目标网络的访问，这类事件发生过不止一次。 POLONIUM针对的多家制造公司也为以色列的国防工业提供服务，因此，该组织的战术为：以服务提供商的访问权为目标，获得下游的访问权。已知的受害者组织涉及以下领域：关键制造业、信息技术、运输系统、国防工业基地、政府机构和服务、食品和农业、金融服务、医疗保健和公共卫生以及其他商业类型	2023-10-17	保留
+1240	APT-LY-1004	南亚之蟒					2022-11-04		猎影实验室发现该组织在攻击目标、攻击目的、反病毒检测、持久化操作等方面符合APT攻击活动特点，且与已知APT组织常用手段有较大差异。猎影实验室对其以内部追踪代号“APT-LY-1004”进行跟踪 活动针对印度国防部下设的CSD部门（Canteen Stores Department，南亚地区多个国家国防部均设此部门，专为武装部队人员、退役军人和国防文职人员购买日用产品所设，提供曲别针、汽车等4千多种产品）；活动通过CVE-2017-0199漏洞利用样本下发后续包含宏代码的远程模板文件；活动最后阶段部署Python后门对目标人群进行持久化文件窃取。	2022-11-04	保留
+1243	Hagga	Aggah	中东、东亚	钓鱼邮件	制造业		2022-11-09		研究人员发现了一项始于2021年7月上旬的鱼叉式网络钓鱼活动，该活动的目标是整个亚洲的制造业。活动中的战术、技术和程序 (TTP) 与 Aggah 威胁组织一致，因此研究人员将此次攻击归因于Aggah组织。Aggah最早于2019年3月首次发现，主要针对阿拉伯联合酋长国(UAE)的组织。据分析，Aggah最新的攻击目标包括台湾的制造公司Fon-star和工程公司FomoTech，以及韩国的电力公司现代电气。	2023-06-21	保留
+1246		Agrius	以色列、中东	恶意软件	公司		2022-11-09		Agrius APT是一个新近确定的攻击组织，自2020年以来一直对其活动进行密切跟踪。犯罪分子的主要目标似乎是总部位于以色列的公民和公司，并且有充分的证据表明，该组织可能与伊朗政府有密切联系。 Agrius Advanced Persistent Threat（APT）黑客似乎同时使用公共和私人恶意软件家族来协助他们的攻击。例如，他们一直在受感染的网络上植入开源ASPXSpy恶意软件，但他们还依赖于一个以前未知的勒索软件/雨刮器，称为Apostle。	2022-11-09	保留
+1249	APTQ12	APT-Q-12	中国	钓鱼邮件	贸易行业	中国	2022-11-09		奇安信威胁情报中心在日常威胁发现过程中发现一个专门针对贸易行业进行攻击的团伙，主要目的为获取情报，攻击手段较为单一，发送带有恶意lnk文件的钓鱼邮件进行传播，今年以来较为活跃，我们将其命名为APT-Q-12	2023-01-04	保留
+1252		BackdoorDiploacy	非洲、中东	漏洞	外交组织		2022-11-09		ESET安全研究人员发现了一个新型APT组织BackdoorDiploacy，攻击目标为非洲及中东国家的外交组织。 该组织自2017年以来一直活跃。ESET高级威胁情报分析师Adam Burgher在6月10日的一份报告中表示，“在几个非洲国家的外交部以及欧洲、中东和亚洲都发现了受害者。其他目标包括非洲的电信公司和至少一家中东慈善机构。”	2022-11-09	保留
+1255		Candiru		0day漏洞	政治工作者、学生		2022-11-09		7月15日，微软发布报告表示，研究人员发现了一个名为 Candiru 的以色列公司，该公司是两个Windows 0-day漏洞（CVE-2021-31979和CVE-2021-33771）的开发者。 这些漏洞已被用来感染和部署一种名为DevilsTongue的新型间谍软件，目前微软已经观察到至少 100 名受害者，包括政客、人权活动家、记者、学者、大使馆工作人员和持不同政见的人。 Candiru 公司成立于2014年，是一家以色列公司，微软将其称为 SOURGUM公司 。该公司向政府客户销售“无法追踪”的间谍软件，产品包括用于监视计算机、移动设备和云帐户的解决方案。	2022-11-09	保留
+1258		DarkCrewFriends	不限	漏洞、僵尸网络	多种目的		2022-11-09		Check Point研究人员最近发现黑客组织“DarkCrewFriends”发起的攻击活动，其主要目的是利用存在漏洞的PHP服务器组建僵尸网络。攻击主要利用文件上传漏洞，上传恶意PHP web shell并使用IRC通道与C&C服务器通信。攻击者可以利用植入的恶意软件发起DDoS攻击或远程执行命令。	2022-11-09	保留
+1261		DarkSide	中国、美国	通过RaaS及各类勒索软件对目标进行勒索获取利益	针对美国等英语国家，对除医疗、政府、教育、非盈利组织和殡葬行业外的组织机构发起勒索攻击		2022-11-09		DarkSide是一支新兴的RaaS（勒索即服务）犯罪团伙，该团伙有可能是由其他勒索软件活动的前分支机构所组织发起的，依据该团伙之前公布的攻击规则声明，该团伙只会针对除医疗、政府、教育、非盈利组织和殡葬行业外的组织机构发起勒索攻击。根据360官网发布的《2021年1月勒索病毒流行态势分析》介绍，该勒索病毒家族最早出现于2020年8月，截至目前为止被公开的有81个企业遭遇该勒索病毒家族的攻击。	2023-10-17	保留
+1264	OperationDRBControl	DRBControl	东南亚、欧洲、中东	恶意软件	赌博和博彩		2022-11-09		DRBControl网络间谍组织开展一起攻击活动，利用新的恶意软件家族瞄准全球赌博和博彩公司，尤其东南亚用户，其次还包括欧洲和中东地区。攻击者旨在从东南亚的赌博和博彩公司窃取数据库和源代码。	2022-12-29	保留
+1267		Ganb	中国	钓鱼邮件	金融	中国	2022-11-09		微步在线情报局提供的追踪数据显示，引发此次钓鱼攻击的Ganb黑产组织在今年3月首先就对我国金融行业相关企业进行过一波网络钓鱼攻击，随后通过“多人分销”的模式扩散至其他行业。	2022-11-09	保留
+1270		GhostEmperor	东南亚	0day漏洞	政府和电信		2022-11-09		卡巴斯基发现了一个新的威胁攻击者，跟踪为 GhostEmperor，它针对 Microsoft Exchange 漏洞进行攻击，针对知名受害者。该集团开展的长期业务主要针对东南亚的实体，包括几家政府实体和电信公司。 	2022-11-09	保留
+1273		Hades	乌克兰、韩国	钓鱼	政府		2022-11-09		Hades一个充满神秘色彩的APT组织，该组织因为2017年12月22日针对韩国平昌冬奥会的攻击活动被首次发现，后来卡巴斯基将该次事件的攻击组织命名为Hades。但是该攻击组织的归属问题却一直未有明确定论。一方面由于该组织在攻击事件中使用的破坏性恶意代码（Olympic Destroyer）与朝鲜Lazarus组织使用的恶意代码存在相似性。而另一方面则有部分美国媒体认为该事件的幕后黑手是俄罗斯情报机构，他们故意模仿了其他组织的攻击手法以制造虚假flag迷惑安全人员。	2022-11-09	保留
+1276		Indra	伊朗	网络攻击	基础设施		2022-11-09		近期Check Point Research发现，Indra对伊朗铁路和道路与城市发展部系统进行了有针对性的网络攻击，被攻击的相关网站在网络中断后停止了服务。	2022-11-09	保留
+1279		KingSqlZ	西班牙语系国家	钓鱼软件	政治	土耳其	2022-11-10		通过对攻击者的行为和所用服务器相关信息的分析和追踪，确定该次攻击来源于一批隐秘多年的土耳其黑客组织-KingSqlZ黑客组织。该组织是一个民族主义色彩非常浓厚的黑客组织，曾攻下其他国家的3千多个网站服务器，并高调的在被攻击网站上留下其组织的名称，随后消失了多年。 如今通过我们对”黑狮行动”的追踪再次挖出该黑客组织的活动迹象。本次攻击过程中，该黑客组织采用渗透手段攻下多台服务器并将其作为存放攻击代码的跳板。	2022-11-10	保留
+1282		LazyScripter	中国、欧洲	通过网络钓鱼邮件攻击目标	攻击想移民到加拿大工作的个人、航空公司和国际航空运输协会（IATA）		2022-11-10		Malwarebytes披露新的APT组织LazyScripter瞄准交通行业。LazyScripter自2018年以来一直活跃，利用网络钓鱼攻击针对加拿大移民、求职者和国际航空运输协会（IATA）。	2023-10-17	保留
+1285		LuminousMoth	东南亚	钓鱼邮件	政府		2022-11-11		2021年7月，卡巴斯基发现一种针对东南亚的攻击活动，被称作LuminoutMoth。该活动至少可以追溯到2020年10月，早期的攻击大多在缅甸但现在主要在菲律宾，目前发现缅甸共有100多名受害者，菲律宾有1,400名受害者，其中一些受害者是政府实体。	2022-11-11	保留
+1288		Lurk		钓鱼邮件	金融机构	俄罗斯	2022-11-11		5月底，俄罗斯***宣布，抓获涉嫌窃取4500万美元的黑客团伙，涉案人数多达50人，该网络犯罪组织名为Lurk，从2011年成型，开始攻击目标为一些组织和用户，大概在一年半之前，将目光转向银行，一共从银行和其他金融机构以及企业共盗窃超过4500万美元。	2022-11-11	保留
+1291		Magnat	美国、加拿大、澳洲、欧洲发达国家	恶意广告			2022-11-11		这个黑客组织大约是从2018年8月展开攻击行动，一开始，利用MagnatExtension窃取浏览器Chrome的帐密，后来到了2019年10月，该组织开始运用MagnatBackdoor后门程序，思科指出，自此之后，Magnat的攻击行动都部署3种恶意软件，也就是：MagnatExtension插件程序、MagnatBackdoor后门程序，以及窃密工具Azorult。	2022-11-11	保留
+1294		MalSmoke		漏洞、勒索软件			2022-11-11		勒索软件团伙Malsmoke正在利用一个存在9年之久的漏洞渗透到世界各地的设备中，这凸显了定期软件修补的重要性。	2022-11-11	保留
+1297		ModifiedElephant	印度	钓鱼邮件	人权活动家、人权捍卫者、学者和律师	印度	2022-11-11		ModifiedElephant对印度各地的人权活动家、人权捍卫者、学者和律师进行有针对性的攻击，目的是栽赃可以定罪的电子证据。 ModifiedElephant至少从 2012 年开始运作，并多次针对特定的人群。 ModifiedElephant通过使用商业上可用的远程访问木马(rat)进行操作，并且与商业监视行业有潜在的联系	2022-11-11	保留
+1300		OldGremlin	俄罗斯	钓鱼邮件	医疗实验室、银行、制造商和软件开发商		2022-11-11		近几个月来，针对关键基础设施的勒索软件攻击激增，网络安全研究人员发现了一个新攻击者，该攻击者一直在尝试对俄罗斯的医疗实验室、银行、制造商和软件开发商的大型公司网络进行多阶段攻击。 这个代号为“OldGremlin”的勒索软件团伙至少自3月以来与一系列活动有关，其中包括上月8月11日发生的对一家临床诊断实验室的成功攻击。	2022-11-11	保留
+1303		OnePercentGroup	美国	钓鱼邮件	公司		2022-11-11		近日，美国联邦调查局（FBI）发布了关于一个名为OnePercent Group（1%）的勒索软件团伙的警告，该团伙自2020年11月以来一直在攻击美国公司。该团伙的电子邮件针对组织内部的个人使用社会工程技巧欺骗粗心的员工打开包含在附件ZIP文件中的恶意Word文档。	2022-11-11	保留
+1306	OutlawGroup	Outlaw	中国、柬埔寨、泰国、老挝	利用僵尸网络和公开漏洞利用作为攻击手段，广泛的进行IP地址扫描活动，在特定时期内攻击特定区域	针对中国、柬埔寨、泰国、老挝等越南周边国家和欧洲地区，专门侵入电脑以夺取其算力进行门罗币(Monero) 挖矿		2022-11-11		TrendMicro 研究人员检测到一个传播含有门罗币挖矿机和 Perl 后门组件的僵尸网络的 URL。研究人员发现这与 Outlaw 黑客组织之前攻击活动中使用的方法一样。	2023-10-17	保留
+1309		BlueMockingBird					2022-11-11		近日，据外媒报道：美国一家网络安全公司的研究人员发现了一种新型的威胁，该威胁提供了挖掘加密货币的有效载荷。新威胁Blue Mockingbird对多个组织进行了机会攻击。该名称指的是一个类似的活动集群，涉及Windows系统上动态链接库(DLL)形式的Monero加密货币挖掘有效负载荷。	2022-11-11	保留
+1315		IndustrialSpy					2022-11-21		Industrial Spy 是一个相对较新的勒索软件组织，于 2022 年 4 月出现。在某些情况下，该威胁组织似乎只会泄露和勒索数据，而在其他情况下，他们会加密、泄露和勒索数据。Industrial Spy 最初是一个数据勒索市场，犯罪分子可以在其中购买大公司的内部数据；他们使用 README.txt 文件来推广这个市场，这些文件是使用伪装成破解和广告软件的恶意软件下载器下载的。在这些最初的促销活动之后，威胁组织引入了他们自己的勒索软件，以创建结合数据盗窃和文件加密的双重勒索攻击。威胁组织似乎也尝试过古巴在 2022 年 5 月开发自己的勒索软件之前，曾短暂接触过勒索软件	2022-11-21	保留
+1318	DecisiveArchitect	RedMenShen					2022-11-21		BPFDoor 被归因于一个名为 Red Menshen（又名 DecisiveArchitect）的中国威胁组织，攻击者从 2018 年至今一直使用它来秘密远程访问受感染的设备。美国、韩国、香港、土耳其、印度、越南和缅甸的系统都已遭到破坏。目标包括电信、政府、教育和物流组织。人们已经看到该组织通过知名提供商托管的虚拟专用服务器 (VPS) 向 BPFDoor 受害者发送命令。反过来，这些 VPS 通过位于台湾的受损路由器进行管理，威胁行为者将其用作 VPN 隧道。	2022-11-21	保留
+1321		DaixinTeam					2022-12-05		据悉，“Daixin Team”是一个勒索软件和数据勒索组织，至少从 2022 年 6 月开始就针对 HPH 部门进行勒索软件和数据勒索行动。在过去四个月中，该组织与医疗保健和公共卫生 (HPH) 部门的多起勒索软件事件有关，对与电子健康记录、诊断、成像和内部网服务相关的服务器进行加密。勒索攻击活动中，该组织通过泄露个人身份信息 (PII) 和患者健康信息 (PHI)的双重勒索模式，从受害者处获得赎金。  在追踪到的一次攻击活动中，其对OakBend 医疗中心实施了勒索攻击，该组织声称已窃取了大约 3.5GB 的数据，其中包括超过 100 万条包含患者和员工信息的记录。除此之外，该组织还曾在数据泄露网站上发布了一个包含 2,000 条患者记录的样本，其中包括姓名、性别、出生日期、社会安全号码、地址和其他预约细节	2022-12-05	保留
+1324	KarakurtGroup	Karakurt					2022-12-07		据The hacker news消息，2021年9月至11月期间，埃森哲发现一个此前未被记录在案的新型黑客组织，该组织被发现与40多起数据盗窃和勒索攻击事件有关。  根据埃森哲12月10日发布报告称，该黑客团体自称为Karakurt，于2021年6月首次被发现，能够根据目标环境的变化修改其技术策略。  “该黑客组织以追求利润最大化为目标的投机主义分子，截至目前，它都以较小的公司为目标，这点与其他黑客组织不同。” 埃森哲网络调查、取证和响应（CIFR）团队表示，“从其入侵分析看，Karakurt只关注数据泄露后的勒索，而不是部署更具破坏性的勒索软件。”  数据显示，受Karakurt勒索攻击的受害者95%位于北美，剩下5%在欧洲，专业服务、医疗保健、工业、零售等垂直行业一直是其最主要的目标	2023-04-06	保留
+1327	Coldriver	Calisto					2022-12-09		2022年3月30日，Google TAG发布了几个与CALISTO相关的IOC，CALISTO是一个与俄罗斯有关的威胁组织，也被称为COLDRIVER，过去曾针对几个西方非政府组织、智库和国防部门。根据Google TAG的说法，攻击者使用新创建的Gmail帐户进行鱼叉式网络钓鱼活动。CALISTO在其VPS上使用Evilginx来捕获受害者的凭据。这个众所周知的开源工具在受害者和合法网站之间创建一个SSL反向代理，以捕获Web凭据、2FA令牌。	2022-12-09	保留
+1330		Cranefly					2022-12-09		一个以前没有文件记录的滴漏器已经被发现安装了后门和其他工具，使用新的技术从看似无害的Internet信息服务(IIS)日志中读取命令。  赛门铁克(Symantec)的网络安全研究人员发现了这个漏洞，他们说：“一个演员正在使用名为Cranefly(又名UNC3524)的恶意软件安装另一个未经记录的恶意软件(Trojan.Danfuan)和其他工具。”  Cranefly最早是在今年5月被曼迪昂特发现的，这家安全公司表示，该组织严重攻击了从事企业发展、并购和大型企业交易的员工的电子邮件。	2022-12-09	保留
+1333		TAG53				俄罗斯	2022-12-12		Recorded Future 发布报道称，和攻击基础设施相关联的俄罗斯国家黑客组织，欺骗美国合法军事武器和硬件供应商Global Ordnance的微软登录页面。  该报告将该基础设施归咎于被称为 TAG-53的威胁活动组织名下，该组织更多地被安全社区熟知为 Blue Callisto、Callisto、COLDRIVER、SEABORGIUM和TA446。报告指出，“从对TAG-53攻击活动的历史公开报道来看，该凭据收割活动部分是通过钓鱼攻击启用的。	2022-12-12	保留
+1336		ExoticLily					2022-12-20		谷歌威胁分析小组(TAG)刚刚观察到了一个出于经济动机、而充当黑客中间人的威胁行为者，可知其“客户”包括了 Conti 勒索软件团伙。Google 将该组织称作“Exotic Lily”，它会充当初始访问代理，寻找易受攻击的组织、并将其网络访问权挂牌转售给出价最高的攻击者	2022-12-20	保留
+1339		GroupA21					2022-12-20		在持续跟踪全球主流黑客组织的过程中，微步在线发现了一个至少自2017年开始活动，主要针对南亚地区各国开展网络间谍活动的新APT组织。该组织的攻击手法与印度背景的SideWinder和Bitter组织存在些许相似，但在攻击细节和所用木马方面存在本质的区别，为方便进行跟踪，微步在线内部将之命名为GroupA21	2022-12-20	保留
+1342		log4j2漏洞					NULL			NULL	删除
+1345		operationrubiacordifolia					NULL			NULL	删除
+1348		colunmtk					NULL			NULL	删除
+1351		lugansk					NULL			NULL	删除
+1354		lpr					NULL			NULL	删除
+1357		asylumambuscade					NULL			NULL	删除
+1360		chimaera					NULL			NULL	删除
+1363		whitewhale					NULL			NULL	删除
+1366		mirrorblast					NULL			NULL	删除
+1369		operationspalax					NULL			NULL	删除
+1372		cryptomimic					NULL			NULL	删除
+1375		deadlykiss					NULL			NULL	删除
+1378		evasivepanda					NULL			NULL	删除
+1381		groupa10					NULL			NULL	删除
+1384		msky					NULL			NULL	删除
+1387		政府、国际组织					NULL			NULL	删除
+1390		chinaz					NULL			NULL	删除
+1393		stantinko					NULL			NULL	删除
+1396		tor2mine					NULL			NULL	删除
+1399		magichound					NULL			NULL	删除
+1402		snowman					NULL			NULL	删除
+1405		muhstik					NULL			NULL	删除
+1408		log4j2漏洞事件					NULL			NULL	删除
+1411		operationpotaoexpress					NULL			NULL	删除
+1414		snowleopard					NULL			NULL	删除
+1417		waterbasilisk					NULL			NULL	删除
+1420		insidecopy					NULL			NULL	删除
+1423		sakura					NULL			NULL	删除
+1426		turbo					NULL			NULL	删除
+1429		myking					NULL			NULL	删除
+1432		cussteel					NULL			NULL	删除
+1435		lookback					NULL			NULL	删除
+1438		rampantkitten					NULL			NULL	删除
+1441		mykings					NULL			NULL	删除
+1444		operationblackatlas					NULL			NULL	删除
+1447		fajan					NULL			NULL	删除
+1450		operation“armorpiercer”					NULL			NULL	删除
+1453		prophetspider					NULL			NULL	删除
+1456		sykipot					NULL			NULL	删除
+1459		blankslate					NULL			NULL	删除
+1462		greedysnake					NULL			NULL	删除
+1465		pokingbear					NULL			NULL	删除
+1468		ramkaldevelopers					NULL			NULL	删除
+1471		bandidos					NULL			NULL	删除
+1474		spearphishingattackshitsindustrialcompanies					NULL			NULL	删除
+1477		LeetMX					NULL		LeetMX 是一场广泛的网络攻击活动，起源于墨西哥，主要针对墨西哥、萨尔瓦多和拉丁美洲其他国家（如危地马拉、阿根廷和哥斯达黎加）的目标。它至少从 2016 年 11 月开始运营。我们不确定其目的，但估计其具有犯罪动机。leetMX 基础设施包括 27 个主机和域，用于传送恶意软件或用于命令和控制。使用了数百个恶意软件样本，大多数是远程访问木马和键盘记录程序。有趣的是，攻击者通过将访问者重定向到墨西哥一家主要报纸 El Universal 来伪装他们的一个交付域	2023-06-20	保留
+1480		bisonal					NULL			NULL	删除
+1483		operationghoul					NULL			NULL	删除
+1486		驱动人生木马					NULL			NULL	删除
+1489		longhorndeprimon					NULL			NULL	删除
+1492		operationdianxun					NULL			NULL	删除
+1495		operationgroundbait					NULL			NULL	删除
+1498		xbash					NULL			NULL	删除
+1501		cron					NULL			NULL	删除
+1504		weakestlink					NULL			NULL	删除
+1507		bookworm					NULL			NULL	删除
+1510	NULL	INJ3CTOR3Operation	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1513	SeaViper	海毒蛇	中国	通过钓鱼邮件，Gafgyt、Mirai木马组建僵尸网络进行DDoS攻击，投放AgentTesla、Remcos RAT和Masslogger窃密木马	针对中国等国家的金融机构、政府事业单位、精密仪器、酒店和旅游业等相关的实体		2022-12-21		“海毒蛇”（又名SeaViper）是来自南亚地区的一个APT组织	2024-07-15	保留
+1516	NULL	Turla	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	待处置
+1519	NULL	xHunt	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	待处置
+1522	NULL	UNC215,Nazar	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1525		UNC215	全球	利用漏洞在中东和亚洲的金融和高科技组织上安装web shell和FOCUSFJORD负载发起攻击	针对全球政府、技术、电信、国防、金融、娱乐和医疗保健部门的组织进行攻击		2022-12-21		“UNC215”是活跃于中东地区的一个APT组织	2023-10-17	保留
+1531	NULL	duke	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	待处置
+1534	NULL	OperationWindigo	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1537	NULL	EquationGroup	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	待处置
+1540		TaskMasters					2022-12-21			2022-12-26	保留
+1543	NULL	小黄鸭	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	待处置
+1546	伊斯兰革命卫队委托委托马布纳研究所	MabnaInstitute		鱼叉式网络钓鱼			2022-12-21			2022-12-26	待处置
+1552	NULL	innaput	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1555	LondonBlue	伦敦蓝		利用商务电子邮件（BEC）进行诈骗攻击	针对中小企业到大型跨国公司等各种规模的部门和企业进行攻击	英国	2022-12-21		“伦敦蓝”（又名London Blue）是来自英国地区的一个APT组织	2023-10-17	保留
+1558	NULL	cdt	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1561	NULL	Gorgon	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	待处置
+1564	NULL	blueprint	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1567	NULL	PYSA	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1573	NULL	UltraRank	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	保留
+1576	NULL	TurlaGroup	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	待处置
+1579	NULL	Hermit	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	保留
+1582	NULL	Bluenoroff	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	待处置
+1585	NULL	gaza	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	待处置
+1588	NULL	GazaTeam	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	待处置
+1591	NULL	DustySky	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1594	NULL	Winnt	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1597	NULL	OperationManul	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	保留
+1600		PKPLUG					2022-12-21			2024-01-08	待处置
+1603	NULL	StegBaus	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1606	NULL	CylanceSPEARTeam	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1609	NULL	Corkow	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1612	NULL	APTV012	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1615	NULL	ShadowBrokers	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	待处置
+1618	NULL	LazarusGroup	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	待处置
+1621	NULL	Agwl	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	保留
+1624	NULL	GhostDragon	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1627	NULL	孔夫子	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	待处置
+1630	NULL	APTC41	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	待处置
+1633	NULL	OperationLayover	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1636	NULL	Carbanakgroup	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	待处置
+1639	NULL	OperationDRBControl	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	待处置
+1642	NULL	UnclassifiedAPT	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1645	Balikbayan Foxes	TA2722	中国、北美、欧洲、东南亚	冒充菲律宾政府实体利用钓鱼邮件传播Remcos和NanoCore远程访问木马	针对北美、欧洲和东南亚的各个行业，包括航运、物流、制造、商业服务、制药、能源和金融		2022-12-21			2023-10-17	保留
+1648	NULL	4nzel4	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1651	NULL	sshpsychos	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	保留
+1654	NULL	TAG22	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	保留
+1657	NULL	Hangover	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	待处置
+1660	NULL	Deceptikons	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	保留
+1663	NULL	WhiteCompany	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	待处置
+1666	NULL	EGoManiac	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	保留
+1669		肖邦	中国、德国、韩国、智利	以各种主题为诱饵通过鱼叉攻击对目标进行攻击窃取指定类型文件情报	针对德国、韩国、智利等国家的金融、教育行业和欧洲地区目标进行攻击		2022-12-21			2023-10-17	保留
+1672	NULL	APTC35(Donot)	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	待处置
+1678	NULL	RATicate	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	保留
+1681		UNC2529					2022-12-21		UNC2529  广泛使用混淆和无文件恶意软件来使检测复杂化，以交付一个编码良好和可扩展的后门。第一次攻击活动利用与  Tigertigerbeads.com 域相关联的邮件地址发送包含恶意链接的钓鱼电子邮件，诱使受害者点击这些链接下载第一阶段包含压缩文件的有效载荷。该压缩文件包含高度混淆的 JavaScript 下载程序  DOUBLEDRAG	2023-10-17	保留
+1684	NULL	Xminp	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1687	NULL	BladeEagle	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1690	NULL	TA406	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	保留
+1693	NULL	Higaisa（黑格莎）	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	待处置
+1696	NULL	Higaisa 	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	待处置
+1699	NULL	GalerHackersTeam	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	待处置
+1702	NULL	GazaCyber​​gang	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	待处置
+1705	NULL	CopyPaste	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	保留
+1708	NULL	ElMachete	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	保留
+1711	NULL	金眼狗（GoldenEyeDog）	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	待处置
+1714	金眼狗（GoldenEyeDog）,APTQ27,GoldenEyeDog	金眼狗	中国、东南亚	利用wps 0day漏洞，水坑攻击投递载荷对目标远控、部署挖矿木马	针对在东南亚的海外华人群体的黑客团伙、在东南亚从事博彩、狗推的相关人员，针对博彩、金融行业		2022-12-21		“金眼狗”（又名GoldenEyeDog）是活跃于东亚地区的一个APT组织	2023-10-17	保留
+1717	NULL	HiddenShadow	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1720	NULL	SectorA05	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1723	NULL	test家族	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1726	NULL	CallistoGroup	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	待处置
+1732	NULL	Disappear	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1735	NULL	“危险密码”（DangerousPassword）	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	待处置
+1738	NULL	LeeryTurtle	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	保留
+1741	NULL	Operationblackball	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1744	NULL	Cyber	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1747	NULL	DePriMon	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1750		幼象	中国、南亚	利用钓鱼网站、使用恶意安卓应用程序攻击手机，用Python等语言编写的木马窃取电脑	针对南亚地区国家政府、军事、国防等部门定向网络攻击		2022-12-21		幼象”组织是一个来自南亚次大陆方向的APT攻击组织，其最早由安天在2020年1月15日发布的《“折纸”行动：针对南亚多国军政机构的网络攻击》[1]报告中所披露。“幼象”组织攻击活动最早可追溯到2017年7月，其主要攻击目标为巴基斯坦、孟加拉、斯里兰卡和马尔代夫等南亚国家的政府、军事、国防、外交、核能、金融、教育、电信等部门及行业。“幼象”组织使用的木马武器既有开源工具，如：Empire渗透框架和Exploit Pack漏洞攻击平台。同时也有自研C++编写的窃密木马（可借助U盘进行横向移动突破隔离网络，窃取隔离网络主机文件）、Python语言编写的木马以及Go语言编写的木马	2023-10-17	保留
+1753	NULL	SyrianElectronicArmy(SEA)	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	待处置
+1756	NULL	TransparentAPT	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	待处置
+1759	NULL	Transparent	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	待处置
+1762	NULL	Chopins	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1765	NULL	OCEANLOTUSAPT	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	待处置
+1768	NULL	CloudSnooper	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1771	NULL	TajMahalframework	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1774	NULL	Gulax	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1777	NULL	Vendetta	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	保留
+1780	NULL	8220MiningGang	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	待处置
+1783	NULL	ScarCruft 	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	待处置
+1786	NULL	cyberbit	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1789	NULL	MagecartGroup8	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1792	NULL	OperationPoisonedNews	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1795	NULL	OperationDreamJob	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1798	NULL	newcampaigntargetingsecurityresearchers	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1801	NULL	OperationSnowMan	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1804	NULL	WelcomeChat	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1807	NULL	OSXFakerMining	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1810		TunnelVision					2022-12-21		研究人员披露，一个与伊朗有关的 APT 组织正积极利用Log4j漏洞，在未打补丁的VMware Horizon服务器上部署勒索软件，目前已在中东和美国检测到入侵。由于该组织严重依赖隧道工具，因此研究人员将其命名为“TunnelVision”。TunnelVision组织的活动在一定程度上与Phosphorus组织存在重叠	2023-10-17	保留
+1813	NULL	Blackloan	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	保留
+1816	NULL	OperationKingphish	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1819	NULL	OperationArmageddon	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1822	APT-C-39,Central Intelligence Agency	CIA	中国	利用Vault7（穹窿7），Fluxwire，Grasshopper等CIA专属网络武器植入后门程序窃取通讯和情报	针对中国等国家的金融、电信、能源、航空航天、信息技术、教育和自然资源等领域发起攻击	美国	2022-12-21		美国中央情报局（英语：Central Intelligence Agency），总部位于美国弗吉尼亚州的兰利。与苏联国家安全委员会（克格勃）、英国军情六处和以色列摩萨德，并称为“世界四大情报机构”。 其主要任务是公开和秘密地收集和分析关于国外政府、公司、恐怖组织、个人、政治、文化、科技等方面的情报，协调其它国内情报机构的活动，并把这些情报报告到美国政府各个部门的工作	2023-10-17	保留
+1825	NULL	TemptingCedarSpyware	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1828	NULL	黑雀	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1831	NULL	NuggetPhantom	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1834	NULL	OutlawGroup	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	待处置
+1837	NULL	VoidBalaur	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	保留
+1840	NULL	RedFoxtrot	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	保留
+1843	NULL	Diggoldgroup	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1846	NULL	破壁	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1849	NULL	1937CN	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	保留
+1852	NULL	TA2552	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	保留
+1855	NULL	MusstangPanda	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1858	NULL	KovCoreG	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	保留
+1861	NULL	Kimsuki	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	待处置
+1864	NULL	SilverFish	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	待处置
+1867	NULL	OperationShadyRAT	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1870	NULL	BitterSweet	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1873	NULL	ConfuciusGroup	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	待处置
+1876	NULL	Lang32	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	保留
+1879	NULL	OperationTripoli	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1882	NULL	LuckyElephant	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	保留
+1885	NULL	HexCode	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	保留
+1888	NULL	APTC42	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	待处置
+1891	NULL	APTQ12	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	待处置
+1894	NULL	ShadowGate	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	保留
+1897	NULL	RxlCoinminer	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1900		匿影		使用永恒之蓝漏洞向受害者计算机植入挖矿病毒，利用中毒主机资源挖取门罗币为主的加密数字货币	主要对用户的虚拟货币钱包、身份证、密码等重要文件数据进行窃取		2022-12-21			2023-06-01	保留
+1903	NULL	8220挖矿团伙	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	待处置
+1906	NULL	Mikroceen	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	保留
+1909	NULL	黑格莎（Higaisa）	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	待处置
+1912	NULL	ChromeGhost	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1915	NULL	RaidForums	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1918	NULL	ZeroZeroDog	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	保留
+1921	NULL	DangerousSavanna	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1924	NULL	UAC0041	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	保留
+1927	NULL	Prometheus	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	保留
+1930	NULL	0ktapus	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1933	NULL	REVIL	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	保留
+1936	NULL	JuiceLedger	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	保留
+1939	NULL	TA4563	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	保留
+1942	NULL	TropicalScorpius	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	保留
+1945	NULL	CobaltMirage	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	保留
+1948	NULL	Worok	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	保留
+1951	NULL	TellYouThePass	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1954	NULL	8220minergroup	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	待处置
+1957	NULL	MakeMoney	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+1960	NULL	GRPLY1001	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	保留
+1963	NULL	Lazarus 	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	待处置
+1996	NULL	PurpleFox 	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	待处置
+2335	NULL	H2Miner	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	保留
+2383	APTC42,APT-C-42,WellMess	魔鼠	中国、美国、英国、加拿大	使用WellMess系列工具对目标进行网络渗透攻击，安装专属的后门程序，控制目标机器进行信息搜集和横向移动	针对美国、英国和加拿大的新冠病毒研究和疫苗研发相关机构及中国网络基础服务提供商发起攻击	俄罗斯	2022-12-21		WellMess组织是一个一直未被业界认定的APT组织，多方面数据显示该组织在2017至2019年间的攻击活动开始频繁活跃，其中日本互联网应急响应中心于2018年曾报道过该组织的相关攻击活动，但并未将其归属为APT组织。 在2019年，360高级威胁研究院捕获发现了WellMess组织一系列的APT攻击活动，这一系列的攻击活动最早开始于2017年12月，一直持续到2019年12月。在对WellMess组织的攻击研判过程中，我们确定这是一个具备自身独特攻击特点和精密攻击技战术的APT组织，为其分配了APT-C-42的专属APT组织编号	2023-10-17	保留
+2386	NULL	Rocke,8220MiningGang	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+2392	NULL	TranGroup	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	待处置
+2395	NULL	UNC2652	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	保留
+2398	NULL	UNC3004	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	保留
+2401	NULL	UNC2652,UNC3004	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+2428	NULL	Yossi	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+2437	NULL	XCSSET	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+2440		ChamelGang	中国、俄罗斯	利用微软Exchange Server的ProxyShell等已知漏洞	针对俄罗斯的燃料和能源综合体以及航空行业，除了俄罗斯，包括美国、日本、土耳其、台湾、越南、印度、阿富汗、立陶宛和尼泊尔等国家也出现了ChamelGang的受害者		2022-12-21		2021年10月，一个名为ChamelGang新的APT组织出现，他们专门针对俄罗斯的燃料和能源综合体以及航空行业，利用已知漏洞，如微软交换服务器的ProxyShell，并利用现有恶意软件和新型恶意软件来破坏网络	2023-10-17	保留
+2458	NULL	XEGroup	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	保留
+2461	NULL	DoggyWill	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+2464	NULL	OperationStealthyTrident	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+2467	NULL	TA575	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	保留
+2485	NULL	NetTraveller	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+2548	NULL	A41APT	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+2563	NULL	APTQ27	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	待处置
+2608	NULL	APTC59	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	待处置
+2635	NULL	ColunmTK,APT41	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+2641	NULL	Medusalocker	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+2650	NULL	FriendlyBird	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+3412	NULL	OPERATIONDOMINO	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	保留
+3433	NULL	docless	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+3436	NULL	Skimmer	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+3442	NULL	SparklingGoblin	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	保留
+3445	NULL	OperationNightScout	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+3448	NULL	BlackEnergygroup	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	待处置
+3451	NULL	Lazarus,Andariel	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+3454	NULL	APTC26	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	待处置
+3457	NULL	WildPressure	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	保留
+3475	NULL	Bitter,APTC37	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+3478	NULL	UNC3004,UNC2652	NULL	NULL	NULL	NULL	2022-12-21	NULL	NULL	2022-12-21	删除
+3550	NULL	UNC2462	NULL	NULL	NULL	NULL	2022-12-22	NULL	NULL	2022-12-22	删除
+3553	NULL	UNC2469	NULL	NULL	NULL	NULL	2022-12-22	NULL	NULL	2022-12-22	删除
+3556	NULL	UNC2467	NULL	NULL	NULL	NULL	2022-12-22	NULL	NULL	2022-12-22	删除
+3559	NULL	UNC2459	NULL	NULL	NULL	NULL	2022-12-22	NULL	NULL	2022-12-22	删除
+3562	NULL	UNC2464	NULL	NULL	NULL	NULL	2022-12-22	NULL	NULL	2022-12-22	删除
+3568	NULL	UNC2458	NULL	NULL	NULL	NULL	2022-12-22	NULL	NULL	2022-12-22	删除
+3571	NULL	UNC2453	NULL	NULL	NULL	NULL	2022-12-22	NULL	NULL	2022-12-22	删除
+3574	NULL	UNC2468	NULL	NULL	NULL	NULL	2022-12-22	NULL	NULL	2022-12-22	删除
+3577	NULL	UNC2463	NULL	NULL	NULL	NULL	2022-12-22	NULL	NULL	2022-12-22	删除
+3589	NULL	UNC2456	NULL	NULL	NULL	NULL	2022-12-22	NULL	NULL	2022-12-22	删除
+3595	NULL	UNC2466	NULL	NULL	NULL	NULL	2022-12-22	NULL	NULL	2022-12-22	删除
+3598	NULL	UNC2461	NULL	NULL	NULL	NULL	2022-12-22	NULL	NULL	2022-12-22	删除
+3601	NULL	UNC2455	NULL	NULL	NULL	NULL	2022-12-22	NULL	NULL	2022-12-22	删除
+3604		UNC2465					2022-12-22		Darkside 勒索软件团伙的一个附属机构（编号为 UNC2465）对一家闭路电视供应商进行了供应链攻击。UNC2465 被认为是 DARKSIDE 组织的主要附属组织之一，以及被 FireEye/Mandiant 追踪为 UNC2628 和 UNC2659 的其他附属团伙	2023-10-17	保留
+3607	NULL	UNC2460	NULL	NULL	NULL	NULL	2022-12-22	NULL	NULL	2022-12-22	删除
+3613	NULL	UNC2457	NULL	NULL	NULL	NULL	2022-12-22	NULL	NULL	2022-12-22	删除
+3625	NULL	OrangeRobber	NULL	NULL	NULL	NULL	2022-12-22	NULL	NULL	2022-12-22	删除
+3640	NULL	RunMiner挖矿团伙	NULL	NULL	NULL	NULL	2022-12-22	NULL	NULL	2022-12-22	保留
+3661	NULL	Aggah,GorgonGroup	NULL	NULL	NULL	NULL	2022-12-22	NULL	NULL	2022-12-22	删除
+3670	NULL	OperationSignSight	NULL	NULL	NULL	NULL	2022-12-22	NULL	NULL	2022-12-22	删除
+3688	NULL	gertoi团伙	NULL	NULL	NULL	NULL	2022-12-22	NULL	NULL	2022-12-22	保留
+3697	NULL	Lazarus,Kimsuky	NULL	NULL	NULL	NULL	2022-12-22	NULL	NULL	2022-12-22	删除
+3700	NULL	UNC2198	NULL	NULL	NULL	NULL	2022-12-22	NULL	NULL	2022-12-22	保留
+3703	NULL	Ks3Miner	NULL	NULL	NULL	NULL	2022-12-22	NULL	NULL	2022-12-22	删除
+3709	NULL	DarkSide,UNC2465	NULL	NULL	NULL	NULL	2022-12-22	NULL	NULL	2022-12-22	删除
+3712	Sharp Dragon,SharpDragon	SharpPanda					2022-12-22		Sharp Panda的工具和TTP（战术、技术和程序）与之前提到的东南亚攻击之间的联系可能是中国APT行动固有的关键特征的另一个例子，例如在团体之间共享自定义工具或任务专业化，当一个实体负责最初的感染而另一个实体执行实际的情报收集时。	2024-05-28	保留
+3718	NULL	SoftCell	NULL	NULL	NULL	NULL	2022-12-22	NULL	NULL	2022-12-22	待处置
+3724	NULL	OperationHarvest	NULL	NULL	NULL	NULL	2022-12-22	NULL	NULL	2022-12-22	删除
+3727	NULL	PYSA,TA428	NULL	NULL	NULL	NULL	2022-12-22	NULL	NULL	2022-12-22	删除
+3730	NULL	FamousSparrow	NULL	NULL	NULL	NULL	2022-12-22	NULL	NULL	2022-12-22	保留
+3733	Lorec53	洛瑞熊					2022-12-22		该组织拥有较强的渗透能力，善于借用其他活跃黑客组织的攻击手法和网络设施，通过鱼叉邮件和水坑站点等途径投放独特的下载器和间谍木马程序。更多行为轨迹信息表明，该组织目前可能受雇于更高级的间谍组织，帮助他们收集信息	2024-01-17	保留
+3736	NULL	SaintBear,lorec53	NULL	NULL	NULL	NULL	2022-12-22	NULL	NULL	2022-12-22	删除
+3739	NULL	CrimsonRAT	NULL	NULL	NULL	NULL	2022-12-22	NULL	NULL	2022-12-22	删除
+3745	NULL	OperationGoldHunting	NULL	NULL	NULL	NULL	2022-12-22	NULL	NULL	2022-12-22	删除
+3748	NULL	lorec53,SaintBear	NULL	NULL	NULL	NULL	2022-12-22	NULL	NULL	2022-12-22	删除
+3751	NULL	OperationYoungWarbler	NULL	NULL	NULL	NULL	2022-12-22	NULL	NULL	2022-12-22	删除
+3754	NULL	SHCMiner	NULL	NULL	NULL	NULL	2022-12-22	NULL	NULL	2022-12-22	保留
+3757	NULL	OperationMaskFace	NULL	NULL	NULL	NULL	2022-12-22	NULL	NULL	2022-12-22	删除
+3760	NULL	TAG28	NULL	NULL	NULL	NULL	2022-12-22	NULL	NULL	2022-12-22	删除
+3763	NULL	Tortilla	NULL	NULL	NULL	NULL	2022-12-22	NULL	NULL	2022-12-22	保留
+3769	NULL	Operationtrilateral	NULL	NULL	NULL	NULL	2022-12-22	NULL	NULL	2022-12-22	删除
+3772	NULL	UNC1945	NULL	NULL	NULL	NULL	2022-12-22	NULL	NULL	2022-12-22	保留
+3775	NULL	Icefog,RedFoxtrot	NULL	NULL	NULL	NULL	2022-12-22	NULL	NULL	2022-12-22	删除
+3778	NULL	DarkCaption	NULL	NULL	NULL	NULL	2022-12-22	NULL	NULL	2022-12-22	保留
+3781	NULL	UNC3004,UNC2652,APT29	NULL	NULL	NULL	NULL	2022-12-22	NULL	NULL	2022-12-22	删除
+3784	NULL	FunnyDream	NULL	NULL	NULL	NULL	2022-12-22	NULL	NULL	2022-12-22	删除
+3787	NULL	KimsukyGroup	NULL	NULL	NULL	NULL	2022-12-22	NULL	NULL	2022-12-22	待处置
+3790	NULL	OperationElectricPowder	NULL	NULL	NULL	NULL	2022-12-22	NULL	NULL	2022-12-22	删除
+3955	NULL	LemonDuck	NULL	NULL	NULL	NULL	2022-12-25	NULL	NULL	2022-12-25	待处置
+3964	NULL	PuzzleMaker	NULL	NULL	NULL	NULL	2022-12-25	NULL	NULL	2022-12-25	保留
+3970		金睛兽	中国、韩国、日本	利用色情下载页面进行钓鱼攻击，通过社交应用聊天的方式诱导受害者下载恶意APK文件	针对韩国和日本，主要在移动端Android和iOS双平台展开攻击，攻击的目的是实现钱财勒索		2022-12-25		“金睛兽”是活跃于东亚地区的一个APT组织	2023-10-17	保留
+4000	NULL	TA2721	NULL	NULL	NULL	NULL	2022-12-25	NULL	NULL	2022-12-25	保留
+4003	NULL	WaterKappa	NULL	NULL	NULL	NULL	2022-12-25	NULL	NULL	2022-12-25	保留
+4054	NULL	MalKamak	NULL	NULL	NULL	NULL	2022-12-25	NULL	NULL	2022-12-25	保留
+4090	NULL	CloudFall	NULL	NULL	NULL	NULL	2022-12-25	NULL	NULL	2022-12-25	保留
+4168	NULL	IronHusky	NULL	NULL	NULL	NULL	2022-12-25	NULL	NULL	2022-12-25	保留
+4204	NULL	Harvester	NULL	NULL	NULL	NULL	2022-12-25	NULL	NULL	2022-12-25	保留
+4399	NULL	CryptoRom	NULL	NULL	NULL	NULL	2022-12-25	NULL	NULL	2022-12-25	保留
+4735	NULL	Hive0107	NULL	NULL	NULL	NULL	2022-12-25	NULL	NULL	2022-12-25	删除
+4816	NULL	Brunhilda	NULL	NULL	NULL	NULL	2022-12-25	NULL	NULL	2022-12-25	保留
+5125	NULL	UNC2447	NULL	NULL	NULL	NULL	2022-12-25	NULL	NULL	2022-12-25	保留
+5203	NULL	SolarWindswashacked	NULL	NULL	NULL	NULL	2022-12-25	NULL	NULL	2022-12-25	删除
+5305	NULL	AvosLocker	NULL	NULL	NULL	NULL	2022-12-25	NULL	NULL	2022-12-25	保留
+5317	小黄鸭,Lemon Duck,LemonDuck	柠檬鸭		通过构造僵尸网络，暴力破解，钓鱼邮件窃取凭据，下发更多的恶意工具	主要针对制造业、政府、能源、科研教育、IOT厂商		2022-12-25		“小黄鸭”最初由针对“驱动人生”发起的APT攻击演变而来，但研究后发现，攻击者可能只是希望利用“驱动人生”作为跳板，使蠕虫尽可能广泛地传播。  攻击者疑似为具有一定专业能力的境外组织，发起或参与过大规模网络攻击相关活动（如构建僵尸网络等）。  至今“小黄鸭”已发展成面向全球，主要针对运行Windows系统的终端设备的有组织、有计划的、以挖矿为目的高级长期威胁组织。国内外多家安全厂商所述的“永恒之蓝”下载器，蓝茶，MTLminer，“驱动⼈⽣”⽆⽂件挖矿，Beapy，LemonDuck，柠檬鸭相关攻击活动，均为“小黄鸭”所为。	2023-06-01	保留
+5329	NULL	Henos	NULL	NULL	NULL	NULL	2022-12-25	NULL	NULL	2022-12-25	删除
+5335	NULL	Shiqiang	NULL	NULL	NULL	NULL	2022-12-25	NULL	NULL	2022-12-25	删除
+5407	NULL	DarkHerring	NULL	NULL	NULL	NULL	2022-12-25	NULL	NULL	2022-12-25	删除
+5860	NULL	Rippr	NULL	NULL	NULL	NULL	2022-12-25	NULL	NULL	2022-12-25	保留
+5887	NULL	SideCopy,TransparentTribe	NULL	NULL	NULL	NULL	2022-12-25	NULL	NULL	2022-12-25	删除
+5902	NULL	OperationDiscord	NULL	NULL	NULL	NULL	2022-12-25	NULL	NULL	2022-12-25	删除
+5908	NULL	TwistedPanda	NULL	NULL	NULL	NULL	2022-12-25	NULL	NULL	2022-12-25	保留
+5920	NULL	GO#WEBBFUSCATOR	NULL	NULL	NULL	NULL	2022-12-25	NULL	NULL	2022-12-25	删除
+6514	NULL	DSIRF	NULL	NULL	NULL	NULL	2022-12-25	NULL	NULL	2022-12-25	删除
+6790	孔夫子,ConfuciusGroup	Confucius					2022-12-29			2023-01-04	保留
+6793	APTC59,wuqiongdong,APT-C-59	芜琼洞	中国、东亚、东南亚	利用正常应用vmnat.exe（Vmware程序的组件）加载恶意程序，同时利用0day漏洞，云盘投毒，诱饵文档等多种方式投递恶意载荷	针对东亚和东南亚，涉及政府、智库、媒体、医疗多个行业		2023-01-04			2024-01-17	保留
+6796	Z-Team,UAC-0118	FRwL					2023-01-05		FRwL是俄罗斯的一个黑客组织，其也被称为Z-Team	2024-07-19	保留
+6799		CuteBoi					2023-01-05			2023-04-06	保留
+6802	APT-LY-1005,DarkPink,SaaiwcGroup	暗石	中国、亚太、欧洲	利用鱼叉式网络钓鱼技术，使用多层代理和定期更换C&C服务器等手段定向攻击欺骗受害者	针对亚太和欧洲的攻击电信、金融、政府机构和军事组织等关键领域		2023-01-06		2022年11月，安恒信息猎影实验室在威胁狩猎中持续追踪到针对东南亚地区的攻击活动，活动疑似针对菲律宾、柬埔寨、越南地区的军事、财政部门。攻击活动主要以ISO文件为初始恶意负载，运行后在本机注册表添加Powershell指令，最后加载Powershell后门PowerDism窃取本机信息并执行任意指令。根据样本中的互斥体名称，我们将该组织命名为：Saaiwc Group，内部编号：APT-LY-1005。	2023-10-17	保留
+6805		Alibaba2044					2023-01-06		在例行的威胁搜寻演习中，Cyble Research and Intelligence Labs (CRIL) 发现了一条关于 TG Soft 的 PureLogs 信息窃取器的推文。2022 年 12 月 14 日，威胁行为者 (TA)“Alibaba2044”使用该工具针对位于意大利的目标发起恶意垃圾邮件活动	2023-04-06	保留
+6811		UNC2454					2023-01-11			2023-04-06	保留
+6817	NULL	Kasablanca	NULL	NULL	NULL	NULL	2023-01-11	NULL	NULL	2023-01-11	待处置
+6820		SafeAPT					2023-01-11			2023-04-06	保留
+6832	NULL	APTC43	NULL	NULL	NULL	NULL	2023-01-11	NULL	NULL	2023-01-11	待处置
+6841		EarthWendigo					2023-01-11			2023-04-06	保留
+6850	卡萨布兰卡,Kasablanca,Kasablanka	卡萨布兰卡	中国、孟加拉国	Windows端利用军事经济热点事件伪装成PDF文档并使用LodaRAT发起攻击，Android端则利用钓鱼网站发起攻击	针对孟加拉国银行和包括孟加拉国警察局、伊斯兰银行在内的多个金融、政府组织发起网络攻击	印度	2023-01-11		2021年2月15日，一个疑似名称为Kasablanka的组织针对孟加拉国银行和包括孟加拉国警察局、伊斯兰银行在内的多个金融、政府组织发起网络攻击。研究表明，Kasablanka组织开发有自己专用的LodaRAT，利用AutoIt脚本语言编写，同时开发人员也已将Android添加为目标平台。 	2023-10-17	保留
+6859	Earth Berberoka,GamblingPuppet	EarthBerberoka					2023-01-12		自2020年以来一直活跃。该组织使用Pupy等多平台恶意软件RAT和HelloBot	2024-01-17	保留
+6862	APT-C-33	ArmaRat	伊朗	社工攻击	政府		2023-01-16		2016年7月，360发现一起针对伊朗Android手机用户长达两年之久的APT攻击活动。攻击者借助社交软件Telegram分享经过伪装的ArmaRat木马，入侵成功后攻击者可以完全控制用户手机，并对用户手机进行实时监控。由于该木马演变过程中C&C及代码结构均出现“arma”关键字，所以我们将该组织命名为“ArmaRat”	2023-04-06	保留
+6865	APT-C-17	飞鲨	中国	鱼叉攻击	基础设施,IT,教育,科研,航空航天	印度	2023-01-16			2023-04-06	保留
+6868	APT-C-31,PoisonNeedles,Poison Needles	毒针	俄罗斯	鱼叉攻击	政府	哈萨克斯坦	2023-01-16		2018年11月25日，360高级威胁应对团队就在全球范围内第一时间发现了一起针对俄罗斯的APT攻击行动，攻击目标则指向俄罗斯总统办公室所属的医疗机构，此次攻击行动使用了Flash 0day漏洞cve-2018-15982和Hacking Team的RCS后门程序，结合被攻击目标医疗机构的职能特色，360将此次APT攻击命名为“毒针”行动	2024-07-19	保留
+6871	APT-C-46,LPR,卢甘斯克	卢甘斯克组织	中国、乌克兰	通过网络钓鱼、水坑攻击，使用开源Quasar RAT和VERMIN等恶意软件窃取密码，获取机密文件	针对乌克兰政府，乌克兰军事目标进行攻击	乌克兰	2023-01-16		2019年初，国外安全厂商披露了一起疑似卢甘斯克背景的APT组织针对乌克兰政府的定向攻击活动，根据相关报告分析该组织的攻击活动至少可以追溯到2014年，曾大量通过网络钓鱼、水坑攻击等方式针对乌克兰政府机构进行攻击	2023-10-17	保留
+6889	TEMP.Veles,TRISIS,XENOTIME,HATMAN	TRITON	中东		石油,天然气	俄罗斯	2023-01-19			2023-04-06	保留
+6919	atw	AgainstTheWest					2023-01-31			2023-04-06	保留
+6937	NULL	KarakurtGroup	NULL	NULL	NULL	NULL	2023-02-01	NULL	NULL	2023-02-01	待处置
+7024	NULL	熊猫使者	NULL	NULL	NULL	NULL	2023-02-01	NULL	NULL	2023-02-01	待处置
+7051	APT-Q-22	APTQ22					2023-02-01		APT-Q-22是目前尚未公开的APT组织，最早活跃于2020年，两年间使用Web层0day攻击和鱼叉邮件的方式对政府、环境、互联网等单位进行攻击，编码能力一般，攻击流程如下	2023-10-17	保留
+7066		Stonefly					2023-02-04			2023-04-06	保留
+7088		TA866					2023-02-17			2023-04-06	保留
+7094		noname05716					2023-02-27			2023-04-06	保留
+7106		vicesociety					2023-02-27			2023-04-06	保留
+7109	apt_newspenguin	NewsPenguin	巴基斯坦				2023-02-27		近日，BlackBerry 安全研究人员披露一个新的 APT 组织 NewsPenguin ，其主要攻击目标包括巴基斯坦的军事技术公司、国家机构和军事组织，PIMEC会议的组织者、参展商和参观者。据报道称该组织目前正在瞄准巴基斯坦军事组织，通过投递包含武器化附件的网络钓鱼邮件展开攻击。该文档利用远程模板注入技术和嵌入式恶意 Visual Basic for Applications (VBA) 宏代码来执行下一阶段的攻击，从而导致最终的有效负载执行	2024-01-08	保留
+7115	TA473,apt_wintervivern,UAC-0114,UAC0114	WinterVivern	印度、立陶宛、斯洛伐克、梵蒂冈				2023-02-27		Winter Vivern 也被称为 UAC-0114，于2021年首次公开曝光，主要针对印度、立陶宛、斯洛伐克和梵蒂冈政府组织展开间谍攻击，利用包含 XLM 宏的武器化 Microsoft Excel 文档在受感染主机上部署 PowerShell 植入程序，分发量身定制的有效负载访问敏感系统。近日，SentinelOne 研究人员监测发现威胁组织瞄准波兰政府机构、乌克兰外交部、意大利外交部以及印度政府内部个人的攻击活动，旨在传播一种名为 Aperetif 的恶意软件展开攻击。	2024-01-08	保留
+7145	NSA,美国国安局nsa	美国国安局		利用QUANTUM（量子）攻击系统及更多更高度工程化的网络攻击平台实现工程化、自动化的网络攻击	针对中国各行业龙头企业，政府、大学、医疗机构、科研机构，重要信息基础设施运维单位等机构发起攻击	美国	2023-02-27		“美国国安局”（又名NSA）是来自于美国地区的一个APT组织	2024-07-19	保留
+7214	DESKTOP-GROUP,Common Raven,NXSMS	OPERA1ER	中国、非洲、亚洲、拉丁美洲	通过鱼叉式网络钓鱼邮件攻击目标	针对非洲、亚洲和拉丁美洲的银行、金融服务和电信公司		2023-03-02		OPERA1ER，也被称为DESKTOP-GROUP、Common Raven和NXSMS，已知自2016年以来一直在活跃，其目标是进行有经济动机的文件窃取和泄露，以进一步用于鱼叉式攻击。	2023-10-17	保留
+7217	NULL	atw	NULL	NULL	NULL	NULL	2023-03-02	NULL	NULL	2023-03-02	待处置
+7262	apt_unc4210	UNC4210					2023-03-02		apt_unc4210	2024-01-08	保留
+7265		狼毒草					2023-03-02			2023-04-06	保留
+7361	Mustard Tempest,MustardTempest	TA569	中国、俄罗斯、加拿大、法国、德国、西班牙、意大利、英国、美国	通过鱼叉式钓鱼邮件攻击，主要攻击工具包括名为SocGholish的网页注入器，银行木马Chthonic，远程控制软件NetSupport，以及多种商业木马	攻击目标包括俄罗斯、加拿大、法国、德国、西班牙、意大利、英国和美国。	俄罗斯	2023-03-06		美国安全厂商Proofpoint威胁研究与检测副总裁Sherrod DeGrippo向媒体证实，“被黑的是一家主要向新闻机构提供视频和广告内容的媒体公司，一直服务于美国多个市场上的不同企业。” 这次供应链攻击背后的恶意团伙被Proofpion命名为TA569，他们将恶意软件注入各新闻媒体网站加载的正常JavaScript文件中。	2024-10-24	保留
+7457		Ares				中国	2023-03-06		将该黑客团伙命名为 Ares 的原因有三个，其一，我们发现样本作者将其编写的 Kaiji 变种称为 "ares" ，其二，新变种样本配置以 "[a=r=e=s]" 为分隔符，其三，在最近几天我们发现，该黑客团伙的多个资产统一更改成了同一登陆页面，并且该页面中也自称为 "Ares" ，黑客团伙在其页面中还写上了 “三思而后行” 的英文标语 “look before you leap”。	2023-04-06	保留
+7532	luoyefeihua	落叶飞花	中国	通过僵尸网络，DDoS攻击长期利用网络攻击而获利	针对中国，受害者中江苏为重灾区，山东，北京，香港等地也有受到影响，主要进行DDoS攻击		2023-03-10		鉴于该团伙多次使用“luoyefeihua.site”作为其服务器基础设施，伏影实验室将该团伙命名为“落叶飞花”。监测数据显示，该团伙于2018年开始活跃起来，发展早期主要通过QQ，论坛等社交媒介出售DDoS攻击工具的方式获利，后期业务趋于多元化。该团伙运营的恶意软件家族中XorDDoS传播量最广，Nitol和DoFloo下发指令最为频繁，而Mediocre Botnet则体现了该团伙原创能力。本文将从该组织资产信息、攻击活动以及组织溯源等方面展开	2023-10-17	保留
+7541		YoroTrooper	中国、阿塞拜疆、塔吉克斯坦、吉尔吉斯斯坦	通过钓鱼电子邮件，Nuitka框架和PyInstaller包装到可执行文件中的Stink窃取程序	针对阿塞拜疆、塔吉克斯坦、吉尔吉斯斯坦和其他独立国家联合体 (CIS) 的政府或能源组织		2023-03-17		研究人员已经确定了一个新的威胁行为者，将其命名为“YoroTrooper”，至少自 2022 年 6 月以来，它一直在开展多次成功的间谍活动。  据分析，YoroTrooper 的主要目标是阿塞拜疆、塔吉克斯坦、吉尔吉斯斯坦和其他独立国家联合体 (CIS) 的政府或能源组织。另外还观察到来自至少两个国际组织的 YoroTrooper 妥协账户：一个关键的欧盟 (EU) 医疗保健机构和世界知识产权组织 (WIPO)	2023-10-17	保留
+7544		UNC2970					2023-03-17		研究人员检测并响应了UNC2970组织针对一家美国科技公司的网络钓鱼活动，该组织疑似为朝鲜间谍组织，针对西方媒体和技术公司攻击。在此操作期间观察到 UNC2970 利用三个新代码系列：TOUCHMOVE、SIDESHOW 和 TOUCHSHIFT。怀疑 UNC2970 在这次行动中专门针对安全研究人员。在确定该活动后，通过使用招聘主题的鱼叉式网络钓鱼响应针对美国和欧洲媒体组织的多次 UNC2970 入侵，并展示了该组织在云环境中操作和针对端点检测和响应 (EDR) 工具的能力的进步	2023-04-06	保留
+7547		NilePhish					2023-03-19			2023-04-06	保留
+7550	TiltedTemple	DEV0322					2023-03-20			2023-04-06	保留
+7565		Clasiopa					2023-03-23		研究人员发现一个未知的攻击组织以亚洲一家材料行业的公司为攻击目标，被命名为 Clasiopa。该组织使用独特的攻击工具，开发了定制化的后门 Atharvan。	2023-04-06	保留
+7568		Bluebottle					2023-03-23		Bluebottle 是一个专门针对金融部门进行有针对性攻击的网络犯罪组织，它继续对法语国家的银行发起攻击。该组织广泛使用离地生活、两用工具和商品恶意软件，在此活动中没有部署自定义恶意软件。 Broadcom 软件部门赛门铁克观察到的活动似乎是2022 年 11 月 Group-IB 报告中记录的活动的延续。Group-IB 记录的活动时间跨度为 2019 年年中至 2021 年，据称在此期间，这个名为 OPERA1ER 的组织在 30 次有针对性的攻击中至少窃取了 1100 万美元	2023-04-06	保留
+7571		Metador					2023-03-23			2023-04-06	保留
+7577		DarkBit					2023-03-24		以色列理工学院（Technion -Israel Institute of Technology）2023年2月12日周日遭到黑客入侵，一个自称DarkBit的威胁行为者声称对周日入侵该研究所的勒索软件攻击负责。DarkBit组织要求80比特币用于解密，但专家指出，黑客团队似乎是出于政治动机，即使满足了要求，他们也不太可能提供解密密钥。Darkbit威胁称，如果Technion拒绝在48小时内支付所要求的金额，他们将提高30%的赎金	2023-04-06	保留
+7583		WhiteRabbit					2023-03-29		2021 年 12 月，Lodestone 在调查期间观察到两者之间惊人的相似之处后，发表了一篇文章，将以前不为人知的勒索软件组织 White Rabbit 与威胁行为者组织 FIN8 联系起来。网络安全社区随后的努力汇集了来自世界各地的专家，可以说是“跟随白兔”，并更深入地了解新出现的威胁	2023-04-06	保留
+7886	Aoqin Dragon	AoqinDragon	中国、澳大利亚、东南亚地区	利用DDoS攻击、网络钓鱼、利用零日漏洞攻击等获取目标系统的控制权	针对中国、澳大利亚、东南亚地区的大型企业、金融机构、政府机构等重要目标获取财务信息和涉密机密信息		2023-04-30		Aoqin Dragon 是 SentinelLabs 广泛跟踪的威胁行为者，自 2013 年以来一直针对东南亚和澳大利亚的政府、教育和电信组织开展活动。主要通过文件漏洞利用和使用伪造的可移动设备来寻求初始访问权限。攻击者使用的其他技术包括 DLL 劫持、Themida 打包文件和 DNS 隧道以逃避妥协后检测。根据 Aoqin Dragon 活动的目标、基础设施和恶意软件结构的分析，我们有适度的信心评估威胁参与者是一个与 UNC94 (Mandiant) 有潜在关联的小型中文团队	2023-10-17	保留
+7901		CryptoCore					2023-05-04		一群神秘的网络犯罪分子可能是2018年攻击各种加密交易所（包括去中心化交易机）的幕后黑手。ClearSky的报告称，这个名为“CryptoCore”的网络犯罪团伙在两年内敛财超过2亿美元，该团伙与东欧地区，特别是乌克兰、俄罗斯或罗马尼亚有联系。ClearSky联合创始人Boaz Dolev说，他的公司在过去两年中发现了至少五起黑客攻击交易所的事件，这些攻击都遵循一种特定的模式，不过他拒绝透露这些交易所的身份	2023-05-04	保留
+7904		WIP26					2023-05-05		新黑客组织WIP26针对中东的电信服务提供商的攻击活动。WIP26的特点是滥用公共云基础设施，如Microsoft 365 Mail、Azure、Google Firebase和Dropbox，进行恶意软件分发、数据泄露和C2。此次活动通过WhatsApp精准定位员工，其中包含指向恶意软件加载程序的Dropbox链接。最终会安装后门CMD365和CMDEmber，它们的主要功能是使用Windows命令解释器执行攻击者提供的系统命令	2023-05-05	保留
+7907		BumbleBee					2023-05-06			2023-05-08	删除
+7961		疑似绿斑					2023-05-06			2023-05-08	删除
+8051	APT-LY-1007,apt_ly1007,ly1007	APTLY1007					2023-05-06		除俄罗斯国防部外，该组织还针对俄罗斯铁路部门。相关恶意文档以“推迟征召俄罗斯联邦武装部队的命令”、 “俄罗斯铁路股份公司免除义务征召通知”为话题下发，后续释放远控木马以窃取目标机密信息	2023-07-19	保留
+8054		ContiGroup					2023-05-11		Conti将其令人印象深刻的记录延续到2022年，仅在前四个月就泄露了另外156家公司的数据。根据Group-IB的估计，在其存在的两年中，它已经从至少859个组织中窃取了数据，尽管人们认为实际的受害者总数要高得多	2024-07-19	保留
+8060	1877 Team,AKINCILAR	1877Team	中国、美国、以色列	主要采用DDoS攻击、网络钓鱼和社交工程等多种方式实施攻击	针对美国和以色列等国家的目标，包括政府机构、教育机构、企业和个人网站	土耳其	2023-05-12		研究人员近日披露了一个名为“1877 Team”的伊拉克黑客组织，该组织由一小群伊拉克库尔德人于2021年7月成立，最初仅开发和分发流行手机游戏PUBG的修改版本，但随着时间的推移，其活动变得更加复杂，并且受到政治驱动。该组织拥有两种获取外国基础设施访问权限的技术：1)扫描存在特定漏洞的网页；2)暴力破解管理员凭据。目前，1877 Team的活动范围主要位于中东，不过非洲、亚洲和西方组织也受到影响，其攻击目标则涉及政治实体和流行的软件/服务。在过去的一年里，该组织声称对大型人肉搜索活动、网站篡改、DDoS攻击以及对国家政府、大学、电信公司、国防组织和IT公司的服务器和数据库的攻击负责	2023-10-17	保留
+8063		unkhac					2023-05-13			2023-05-16	删除
+8474	DEV-0530,Holy Ghost,HolyGhost	DEV0530					2023-05-17		自2021年9月以来,DEV-0530针对多个国家的中小型企业，包括制造业组织、银行、学校“双重勒索”手段。加密数据，以及活动和会议策划公司。袭击者采用还威胁要公布数据，如果目标拒绝支付。研究人员已经发现DEV-0530与APT组(又名达克首尔和安达利尔)之间的联系	2024-07-19	保留
+8477		TA577					2023-05-19		以TA系列组织为例包括:TA569、TA800、TA577、TA551、TA570等,在初始阶段使用Trick、Dridex、Qbot、IcedID、ZLoader、Ursnif等恶意软件感染尽可能多的受害单位,第二阶段才分发WastedLocker、Ryuk、Egregor、Maze、Sodinokibi、ProLock等勒索软件实现其攻击意图	2023-05-19	保留
+8480	Water Orthrus	WaterOrthrus	中国	主要通过DDoS攻击、社交工程、恶意文件传递和利用零日漏洞攻击目标	针对政府组织、军事机构和大型企业等目标盗窃财务或机密信息		2023-05-19		自 2021 年以来，研究人员一直在跟踪称为 Water Orthrus 的威胁行为者的活动，该行为者通过按安装付费 (PPI) 网络分发 CopperStealer 恶意软件。威胁行为者出于不同目的多次升级和修改恶意软件，例如注入网络广告、获取个人信息和窃取加密货币。我们认为它们与 2019 年报告为“ Scranos ”的威胁活动有关。2023 年 3 月观察到两个传播新恶意软件的活动，研究人员将其命名为 CopperStealth 和 CopperPhish。这两种恶意软件都具有与 CopperStealer 相似的特征，并且很可能是由同一作者开发的，相信这些活动很可能是 Water Orthrus 的新活动。这篇博文讨论了研究人员对 CopperStealth 和 CopperPhish 感染链的分析，以及它们与 Water Orthrus 的相似之处	2023-10-17	保留
+8483	Lemon Group	LemonGroup	中国	利用网络间谍软件和零日漏洞，利用恶意软件等方便的应用程序进行攻击	针对国家安全机关、军事机构、企业领导层、重要官员和个人商业发起攻击		2023-05-19		名为 "Lemon Group "的威胁行为者在市场上销售的预感染设备上建立的赚钱业务和货币化战略。它还概述了这些设备是如何被感染的，使用的恶意插件，以及这些团体的职业关系。据报道，2016 年，Triada恶意软件被植入多台设备，2019 年，谷歌证实了第三方供应商在未通知 OEM 公司的情况下使用 OEM 图像的案例。研究人员发现该团伙至少从 2018 年就将其变成了一家犯罪企业并建立了网络	2023-10-17	保留
+8519	elf_teamtnt	TeamTNT	中国	通过暴力破解对目标系统投放僵尸网络程序和挖矿木马，组建僵尸网络并利用目标系统资源进行挖矿	针对云主机和容器化环境进行攻击，如Docker、Kubernetes和Redis等		2023-05-25		TeamTNT是一个主要针对云和集装箱环境的威胁组织。该组织至少自2019年10月以来一直很活跃，主要致力于利用云和容器资源在受害者环境中部署加密货币矿工。	2023-10-17	保留
+8522		RedlineStealer					2023-05-26			2023-05-26	删除
+8525		BatLoader					2023-05-26			2023-05-26	删除
+8537		OperationRestyLink					2023-05-29			2023-05-29	删除
+8540		OperationSpoofedScholars					2023-05-31			2023-06-02	删除
+8543		WaterPamola					2023-05-31			2023-06-02	删除
+8546		ShadowTiger					2023-05-31			2023-06-02	删除
+8549		OperationKremlin					2023-05-31			2023-06-02	删除
+8552		GoldenEyebeast					2023-06-01			2023-06-02	删除
+8555	APT-C-00	利刃鹰	中国、中东	通过社会工程学、定向攻击、APT攻击、漏洞利用等方式长期渗透和窃取目标信息	针对中东地区政府机构、能源、石油和天然气、航空航天、科技、金融、经济等领域	阿拉伯酋长联合国	2023-06-07		安全团队注意到一波针对伊斯兰国、基地组织、库尔德族群和土库曼族群进行持续攻击控制的活动， 时间跨度从自2019年3月起至今，通过从多源信息的交叉比对我们推测攻击组织来自中东某国，将其命名为利刃鹰组织	2023-10-17	保留
+8567	VoltTyphoon,BRONZE SILHOUETTE,BRONZESILHOUETTE,Vanguard Panda,Dev0391,UNC3236,Voltzite,Insidious Taurus	VoltTyphoon				中国	2023-06-08		Volt Typhoon是一个总部设在中国的国家支持的组织，通常专注于间谍活动和信息收集。该组织自2021年年中以来一直很活跃，已经瞄准了关岛和美国其他未指明的目标，并认为Volt Typhoon不断发展的能力可能在未来的危机中破坏美国和亚洲地区之间的关键通信基础设施	2024-02-29	保留
+8570		RedBeard					2023-06-09		RedBeard攻击者是一个新的黑客组织或个人，攻击目标主要为位于土耳其的各类企业，推测盈利模式为数据窃取与数据出售。RedBeard的攻击模式简单而有效，在攻击工具与攻击思路的选择上也有一定的创新，偏好利用企业的失陷站点作为跳板发起针对内部的水坑攻击	2023-06-15	保留
+8579		Blacktail	中国	利用漏洞攻击和社交工程发送钓鱼邮件、伪造网站等方式获取资金或盗窃商业秘密	针对金融领域和能源领域构、政府机构、军事机构等进行间谍活动威胁国家安全		2023-06-12		Buhti 背后的威胁行为者（现在被称为“Blacktail”）尚未开发出自己的勒索软件，但他们创建了一个自定义数据渗漏实用程序，用于勒索受害者，这种策略被称为“双重勒索	2023-10-17	保留
+8582	GUI-Vil	GUIVil	中国	通过社会工程学、钓鱼攻击、漏洞利用、拒绝服务攻击等方式攻击	主要以云为中心为目标、出于经济动机执行未经授权的加密货币挖掘活动	印度尼西亚	2023-06-12		印度尼西亚威胁组织 GUI-Vil (p0-LUCR-1) 进行未经授权的行为使用个性化渗透策略的加密货币挖掘。 他们利用 AWS，利用受损的凭据和漏洞，如 CVE-2021-22205。 图形用户界面喜欢 GUI 工具，最后一次观察是在 2023 年 4 月。	2023-10-17	保留
+8585	Camaro Dragon	CamaroDragon					2023-06-12		这次袭击负责的 Camaro Dragon 组织与中国政府有关联。有趣的是，他们发现该组织的基础设施与另一名名为 Mustang Panda 的中国攻击者的基础设施明显“重叠”。 TP-Link 路由器是识别出 Horse Shell 的特定设备，研究人员表示，该恶意软件在固件或目标品牌方面没有选择性，表明各种设备和供应商存在广泛的潜在风险	2023-06-12	保留
+8588	RA Group	RAGroup					2023-06-14		该组织还采取了一些措施以避免通过硬编码列表加密系统文件和文件夹，从而允许受害者下载qTox聊天应用程序。受害者可通过赎金通知上提供的qTox ID与该组织取得联系。RA Group与其他勒索软件的不同之处在于，他们会将信息托管在安全的TOR站点上，然后直接在他们的泄漏网站上出售受害者的泄露数据	2023-06-14	保留
+8591		 Lancefly					2023-06-14		自2018年以来，Lancefly一直在针对性的攻击活动中分发隐蔽的自定义后门Merdoor，以在目标网络上建立持久性、执行命令和记录键盘。一旦进入目标系统，攻击者就会通过DLL侧载将Merdoor后门注入合法进程perfhost.exe或svchost.exe，旨在绕过检测。此外，攻击活动还使用了更新版本的ZXShell rootkit	2023-06-14	保留
+8594	Dragon Breath	DragonBreath					2023-06-14		Dragon Breath APT 组织最近由于其针对包括博彩业在内的大量行业进行复杂的网络攻击而闻名。最近，安全研究人员发现了该组织使用的最新技术：使用双重清洁应用程序的方法来逃避检测并渗透到目标的网络中。双重清洁应用技术需要使用两种不同类型的恶意软件，两者都可以逃避传统的杀毒软件的检测。第一种恶意软件是一个看起来很合规的软件，对安全系统来说似乎无害。它通常会被伪装成一个合法的应用程序或文件，如 PDF 文档或微软 Office 文件	2023-06-14	保留
+8639	Earth Longzhi	EarthLongzhi					2023-06-15		该组织是 APT41（又名 HOODOO 或 Winnti）中的一个子组织，与其他各种集群如 Earth Baku、SparklingGoblin 和 GroupCC 共享重叠。Earth Longzhi 于 2022 年 11 月首次被网络安全公司记录下来，详细描述了它对位于东亚和东南亚以及乌克兰的各种组织的攻击	2023-06-15	保留
+8642		OperationTriangulation					2023-06-15			2023-07-05	删除
+8666		ITG10					2023-06-16		ITG10继续针对参与外交政策的个人和组织，这可能与半岛热点地缘政治和安全环境的变化有关。IBM X-Force 非常有信心地评估，鉴于 ITG10 之前和最近的活动，持有与半岛相关的战略、政治或军事信息的个人和组织将看到来自东北亚某国的威胁增加	2023-06-16	保留
+8669	DEV-05,Cadet Blizzard,CadetBlizzard	DEV0586					2023-06-16		Cadet Blizzard 在操作上与 GRU 领导的整个俄罗斯入侵乌克兰行动的职权范围和评估目标一致，在重要地区进行了集中的破坏性攻击、间谍活动和信息操作。Cadet Blizzard 的运营虽然在规模和范围上相对不如 Seashell Blizzard 等更成熟的威胁参与者多产，但其结构是为了产生影响并经常冒着阻碍网络运营连续性和通过有针对性的黑客攻击以及泄露敏感信息的风险操作	2023-06-16	保留
+8696	Operation Triangulation,triangulation,沙鹰,triangulation	三角行动	中国	攻击者利用了苹果零日漏洞针对大量移动设备实施了一系列复杂定向攻击活动	攻击者利用 iMessage 来传播恶意软件	美国	2023-06-16		该活动针对iOS设备，并使用以前未知的恶意软件。该活动被称为 " 三角行动 "，通过 iMessage 发布零点击漏洞利用程序来运行恶意软件，从而获得对设备和用户数据的完全控制，最终目标是隐蔽地监视用户	2024-07-19	保留
+8756		CloudWizard					2023-06-19		CloudWizard APT活动与两个相关的大型模块化框架：CommonMagic和CloudWizard。研究表明，CommonMagic和CloudWizard幕后组织发起的攻击可以追溯到2008年，那一年首次发现了Prikormka样本。自2017年以来，类似攻击就销声匿迹了。然而，这两个活动背后的组织并没有消停，一直开发他们的工具集并攻击感兴趣的目标	2023-06-19	保留
+8759	NSO Group	NSOGroup					2023-06-20		黑客组织NSO Group近日被发现，他们在2022年发起了多次“零点击”攻击，研究黑入iPhone的方法。据Citizen Lab公布的信息，NSO的零点击共计不需要用户的交互和点击，仅需向用户的iPhone发送一条iMessage消息即可。攻击者依靠系统漏洞，即便用户并没有打开该iMessage消息，也能够远程访问iPhone内容	2023-06-20	保留
+8762		OSX伪装者					2023-06-20		在线监测到一个专门篡改主流 MAC 应用的 dmg 软件安装包并植入挖矿木马的黑产 团伙——OSX伪装者，该团伙利用合法应用的破解版诱导用户下载安装，并借助各大软件下载站传播，针对此情分析总结如下:OSX 伪装者至少自 2018 年 6 月份开始注册域名 资产，并于 7 月、8 月大肆推广恶意软件，影响范围不断扩大。目前发现网络中流通的恶意应用至少包括 NTFS For Mac、office for mac 以及 lol for mac 等，且通过华军软件园、9553 下载站、94afx(就是爱分享)等下载平台进行传播	2023-06-20	保留
+8765	CL-STA-0043	CLSTA0043					2023-06-25		研究人员发现多起针对中东和非洲政府实体的间谍攻击。根据调查结果，攻击的主要目标是获取高度机密和敏感的信息，特别是与政客、军事活动和外交部有关的信息。这些攻击大约发生在同一时间范围内，在战术、技术和程序 (TTP) 方面有几个非常独特的相似之处，其中一些以前从未在野外报告过，而其他技术则相对罕见，只有少数攻击者报告使用了它们。目前命名该组为CL-STA-0043。该活动组织的复杂程度、适应性和受害者学水平表明，这是一个能力很强的APT威胁行为者，而且它被怀疑是民族国家威胁行为者。	2023-06-25	保留
+8768	Mexals,color1337	Diicot				罗马尼亚	2023-06-25		Diicot与罗马尼亚反恐警察部门共享新名称，并使用相同风格的信息和图像。Diicot，以前称为Mexals，是一个相对较新的威胁组织，拥有广泛的技术知识和广泛的目标，Diicot自2020年以来一直活跃，主要进行加密劫持活动或为恶意软件即服务( MaaS)创建恶意软件	2023-07-03	保留
+8771		Frosted					2023-06-25		一份联合报告对本次发现的僵尸网络作者曾进行过披露，并将该僵尸网络犯罪团伙命名为 Frosted，我们猜测是通过僵尸网络作者的ID进行团伙的命名，本文将详细披露 Frosted 僵尸网络犯罪团伙	2023-06-25	保留
+8774		FakeCrack					2023-06-25			2023-07-03	删除
+8777		Andariel,Lazarus					2023-06-26			2023-07-03	删除
+8792		谷堕大盗		钓鱼攻击、后门木马	金融、制造		2023-07-03		有研究机构发现，名为“谷堕大盗”的黑客正利用百度中的搜索结果，大规模传播木马程序，伪装度和隐蔽程度较高，受害企业呈持续上升趋势。调查发现，该黑客团伙针对金融、制造等行业进行的大规模钓鱼攻击活动，通过追溯后门程序来源，确认本次样本为通过搜索引擎推广的后门木马程序，多种伪装形式，或伪装成打印机驱动传播	2023-07-03	保留
+8795		8Base					2023-07-03		8Base 是一个勒索软件组织，自 2022 年 3 月以来一直活跃，并在 2023 年 6 月活动大幅增加。他们的网站将自己描述为“简单的笔测试者”，通过常见问题和规则部分以及多种方式提供受害者详细信息联系他们。8Base 沟通风格的有趣之处在于使用了另一个已知组织 RansomHouse 非常熟悉的措辞	2023-07-03	保留
+8798	银狐,silverfox	游蛇	中国	通过使用SEO网站优化使得相关钓鱼网站搜索排名领先，之后传播包含恶意木马的工具窃取客户资料和敏感信息	针对中国的金融、证券、教育等行业投递钓鱼木马		2023-07-04		“游蛇”黑产团伙自2022年下半年开始活跃至今，针对国内用户发起了大量的攻击活动。该团伙利用钓鱼邮件、伪造的电子票据下载站、虚假应用程序下载站、社交软件等多种途径传播恶意程序，其投放的恶意程序运行后从攻击者服务器中获取多个载荷文件，利用“白加黑”的方式，借助NetSarang系列工具更新程序、腾讯游戏相关程序等加载恶意载荷，使用COM组件创建计划任务，经过多层解码后在内存中释放执行Gh0st远控木马变种。该黑产团伙使用多种途径传播恶意程序，短时间内针对国内用户发起大量攻击，更换服务器地址的频率较高，下载的载荷文件均经过混淆处理以规避安全产品的检测	2023-10-17	保留
+8801		APTLY1006					2023-07-06			2023-07-14	删除
+8804		HydroJiin					2023-07-07			2023-07-14	删除
+8813		OperationMagalenha					2023-07-09			2023-07-14	删除
+8819		BadBlood					2023-07-12			2023-07-14	删除
+8822		unclassified					2023-07-14			2023-07-14	删除
+8831		conti					2023-07-14			2023-07-14	删除
+8834		quarian					2023-07-14			2023-07-14	删除
+8837	NULL	tengyunsnake	NULL	NULL	NULL	NULL	2023-07-14	NULL	NULL	2023-07-14	待处置
+8843		未知组织					2023-07-14			2023-07-14	删除
+8849		MirrorFace					2023-07-14		MirrorFace 长期以来一直在对日本组织进行攻击	2024-07-19	保留
+8852		pegasus					2023-07-14			2023-07-14	删除
+8855		SpacePirates					2023-07-14		研究人员发现了一个新的组织，他们将其称为SpacePirates。该组织至少从 2017 年就开始活跃了。第一份描述该群体的全面研究于2022 年初发布。迄今为止，它加强了针对俄罗斯公司的活动：这一年在调查网络攻击时经常遇到SpacePirates。该组织的策略没有太大变化，但开发了新工具并改进了旧工具	2023-10-17	保留
+8861		scieron					2023-07-14			2023-07-19	删除
+8873		seaflower					2023-07-14		SeaFlower 正在传播合法数字货币钱包的恶意版本（包括 Coinbase Wallet、MetaMask、TokenPocket 和 imToken），会导致用户的助记词被通过后门窃取。这些修改过的钱包会按照预期运行，但允许攻击者通过使用窃取的助记词来获取用户的数字货币。  SeaFlower 向尽可能多的用户传播数字货币钱包应用程序的木马版本是通过包括创建山寨网站和攻击搜索引擎优化（SEO）等各类方式实现的，或是通过社交媒体渠道、论坛和通过恶意广告推广这些应用程序，但其主要传播渠道是通过搜索服务	2023-07-19	保留
+8894	NULL	wuqiongdong	NULL	NULL	NULL	NULL	2023-07-14	NULL	NULL	2023-07-14	待处置
+8909		UNC2596	美国,加拿大				2023-07-14		迄今唯一使用Cuba勒索软件的黑客集团为UNC2596；主要锁定美国与加拿大的组织，北美受害者就占了8成；并不攻击提供紧急看护的医院或组织；以及入侵受害者组织的方法从垃圾邮件、恶意程序逐渐转为开采安全漏洞	2024-01-08	保留
+8918		TinyScouts					2023-07-14		该组织使用勒索软件和密码窃取，以俄罗斯工业家和企业家联盟的成员为目标	2023-07-19	保留
+8948		APT29,StellarParticle					2023-07-14			2023-07-19	删除
+8987	Sabbath	UNC2190					2023-07-14		名为 Sabbath（又名 UNC2190）的勒索软件组织，从今年6月开始，Sabbath就一直针对美国和加拿大的关键基础设施展开攻击。研究人员认为“Sabbath”组织之前都在以Arcane和Eruption的名义运作，后者在去年被部署了ROLLCOAST勒索软件	2023-07-19	保留
+8990	NULL	vajraeleph	NULL	NULL	NULL	NULL	2023-07-14	NULL	NULL	2023-07-14	待处置
+8993		UNC788					2023-07-14		最近破坏的第二个组织被称为 UNC788，是在伊朗运营的几个知名且多产的 APT 组织之一。Meta 过去曾对该组织采取过行动，谷歌和其他主要平台提供商也是如此。UNC788 最近在 Meta 平台上的活动使用了典型的网络钓鱼和社会工程策略，以及虚构的角色和自定义恶意软件工具。“为了危害人们的帐户和设备，该组织复制并修改了合法的 Android 应用程序（生日日历应用程序），以便它可以提取联系信息并将其发送到攻击者的远程服务器。他们还为 Android 开发了具有远程访问功能的恶意软件，伪装成古兰经，这是一款聊天应用程序，可以检索人们的联系人列表、短信、文件、位置信息，并激活摄像头和麦克风	2023-10-17	保留
+9044		quasar					2023-07-14			2023-07-19	删除
+9143		sobaken					2023-07-14			2023-07-19	删除
+9167		UNC4166					2023-07-14		这次供应链攻击背后的组织被追踪为UNC4166，其目标可能是收集和窃取乌克兰政府网络的敏感信息。虽然目前还没有明确的归属，但Mandiant的安全研究人员发现，在这次活动中被攻击的组织以前是与俄罗斯军事情报有联系的APT28国家黑客的目标名单上的。	2023-07-19	保留
+9179		dalbit					2023-07-14			2023-07-19	删除
+9386	NULL	ly1007	NULL	NULL	NULL	NULL	2023-07-14	NULL	NULL	2023-07-14	待处置
+9404		downex					2023-07-14			2023-07-19	删除
+9407	NULL	triangulation	NULL	NULL	NULL	NULL	2023-07-14	NULL	NULL	2023-07-14	待处置
+9500		UNC4191					2023-07-14		Mandiant已确认网络间谍活动的细节，目前被追踪为UNC4191，利用USB设备作为初始感染媒介，并集中在菲律宾。Mandiant的研究人员在28日的一篇文章中写道:“在通过USB设备进行初始感染后，威胁行为者利用合法签名的二进制文件侧加载恶意软件，包括MISTCLOAK、DARKDEW和BLUEHAZE的三个新家族。”恶意软件通过感染插入受损系统的新的可移动驱动器进行自我复制，允许恶意有效载荷传播到其他系统，并可能从物理隔离系统中收集数据	2023-07-19	保留
+9695		unc3500					2023-07-14			2023-07-19	删除
+9728		BadMagic					2023-07-14		与俄乌冲突有关的新APT组织自俄乌冲突开始以来，研究人员已经发现了大量地缘政治网络攻击。去年10月，研究人员就发现了BadMagic的攻击。最初的攻击途径尚不清楚，但接下来要使用鱼叉式网络钓鱼或类似的方法。攻击目标被导航到一个URL，该URL指向托管在恶意web服务器上的ZIP文档。该文档包含两个文件：一个是诱饵文档（研究人员发现了PDF、XLSX和DOCX版本），另一个是带有双重扩展名的恶意LNK文件（例如PDF.LNK），打开后会导致攻击	2023-07-18	保留
+10154		unc961					2023-07-14			2023-07-19	删除
+10175	Poison Needles	PoisonNeedles					2023-07-14		高级威胁应对团队在全球范围内第一时间发现了一起针对俄罗斯的APT攻击行动。此次攻击相关样本来源于乌克兰，攻击目标则指向俄罗斯总统办公室所属的医疗机构	2024-07-19	待处置
+10184		unc3535					2023-07-15			2023-07-19	删除
+10193	Storm-0978,Storm0978,UAT-5647,UAT5647	RomCom					2023-07-17		RomCom是一个总部位于俄罗斯的网络犯罪组织（也被追踪为Storm-0978），该组织以从事勒索软件和勒索攻击以及专注于窃取凭证的活动而闻名。该组织与此前的工业间谍勒索软件行动有关，现在该行动已转向名为“地下”(VirusTotal)的勒索软件	2024-10-21	保留
+10196		8220.0					2023-07-18			2023-07-19	删除
+10211	DEV-0196	DEV0196					2023-07-19		威胁组织 DEV-0196 与总部位于以色列的名为 QuaDream 的私营部门攻击者 (PSOA) 有关。QuaDream 出于执法目的向政府出售他们称为 REIGN 的平台。REIGN 是一套漏洞利用、恶意软件和基础设施，旨在从移动设备中泄露数据	2023-07-19	保留
+10217	APT-Q-43,VajraEleph,vajraeleph	金刚象					2023-07-19		金刚象是一个来自南亚某国军方背景的 APT 组织，该组织最早由奇安信病毒响应中心于 2022 年 3 月进行全球独家首次公开披露，是奇安信独立发现并率先披露的第 15 个 APT 组织。金刚象组织的攻击活动最早可追溯到 2021 年，一年多的持续攻击已经影响到巴基斯坦、阿联酋、尼泊尔、沙特阿拉伯、斯里兰卡、马尔代夫等印度周边国家	2024-07-19	保留
+10220		OnionPoison					2023-08-01			2023-08-09	删除
+10223		GlowSand					2023-08-02			2023-08-09	删除
+10226		FreeCryptoScam					2023-08-02			2023-08-09	删除
+10229	Core Werewolf,Awaken Likho,AwakenLikho	CoreWerewolf					2023-08-02		Core Werewolf 组织使用网络钓鱼和合法软件来完全控制用户的系统、复制文件、跟踪的行为，试图通过发送钓鱼邮件来入侵机构的系统，这些邮件中包含链接到危险文件的伪装成DOCX和PDF格式文档的危险文件链接，如决议和命令、指南、备忘录和简历。如果用户打开这样的文件，他们会看到所声称的文档。然而，与此同时，后台UltraVNC的安装同时启动。专家指出，这是经常用于远程连接到计算机的合法软件，攻击者通过这种方式试图获取对被入侵设备的访问权限	2024-10-11	保留
+10232	TropicalScorpius	VoidRabisu					2023-08-04		Void Rabisu，也被称为Tropical Scorpius，研究人员认为它使用RomCom后门发起攻击。分析发现，Void Rabisu的攻击是出于经济动机。自2022年10月以来，Void Rabisu的动机似乎发生了变化，当时RomCom后门被报道出现在俄乌冲突中	2023-08-09	保留
+10235		OperationTrickyMouse					2023-08-04			2023-08-09	删除
+10238	DEV-0401, Cinnamon Tempest, SLIME34, Emperor Dragonfly	BronzeStarlight					2023-08-04		一个名为Bronze Starlight的APT组织一直在使用有效证书签署恶意软件。该证书由Ivacy VPN使用，黑客的目标是东南亚的赌博业。使用这种技术，黑客可以确保恶意软件绕过所有安全措施而不会引起怀疑并入侵目标设备。它还可以轻松地融入合法软件流量中	2023-10-17	保留
+10244		Hive0117					2023-08-04		Hive0117是出于经济动机的网络犯罪组织，该组织自2022年2月起，冒充俄罗斯机构针对东欧国家实体发起网络钓鱼活动。该活动伪装成俄罗斯政府联邦法警局的官方通讯，向立陶宛、爱沙尼亚和俄罗斯电信、电子和工业部门的用户发送俄语电子邮件，旨在提供名为DarkWatchman的无文件恶意软件变种。研究人员认为，Hive0117不属于俄罗斯APT组织，也不属于国家资助的执行网络间谍和网络战行动的集群的一部分	2023-08-09	保留
+10250	Maverick Panda,Wisp Team,Sykipot,TG-0623,Bronze Edison,Sodium,Salmon Typhoo	APT4					2023-08-04		Sykipot 的主要攻击目标包括美国国防初始基地 (DIB) 和电信、计算机硬件、政府承包商和航空航天等关键行业。过去 6 年对 15 次重大 Sykipot 攻击的开源审查证实了这一点。  最近，我们遇到了一个 Sykipot 变体正在收集与民航部门相关的信息的案例。攻击发生在与其历史相符的目标上，所寻求的信息引起了新的兴趣。最新一轮攻击的意图尚不清楚，但它代表着目标或任务的转变	2024-07-19	保留
+10259		APTLY1001					2023-08-05			2023-08-09	删除
+10262		silencerlion					2023-08-05			2024-07-19	删除
+10265		WaterLabbu					2023-08-07			2023-08-09	删除
+10268		DormantColors					2023-08-09			2023-08-09	删除
+10271	SilencerLion	诺崇狮					2023-08-09		诺崇狮组织掌握有一个由大量机器人及雇佣而来的成百上千名年轻人组成的虚拟团队，用于传播虚假信息和亲政府宣传，长期以来其一直专注于监视攻击，使国内外的批评者保持沉默，其能够利用昂贵的间谍软件瞄准生活在世界另一端的持不同政见者	2023-08-09	保留
+10274		UNC4899					2023-08-09		朝鲜侦察总局 (RGB) 的一个黑客单位与 JumpCloud 漏洞有关，因为攻击者犯了操作安全 (OPSEC) 错误，无意中暴露了他们的真实 IP 地址。该黑客组织被 Mandiant 追踪为 UNC4899，此前曾观察到该组织使用商业 VPN 和操作中继盒 (ORB) 的组合，并使用 L2TP IPsec 隧道来隐藏其实际位置。Mandiant 表示，UNC4899 威胁行为者在之前的活动中为此目的使用了许多 VPN 提供商，包括 ExpressVPN、NordVPN、TorGuard 等。 虽然朝鲜国家黑客以使用商业 VPN 服务来掩盖其 IP 地址和实际位置而闻名，但在 JumpCloud 攻击期间，他们使用的 VPN 在连接到受害者网络时发生故障并暴露了其在平壤的位置	2024-01-08	保留
+10295	APTK47,APT-K-47,Mysterious Elephant.MysteriousElephant	神秘象					2023-08-14		研究人员对Mysterious Elephant组织进行了扩展分析。Mysterious Elephant，又名神秘象、APT-K-47，最早发现活跃于2022年3月份，曾使用ORPCBackdoor后门对巴基斯坦外交相关部门进行攻击。攻击者使用钓鱼邮件作为初始感染媒介，邮件携带CHM附件，CHM文件以"俄中友好、和平与发展委员会"为主题。据研究人员表示，该组织除了针对巴基斯坦，还针对其他多个国家	2023-08-14	保留
+10298	TAG-53,TAG53	BlueCharlie			政府、国防、教育、政治部门、非政府组织、记者		2023-08-15		该组织与俄罗斯组织 Callisto/Calisto、COLDRIVER 和 Star Blizzard/SEABORGIUM 有关联。BlueCharlie自 2017 年以来一直活跃，专注于间谍活动和黑客泄露行动的信息收集。BlueCharlie 已经发展其策略、技术和程序 (TTP)，并建立了新的基础设施，这表明在适应公开披露和提高运营安全方面的复杂性。具体受害者尚不清楚，过去的目标包括政府、国防、教育、政治部门、非政府组织、记者等	2023-08-15	保留
+10300		ShinyHunters					2023-08-16		ShinyHunters 是一个因参与多起备受瞩目的数据泄露事件而臭名昭著的黑客组织，该组织一直以组织为目标，通过在Clear 和暗网上出售用户数据来窃取敏感信息以获取金钱利益。在 ShinyHunters 的控制下，BreachForums 的死灰复燃引发了人们对全球网络安全潜在影响的担忧	2023-08-18	保留
+10303		GoldenJackal	中国、印度	利用伪造文档、网络钓鱼和恶意软件等方式攻击目标，使用社交工程欺骗受害者获取目标系统的控制权	针对印度政府机构、民间社会、科研机构、军事机构等目标		2023-08-16		GoldenJackal 是一个 APT 组织，自 2019 年开始活跃，通常针对中东和南亚的政府和外交实体。尽管他们多年前就开始了活动，但这个团体通常不为人知，还没有被公开描述过。研究人员于 2020 年年中开始对该组织进行监控，并观察到持续的活动水平表明这是一个有能力且隐秘的演员。该组的主要功能是 .NET 恶意软件 JackalControl、JackalWorm、JackalSteal、JackalPerInfo 和 JackalScreenWatcher 的特定工具集	2023-10-17	保留
+10306		MoustachedBouncer				白俄罗斯	2023-08-16		白俄罗斯MoustachedBouncer黑客组织被曝在国家支持下对外国大使馆进行间谍活动。ESET Research揭露了一项针对南亚、非洲和欧洲外交官长达数年的活动。黑客采用多种技术，包括C++后门和ISP级攻击。MoustachedBouncer篡改了受害者的互联网访问，通过虚假的强制门户欺骗Windows。研究人员建议使用加密VPN，以增强安全性，抵御这种复杂的间谍活动	2023-08-18	保留
+10309		Phantommouse					2023-08-16			2023-08-18	删除
+10312		hvv2023					2023-08-17			2023-08-18	删除
+10315	Bronze Highland, Evasive Panda	Daggerfly					2023-08-17		据观察，Daggerfly 高级持续威胁组织使用在最近的一次活动中，来自 MgBot 恶意软件框架的以前未见过的插件，据信该攻击的目标是非洲的一家电信组织通过共享策略、技术和程序将其与 2020 年之前的活动联系起来。	2023-08-17	保留
+10318		Tomiris					2023-08-17		卡巴斯基发布了一项关于Tomiris APT组织的新调查报告，该威胁组织专注于在中亚地区收集情报。这个使用俄语的威胁行为者使用各种快速开发的恶意软件植入物，并以所有可以想象的编程语言进行开发，其原因可能是为了防止被溯源。引起研究人员特别注意的是，Tomiris部署的恶意软件与之前的另外一个臭名昭著的APT组织Turla有关	2023-08-17	保留
+10321	GRP-LY-1003,GRPLY1003	图穷之刃					2023-08-17		该团伙投递的恶意软件回连C2更新频繁，执行流程复杂，采用多种手法对抗检测和调试，最终将加载FatalRAT窃取用户敏感信息。由于该团伙的样本执行过程最终都会通过读取一个图片文件数据得到最终的远控模块，以成语“图穷匕见”之意将该团伙命名为“图穷之刃”，内部追踪代号“GRP-LY-1003”。	2023-08-17	保留
+10324		UNC4466					2023-08-22		美国网络安全和基础设施安全局（CISA）已将勒索软件攻击中利用的Veritas Backup Exec漏洞添加到其已知漏洞目录中。包括CVE-2021-27876、CVE-2021-27877、CVE-2021-27878、CVE-2019-1388、CVE-2023-26083。Mandiant研究人员报告称，观察到ALPHV BlackCat勒索软件团伙的一个分支机构（跟踪为UNC4466）利用Veritas Backup解决方案中的上述漏洞来获得对目标网络的初始访问权限	2023-08-22	保留
+10327		APT43					2023-08-24		该组织的动机既有间谍活动又有经济动机，利用凭证收集和社会工程学等技术来推进其目标。其攻击活动的货币角度是威胁行为者试图筹集资金以满足其“收集战略情报的主要任务”。受害者学模式表明，目标集中在韩国、美国、日本和欧洲，涵盖政府、教育、研究、政策机构、商业服务和制造业。从 2020 年 10 月到 2021 年 10 月，还观察到威胁行为者通过攻击与健康相关的垂直行业和制药公司而偏离轨道，这突显了其迅速改变优先事项的能力	2024-07-15	保留
+10330		OperationDragonCastling					2023-09-07			2024-07-19	删除
+10333		UNC4034					2023-09-07		UNC4034 与朝方的几个组织有重叠，其通过 WhatsApp 即时通讯服务与受害者建立了联系，并引诱其下载恶意 ISO 包	2024-07-19	保留
+10336		TA550					2023-09-22			2024-07-19	删除
+10342	ModifiedElephant,DarkElephant	暗象	印度、中国	通过漏洞（CVE-2012-0158、CVE-2014-1761、CVE-2013-3906、CVE-2015-1641）利用文档针对目标投放恶意软件。 2019年该组织将邮件附件更改为外部链接，供目标下载执行。	组织主要针对印度活动家、人权捍卫者、记者、学者以及法律专业人士		2023-09-22		组织主要针对印度活动家、人权捍卫者、记者、学者以及法律专业人士，进行长期监视，并在“必要情况”下向目标电脑中植入犯罪证据。	2023-10-17	保留
+10378		SmishingTriad				中国	2023-09-22		Smishing Triad起源于中国，并使用短信攻击作为其主要攻击媒介。研究人员发现，Smishing Triad 与多个不同的网络犯罪组织有关联，该组织提供网络犯罪即服务基础设施，其 Smishing 套件订阅起价为每月 200 美元。订阅者会收到具有不同框架的激活代码和部署脚本	2023-10-17	保留
+10390		UNC4841					2023-09-22		从去年 10 月开始 UNC4841 选择性的感染了部分梭子鱼客户，数量大约在 400-500 左右。在梭子鱼发布补丁堵上漏洞之后，UNC4841 再次选择性的对部分高价值目标释出了 DepthCharge、SkipJack 和 FoxTrot/FoxGlove 三种恶意程序	2023-10-17	保留
+10543		NoName57(16)					2023-09-22		NoName057(16)是一个鲜为人知的亲俄黑客组织，他们在Telegram频道上炫耀自己的攻击事例，该频道拥有超过14000个订阅者。该组织在成功袭击芬兰和波兰议会后于8月初在媒体上曝光	2024-07-19	保留
+10552		QuasarRAT					2023-09-22			2024-07-19	删除
+10558		Killnet				俄罗斯	2023-09-22		Killnet，俄罗斯黑客组织，"SECSWA"组织的下属分支之一。当地时间2022年5月16日，“Killnet”正式向10个支持恐俄症的国家宣战	2023-10-17	保留
+10594		Condi					2023-09-22			2024-07-19	删除
+10771		Henos,肚脑虫					2023-09-28			2024-07-19	删除
+10774		Lazarus,Bluenoroff					2023-09-28			2024-07-19	删除
+10813		ModifiedElephant,MosesStaff					2023-09-28			2024-07-19	删除
+10816	GRP-LY-1004,GRPLY1004	暗钩					2023-10-06		该团伙至少从2022年8月开始活跃。期间除了通过钓鱼网站途径之外，还可能通过钓鱼邮件、社交媒体等方式投递木马	2024-07-19	保留
+10822		ShadowSyndicate					2023-10-16		ShadowSyndicate是一个威胁行为者，与各种勒索软件组织和勒索软件程序附属机构合作。该软件自 2022 年 7 月以来一直活跃，在攻击中使用了“现成”工具包，包括Cobalt Strike、IcedID和Sliver恶意软件。研究人员非常有信心地将 ShadowSyndicate 归因于2022 年 9 月的Quantum勒索软件活动、 2022 年 10 月、2022 年 11 月和 2023 年 3 月的Nokoyawa勒索软件活动以及2023 年 2 月的ALPHV活动。在可信度较低的情况下，可以将 ShadowSyndicate 归因于Royal、Cl0p、Cactus和Play勒索软件活动。此外还发现其 基础设施和Cl0p/Truebot之间有联系	2023-10-17	保留
+11095		Carderbee					2023-10-16		一个先前未知的 APT 组织（被追踪为 Carderbee）使用合法 Cobra DocGuard 软件的恶意软件版本对香港的组织发起了供应链攻击。该组织试图使用 Korplug 后门（又名PlugX ）感染目标组织	2023-10-17	保留
+11098	Caracal Kitten,APT-Q-58	沙猁猫					2023-10-16		攻击者较高概率为来自中东某政权背景的组织。该组织虽然与此前公开的Domestic Kitten、Ferocious Kitten和Rampant Kitten等组织有类似的攻击目标，但目前并未发现相关IOC资源和证据表明其归属于某一历史组织，且该组织具有更加明确的攻击目标，更清晰的攻击时间节点	2023-10-17	保留
+11104		AtlasCross					2023-10-16		本次发现的新型攻击者AtlasCross，是一个非常小心谨慎，具有较强的流程和工具开发能力的黑客组织。该攻击者一方面能够积极吸收各类黑客技术，融合至自身技术栈和工具开发过程中；另一方面在环境探测、执行策略、网络设施选择等方面都选择了最保守的路线，不惜牺牲效率也要降低自身暴露的风险。此外，AtlasCross自研木马中残留的debug代码也能证明该攻击者仍在完善攻击流程	2023-10-17	保留
+11107		Sandman					2023-10-16		研究人员观察到一个由未知攻击者发起的新黑客活动，并将攻击者命名为Sandman，将攻击活动中发现的基于LuaJIT平台的后门文件命名为LuaDream。此次攻击活动主要针对中东、西欧和南亚次大陆的电信提供商，活动具有横向移动和避免安全检查的特点	2023-10-17	保留
+11191	Storm-0324	Storm0324					2023-10-16		Storm-0324 是一个出于经济动机的威胁行为者组织，此前因分发网络钓鱼电子邮件以通过远程执行代码获得对受感染系统的初始访问权限而闻名。在获得初步立足点后，Storm-0324 经常将访问权限移交给知名勒索软件组织 Sangria Tempest（也称为 FIN7、Carbon Spider）和 TA543，后者经常利用该组织提供的访问权限执行勒索软件攻击	2023-10-17	保留
+11206	Deadeye Jackal	叙利亚电子军	中国,英国,美国	通过DDoS、恶意软件、网络钓鱼、垃圾邮件、网站污损等方式进行攻击	针对 BBC 新闻、美联社、国家公共广播电台、CBC 新闻、每日电讯报、华盛顿邮报等新闻网站进行攻击	叙利亚	2023-10-16		“叙利亚电子军”（又名Deadeye Jackal）是来自叙利亚地区的一个APT组织	2023-10-17	保留
+11209	Silent Librarian	TA473	中国、美国	利用网络钓鱼、恶意软件攻击等窃取大量账户信息、研究成果、人际关联以及其他敏感信息	针对美国等北大西洋公约组织的高校及其教职员工和学生，以窃取各种的学术和个人信息作为目的	伊朗	2023-10-17		“TA473”（又名Silent Librarian）是来自于伊朗地区的一个APT组织	2023-10-17	保留
+11212	Ethereal Panda,RedJuliett	FlaxTyphoon					2023-10-17		新黑客组织“Flax Typhoon”针对政府机构、教育、关键制造和信息技术组织实施间谍活动。黑客组织Flax Typhoon利用操作系统上已有的大部分组件，即live-off-the-land 二进制文件、LOLBins 以及合法软件来获取和维护对受害者网络的访问。最早从2021年中期开始，Flax Typhoon主要攻击台湾的组织；经调查，东南亚、北美和非洲地区也存在Flax Typhoon的受害者	2024-10-08	保留
+11215	Scattered Spider,Starfraud,0ktapus,Storm-0875,LUCR-3,Scatter Swine,Muddled Libra	UNC3944					2023-10-17		被称为UNC3944的出于经济动机的威胁行为者正在转向勒索软件部署，作为其货币化战略扩展的一部分。“UNC3944已经表现出更加关注窃取大量敏感数据以进行勒索，他们似乎了解西方的商业行为，可能是由于该组织的地理构成，”威胁情报公司表示。“UNC3944还一直依赖公开可用的工具和合法软件，以及可在地下论坛上购买的恶意软件	2024-03-07	保留
+11218	GRP-LY-1002,GRPLY1002	幽谍犬					2023-10-17		日常监测中发现多起以“税务”、“发票”为主题的攻击活动，主要通过伪装为“国家税务总局增值税电子发票公共服务平台”等钓鱼网站或通过社交媒体等方式下发Gh0st远控木马。经过关联分析发现该黑灰产团伙掌握大量服务器，并长期以税务、发票和软件等主题投递Gh0st木马进行恶意窃密，安恒猎影实验室将该团伙命名为“幽谍犬”，内部追踪代号“GRP-LY-1002”	2023-10-17	保留
+11221	keygroup777	KeyGroup					2023-10-17		Key Group 勒索软件家族于 2023 年 1 月 6 日首次曝光，此后一直在继续运作。研究人员高度自信地评估，Key Group 勒索软件团伙主要是一个讲俄语、出于经济动机的威胁组织，使用 Telegram 频道 keygroup777Tg 进行赎金谈判。Key Group 还有一个额外的私人（仅限受邀者）Telegram 频道来共享 。信息成员之间的人肉搜索和攻击性工具共享。根据 Telegram 消息，自 2023 年 6 月 29 日起，威胁行为者可能会使用 NjRAT（一种远程管理工具 (RAT)）来远程访问受害者设备	2024-10-08	保留
+11224		EarthEstries					2023-10-17		Earth Estries 背后的威胁行为者正在利用高级资源，在网络间谍和非法活动方面拥有复杂的技能和经验。威胁行为者还使用多个后门和黑客工具来增强入侵向量。为了尽可能减少足迹，使用 PowerShell 降级攻击来避免 Windows 反恶意软件扫描接口 (AMSI) 日志记录机制的检测。此外，攻击者还滥用 Github、Gmail、AnonFiles 和 File.io 等公共服务来交换或传输命令和窃取的数据。这项积极的活动针对菲律宾、台湾、马来西亚、南非、德国和美国的政府和技术行业组织	2023-10-17	保留
+11227	Yellow Liderc,Imperial Kitten,ITortoiseshell,ITA456,ICrimson Sandstorm	YellowLiderc					2023-11-06		自 2019 年以来，研究人员一直在追踪一个位于伊朗的威胁行为者，称之为 Yellow Liderc（又名 Imperial Kitten、Tortoiseshell、TA456、Crimson Sandstorm）。该威胁行为者仍然对许多行业和国家构成积极和持续的威胁，包括地中海地区的海事、航运和物流部门；美国和欧洲的核工业、航空航天工业和国防工业；以及中东的 IT 管理服务提供商	2023-12-06	保留
+11404	APT-C-52	焰魔蛇					2023-11-24		APT-C-52（焰魔蛇）组织是一个来自南亚的APT组织，主要针对巴基斯坦进行有组织、有计划、针对性的网络攻击行动。该组织攻击活动开始于2021年初，至今仍处于活跃状态。我们获取攻击者服务器泄露的部分数据，受害者主要为巴基斯坦军事人员。APT-C-52（焰魔蛇）组织主要通过Google Play应用商店传播恶意应用，首先利用Facebook获取攻击目标联系方式，然后通过WhatsApp或短信等社交方式传播恶意应用的下载地址，诱导攻击目标安装并使用恶意应用，实现窃取目标隐私数据等敏感信息的目的。	2023-12-06	保留
+11443		山猫					2023-11-24		监测发现一个针对政府、能源和教育等行业发起 “爆发式”攻击的黑产团伙：仅2023年10月28日至11月1日这5天时间，受到攻击的企业达到了数十家，触发告警近万次。经过对该团伙历史攻击行为和资产特征进行分析，结合各维度特征，将其命名为“山猫”	2023-12-06	保留
+11680		WildCard					2023-12-01		研究团队发现了一个新的 APT 组织，称为“WildCard”，最初是通过使用 SysJoker 恶意软件检测到的，该恶意软件于 2021 年针对以色列教育部门。该组织与 ClearSky 的ElectricPowder 行动的可能联系。与 ElectricPowder 行动的联系表明了 WildCard 的先进能力，重点关注以色列境内的关键部门	2023-12-06	保留
+11686	NULL	美国国安局nsa	NULL	NULL	NULL	NULL	2023-12-03	NULL	NULL	2023-12-03	待处置
+11752	DarkCasino,APT-N-12,Water Hydra	鬼轮盘					2023-12-06		DarkCasino组织（中文名称：鬼轮盘；绿盟科技高级威胁组织编号：APT-N-12）是一个最早于2021年活动的以经济利益为驱动的APT组织	2024-03-01	保留
+11755		双异鼠					2023-12-06		攻击者策划发动了一场持续时间六个月以上的针对我国的大型网络攻击行动。该攻击者具有较高的黑客技术水平以及极高的攻击破坏能力，在持续调查过程中发现了该攻击者的数次网络攻击活动与两种独有武器工具，并关联确认了该攻击者针对国内多个目标的入侵行为。该武器在通信过程中使用了两次异或加密，根据这一特殊的通信加密思路将该主要工具命名为“双异鼠”，并以相同的名称标记该攻击者为双异鼠组织	2023-12-06	保留
+11758	Scarred Manticore	ScarredManticore				伊朗	2023-12-06		Scarred Manticore 是一个伊朗民族国家威胁组织，主要针对中东的政府和电信部门。Scarred Manticore 与多产的伊朗演员 OilRig（又名 APT34、EUROPIUM、Hazel Sandstorm）有联系，一直在追求高调组织，利用定制工具系统地窃取数据	2023-12-06	保留
+11761	Skeleton Wolf,APT-LY-1008	骷髅狼					2023-12-06		通过仔细的样本分析和追溯，我们发现这些攻击事件共享相同的攻击组件和模式，因此我们确定该类攻击背后的幕后黑手为同一组织。鉴于该组织攻击手法的独特性，我们将该组织命名为“骷髅狼”(Skeleton Wolf)	2023-12-06	保留
+11764	Storm-0558	Storm0558					2023-12-06		名为Storm-0558的中国黑客组织侵入了微软工程师的公司账户，窃取了一个重要秘钥，进而盗取美国多名高官的电子邮件。其中包括商务部长雷蒙多，美国驻中国大师伯恩斯等人的数十万个电邮的资料。事件引发了对微软网络安全的关注。民主党俄勒冈州议员怀登已要求美国当局调查此事件。这个事件引发了对微软网络安全的关注，让人们开始质疑：这是不是证明了微软拥有大量后门	2023-12-06	保留
+11767		Fenix					2023-12-06		“Fenix”组织对墨西哥和智利政府网站的用户实施僵尸网络攻击，该组织采用巧妙的钓鱼手法，将受害者的访问链接重定向至伪装成墨西哥和智利政府官方网站的虚假网站，在这些钓鱼网站上，攻击者声称为增强网站的安全性，提供可供用户下载的安全工具，这些所谓的安全工具实际上是信息窃取软件，用于窃取受害者的敏感数据信息	2023-12-06	保留
+11773	TAG-74	TAG74					2023-12-15		TAG-74 长期持续关注韩国目标持续时间及其与北部战区的明显一致性指挥部，很可能该集团将继续保持高水平其不断努力从战略中收集情报的活动目标在韩国境内。 此外，还有可能集团将业务扩展至日本等国家俄罗斯的情报收集工作	2024-01-10	保留
+11899	Earth Lusca,Bronze University,Charcoal Typhoon,Red Scylla	EarthLusca					2023-12-15		一个被追踪为Earth Lusca的复杂难以捉摸的威胁行为者出于财务目的，通过鱼叉式网络钓鱼和水坑攻击将全球政府和私人组织作为目标。据安全公司称，该组织出于经济动机，其网络间谍活动打击了高价值目标，例如政府和教育机构、宗教运动、新型冠状病毒研究组织、赌博、加密货币公司和媒体	2024-01-10	保留
+11902		Redfly					2023-12-15		今年早些时候，一个名为Redfly的威胁行为者与位于一个未命名亚洲国家的国家电网的妥协有关长达六个月，使用了一种称为ShadowPad的已知恶意软件。“攻击者设法窃取了凭据并破坏了该组织网络上的多台计算机，”Broadcom旗下的赛门铁克威胁猎人团队在与The Hacker News分享的一份报告中表示。 “这次攻击是针对[关键国家基础设施]目标的一系列间谍入侵中的最新一次	2024-01-10	保留
+11995	DarkShadow,Oro0lxy	Storm0062					2023-12-15		根据微软的追踪，这个利用Atlassian Confluence漏洞的黑客组织被称为Storm-0062，也被称为DarkShadow或Oro0lxy。值得注意的是，Oro0lxy是李小鱼（Li Xiaoyu）创建的一个数字化别名。李小鱼是一名中国黑客，被美国司法部于2020年7月指控入侵美国、香港和中国的“数百家公司”，其中包括新冠疫苗研发商Moderna	2024-01-10	保留
+12043		Grayling					2023-12-20		安全研究人员分享了一个新的 APT 组织的证据，该组织主要针对中国台湾组织开展了持续至少四个月的网络间谍活动。该组织被赛门铁克称为“Grayling”，其活动从 2023 年 2 月开始，至少持续到 2023 年 5 月，从台湾的制造、IT 和生物医学公司以及美国、越南和太平洋岛屿的受害者那里窃取敏感信息	2024-01-08	保留
+12052		StarBlizzard					2024-01-02		Star Blizzard主要采用鱼叉式网络钓鱼攻击，先研究目标对象的兴趣及网络活动，再通过社交媒体或专业网络平台来与受害目标进行交流，他们创建虚假的社交媒体数据，冒充各类专家，再以会议或活动邀约为诱饵，于Outlook、Gmail、Yahoo或Proton邮件平台，创建假冒为对方感兴趣的电子邮件账号	2024-07-15	保留
+12694	Teal Kurma,Sea Turtle,Marbled Dust,Cosmic Wolf	TealKurma					2024-01-02		Teal Kurma(又名Sea Turtle、Marbled Dust,、Cosmic Wolf)是一个致力于情报收集和监视活动的土耳其间谍组织，该组织在2018年至2020年期间非常活跃，曾参与大规模且长期的域名服务器(DNS)劫持攻击，并且主要关注欧洲和中东地区，目标实体涵盖政府、电信、IT服务运营商、非政府组织等各种私营和公共部门	2024-01-08	保留
+12718		TA422				俄罗斯	2024-01-02		TA422组织，是一个被美国归属于俄罗斯GRU情报局的黑客组织，与APT28、Forest Blizzard、Pawn Storm、Fancy Bear、BlueDelta等组织有重叠活动，该组织常进行钓鱼攻击活动，并且经常利用历史漏洞进行渗透。自2023年3月以来，安全人员观察到TA422组织频繁地向欧洲和北美发起历史漏洞攻击活动以及钓鱼攻击活动，针对行业包括政府、航空航天、教育、金融、制造和技术部门，利用的历史漏洞有CVE-2023-38831(WinRAR远程执行漏洞)和CVE-2023-23397(Microsoft Outlook特权提升漏洞)，安全人员还捕获到超过一万封钓鱼邮件	2024-01-10	保留
+12733		TA4557					2024-01-02		TA4557自2018年以来一直活跃，是一个出于经济动机的威胁组织，曾分发More_Eggs后门，常使用以求职者为主题的钓鱼诱饵，并具有独特的攻击链。此外，该组织似乎与网络犯罪组织FIN6的相关活动存在重叠，其使用的恶意软件也曾被Cobalt Group和Evilnum组织使用	2024-01-10	保留
+12745		UNC2975					2024-01-02		UNC2975组织开展了一场恶意广告活动。该活动可以追溯到2023年6月19日，攻击者通过利用搜索引擎流量以及宣传以无人认领资金为主题的恶意网站，进而传播PAPERDROP和PAPERTEAR恶意软件下载器，最终部署了DANABOT和DARKGATE后门。据悉，UNC2975至少从2021年起，就一直利用此技术在受害者机器上分发第二阶段有效负载的恶意下载器，该组织还通常使用社交媒体、微软和谷歌广告来宣传虚假网站	2024-01-10	保留
+12802		AquaBot					2024-01-02			2024-07-19	删除
+12826		Kinsing					2024-01-02		Kinsing黑客组织向以迅速调整的弹性战术闻名于黑客界，包括转而利用新披露的Web应用程序漏洞来入侵目标网络，并植入加密货币挖矿程序。本月初，安全公司Aqua便揭发了Kinsing恶意攻击者意图利用名为Looney Tunables的Linux权限提升漏洞来渗透云计算环境	2024-01-10	保留
+12883	UAC-0099	UAC0099	乌克兰				2024-01-02		UAC-0099自2022年中期以来便一直针对乌克兰。2023年8月，该组织使用ukr.net电子邮件服务向一名在乌克兰境外公司远程工作的乌克兰员工发送了一封冒充利沃夫市法院的包含LNK文件附件的SFX钓鱼邮件，进而诱导其下载执行恶意的PowerShell	2024-01-10	保留
+12976	Storm-0569	Storm0569					2024-01-05		Storm-0569 是一个访问代理，专注于通过恶意广告和包含恶意下载网站链接的网络钓鱼邮件下载被入侵后的有效载荷，比如 BATLOADER	2024-01-10	保留
+12985	Storm-1113	Storm1113					2024-01-05		Storm-1113 是一个威胁行为者，它既是一个通过搜索广告传播恶意软件的访问代理，也是一个提供恶意安装程序和登陆页面框架的‘即服务’实体	2024-01-10	保留
+12991	Storm-1674	Storm1674					2024-01-05		Storm-1674 是一个访问代理，以使用基于公开可用的 TeamsPhisher 工具来分发 DarkGate 恶意软件而闻名	2024-01-10	保留
+13006		Amdc6766					2024-01-05		2017年，黑客入侵Avast服务器，在CCleaner更新中植入恶意代码，被数百万用户下载。2017年，M.E.Doc遭黑客攻击，篡改更新植入NotPetya，影响全球公司。2020年，黑客入侵SolarWinds服务器，植入恶意代码影响客户敏感信息，导致美国财政部、商务部等多个政府机构，用户受到长期入侵和监视。该域名常用于供应链投毒攻击以及动态链接库远控后门，因此内部将该团伙命名为代号“amdc6766”黑产组织。	2024-01-10	保留
+13105		DarkRiver					2024-01-08		DarkRiver：一个名为DarkRiver:DarkRiver 的新 APT 组织  A new APT group named  正在针对俄罗斯国防部门的公司。该组织非常注重保持隐秘性，对目标非常有选择性，并从干净的基础设施发起一次性攻击。该组织的主要工具是 MataDoor，这是一个高度模块化且前所未见的后门。到目前为止，俄罗斯安全公司 Positive Technologies 已将 DarkRiver 与对四家俄罗斯国防公司的入侵联系起来	2024-01-08	保留
+13108	Onyx Sleet	OnyxSleet				朝鲜	2024-01-08		Onyx Sleet 是同样由朝鲜政府撑腰的威胁组织，主要针对韩国、美国和印度的国防和 IT 服务。Onyx Sleet 使用了自行开发的一套强大的工具对受害者环境实现持久访问，并且不被发现，该组织经常利用 N 日漏洞（N-day）获得对威胁目标的初始访问权限  ———————————————— 原文作者：嘶吼专业版 转自链接：https://www.wangan.com/p/11v7ce555abc7301 版权声明：著作权归作者所有。商业转载请联系作者获得授权，非商业转载请保留以上作者信息和原文链接。	2024-01-10	保留
+13111	Diamond Sleet	DiamondSleet				朝鲜	2024-01-08		Diamond Sleet（ZINC）是朝鲜政府撑腰的威胁组织，主要从事间谍活动、窃取数据、牟取经济利益和破坏网络。这个组织通常以全球各地的媒体、IT 服务和国防相关实体为目标。微软在 2021 年 1 月报告了 Diamond Sleet 针对安全研究人员的攻击，该组织在 2022 年 9 月将开源软件沦为武器化。2023 年 8 月，Diamond Sleet 侵入了一家德国软件供应商的软件供应链	2024-01-08	保留
+13114		Wagemole					2024-01-08		研究人员最近发现了两项针对求职活动的独立活动，这些活动与朝鲜民主主义人民共和国 (DPRK)（俗称朝鲜）相关的国家支持的威胁行为者有关。我们将第一个活动称为“传染性面试”，威胁行为者冒充雇主（通常是匿名或身份模糊），诱骗软件开发人员通过面试过程安装恶意软件。这种恶意软件可能会造成各种类型的盗窃。我们有适度的信心认为“传染性采访”是由朝鲜国家支持的威胁行为者进行的。我们将第二次活动称为“Wagemole”，威胁行为者在美国和世界其他地区的组织中寻求未经授权的就业，从而可能获得经济利益和间谍活动。我们高度确信瓦格莫勒是朝鲜国家支持的威胁。这两个活动的活动仍然是持续的威胁	2024-01-08	保留
+13117		TA581					2024-01-08		2 月的活动与一个名为TA581的新组织有关，威胁参与者使用武器化的Microsoft OneNote附件分发Forked变体。TA581使用的另一种恶意软件是Bumblebee加载程序	2024-01-08	保留
+13120		ITG05				俄罗斯	2024-01-10		ITG05被追踪为一个可能由俄罗斯国家资助的组织，它由多个活动集群组成，并与APT28、UAC-028、和Forest Blizzard存在重叠	2024-01-10	保留
+13123		ShroudedSnooper					2024-01-10		ShroudedSnooper 威胁行为者通过名为 HTTPSnoop 的后门瞄准中东的电信服务提供商。思科 Talos 研究人员最近发现了一种名为 HTTPSnoop 的新隐形植入物，该植入物被用于针对中东电信提供商的攻击	2024-01-10	保留
+13126		AeroBlade					2024-01-10		一个以前未知的威胁行为者，其目标是美国的一家航空航天组织，其明显目标是进行商业和竞争性网络间谍活动。攻击者使用鱼叉式网络钓鱼作为交付机制：以电子邮件附件形式发送的武器化文档，包含嵌入式远程模板注入技术和恶意 VBA 宏代码，以交付下一阶段的最终有效负载执行	2024-01-10	保留
+13129	Rare Wolf	RareWolf					2024-01-10		Rare Wolf是一个自2019年开始活跃的攻击组织，常使用钓鱼攻击。近期活动中，攻击者发送携带附件的恶意网络钓鱼邮件，邮件内容为电子发票相关，并表示附件为加密压缩包，压缩包中包含发票。邮件内容中给出了压缩包解密密钥。压缩文件解压后包含一个scr安装程序，当用户运行该程序后，程序将创建一个特定文件夹并将该文件夹设置为隐藏、不可索引属性。随后，程序将创建特定注册表项，同时使用curl从远程服务器下载加密压缩包	2024-01-10	保留
+13132	UAC-0006	UAC0006					2024-01-10		UAC-0006组织自2013年开始被研究人员追踪，该组织在针对乌克兰金融行业的攻击活动中排名第一，据传该组织每周从乌克兰企业账户窃取的资金高达一百万格里(乌克兰货币)。目前，研究人员观察到该组织使用超过13种恶意程序，包括SMOKELOADER、LOADERX3、RDPWRAPPER、LUMMASTEALER、REDLINESTEALER、TALESHOT等程序	2024-01-10	保留
+13135	Forest Blizzard	ForestBlizzard					2024-01-10		来自俄罗斯的组织Forest Blizzard涉及修改 Microsoft Exchange 服务器内邮箱文件夹权限的技术。它允许攻击者提供对电子邮件通信的秘密、未经授权的访问，并在通过 CVE-2023-23397（Microsoft Outlook 漏洞）获得对电子邮件帐户的访问权限	2024-01-10	保留
+13183		HomelandJustice				伊朗	2024-01-15		2023年12月24日，伊朗组织“Homeland justice”在其Telegram频道上发布了一段阿尔巴尼亚语视频，称其再次摧毁“恐怖分子支持者”。该组织自2022年7月以来一直在运作，专注于针对阿尔巴尼亚的勒索软件和破坏性活动	2024-01-15	保留
+13186	Water Curupira	WaterCurupira					2024-01-15		一个名为Water Curupira的威胁组织开始在垃圾邮件活动中积极传播PikaBot恶意软件加载程序。据悉，Water Curupira组织常会通过开展网络钓鱼活动以释放Cobalt Strike等后门，进而实施Black Basta勒索软件攻击。不过，该组织在2023年第三季度的前几周进行DarkGate垃圾邮件活动和IcedID恶意软件分发活动后，便一直专注于传播Pikabot。PikaBot则是一种复杂的多阶段恶意软件，它在同一文件中具有加载程序、核心模块，以及解密的shellcode，可从其资源(实际有效负载)中解密另一个DLL文件。另外，PikaBot与Qakbot非常相似，后者于2023年8月被执法部门取缔，而PikaBot则在2023年最后一个季度得到积极传播，这表明Pikabot很可能会成为Qakbot的替代品	2024-01-15	保留
+13201	UAC-0050	UAC0050					2024-01-17		UAC-0050 是一个专注于乌克兰的威胁行为者，正在使用新策略来传播 Remcos RAT。 在其最新举措中，UAC-0050 通过隐藏数据传输方法巧妙地避免检测并智胜 EDR 系统，展现了先进的适应性。	2024-01-17	保留
+13204	Turan Ordusu,TuranOrdusu	图兰军	中国			土耳其	2024-01-17	2019-12-21T16:00:00.000Z	该组织是2019年12月22日成立的土耳其反华黑客组织，并大力支持东突分裂势力，同时针对中国境内政府、教育等类别网站进行攻击。早在2019年该组织刚成立时，知道创宇404积极防御实验室就已开始监测其动向;其成立当日，一名昵称为 “Yakamoz1319” 的组织成员就在黑客论坛 “turkhackteam” 上发帖煽动土耳其黑客针对我国境内网站发起攻击，以实际行动表明对“东突厥斯坦”的支持	2024-01-17	保留
+13207	Moshen Dragon	MoshenDragon					2024-01-17		rend Micro 获悉 2022 年 5 月 2 日发布的一些研究，涉及据称位于中亚的被称为‘Moshen Dragon’的威胁行为者，该攻击者部署了恶意软件集群，试图劫持各种流行的安全产品，其中包括 Trend微型，	2024-01-17	保留
+13210		Bigpanzi					2024-01-19		这个团伙主要针对的设备是Android操作系统的电视、机顶盒，eCos操作系统的机顶盒等。不同于一般的僵尸网络通过0/N day传播，这个团伙组建僵尸网络的主要手段是免费或廉价的满足用户的视听需求，即诱使用户安装免费的视频APP，或固件刷机安装廉价的影像娱乐平台，这些APP/平台都带有后门组件，一旦安装设备就成了黑产团伙私建流媒体平台中的一个业务流量节点；业务涵盖流量代理，DDoS攻击，互联网提供内容的服务（OTT），盗版流量（Pirate Traffic）等。基于这个僵尸网络庞大的规模，以及文件名pandoraspear，我们将这个团伙命名为Bigpanzi	2024-01-19	保留
+13675		暗蚊					2024-01-26		该黑产团伙采用供应链投毒、伪造官方软件网站、以及利用破解软件等多种方式传播恶意程序，主要攻击目标是IT运维人员，攻击范围涵盖了Windows、Linux以及macOS等操作系统。此外，该团伙使用经过精心构造的域名，并对下载的载荷文件进行混淆处理，以规避安全产品的检测，因此用“暗蚊”组织命名该团伙	2024-01-26	保留
+13816		Blackwood					2024-02-06		Blackwood 是一个与中国结盟的 APT 组织，至少自 2018 年以来一直活跃，从事针对中国和日本个人和公司的网络间谍活动。 Blackwood 有能力进行中间对手攻击，通过合法软件更新来传递我们命名为 NSPX30 的植入程序，并通过拦截植入程序生成的流量来隐藏其命令和控制服务器的位置	2024-02-06	保留
+13819		ScalyWolf					2024-02-06		Scaly Wolf组织于2023年6月首次亮相，以Roskomnadzor(俄罗斯联邦政府)为诱饵进行钓鱼攻击活动，7月的攻击活动与6月相似，均通过钓鱼活动分发White Snake恶意软件	2024-02-06	保留
+13822		树狼					2024-02-06		近期研究人员监测到一系列通过社交软件和电子邮件传播的税务、医疗保险等相关钓鱼链接，或文档的攻击活动，攻击者使用hfs搭建文件存储服务，存放钓鱼文档和后阶段PayLoad。诱导用户点击下载后的文档中的链接。通过hfs页面的点击次数可以看出受影响用户广泛，以下是研究人员近期监测到近期树狼远控攻击活动趋势，首次发现于2023年11月中旬，根据其pdb名称命名为”树狼“。	2024-02-06	保留
+13825		UNC4990					2024-02-06		UNC4990组织至少从2020年开始活跃，主要针对意大利用户，常使用USB设备感染用户，目前UNC4990正在逐渐转向使用GitHub、GitLab、Vimeo等网站托管有效负载。安全人员还观察到攻击者使用EMPTYSPACE(也称为VETTA Loader和BrokerLoader)加载器和QUIETBOARD后门	2024-02-06	保留
+13828	WhiteBat	Albabat					2024-02-06		Albabat，也称为 White Bat，是一种以 Rust 编写的出于经济动机的勒索软件变体，它会识别和加密对用户重要的文件，并要求赎金才能释放它们。它首次出现于 2023 年 11 月，其变体版本为 0.1.0。0.3.0 版本于 12 月下旬发布，随后于 2024 年 1 月中旬发布了 0.3.3 版本。Albabat 勒索软件似乎作为流氓软件进行分发，例如假冒的 Windows 10 数字激活工具和《反恐精英 2》游戏的作弊程序	2024-02-06	保留
+13834		StickyWerewolf					2024-02-26		Sticky Werewolf是一个网络间谍组织，专门攻击俄罗斯和白俄罗斯的政府机构和金融公司。该组织常通过带有恶意文件链接的网络钓鱼电子邮件作为其初始攻击媒介，并会配合使用Darktrack RAT和Ozone RAT以及MetaStealer窃取程序(RedLine Stealer的变体)等工具	2024-02-26	保留
+13837		UTGQ007					2024-02-27		该团伙攻击目标有中国、韩国、越南、印度等亚洲国家，行业涉及建筑、房产营销、互联网，并使用特有的ROTbot木马窃取加密货币、知识产权、社交账号等敏感数据，与faceduck Group(ducktail)盈利模式类似存在劫持facebook商业账号ads的行为，我们将相关细节披露给开源社区，供友商进行分析排查	2024-02-27	保留
+13840		RansomHouse					2024-02-29		RansomHouse 组织以其使用专门程序进行勒索活动而闻名，该组织开发了一种名为“MrAgent”的新恶意工具。它旨在跨多个VMware ESXi虚拟机管理程序自动分配数据加密器，这为虚拟机攻击提供了新的机会。RansomHouse 是一种勒索软件即服务 ( RaaS ) 操作，于 2021 年 12 月出现，采用双重勒索策略。 2022 年 5 月，该组织在暗网上创建了一个特殊页面来发布受害者的数据	2024-02-29	保留
+13843		Doppelganger					2024-02-29		Doppelganger是一个亲俄网络，以传播反乌克兰宣传而闻名，是“规模最大、持续性最强的俄罗斯裔行动”。至少自2022年2月起活跃，它与两家名为Structurea National Technologies and Social Design Agency的公司有联系	2024-02-29	保留
+13846		SavvySeahorse					2024-03-01		Savvy Seahorse 是一个 DNS 威胁行为者，其说服受害者在虚假投资平台上创建账户，向个人账户存款，然后将这些存款转移到俄罗斯的一家银行。该行为者利用 Facebook 广告引诱用户进入其网站，并最终在虚假投资平台注册。活动主题通常涉及特斯拉、Facebook/Meta 和帝国石油等知名公司	2024-03-01	保留
+13849		Ducktail					2024-03-01		Ducktail是一个2021年被发现的网络犯罪组织，具有越南背景。该组织主要针对Facebook企业账号进行攻击，通过伪装成图片、文档等文件的恶意程序，利用鱼叉式攻击方式攻击有权管理Facebook企业账号的个人。一旦获取目标账号权限，他们就会发布广告，损害受害者声誉并获利	2024-03-01	保留
+13852	UAC-0184	UAC0184					2024-03-01			2024-03-01	保留
+13855		ResumeLooters					2024-03-01		作为 11 月至 12 月活动的一部分，该组织主要袭击了印度（12 个）、台湾（10 个）、泰国（9 个）、越南（7 个）和中国（3 个）的站点。然而，它也以澳大利亚、菲律宾、韩国、日本、美国、巴西、俄罗斯和意大利的受害者为目标	2024-07-19	保留
+14191	EagleStrike	GambleForce					2024-03-06		该黑客组织一直使用 SQL 注入并利用赌博组织的内容管理系统 (CMS) 中的漏洞、政府、零售和旅游部门，窃取敏感信息，包括用户凭证。该黑客组织完全依赖开源和其他公开可用的工具来进行初始访问、侦察和数据盗窃，并且据观察在攻击中使用了 Cobalt Strike 渗透测试框架	2024-03-06	保留
+14194	CyberAveng3rs,Cyber Avengers	CyberAv3ngers					2024-03-06		伊朗黑客组织“网络复仇者”，又名“CyberAv3ngers”，在Telegram频道中声称他们已渗透到BAZAN网络。周六（7月29日）晚上，该组织发布了BAZAN集团公司的SCADA系统的屏幕截图，该系统用于监视和控制工业控制系统	2024-03-06	保留
+14197	farnetworkl,jingo,jsworm,razvrat,piparkuka,farnetworkit	Farnetwork					2024-03-07		Farnetwork 是一位熟练的威胁参与者，精通俄语，在五个不同的勒索软件即服务 (RaaS) 计划中发挥了关键作用，承担了多种角色，例如恶意软件开发的协调者和贡献者	2024-03-07	保留
+14200	RedCurl,Red Wolf	EarthKapre					2024-03-08		间谍组织 Earth Kapre（又名 RedCurl 和 Red Wolf）一直在积极针对俄罗斯、德国、乌克兰、英国、斯洛文尼亚、加拿大、澳大利亚和美国的组织开展网络钓鱼活动。它使用包含恶意附件（.iso 和 .img）的网络钓鱼电子邮件，打开此文件就会成功感染，以触发创建持久性计划任务，同时未经授权收集敏感数据并将其传输到命令和控制 (C&C) 服务器	2024-03-08	保留
+14203		TA4903					2024-03-08		TA4903 是一个出于经济动机的网络犯罪者，它欺骗美国政府实体和多个行业的私营企业。该攻击者主要针对位于美国的组织，偶尔也会针对全球范围内的组织，以进行大量电子邮件活动。研究人员高度确信这些活动的目标是窃取公司凭据、渗透邮箱并进行后续商业电子邮件泄露活动	2024-03-08	保留
+14206		FluffyWolf					2024-03-08		Fluffy Wolf组织正通过钓鱼邮件的方式感染主机，安全人员表示，该组织至少自2022年以来一直活跃，常通过钓鱼邮件投递受密码保护的压缩文档，压缩文档包含伪装成对账报告的可执行文件，可执行文件可在主机中部署Meta Stealer、WarZone RAT等多种恶意程序	2024-03-08	保留
+14245		SPIKEDWINE					2024-03-12		根据攻击链不同阶段使用的与葡萄酒相关的主题和文件名，将此威胁行为者命名为 SPIKEDWINE，并且对此案的调查正在进行中	2024-03-12	保留
+14248		UNC1549					2024-03-12		UNC1549 ，该攻击者与Tortoiseshell重叠 ，Tortoiseshell是一个已公开 与 伊朗伊斯兰革命卫队 (IRGC)有联系的威胁攻击者。这一可疑的 UNC1549 活动至少自 2022 年 6 月以来一直活跃，并且截至 2024 年 2 月仍在持续。虽然其本质上是区域性的，并且主要集中在中东，但目标包括在全球运营的实体。此外还观察到该活动部署了多种规避技术来掩盖活动路径	2024-03-12	保留
+14251		facebackgroup					2024-03-13			2024-07-19	删除
+14257		MagnetGoblin					2024-03-15		Magnet Goblin组织是一个出于经济动机的攻击者，常在漏洞公开后，利用1day漏洞对服务器发起攻击活动。攻击者主要使用Nerbian恶意软件家族的软件，包括NerbianRAT(一种跨平台RAT，具有适用于Windows和Linux系统的变体)和MiniNerbian(一种小型Linux后门)	2024-03-15	保留
+14293		雪狼					2024-03-26			2024-03-26	保留
+14296		TA450					2024-03-29		TA450是一个主要针对以色列实体的黑客组织，特别是自2023年10月以色列与哈马斯战争爆发以来，其攻击活动持续进行，其攻击目标包括全球制造、技术和信息安全公司	2024-03-29	保留
+14311		BitRAT					2024-04-03			2024-07-19	删除
+14312		CloudWerewolf					2024-04-08		Cloud Werewolf组织利用网络钓鱼电子邮件，用对目标有吸引力的主题，如水疗优惠券和联邦法令，携带看似合法的恶意文档附件，对俄罗斯和白俄罗斯的政府组织进行了至少五次攻击	2024-04-08	保留
+14341	LordNemesis	NemesisKitten					2024-04-19		报告详细描述了伊朗黑客活动分子组织“Lord Nemesis”（也称为“Nemesis Kitten”）对以色列学术界进行的供应链攻击。该组织自2023年底出现以来，公开宣称其目标是针对以色列的组织，并试图在其受害者中制造恐慌	2024-04-19	保留
+14344		UTA0218					2024-04-19		UTA0218似乎自2024年3月26日开始利用该漏洞进行恶意活动测试；4月7日，攻击者继续尝试在客户的防火墙设备上部署一种基于Python的新型自定义后门：UPSTYLE，该后门允许攻击者通过特制的网络请求在设备上执行其他命令，但未能成功	2024-04-19	保留
+14347		StarryAddax					2024-04-19		研究人员披露了一起新的攻击活动，并将攻击者追踪为Starry Addax。该组织主要针对阿拉伯撒哈拉民主共和国(SADR)，通过钓鱼攻击诱骗目标安装安卓恶意程序FlexStarling	2024-04-19	保留
+14350		RUBYCARP					2024-04-19		研究人员最近发现了一个疑似由罗马尼亚人长期运营的僵尸网络组织：RUBYCARP。据悉，该组织似乎与Outlaw APT存在关联，它们共享许多的TTP，目前已活跃至少10年，主要依靠各种公共漏洞和暴力攻击手段部署僵尸网络，借助公共和私人类型的多个IRC网络进行通信，同时开发了大量的网络武器并会窃取目标数据，然后通过加密货币挖矿和网络钓鱼来获取经济利益	2024-04-19	保留
+14353		LazyKoala					2024-04-19		研究人员近期发现了一系列针对俄罗斯、白俄罗斯、哈萨克斯坦、乌兹别克斯坦、吉尔吉斯斯坦、塔吉克斯坦和亚美尼亚政府、金融、医疗和教育部门的攻击。经关联分析，目前暂无法将该活动与已知威胁组织建立联系，研究人员因此将其命名为"Lazy Koala"	2024-04-19	保留
+14356		���۹�					2024-04-19			2024-07-19	删除
+14380		Ħڭ��					2024-04-19			2024-07-19	删除
+14389		����					2024-04-19			2024-07-19	删除
+14390		FaCai					2024-04-23		在分析过程中科恩实验室分析人员发现，该类木马在与C2地址进行通信时，往往使用6666或8888端口，并且加密后的数据也存在很多"6666"字符串，特别是在对数据进行定位时使用了字符串"FaCai2024"，因此将该团伙命名为“FaCai”。	2024-04-23	保留
+14450		������					2024-04-23			2024-07-19	删除
+14459	STORM-1849,STORM1849	UAT4356					2024-04-26		研究人员发现了一个以前未知的攻击者，现在追踪为 UAT4356，微软威胁情报中心追踪为 STORM-1849。该攻击者使用定制工具，表现出对间谍活动的明确关注以及对其目标设备的深入了解，这是成熟的国家资助攻击者的标志	2024-04-26	保留
+14462		CoralRaider					2024-04-26		Cisco Talos研究团队4月4日发布的博文称，他们发现了一个新的威胁行为者，将其命名为“CoralRaider”，Talos认为该威胁行为者源自越南并具有经济动机。CoralRaider至少自2023 年以来一直在运营，目标是多个亚洲和东南亚国家的受害者	2024-04-26	保留
+15365		FatalRat					2024-05-06			2024-07-19	删除
+15371	Muddling Meerkat	MuddlingMeerkat					2024-05-07		Muddling Meerkat 通过 DNS 进行主动操作，创建大量广泛分布的查询，随后使用开放 DNS 解析器通过互联网传播。他们的行动与中国和中国参与者紧密相关的两个主题交织在一起：中国防火墙（GFW）和慢速滴注（或随机前缀）分布式拒绝服务（DDoS）攻击	2024-05-07	保留
+15373		SecretCrow					2024-05-11		SecretCrow语音网络钓鱼组织正在构建一系列冒充执法机构、金融机构的网络钓鱼页面，通过开发恶意Android应用程序来诱骗受害者访问钓鱼网站，进而安装用于金融欺诈的应用程序(包括SecretCalls Loader和SecretCalls)以从受害者那里窃取金钱	2024-05-11	保留
+15449		Storm1811					2024-05-17		Storm-1811是一个出于经济动机的网络犯罪组织，以部署Black Basta勒索软件而闻名。Quick Assist则是一款应用程序，使用户能够通过远程连接与其他人共享其Windows或macOS设备	2024-05-17	保留
+15452		Timitator					2024-05-17		Timitator(战术模仿者) 组织自2022年到2023年针对我国的能源、高校、科研机构及军工等行业进行攻击，主要采取鱼叉、nday等方式进行打点	2024-05-17	保留
+15455		PhantomCore					2024-05-17		PhantomCore是一个自2024年初以来针对俄罗斯开展攻击活动的网络间谍组织，目前主要通过钓鱼邮件分发携带恶意文件的压缩包。在2024年3月安全人员曾捕获到该组织分发的恶意压缩包，压缩包中携带一个诱饵pdf文档和一个可执行文件。pdf文档内容为俄罗斯核工业企业境内施工场地的转让和验收，攻击者利用WinRAR漏洞CVE-2023-38831，试图在用户打开PDF文件时，执行其准备的恶意代码	2024-05-17	保留
+15509		EarthHundun					2024-05-20		EarthHundun以针对亚太地区而闻名，现在采用更新的策略来传播感染和传播，该威胁组织因使用 Waterbear 恶意软件及其最新版本 Deuterbear 针对亚太地区而闻名	2024-05-20	保留
+15512		UTGQ010					2024-05-21		日常运营过程中发现客户收到了定向的中文钓鱼邮件，正文中逻辑清晰，使用互联网大厂的游戏招聘、AI技术等内容诱导目标公司的HR打开包含恶意lnk的加密附件，从而在内网中立足并寻求进一步的横向移动，经过短暂的调查我们将该团伙命名为UTG-Q-010,具有经济目的定向攻击团伙，攻击者位于东亚	2024-05-21	保留
+15515		VoidManticore					2024-05-22		Void Manticore 是隶属于情报与安全部 (MOIS) 的伊朗威胁组织。他们进行破坏性擦除攻击并结合影响力行动。该威胁行为者操纵着多个在线角色，其中最突出的是  在阿尔巴尼亚发动攻击的 国土正义组织和 在以色列发动攻击的业力组织	2024-05-22	保留
+15518		IkaruzRedTeam					2024-05-24		Ikaruz Red Team主要通过小规模DDoS攻击、钓鱼以及勒索攻击针对菲律宾实体。从该团伙实施的勒索软件活动可以看出，攻击者似乎正在利用泄露的LockBit构建器实施勒索攻击	2024-05-24	保留
+15521		Hellhound					2024-05-31		Hellhounds至少从2021年起就成功攻击了俄罗斯公司，其恶意软件开发则于2019年开始，攻击者似乎通过从承包商处泄露的SSH登录凭据，利用供应链攻击手段在目标基础设施中安装了Decoy Dog后门，并会将其工具伪装成合法的软件产品(如Positive Technologies)，同时利用著名的Sliver框架来使用C2服务器，最后再使用修改后的开源3snake实用程序来获取运行Linux的主机上的凭据	2024-05-31	保留
+15524	Unfading Sea Haze	UnfadingSeaHaze					2024-05-31		近期发现一个针对东南亚国家的未知黑客组织，该组织的最早攻击活动出现于2018年。由于时间过于久远，许多痕迹已无法恢复，安全人员目前仅确定攻击者会使用钓鱼攻击传播恶意lnk文件。攻击者采用在lnk文件的命令行中嵌入长注释以绕过安全检测	2024-05-31	保留
+15527	Sapphire Werewolf	SapphireWerewolf					2024-05-31		该组织主要对俄罗斯的教育、工业、信息技术、军工联合体和航空航天领域发起攻击。攻击者通过电子钓鱼邮件发起初始攻击，钓鱼邮件中携带恶意附件，当用户打开附件后，文件会在指定路径创建一个新文件并将其携带的资源写入其中	2024-05-31	保留
+15530	Moonstone Sleet,Storm-1789,Storm1789	MoonstoneSleet					2024-05-31		该组织主要以获取经济利益和实施间谍活动为目标，常用的攻击手段为部署自定义勒索软件、创建恶意游戏、建立虚假公司以及利用IT工作者。安全人员对该组织目前使用的TTP进行了公开。在2023年8月，该组织曾通过Linkedin、Telegram以及开发者自由职业平台传播开源PuTTY工具的木马版本	2024-05-31	保留
+15533	UAC-0188	UAC0188					2024-05-31		UAC-0188组织发起的网络钓鱼攻击事件，该事件涉及利用微软著名扫雷游戏的Python克隆代码版本来隐藏针对欧洲和美国金融组织的恶意脚本。具体来说，攻击者通过合法的远程管理软件SuperOps RMM获取了对乌克兰组织计算机的未经授权的访问权限	2024-05-31	保留
+15536		Ransomhub					2024-05-31		勒索组织Ransomhub声称攻陷并获取了西班牙Matadero de Gijón生物能源工厂的数据。该公司主要依靠ICS来满足生产和运营需求。Ransomhub除了在详细帖子中含糊其辞地声称加密并窃取了超过400 GB的数据，还声称可以访问控制生物能源工厂的监控和数据采集(SCADA)系统	2024-05-31	保留
+15539		͸������					2024-05-31			2024-07-19	删除
+15548	Hellhounds,Operation Lahat	地狱猎犬					2024-05-31		该APT组织至少从 2021 年开始就将目标对准俄罗斯公司，恶意软件的开发早在 2019 年 11 月就开始了	2024-07-19	保留
+15707		����Ѽ					2024-06-06			2024-07-19	删除
+15761	UAC-0195	UAC0195					2024-06-07		UAC-0195正采用双因素身份验证绕过技术，并通过获取流行社交媒体帐户(如SMS、Telegram、WhatsApp)的访问权限发起网络钓鱼攻击	2024-06-07	保留
+15764		UNC5537					2024-06-11		威胁行为者 UNC5537 以 Snowflake 实例为目标，专注于数据盗窃和勒索，利用弱身份验证和 VPN IP。Snowflake 客户应注意最近的通信，因为有超过 1,500 个组织成为目标。主动威胁搜寻和强大的安全措施对于防范 UNC5537 的复杂攻击至关重要。	2024-06-11	保留
+15767	UAT-4820,UAT4820	LilacSquid					2024-06-11		LilacSquid 专门针对美国的 IT 组织、欧洲的能源部门以及亚洲的制药公司。他们的一些策略与 Andariel 的策略重叠	2024-06-11	保留
+15769	UAC-0200,UAC0200	Vermin					2024-06-14		UAC-0200(又称Vermin)组织利用DarkCrystal RAT恶意程序对乌克兰公务员、军队和国防企业代表发起了定向网络攻击活动。据悉，UAC-0200组织与卢甘斯克人民共和国(LPR)地区有关，且其活动通常符合俄罗斯的利益，主要动机是从军事组织处窃取敏感信息	2024-06-14	保留
+15772	Commando Cat	CommandoCat					2024-06-14		因使用开源Commando项目生成无害容器而得名的"Commando Cat"组织正利用暴露的Docker远程API服务器来部署加密货币挖矿软件，并使用来自开源Commando项目的Docker镜像，以获取经济利益	2024-06-14	保留
+15775		DarkPeony					2024-06-14		名为DarkPeony的威胁组织在2024年5月下旬开始利用MSC文件发起针对性攻击活动：Operation ControlPlug，且此活动似乎主要针对缅甸、菲律宾、蒙古和塞尔维亚的军事和政府机构	2024-06-14	保留
+15782		VoidArachne					2024-06-21		一个新威胁组织"Void Arachne"在最近的一次活动中开始利用恶意Windows Installer(MSI)文件，并主要以中文人群以及更广泛的东亚社区为目标	2024-06-21	保留
+15785	Cosmic Leopard	CosmicLeopard					2024-06-21		该组织与另一个巴基斯坦APT组织Transparent Tribe在TTP上存在重叠，但目前未有足够的证据将两者联系在一起，研究人员因此将其追踪为"Cosmic Leopard"。"Cosmic Leopard专注于间谍监视活动，似乎多年来持续针对属于国防、政府和相关技术领域的印度实体和个人。	2024-06-21	保留
+15788		ExCobalt					2024-06-21		该团伙至少从2016年开始活跃，主要针对俄罗斯从事间谍活动。此次被发现的未知后门被命名为GoRed	2024-06-21	保留
+15791		UTA0137					2024-06-24		2024 年，巴基斯坦威胁行为者 UTA0137 发起了一场复杂的网络间谍活动，引入了一种名为 DISGOMOJI 的高级恶意软件。该恶意软件使用 Golang 开发，专为 Linux 系统设计，专门针对印度政府实体	2024-06-24	保留
+15794	Velvet Ant	VelvetAnt					2024-06-24		Velvet Ant 是一个高度复杂的威胁行为者，旨在长期保持对目标网络的访问以进行间谍活动。一种持久性方法是利用暴露在互联网上的旧式 F5 BIG-IP 设备，攻击者利用该设备作为内部命令和控制 (C&C) 服务器。	2024-06-24	保留
+15797		UNC3886					2024-06-24		UNC3886 利用 Fortinet 和 VMware 系统中的漏洞来获取访问权限。为了维持长期访问，该组织在网络设备、虚拟机管理程序和虚拟机中使用了多层持久性。他们的攻击集中在北美、东南亚、大洋洲和其他地区的实体，包括政府、电信、技术、航空航天、国防和能源等行业	2024-06-24	保留
+15800		˫βЫ					2024-06-24			2024-07-19	删除
+15806		Boolka					2024-06-25		Boolka 活动的发现揭示了网络威胁的演变格局。从 2022 年的机会性 SQL 注入攻击到开发自己的恶意软件交付平台和 BMANAGER 等木马，Boolka 的行动表明该组织的策略随着时间的推移变得更加复杂。将恶意 JavaScript 代码段注入易受攻击的网站以进行数据泄露，然后使用 BeEF 框架进行恶意软件交付，反映了攻击者能力的逐步发展	2024-06-25	保留
+15809		ReaverBits					2024-06-28		安全人员发现存在一批新的攻击者针对俄罗斯各个公司和部门发送恶意电子邮件。安全人员将该组织命名为ReaverBits	2024-06-28	保留
+15812		SneakyChef					2024-06-28		SneakyChef是一个新威胁组织，早在2023年8月就开始使用SugarGh0st恶意软件针对韩国和乌兹别克斯坦用户，现在目标已遍布欧洲、中东、非洲和亚洲国家	2024-06-28	保留
+15815		��β��					2024-06-28			2024-07-19	删除
+15818		VolcanoDemon					2024-07-05		该勒索组织通过从网络收集的通用管理凭据后成功锁定了Windows工作站和服务器，最终利用名为LukaLocker的加密器样本实现了双重勒索操作	2024-07-05	保留
+15821		UnfurlingHemlock					2024-07-05		该组织疑似与东欧国家存在关联，无固定攻击目标，主要目的为大批量传播恶意软件以牟取经济利益	2024-07-05	保留
+15824		���黨					2024-07-08			2024-07-19	删除
+15830		Ф��					2024-07-08			2024-07-19	删除
+15833		�����ж�					2024-07-08			2024-07-19	删除
+15956		VasyGrek					2024-07-12		VasyGrek组织至少自2016年以来一直在攻击俄罗斯公司的财务员工。该组织常借助代表会计部门发送的有关财务主题(如"对账法"、"付款令"、"1C")的电子邮件获取初始感染权限，并会在活动期间使用木马化的合法远程系统管理工具RMS，PureCoder开发的恶意软件(PureCrypter、PureLogs等)，以及其他商用恶意软件，如MetaStealer、WarzoneRAT、RedLine Stealer等	2024-07-12	保留
+15959		CloudSorcerer					2024-07-12		安全人员发现了一种针对俄罗斯联邦政府的新型黑客组织，并将其命名为CloudSorcerer。攻击活动中，攻击者会在获得受害主机的初始访问权限后，手动执行一个恶意软件。该恶意软件是一个C语言编写的PE文件	2024-07-12	保留
+15962		BlackSuit					2024-07-12		BlackSuit勒索团伙于2023年5月首次出现，主要攻击医疗保健、教育、信息技术、政府、零售和制造业的实体。该团伙没有公共附属机构，但似乎与Royal勒索软件团伙有着密切的联系	2024-07-12	保留
+15964	TAG-100	TAG100					2024-07-19		TAG-100 发起了疑似网络间谍活动，目标是全球政府和私营部门组织。TAG-100 利用面向互联网的设备并使用 Go 后门 Pantegana 等开源工具。该活动入侵了两个亚太政府间组织，并针对多个外交和贸易实体	2024-07-19	保留
+15967		NullBulge					2024-07-19		黑客组织NullBulge近日声称成功入侵迪士尼的内部通讯平台，并窃取了超过1TB的数据，正在将这些信息泄露到网上，以抗议迪士尼对艺术家的“反艺术”立场。该组织表示，其行动旨在“保护艺术家的权利，并确保他们的工作获得公平的报酬	2024-07-19	保留
+15970		VoidBanshee					2024-07-19		Void Banshee 使用 CVE-2024-38112 作为攻击链的一部分，该组织针对北美、欧洲和东南亚地区进行信息窃取和经济利益。此零日攻击链的最终载荷是 Atlantida 窃取程序	2024-07-19	保留
+15973		RevolverRabbit					2024-07-22		专注于 DNS 的安全厂商 Infoblox 的研究人员发现，一个名为 Revolver Rabbit 的网络犯罪团伙注册了 50 多万个域名，通过散布一种叫 XLoader（Formbook 的后继者）的信息窃取恶意软件，收集 Windows 和 macOS 系统的敏感信息或对其执行恶意代码	2024-07-22	保留
+16102		��ˮ					2024-07-22			2024-07-29	删除
+16153	UAC-0057	UAC0057					2024-07-25		UAC-0057 组织的活动激增，该组织分发带有宏的文档，旨在启动 PICASSOLOADER 恶意软件计算机上的程序，旨在将数据传送到 Cobalt Strike Beacon 受害者的计算机上	2024-07-25	保留
+16165		AtlantidaStealer					2024-07-25			2024-07-29	删除
+16166	GXC Team	GXCTeam					2024-07-26		Group-IB 发现了一个之前不为人知的西班牙语犯罪集团 GXC Team，该集团运营着一个复杂的人工智能驱动的网络钓鱼即服务平台。GXC Team 针对西班牙银行的用户，采用了非常规策略，对该地区构成了重大威胁	2024-07-26	保留
+16169		CyberCartel					2024-07-26		网络犯罪集团 Cyber​​Cartel 一直活跃于拉丁美洲，最近又出现了一种新的威胁。Cyber​​Cartel 并未开发自己的恶意软件，而是使用现有恶意软件家族的恶意软件即服务	2024-07-26	保留
+16172	Head Mare	HeadMare					2024-07-29		根据所使用的恶意软件、妥协指标以及攻击者策略、技术和程序，可以假设名为 Head Mare 的黑客组织是 PhantomDL 攻击的幕后黑手	2024-07-29	保留
+16175		HackNeT					2024-07-29		黑客组织人民网络军和 HackNeT 在其 Telegram 频道的帖子中分享了声称对多个法国网站进行 DDoS 攻击的截图，以及其域名停机监控网站“check-host.net”的截图，以支持他们成功进行 DDoS 攻击的说法	2024-07-29	保留
+16178	Stargazer Goblin	StargazerGoblin					2024-07-29		Check Point Research正在追踪这项服务背后的威胁组织Stargazer Goblin。该组织提供、运营和维护Stargazers Ghost Network，并通过其 GitHub Ghost 帐户分发恶意软件和链接。 该网络传播了各种恶意软件家族，包括Atlantida Stealer、Rhadamanthys、RisePro、Lumma Stealer 和 RedLine	2024-07-29	保留
+16181		Handala					2024-07-29		该威胁行为者于 2023 年 12 月出现，并于当月 18 日在 X 上发布了第一篇帖子。他们的重点是以色列实体以及与以色列实体互动的实体。从一开始，威胁行为者就标记了以色列国家网络局 (INCD)，以引起注意并嘲讽。根据以色列官方网站，一家未公开的商业公司将该组织归咎于伊朗	2024-07-29	保留
+16196		���Գ�					2024-07-30			2024-08-01	删除
+16205		BerBeroka					2024-07-31		实际上 BerBeroka 与 DRBControl[2] 和 TAG33 等组织同源，针对我国金融、医院医疗、游戏等行业进行入侵，受害规模远超我们之前披露的 APT-Q-29[3] 和 BlackTech[4]，这种类型的攻击与微信群投递 XXX.exe 的黑产不同，外包攻击者本身具备非常丰富的海内外渗透经验，在涉及到与自己金融收入有关的活动中展示出的进攻欲望和进攻强度远超一般的境外 APT 组织	2024-07-31	保留
+16208		UNC4393					2024-08-05		UNC4393 是一个以经济为目的的威胁集群，也是 BASTA 勒索软件的主要用户，自 2022 年中期开始跟踪，但根据 BASTA DLS 上的活动，可能自 2022 年初开始活跃。该组织充分利用了通过 UNC2633 和 UNC2500 QAKBOT 僵尸网络感染获得的初始访问权限来部署 BASTA 勒索软件	2024-08-05	保留
+16211		Cyber​​Cartel					2024-08-05		网络犯罪集团 Cyber​​Cartel 一直活跃于拉丁美洲，最近又出现了一种新的威胁。Cyber​​Cartel 并未开发自己的恶意软件，而是使用现有恶意软件家族的恶意软件即服务	2024-08-05	保留
+16214		BloodyWolf					2024-08-07		自 2023 年底以来，Bloody Wolf 威胁组织一直使用 STRRAT 恶意软件攻击哈萨克斯坦的组织，该恶意软件可在地下论坛上购买。他们采用复杂的网络钓鱼策略，冒充政府机构来提供恶意 JAR 文件。安装后，STRRAT 会窃取敏感数据并允许远程控制受感染的系统	2024-08-07	保留
+16217	Evasive Panda,StormCloud	StormBamboo					2024-08-09		StormBamboo 组织通过入侵 ISP 并使用 DNS 投毒将软件更新重定向到恶意服务器，在 macOS 和 Windows 系统上安装 MACMA 和 POCOSTICK 恶意软件，从而实施了一次复杂的攻击。该恶意软件促进了数据泄露，并安装了隐秘的浏览器扩展程序以实现持久访问。该攻击利用了不安全的更新机制，凸显了对强大的完整性检查和增强的 DNS 安全性的需求	2024-08-09	保留
+16220		UNC5330					2024-08-09		2024 年 4 月，针对台湾、香港和越南的三个组织部署了一个名为 Grager 的新后门。它使用 Graph API 与托管在 Microsoft OneDrive 上的 C&C 服务器进行通信。该活动初步与一名疑似中国威胁行为者有关，该行为者被追踪为UNC5330	2024-08-09	保留
+16222		StressedPungsan					2024-08-12		近期，Datadog检测到npm用户"nagasiren978"于2024年7月7日向npmjs.org上的npm注册表发布了两个软件包("harthat-hash"、"harthat-api")，它们实际上包含从攻击者C2服务器安装其它恶意软件的代码。据悉，该C2服务器主要提供恶意批处理脚本和一个DLL，目标是Windows用户，其最终下载的有效负载使用rundll32.exe二进制文件加载到内存中的DLL。经进一步分析，研究人员发现活动使用的TTP与朝鲜Storm-1789组织密切相关，并将其内部追踪为Stressed Pungsan	2024-08-12	保留
+16226		EarthBaku					2024-08-14		Earth Baku（与 APT41 相关的威胁行为者）已将其活动范围从印度太平洋地区扩展到欧洲、中东和非洲，目标是意大利、德国、阿联酋和卡塔尔等国家，并怀疑在格鲁吉亚和罗马尼亚存在威胁活动	2024-08-14	保留
+16228		GanbRun					2024-08-16		该团伙于2022年3月被微步情报局首次披露，至今仍处于高活跃状态，已形成了成熟的钓鱼诈骗流程。他们常常伪装为“财务”、“人力”等角色，以社保、公积金、个人所得税、劳动补贴等福利补贴为诱饵，大量发送携带二维码的钓鱼邮件。受害者在扫描这些二维码后，就会跳转到伪造的政府网站或者银行卡信息收集页面，进而导致银行卡、手机号、密码和身份证号等敏感个人信息甚至银行存款被盗	2024-08-16	保留
+16250		CrazyEvil					2024-08-19		最新情报显示，这个可能与俄罗斯存在联系的“Crazy Evil”组织，正通过操纵谷歌广告系统，将用户导向位于smokecoffeeshop[.]com的伪造Loom站点。此站点在视觉上与正版Loom网站高度相似，任何从此站点下载的内容实则都是AMOS窃取程序的载体	2024-08-19	保留
+16253		coldwastrel					2024-08-21			2024-08-27	删除
+16271		组织					2024-08-22			2024-08-23	删除
+16273	UAT-5394	UAT5394					2024-08-26		UAT-5394 实际上是 Kimsuky（或 Kimsuky 内部的一个子组织），他们正在用 MoonPeak 取代 QuasarRAT。（我们观察到 UAT-5394 在最终采用 XenoRAT 和 MoonPeak 之前积极设置和操作 QuasarRAT C2 服务器。） 或者，UAT-5394 是朝鲜 APT 机制中的另一个组织，其从 Kimsuky 借用了 TTP 和基础设施模式	2024-08-26	保留
+16274		60					2024-08-30			2024-09-04	删除
+16277	NULL	gamaredon1	NULL	NULL	NULL	NULL	2024-08-30	NULL	NULL	2024-08-30	待处置
+16289		啊大大是的					2024-09-04			2024-09-04	删除
+16301		Mirai					2024-09-05			2024-09-09	删除
+16304		LockBit					2024-09-05			2024-09-09	删除
+16307		WannaMine					2024-09-05			2024-09-09	删除
+16316		Marcher					2024-09-05			2024-09-09	删除
+16331		Emotet					2024-09-05			2024-09-09	删除
+16337		RedGoBot					2024-09-05			2024-09-09	删除
+16358		Orchard					2024-09-05			2024-09-09	删除
+16367		NicoMiner					2024-09-05			2024-09-09	删除
+16397		GootLoader					2024-09-05			2024-09-09	删除
+16448		道贼					2024-09-05			2024-09-09	删除
+16505		Phobos					2024-09-05			2024-09-09	删除
+16622	Citrine Sleet,Gleaming Pisces	CitrineSleet					2024-09-06		微软网络安全研究人员发现了一个 Chromium 引擎中的零日漏洞，该引擎为 Chrome 等浏览器提供支持。这个漏洞被一个名为 Citrine Sleet 的朝鲜黑客组织利用，专门针对加密货币用户。Citrine Sleet 使用了名为 FudModule 的 rootkit 恶意软件，通过创建虚假的加密货币交易平台网站，诱使用户下载恶意软件或武器化的加密钱包，从而获得远程代码执行权限，进而窃取受害者的加密资产	2024-09-13	保留
+16625		TIDRONE					2024-09-11		TIDRONE 是一个使用中文的威胁行为者，它积极针对台湾的无人机制造和卫星行业，专注于间谍活动和情报收集。这个复杂的网络间谍组织部署了先进的恶意软件，包括 CXCLNT 和 CLNTEND	2024-09-11	保留
+16628		DragonRank					2024-09-14		DragonRank 是一个新近发现的黑客组织，主要针对亚洲和欧洲国家。他们利用 Web 应用程序中的漏洞来部署 Web Shell 和 PlugX 和 BadIIS 等恶意软件，从而收集系统信息并建立持久控制。他们的主要目标是操纵托管在受感染服务器上的第三方诈骗网站的搜索引擎优化 (SEO) 排名，从而提高这些恶意网站的可见性	2024-09-14	保留
+16631	Hunters International	HuntersInternational					2024-09-14			2024-09-18	保留
+16661		predator					2024-09-18			2024-09-23	删除
+16805		kun3					2024-09-20			2024-09-23	删除
+16871	Vanilla Tempest,DEV-0832,Vice Society,DEV0832,Storm-0494,Storm0494	VanillaTempest					2024-09-23		Vanilla Tempest，又名 Vice Society，是一个网络威胁行为者，使用 INC 勒索软件积极针对医疗保健和教育等行业。他们通过 Storm-0494 部署的 Gootloader 恶意软件进入，并使用 AnyDesk 和 MEGA 等工具进行横向移动和数据泄露。他们的机会主义攻击凸显了持续的网络安全挑战，特别是对于医疗保健组织而言	2024-09-23	保留
+16874	Earth Baxia	EarthBaxia					2024-09-23		威胁行为者 Earth Baxia 使用鱼叉式网络钓鱼电子邮件和 GeoServer 漏洞 CVE-2024-36401 攻击了台湾的一个政府组织，并且可能攻击了亚太地区 (APAC) 的其他国家	2024-09-23	保留
+16955		37					2024-09-23			2024-09-24	删除
+17123		23					2024-09-23			2024-09-24	删除
+17135	Rast gang	Rastgang					2024-09-25		Rast gang 是一个快节奏的勒索运营商，不追求在目标目标内网中进行横向移动，大部分情况下的只要有服务器的权限就立马释放 Rast 勒索，对边界服务器的安全防护提出了较大的挑战。其最早在国内的活跃时间与 Rast勒索在国内出现的时候相吻合，从 2023 年 12 月至今投递了三个版本的 Rast 勒索软件，没有发现该团伙投递其他勒索家族的趋势，攻击者通过 RDP 爆破和 Nday 组合的方式入侵边界服务器	2024-09-25	保留
+17147	Outrider Tiger,Fishing Elephant	SloppyLemming					2024-09-27		SloppyLemming 是Cloudforce One为该威胁行为者提供的代号，与 CrowdStrike 跟踪的对手OUTRIDER TIGER一致。该行为者主要依赖开源对手模拟框架，例如 Cobalt Strike、Havoc 等。根据 Cloudflare 的知名度，该行为者主要针对亚洲地区。巴基斯坦是 SloppyLemming 的主要目标；然而，该行为者也经常针对孟加拉国、印度尼西亚、斯里兰卡、中国和尼泊尔。目标部门主要包括巴基斯坦境内的政府实体。	2024-10-08	保留
+17150		UNC1860					2024-09-27		UNC1860 是一个持续性且机会主义的伊朗国家支持的威胁行为者，可能与伊朗情报和安全部 (MOIS) 有关联。UNC1860 的一个关键特征是其收集了专门的工具和被动后门，Mandiant 认为这些工具和后门支持其多个目标，包括其作为可能的初始访问提供商的角色以及其获得高优先级网络（例如整个中东地区的政府和电信领域的网络）的持续访问的能力	2024-09-27	保留
+17153	Marko Polo	MarkoPolo					2024-09-27		Marko Polo 运营着一个庞大的诈骗网络，利用复杂的信息窃取恶意软件针对全球个人和企业。通过冒充在线游戏、虚拟会议软件和加密货币平台中的知名品牌，Marko Polo 已成功发起 30 多种不同的诈骗，感染了全球数以万计的设备	2024-09-27	保留
+17450		Lumma					2024-10-08			2024-10-09	删除
+17468		KingMiner					2024-10-08			2024-10-09	删除
+17489		Satori					2024-10-08			2024-10-09	删除
+17501		BuleHero					2024-10-08			2024-10-09	删除
+17507		Hive					2024-10-08			2024-10-09	删除
+17516		CobaltStrike					2024-10-08			2024-10-09	删除
+17519		TrickBot					2024-10-08			2024-10-09	删除
+17522		Panda					2024-10-08			2024-10-09	删除
+17531		BlackMoon					2024-10-08			2024-10-09	删除
+17534		Scar					2024-10-08			2024-10-09	删除
+17543		Denonia					2024-10-08			2024-10-09	删除
+17573	PYSA	Mespinoza					2024-10-08		Mespinoza 勒索軟件團伙也以 PYSA 為別名，因其不尋常的操作方法而成為人們關注的焦點。  該組織以大多數其他勒索軟件機構的方式滲透網絡，但一旦進入，Mespinoza 黑客就會搜索文檔、文件或其他可能暗示黑客受害者在某種程度上知道非法活動的證據。然後，該組織利用這些信息作為槓桿，向受害者勒索巨額贖金	2024-10-09	保留
+17582		GuardMiner					2024-10-08		黑客团伙GuardMiner利用ElasticSearch远程命令执行漏洞（CVE-2014-3120）入侵云上主机进行门罗币挖矿，根据智云盾威胁情报中心检测的数据显示，针对云上主机的恶意挖矿行为呈现上升趋势，最常见的挖矿币种就是门罗币	2024-10-09	保留
+17588		Amadey					2024-10-08			2024-10-09	删除
+17615		LeeHozer					2024-10-08			2024-10-09	删除
+17633		BillGates					2024-10-08			2024-10-09	删除
+17648		Nokoyawa					2024-10-08			2024-10-09	删除
+17651		DreamBus					2024-10-08			2024-10-09	删除
+17678		Matanbuchus					2024-10-08			2024-10-09	删除
+17687		Cactus					2024-10-08		Cactus于2023年3月开始首次行动，截止2024年5月底共发动了186次勒索行动，平均每个月就有超10名受害者。在一项关于勒索软件增长的研究中，SANS 研究所将Cactus追踪为当年增长最快的威胁行为者之一。这项研究还发现，2023年所有勒索软件攻击中有17%是由2022年不存在的新团体进行的 ————————————————                              版权声明：本文为博主原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接和本声明。	2024-10-11	保留
+17696		Quantum					2024-10-08			2024-10-09	删除
+17939		TA444				朝鲜	2024-10-09		TA444，朝鲜国家支持的威胁行为者，利用名为“SpectralBlur”的新型恶意软件针对macOS用户进行攻击。这款定制工具是该高级持续性威胁（APT）组织不断生成的专有恶意软件系列中的最新产品，这一特点使其与其他朝鲜支持的威胁有所区别。根据Proofpoint威胁研究员Greg Lesnewich的说法，TA444于8月推出了SpectralBlur恶意软件	2024-10-09	保留
+17945		OriginLogger					2024-10-12			2024-10-14	删除
+17948		Fodcha					2024-10-12			2024-10-14	删除
+17954		Manjusaka					2024-10-12			2024-10-14	删除
+17960		Remcos					2024-10-12			2024-10-14	删除
+17966		贪吃蛇					2024-10-12			2024-10-14	删除
+17978		Chalubo					2024-10-12			2024-10-14	删除
+17993		FBot					2024-10-12			2024-10-14	删除
+18005		CeranaKeeper					2024-10-16		CeranaKeeper 是一个与中国结盟的威胁行为者，从事大规模数据泄露，特别是针对东南亚的政府机构。该组织自 2022 年以来一直活跃，通过重新利用以前归因于 APT 组织 Mustang Panda 的组件来改进其策略，展示了其方法论的明显适应性	2024-10-16	保留
+18008		APT60					2024-10-16			2024-10-17	删除
+18026	Water Makara	WaterMakara					2024-10-16		该团体以巴西的企业为目标，使用模糊的 JavaScript 部署银行恶意软件以绕过安全防御。	2024-10-16	保留
+18056		Hive0147					2024-10-17		Hive0147 是拉丁美洲区最活跃的威胁组织之一，大规模攻击员工收件箱，主要关注网络钓鱼和恶意软件传播	2024-10-17	保留
+18068	Larva-24009	Larva24009					2024-10-18		Larva-24009攻击者正在针对国内用户进行鱼叉式网络钓鱼攻击。 Larva-24009 攻击者至少从 2023 年起就开始活跃，主要使用针对海外用户的鱼叉式网络钓鱼攻击。不过，近日经证实，国内用户中也出现了感染病例	2024-10-25	保留
+18071	UAT-5647	UAT5647					2024-10-18		AT-5647因其与俄罗斯语系的敌对势力有关联而被人们所知。长期以来，UAT-5647一直以其多动机攻击而闻名，从间谍活动到勒索软件部署。最近的攻击趋势表明，这个组织越来越注重建立长期访问权限来泄露敏感数据，然后再转向勒索软件操作	2024-10-25	保留
+18107	Crypt Ghouls	CryptGhouls					2024-10-21		一个新组织利用勒索软件针对俄罗斯企业和政府机构。对该组织活动的进一步调查表明，该组织与目前针对俄罗斯的其他组织存在关联。我们发现，不仅攻击指标和工具存在重叠，而且策略、技术和程序 (TTP) 也存在重叠。此外，基础设施在攻击中也存在部分重叠	2024-10-21	保留
+18110		icepeony					2024-10-22			2024-10-22	删除
+18116	TAG-70	TAG70				俄罗斯	2024-10-22		与俄罗斯有关联的攻击者TAG-70以乌克兰、格鲁吉亚和波兰的邮件服务器为目标，旨在收集有关欧洲政治和军事活动的情报，特别是与乌克兰战争有关的情报。由于与俄罗斯有关的TAG-70组织针对欧洲政府，80个组织的电子邮件服务器遭到破坏	2024-10-23	保留
+18119		VietnameseThreatActor					2024-10-22			2024-10-23	删除
+18125		黑猫					2024-10-22		自7月底开始，仿冒了谷歌浏览器、搜狗输入法、WPS办公软件等常见软件和各种VPN、上网加速器，以及各个虚拟货币行情交易平台等，累计仿冒网站达20余个，有数据可查的攻击已有数十万次，被攻击行业领域极其广泛，国家有关部门、高校和研究机构、汽车行业、央国企等多个领域均有大量受害单位。该攻击团伙所使用的域名资产中含有大量“heimao-*(三位数字).com”特征域名	2024-10-22	保留
+18227		Telekopye					2024-10-23			2024-10-23	删除
+18236	Lying Pigeon	LyingPigeon					2024-10-23		APT-UNK2 组织与 Lying Pigeon 有很大重叠，还负责在波兰传播信息窃取程序并建立虚假网站	2024-10-25	保留
+18248	SNBlackMeta	BlackMeta					2024-10-24		BlackMeta，又名SN_BlackMeta，曾声称对以色列，阿联酋和美国机构的攻击负责，该组织将其攻击定性为对巴勒斯坦人和穆斯林遭受不公正待遇的报复	2024-10-25	保留
+18251	Vigorish Viper	VigorishViper					2024-10-25		该行为者被称为“Vigorish Viper”，开发了高度复杂的软件和基础设施。他们使用多层流量分配系统 (TDS) 和 JavaScript 来创建保护门，通过监视鼠标移动和评估 IP 地址来广泛地对用户进行指纹识别。最先进的软件版本是为中国品牌保留的。Vigorish Viper 控制着超过 170,000 个域名，并运营着与香港和中国相关的恶意基础设施	2024-10-25	保留
+18254		UNC5820					2024-10-27		UNC5820 准备并窃取了被利用的 FortiManager 管理的 FortiGate 设备的配置数据。这些数据包含受管设备的详细配置信息以及用户及其 FortiOS256 哈希密码。UNC5820 可以使用这些数据进一步入侵 FortiManager，横向移动到受管 Fortinet 设备，并最终瞄准企业环境	2024-10-28	保留
