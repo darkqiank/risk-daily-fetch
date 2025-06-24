@@ -1,1 +1,0 @@
-CREATE UNIQUE INDEX `t_blogs_link_unique` ON `t_blogs` (`link`);
