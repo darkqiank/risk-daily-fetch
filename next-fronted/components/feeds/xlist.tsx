@@ -26,11 +26,11 @@ const TweetList = () => {
       const response = await fetch(url);
       const jsonData = await response.json();
 
-      const total = (jsonData as any).totalPages;
+      // const total = (jsonData as any).totalPages;
       const twitters = Object.values((jsonData as any).data) as any;
 
       setData(twitters);
-      setTotal(total);
+      setTotal((jsonData as any).totalRecords);
     } catch (err) {
       console.error("Error fetching data:", err);
     }
@@ -111,6 +111,7 @@ const TweetList = () => {
         <Pagination
           current={page}
           defaultCurrent={1}
+          pageSize={20}
           showSizeChanger={false}
           total={total}
           onChange={handlePageChange}

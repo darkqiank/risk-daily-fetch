@@ -13,6 +13,8 @@ import {
   DatePicker,
   Select,
   Input,
+  Modal,
+  Tooltip,
 } from 'antd';
 import {
   ReloadOutlined,
@@ -24,6 +26,7 @@ import {
   CloseCircleOutlined,
   ClockCircleOutlined,
   ExclamationCircleOutlined,
+  InfoCircleOutlined,
 } from '@ant-design/icons';
 import type { ColumnsType } from 'antd/es/table';
 import type { TablePaginationConfig } from 'antd/es/table';
@@ -92,7 +95,13 @@ const FlowRuns: React.FC = () => {
     total: 0,
   });
   const [selectedDeployment, setSelectedDeployment] = useState<string>('');
+  const [selectedState, setSelectedState] = useState<string>('');
   const [dateRange, setDateRange] = useState<[dayjs.Dayjs | null, dayjs.Dayjs | null] | null>(null);
+  
+  // Modal state for message display
+  const [messageModalVisible, setMessageModalVisible] = useState(false);
+  const [currentMessage, setCurrentMessage] = useState<string>('');
+  const [currentMessageTitle, setCurrentMessageTitle] = useState<string>('');
 
   // 获取部署列表
   const fetchDeployments = async () => {
@@ -127,7 +136,9 @@ const FlowRuns: React.FC = () => {
           // 只获取有部署的 flow runs
           deployment_id: {
             is_null_: false
-          }
+          },
+          state: {
+          },
         },
         sort: 'START_TIME_DESC',
         offset: (page - 1) * limit,
@@ -138,6 +149,13 @@ const FlowRuns: React.FC = () => {
       if (selectedDeployment) {
         filterBody.flow_runs.deployment_id = {
           any_: [selectedDeployment]
+        };
+      }
+
+      // 添加状态筛选
+      if (selectedState) {
+        filterBody.flow_runs.state.name = {
+          any_: [selectedState]
         };
       }
 
@@ -197,24 +215,101 @@ const FlowRuns: React.FC = () => {
   // 重置筛选
   const handleReset = () => {
     setSelectedDeployment('');
+    setSelectedState('');
     setDateRange(null);
     fetchFlowRuns(1, pagination.pageSize);
   };
 
-  // 状态渲染
-  const renderState = (stateType: string, stateName: string) => {
+  // 格式化JSON显示
+  const formatMessageContent = (messageText: string) => {
+    if (!messageText) return '无消息内容';
+    
+    try {
+      const parsed = JSON.parse(messageText);
+      return (
+        <pre style={{ 
+          whiteSpace: 'pre-wrap', 
+          wordBreak: 'break-word',
+          background: '#f5f5f5',
+          padding: '12px',
+          borderRadius: '4px',
+          fontSize: '12px',
+          lineHeight: '1.4'
+        }}>
+          {JSON.stringify(parsed, null, 2)}
+        </pre>
+      );
+    } catch (e) {
+      return (
+        <div style={{ 
+          whiteSpace: 'pre-wrap', 
+          wordBreak: 'break-word',
+          lineHeight: '1.6'
+        }}>
+          {messageText}
+        </div>
+      );
+    }
+  };
+
+  // 显示消息弹窗
+  const showMessageModal = (messageText: string, flowRunName: string) => {
+    setCurrentMessage(messageText || '无消息内容');
+    setCurrentMessageTitle(`Flow Run: ${flowRunName}`);
+    setMessageModalVisible(true);
+  };
+
+  // 解析CompletedWithFaild状态的消息
+  const parseCompletedWithFaildMessage = (messageText: string) => {
+    try {
+      const parsed = JSON.parse(messageText);
+      const success = parsed.success || 0;
+      const failed = parsed.failed || 0;
+      return { success, failed };
+    } catch (e) {
+      return { success: 0, failed: 0 };
+    }
+  };
+
+  // 状态渲染 - 基于 state_name 进行处理
+  const renderState = (stateName: string, stateType: string, messageText?: string) => {
     const stateConfig: Record<string, { color: string; icon: React.ReactNode; text: string }> = {
-      'COMPLETED': { color: 'green', icon: <CheckCircleOutlined />, text: '已完成' },
-      'RUNNING': { color: 'blue', icon: <PlayCircleOutlined />, text: '运行中' },
-      'SCHEDULED': { color: 'orange', icon: <ClockCircleOutlined />, text: '已调度' },
-      'PENDING': { color: 'gold', icon: <ClockCircleOutlined />, text: '等待中' },
-      'FAILED': { color: 'red', icon: <CloseCircleOutlined />, text: '失败' },
-      'CANCELLED': { color: 'default', icon: <PauseCircleOutlined />, text: '已取消' },
-      'CRASHED': { color: 'volcano', icon: <ExclamationCircleOutlined />, text: '崩溃' },
-      'PAUSED': { color: 'purple', icon: <PauseCircleOutlined />, text: '暂停' },
+      // 基于 state_name 的配置
+      'Completed': { color: 'green', icon: <CheckCircleOutlined />, text: '已完成' },
+      'Running': { color: 'blue', icon: <PlayCircleOutlined />, text: '运行中' },
+      'Scheduled': { color: 'orange', icon: <ClockCircleOutlined />, text: '已调度' },
+      'Pending': { color: 'gold', icon: <ClockCircleOutlined />, text: '等待中' },
+      'Failed': { color: 'red', icon: <CloseCircleOutlined />, text: '失败' },
+      'Cancelled': { color: 'default', icon: <PauseCircleOutlined />, text: '已取消' },
+      'Crashed': { color: 'volcano', icon: <ExclamationCircleOutlined />, text: '崩溃' },
+      'Paused': { color: 'purple', icon: <PauseCircleOutlined />, text: '暂停' },
+      'Retrying': { color: 'blue', icon: <PlayCircleOutlined />, text: '重试中' },
+      'Late': { color: 'orange', icon: <ClockCircleOutlined />, text: '延迟' },
+      'AwaitingRetry': { color: 'orange', icon: <ClockCircleOutlined />, text: '等待重试' },
+      'Cancelling': { color: 'default', icon: <PauseCircleOutlined />, text: '取消中' },
+      'Cached': { color: 'green', icon: <CheckCircleOutlined />, text: '已缓存' },
+      'RolledBack': { color: 'green', icon: <CheckCircleOutlined />, text: '已回滚' },
+      // 自定义状态
+      'CompletedWithFaild': { color: 'green', icon: <ExclamationCircleOutlined />, text: '部分完成' },
     };
 
-    const config = stateConfig[stateType] || { color: 'default', icon: <ClockCircleOutlined />, text: stateType };
+    const config = stateConfig[stateName] || { color: 'default', icon: <ClockCircleOutlined />, text: stateName };
+    
+    // 特殊处理 CompletedWithFaild 状态
+    if (stateName === 'CompletedWithFaild' && messageText) {
+      const { success, failed } = parseCompletedWithFaildMessage(messageText);
+      
+      return (
+        <Space size={4}>
+          <Tag color="green" style={{ fontSize: '11px', padding: '1px 6px' }}>
+            成功: {success}
+          </Tag>
+          <Tag color="red" style={{ fontSize: '11px', padding: '1px 6px' }}>
+            失败: {failed}
+          </Tag>
+        </Space>
+      );
+    }
     
     return (
       <Tag icon={config.icon} color={config.color}>
@@ -246,6 +341,27 @@ const FlowRuns: React.FC = () => {
   const goToDeploymentDetail = (deploymentId: string) => {
     const url = `${PREFECT_API_URL}/deployments/deployment/${deploymentId}?tab=Runs`;
     window.open(url, '_blank');
+  };
+
+  // 获取所有状态选项 - 使用预定义的状态
+  const getStateOptions = () => {
+    return [
+      'Completed',
+      'CompletedWithFaild',
+      'Running', 
+      'Failed',
+      'Scheduled',
+      'Pending',
+      'Cancelled',
+      'Crashed',
+      'Paused',
+      'Retrying',
+      'Late',
+      'AwaitingRetry',
+      'Cancelling',
+      'Cached',
+      'RolledBack'
+    ];
   };
 
   // 表格列定义
@@ -284,10 +400,10 @@ const FlowRuns: React.FC = () => {
     },
     {
       title: '状态',
-      dataIndex: 'state_type',
-      key: 'state_type',
+      dataIndex: 'state_name',
+      key: 'state_name',
       width: 120,
-      render: (stateType: string, record: FlowRun) => renderState(stateType, record.state_name),
+      render: (stateName: string, record: FlowRun) => renderState(stateName, record.state_type, record.state?.message),
     },
     {
       title: '运行次数',
@@ -319,12 +435,25 @@ const FlowRuns: React.FC = () => {
       render: (time: number) => time > 0 ? formatDuration(time) : '-',
     },
     {
-      title: '工作池',
-      dataIndex: 'work_pool_name',
-      key: 'work_pool_name',
-      width: 120,
-      ellipsis: true,
-      render: (text: string) => text || '-',
+      title: 'Message',
+      dataIndex: ['state', 'message'],
+      key: 'message',
+      width: 100,
+      align: 'center',
+      render: (text: string, record: FlowRun) => (
+        <Tooltip title="点击查看详细消息">
+          <Button
+            type="text"
+            icon={<InfoCircleOutlined />}
+            onClick={() => showMessageModal(text, record.name)}
+            style={{ 
+              color: text ? '#1890ff' : '#d9d9d9',
+              cursor: text ? 'pointer' : 'default'
+            }}
+            disabled={!text}
+          />
+        </Tooltip>
+      ),
     },
   ];
 
@@ -357,7 +486,7 @@ const FlowRuns: React.FC = () => {
 
           {/* 筛选区域 */}
           <Row gutter={[16, 16]} style={{ marginBottom: 16 }}>
-            <Col span={8}>
+            <Col span={6}>
                 <Select
                   prefix={<span style={{ fontWeight: 'bold' }}>选择部署：</span>}
                   allowClear
@@ -372,6 +501,25 @@ const FlowRuns: React.FC = () => {
                   {deployments.map((deployment) => (
                     <Option key={deployment.id} value={deployment.id}>
                       {deployment.name}
+                    </Option>
+                  ))}
+                </Select>
+            </Col>
+            <Col span={6}>
+                <Select
+                  prefix={<span style={{ fontWeight: 'bold' }}>选择状态：</span>}
+                  allowClear
+                  style={{ width: '100%' }}
+                  value={selectedState}
+                  onChange={setSelectedState}
+                  showSearch
+                  filterOption={(input, option) =>
+                    (option?.children as unknown as string)?.toLowerCase().includes(input.toLowerCase())
+                  }
+                >
+                  {getStateOptions().map((state) => (
+                    <Option key={state} value={state}>
+                      {state}
                     </Option>
                   ))}
                 </Select>
@@ -456,6 +604,22 @@ const FlowRuns: React.FC = () => {
             />
           </div>
         </Card>
+
+        {/* Message Modal */}
+        <Modal
+          title={currentMessageTitle}
+          open={messageModalVisible}
+          onCancel={() => setMessageModalVisible(false)}
+          footer={[
+            <Button key="close" onClick={() => setMessageModalVisible(false)}>
+              关闭
+            </Button>
+          ]}
+          width={800}
+          style={{ top: 20 }}
+        >
+          {formatMessageContent(currentMessage)}
+        </Modal>
       </div>
     </div>
   );
