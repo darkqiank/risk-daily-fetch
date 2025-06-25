@@ -172,7 +172,7 @@ const ContentList = () => {
   if (!datas) return <Spin />;
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 w-full min-w-0">
       {loading && (
         <div className="absolute inset-0 flex items-center justify-center z-10">
           <div className="loader">
@@ -180,93 +180,109 @@ const ContentList = () => {
           </div>
         </div>
       )}
-      <div className="flex  w-full gap-3 items-center">
-        <ASelect
-          className="max-w-xs"
-          defaultValue="all"
-          options={[
-            { value: "blog", label: "博客" },
-            { value: "biz", label: "微信公众号" },
-            { value: "all", label: "不限" },
-          ]}
-          placeholder="select it"
-          prefix="来源类型"
-          size="small"
-          onChange={handleSelectionSourceTypeChange}
-        />
-        <ASelect
-          className="max-w-xs"
-          defaultValue="all"
-          options={[
-            { value: "true", label: "是" },
-            { value: "false", label: "否" },
-            { value: "all", label: "不限" },
-          ]}
-          placeholder="select it"
-          prefix="家庭事件"
-          size="small"
-          onChange={handleSelectionHomeChange}
-        />
-        <ASelect
-          className="max-w-xs"
-          defaultValue="all"
-          options={[
-            { value: "true", label: "是" },
-            { value: "false", label: "否" },
-            { value: "all", label: "不限" },
-          ]}
-          placeholder="select it"
-          prefix="运营商事件"
-          size="small"
-          onChange={handleSelectionOpChange}
-        />
-        <ASelect
-          className="max-w-xs"
-          defaultValue="all"
-          options={[
-            { value: "true", label: "是" },
-            { value: "false", label: "否" },
-            { value: "all", label: "不限" },
-          ]}
-          placeholder="select it"
-          prefix="APT"
-          size="small"
-          onChange={handleSelectionAptChange}
-        />
-        <ASelect
-          className="max-w-xs"
-          defaultValue="all"
-          options={[
-            { value: "true", label: "是" },
-            { value: "false", label: "否" },
-            { value: "all", label: "不限" },
-          ]}
-          placeholder="select it"
-          prefix="欧美"
-          size="small"
-          onChange={handleSelectionEuChange}
-        />
-        <ASelect
-          className="max-w-xs"
-          defaultValue="all"
-          options={[
-            { value: "true", label: "有" },
-            { value: "false", label: "无" },
-            { value: "all", label: "不限" },
-          ]}
-          placeholder="select it"
-          prefix="ioc"
-          size="small"
-          onChange={handleSelectionIOCChange}
-        />
-        <Search
-          allowClear
-          enterButton
-          className="w-[400px]"
-          loading={loading}
-          placeholder="全文搜索..."
-          onSearch={handleSearch}
-        />
+      {/* 响应式过滤器区域 */}
+      <div className="flex flex-col lg:flex-row w-full gap-3 items-start lg:items-center">
+        {/* 过滤器组 */}
+        <div className="flex flex-wrap gap-2 lg:gap-3 items-center flex-1 min-w-0">
+          <div className="flex flex-col gap-1">
+            <ASelect
+              prefix={<span style={{ fontWeight: 'bold' }}>来源类型：</span>}
+              className="w-full sm:w-auto sm:min-w-[120px] sm:max-w-[150px]"
+              defaultValue="all"
+              options={[
+                { value: "blog", label: "博客" },
+                { value: "biz", label: "微信公众号" },
+                { value: "all", label: "不限" },
+              ]}
+              size="small"
+              onChange={handleSelectionSourceTypeChange}
+            />
+          </div>
+          <div className="flex flex-col gap-1">
+            <ASelect
+              prefix={<span style={{ fontWeight: 'bold' }}>家庭事件：</span>}
+              className="w-full sm:w-auto sm:min-w-[120px] sm:max-w-[150px]"
+              defaultValue="all"
+              options={[
+                { value: "true", label: "是" },
+                { value: "false", label: "否" },
+                { value: "all", label: "不限" },
+              ]}
+              size="small"
+              onChange={handleSelectionHomeChange}
+            />
+          </div>
+          <div className="flex flex-col gap-1">
+            <ASelect
+              prefix={<span style={{ fontWeight: 'bold' }}>运营商事件：</span>}
+              className="w-full sm:w-auto sm:min-w-[120px] sm:max-w-[150px]"
+              defaultValue="all"
+              options={[
+                { value: "true", label: "是" },
+                { value: "false", label: "否" },
+                { value: "all", label: "不限" },
+              ]}
+              size="small"
+              onChange={handleSelectionOpChange}
+            />
+          </div>
+          <div className="flex flex-col gap-1">
+            <ASelect
+              prefix={<span style={{ fontWeight: 'bold' }}>APT：</span>}
+              className="w-full sm:w-auto sm:min-w-[120px] sm:max-w-[150px]"
+              defaultValue="all"
+              options={[
+                { value: "true", label: "是" },
+                { value: "false", label: "否" },
+                { value: "all", label: "不限" },
+              ]}
+              size="small"
+              onChange={handleSelectionAptChange}
+            />
+          </div>
+          <div className="flex flex-col gap-1">
+            <ASelect
+              prefix={<span style={{ fontWeight: 'bold' }}>欧美：</span>}
+              className="w-full sm:w-auto sm:min-w-[120px] sm:max-w-[150px]"
+              defaultValue="all"
+              options={[
+                { value: "true", label: "是" },
+                { value: "false", label: "否" },
+                { value: "all", label: "不限" },
+              ]}
+              size="small"
+              onChange={handleSelectionEuChange}
+            />
+          </div>
+          <div className="flex flex-col gap-1">
+            <ASelect
+              prefix={<span style={{ fontWeight: 'bold' }}>IOC：</span>}
+              className="w-full sm:w-auto sm:min-w-[120px] sm:max-w-[150px]"
+              defaultValue="all"
+              options={[
+                { value: "true", label: "有" },
+                { value: "false", label: "无" },
+                { value: "all", label: "不限" },
+              ]}
+              size="small"
+              onChange={handleSelectionIOCChange}
+            />
+          </div>
+        </div>
+        {/* 搜索框 */}
+        <div className="w-full lg:w-auto lg:min-w-[250px] lg:max-w-[400px]">
+          <div className="flex flex-col gap-1">
+            <span className="text-xs text-gray-600">全文搜索</span>
+            <Search
+              allowClear
+              enterButton
+              className="w-full"
+              loading={loading}
+              placeholder="输入关键词..."
+              onSearch={handleSearch}
+            />
+          </div>
+        </div>
       </div>
       <Pagination
         current={page}
@@ -278,8 +294,7 @@ const ContentList = () => {
       />
       <MyScrollShadow
         ref={scrollRef}
-        // className="w-full h-[500px] p-4"
-        className="w-full h-[500px] p-4"
+        className="w-full h-[500px] p-4 min-w-0"
         hideScrollBar={false}
         showShadow={false}
       >
@@ -287,24 +302,24 @@ const ContentList = () => {
           dataSource={datas}
           itemLayout="vertical"
           renderItem={(item: any) => (
-            <List.Item key={item.contentHash}>
-              <div className="flex flex-col gap-1">
+            <List.Item key={item.contentHash} className="min-w-0">
+              <div className="flex flex-col gap-1 min-w-0">
                 <Typography.Title
-                  className="whitespace-normal break-words" // 添加换行样式
+                  className="whitespace-normal break-words min-w-0" // 添加换行样式
                   level={5}
                   style={{ wordWrap: "break-word", margin: 0 }}
                 >
-                  {item.detail && <div>{item.detail.摘要} </div>}
+                  {item.detail && <div className="min-w-0">{item.detail.摘要} </div>}
                 </Typography.Title>
-                <div className="w-full">
+                <div className="w-full min-w-0 overflow-hidden">
                   {item.url.startsWith("http") && (
                     <a
-                      className="text-blue-500 hover:underline whitespace-normal break-words"
+                      className="text-blue-500 hover:underline whitespace-normal break-words block"
                       href={item.url}
                       rel="noopener noreferrer"
                       style={{
                         wordBreak: "break-all",
-                        display: "inline-block",
+                        overflowWrap: "break-word",
                         maxWidth: "100%",
                       }}
                       target="_blank"
@@ -314,20 +329,20 @@ const ContentList = () => {
                     </a>
                   )}
                 </div>
-                <div className="flex flex-wrap gap-3">
-                  <div>
+                <div className="flex flex-wrap gap-2 lg:gap-3 text-sm">
+                  <div className="min-w-0">
                     <strong>来源类型：</strong> {item.sourceType || "未知"}
                   </div>
-                  <div>
-                    <strong>来源：</strong> {item.source || "未知"}
+                  <div className="min-w-0">
+                    <strong>来源：</strong> <span className="break-words">{item.source || "未知"}</span>
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <strong>日期：</strong> {item.date}
                   </div>
                 </div>
                 {item.detail && (
-                  <div className="flex flex-wrap gap-3">
-                    <div>
+                  <div className="flex flex-wrap gap-2 lg:gap-3 text-sm">
+                    <div className="min-w-0">
                       <strong>家庭事件：</strong>
                       <Tag
                         color={
@@ -337,7 +352,7 @@ const ContentList = () => {
                         {item.detail["家庭事件"] === "是" ? "是" : "否"}
                       </Tag>
                     </div>
-                    <div>
+                    <div className="min-w-0">
                       <strong>运营商事件：</strong>
                       {/* {item.detail["运营商事件"]} */}
                       <Tag
@@ -348,31 +363,30 @@ const ContentList = () => {
                         {item.detail["运营商事件"] === "是" ? "是" : "否"}
                       </Tag>
                     </div>
-                    <div>
+                    <div className="min-w-0 flex-1">
                       <strong>原因：</strong>
-                      {item.detail.原因}
+                      <span className="break-words">{item.detail.原因}</span>
                     </div>
-                    <div>
-                      <strong>国家：</strong>
-                      {/* {item.detail.国家.map((country: any) => (
-                      <Tag key={country}>{country}</Tag>
-                    ))} */}
-                      {Array.isArray(item.detail.国家) ? (
-                        item.detail.国家.map((country: any) => (
-                          <Tag key={country}>{country}</Tag>
-                        ))
-                      ) : item.detail.国家 ? (
-                        <span>{item.detail.国家}</span>
-                      ) : (
-                        "无"
-                      )}
-                    </div>
+                    {/* 只有当国家信息存在且不为空时才显示国家字段 */}
+                    {((Array.isArray(item.detail.国家) && item.detail.国家.length > 0) || 
+                      (item.detail.国家 && !Array.isArray(item.detail.国家) && item.detail.国家.trim() !== "")) && (
+                      <div className="min-w-0">
+                        <strong>国家：</strong>
+                        {Array.isArray(item.detail.国家) ? (
+                          item.detail.国家.map((country: any) => (
+                            <Tag key={country}>{country}</Tag>
+                          ))
+                        ) : (
+                          <span className="break-words">{item.detail.国家}</span>
+                        )}
+                      </div>
+                    )}
                   </div>
                 )}
                 {item.extractionResult && (
-                  <div className="flex flex-wrap gap-3">
+                  <div className="flex flex-wrap gap-2 lg:gap-3 text-sm">
                     {/* 通用安全访问组件 */}
-                    <div>
+                    <div className="min-w-0">
                       <strong>APT：</strong>
                       <Tag
                         color={
@@ -386,7 +400,7 @@ const ContentList = () => {
                       </Tag>
                     </div>
 
-                    <div>
+                    <div className="min-w-0">
                       <strong>欧美：</strong>
                       <Tag
                         color={
@@ -400,7 +414,7 @@ const ContentList = () => {
                       </Tag>
                     </div>
 
-                    <div>
+                    <div className="min-w-0">
                       <strong>IOCs：</strong>
                       {/* 数组安全检测 + 默认值 */}
                       {(Array.isArray(item.extractionResult?.data?.iocs)
@@ -429,7 +443,7 @@ const ContentList = () => {
                     dangerouslySetInnerHTML={{
                       __html: `...${item.snippet}...`,
                     }}
-                    className="text-gray-600"
+                    className="text-gray-600 break-words min-w-0"
                   />
                 )}
               </div>

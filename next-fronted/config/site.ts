@@ -49,6 +49,23 @@ export const menuItems: MenuItem[] = [
     ],
   },
   {
+    label: "爬虫任务",
+    key: "/nav/spider",
+    icon: DatabaseOutlined,
+    subItems: [
+      {
+        label: "工作流",
+        key: "/nav/spider/workflow",
+        href: "/nav/spider/workflow",
+      },
+      {
+        label: "运行记录",
+        key: "/nav/spider/flow_runs",
+        href: "/nav/spider/flow_runs",
+      },
+    ],
+  },
+  {
     label: "数据源管理",
     key: "/nav/source",
     icon: DatabaseOutlined,

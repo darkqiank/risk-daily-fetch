@@ -42,7 +42,7 @@ const ThreatList = () => {
       const jsonData = await response.json();
 
       setThreats(jsonData.data);
-      setTotal(jsonData.totalPages);
+      setTotal(jsonData.totalRecords);
     } catch (err) {
       console.error("Error fetching threats data:", err);
     }
@@ -56,7 +56,7 @@ const ThreatList = () => {
   if (!threats) return <Spin />;
 
   return (
-    <div className="flex flex-col items-center space-y-4">
+    <div className="flex flex-col items-center space-y-4 w-full min-w-0">
       {loading && (
         <div className="absolute inset-0 flex items-center justify-center z-10">
           <div className="loader">
@@ -64,70 +64,76 @@ const ThreatList = () => {
           </div>
         </div>
       )}
-      <div className="flex w-full gap-3 items-center">
-        <Select
-          className="max-w-xs"
-          defaultValue="all"
-          prefix="类型"
-          size="small"
-          onChange={handleSelectionChange(setSourceTypeFilter)}
-        >
-          <Option value="twitter">推特</Option>
-          <Option value="biz">微信公众号</Option>
-          <Option value="blog">博客</Option>
-          <Option value="all">不限</Option>
-        </Select>
-        <Select
-          className="max-w-xs"
-          defaultValue="all"
-          prefix="来源"
-          size="small"
-          onChange={handleSelectionChange(setSourceFilter)}
-        >
-          <Option value="all">不限</Option>
-        </Select>
-        <Select
-          className="max-w-xs"
-          defaultValue="all"
-          prefix="APT"
-          size="small"
-          onChange={handleSelectionChange(setAptFilter)}
-        >
-          <Option value="true">是</Option>
-          <Option value="false">否</Option>
-          <Option value="all">不限</Option>
-        </Select>
-        <Select
-          className="max-w-xs"
-          defaultValue="all"
-          prefix="欧美"
-          size="small"
-          onChange={handleSelectionChange(setEuFilter)}
-        >
-          <Option value="true">是</Option>
-          <Option value="false">否</Option>
-          <Option value="all">不限</Option>
-        </Select>
+      
+      {/* 响应式筛选器区域 */}
+      <div className="flex flex-col lg:flex-row w-full gap-3 items-start lg:items-center">
+        <div className="flex flex-wrap gap-2 lg:gap-3 items-center flex-1 min-w-0">
+          <Select
+            prefix={<span style={{ fontWeight: 'bold' }}>类型：</span>}
+            className="w-full sm:w-auto sm:min-w-[120px] sm:max-w-[150px]"
+            defaultValue="all"
+            size="small"
+            onChange={handleSelectionChange(setSourceTypeFilter)}
+          >
+            <Option value="twitter">推特</Option>
+            <Option value="biz">微信公众号</Option>
+            <Option value="blog">博客</Option>
+            <Option value="all">不限</Option>
+          </Select>
+          
+          <Select
+            prefix={<span style={{ fontWeight: 'bold' }}>来源：</span>}
+            className="w-full sm:w-auto sm:min-w-[120px] sm:max-w-[150px]"
+            defaultValue="all"
+            size="small"
+            onChange={handleSelectionChange(setSourceFilter)}
+          >
+            <Option value="all">不限</Option>
+          </Select>
+          
+          <Select
+            prefix={<span style={{ fontWeight: 'bold' }}>APT：</span>}
+            className="w-full sm:w-auto sm:min-w-[120px] sm:max-w-[150px]"
+            defaultValue="all"
+            size="small"
+            onChange={handleSelectionChange(setAptFilter)}
+          >
+            <Option value="true">是</Option>
+            <Option value="false">否</Option>
+            <Option value="all">不限</Option>
+          </Select>
+          
+          <Select
+            prefix={<span style={{ fontWeight: 'bold' }}>欧美：</span>}
+            className="w-full sm:w-auto sm:min-w-[120px] sm:max-w-[150px]"
+            defaultValue="all"
+            size="small"
+            onChange={handleSelectionChange(setEuFilter)}
+          >
+            <Option value="true">是</Option>
+            <Option value="false">否</Option>
+            <Option value="all">不限</Option>
+          </Select>
+        </div>
       </div>
+      
       <Pagination
         current={page}
-        pageSize={10}
+        defaultCurrent={1}
+        pageSize={20}
         showSizeChanger={false}
         total={total}
         onChange={handlePageChange}
       />
+      
       <MyScrollShadow
         ref={scrollRef}
-        // className="w-full h-[500px] p-4"
-        className="w-full h-[500px] p-4"
+        className="w-full h-[500px] p-4 min-w-0"
         hideScrollBar={false}
         showShadow={false}
       >
         <ThreatTable threats={threats} />
       </MyScrollShadow>
-      {/* <div className="flex flex-col gap-2">
-        <ThreatTable threats={threats} />
-      </div> */}
     </div>
   );
 };
