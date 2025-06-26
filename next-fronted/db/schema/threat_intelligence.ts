@@ -173,7 +173,7 @@ export const getIOCCount = async () => {
 };
 
 // 根据IOC进行忽略大小写的精确搜索
-export const searchByIOC = async (iocValue: string, pn = 1, ps = 20) => {
+export const searchByIOC = async (iocValue: string, pn = 1, ps = 20, sourceTypes?: string) => {
   const offset = (pn - 1) * ps;
   
   // 构建搜索查询
@@ -241,6 +241,9 @@ export const searchByIOC = async (iocValue: string, pn = 1, ps = 20) => {
   // 构建总记录数查询
   let countQuery = db.select({ value: count() }).from(threatIntelligence);
 
+  // 构建查询条件数组
+  let sql_list = [];
+
   // 使用GIN索引进行忽略大小写的IOC搜索
   const searchCondition = sql`
     EXISTS (
@@ -248,9 +251,45 @@ export const searchByIOC = async (iocValue: string, pn = 1, ps = 20) => {
       WHERE LOWER(TRIM(ioc ->> 'IOC')) = LOWER(TRIM(${iocValue}))
     )
   `;
+  sql_list.push(searchCondition);
 
-  query = query.where(searchCondition) as any;
-  countQuery = countQuery.where(searchCondition) as any;
+  // 添加source_types筛选逻辑
+  if (sourceTypes && sourceTypes.trim()) {
+    const types = sourceTypes.split(',').map(type => type.trim()).filter(type => type);
+    
+    if (types.length > 0) {
+      const sourceTypeConditions = [];
+      
+      for (const type of types) {
+        if (type === "twitter") {
+          sourceTypeConditions.push(
+            sql`(${threatIntelligence.source} like 'tweet%' or ${threatIntelligence.source} like 'profile-conversation%')`
+          );
+        } else if (type === "biz") {
+          sourceTypeConditions.push(
+            sql`${threatIntelligence.source} like 'https://mp.weixin.qq.com%'`
+          );
+        } else if (type === "blog") {
+          sourceTypeConditions.push(
+            sql`${threatIntelligence.source} not like 'tweet%' and ${threatIntelligence.source} not like 'profile-conversation%' 
+            and ${threatIntelligence.source} not like 'https://mp.weixin.qq.com%'`
+          );
+        }
+      }
+      
+      if (sourceTypeConditions.length > 0) {
+        const sourceTypeCondition = sql.join(sourceTypeConditions, sql` or `);
+        sql_list.push(sql`(${sourceTypeCondition})`);
+      }
+    }
+  }
+
+  // 应用所有查询条件
+  if (sql_list.length > 0) {
+    const sql_condition = sql.join(sql_list, sql` and `);
+    query = query.where(sql_condition) as any;
+    countQuery = countQuery.where(sql_condition) as any;
+  }
 
   query = query
     .orderBy(desc(threatIntelligence.insertedAt))
@@ -271,5 +310,6 @@ export const searchByIOC = async (iocValue: string, pn = 1, ps = 20) => {
     pageNumber: pn,
     pageSize: ps,
     searchTerm: iocValue,
+    sourceTypes,
   };
 };

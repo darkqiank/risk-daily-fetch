@@ -10,7 +10,7 @@ export default async function handler(
   }
 
   try {
-    const { ioc, pn = "1", ps = "20" } = req.query;
+    const { ioc, pn = "1", ps = "20", source_types } = req.query;
 
     if (!ioc || typeof ioc !== "string") {
       return res.status(400).json({ 
@@ -46,7 +46,24 @@ export default async function handler(
       });
     }
 
-    const result = await searchByIOC(cleanedIoc, pageNumber, pageSize);
+    // 处理source_types参数
+    const sourceTypes = source_types && typeof source_types === "string" ? source_types.trim() : undefined;
+
+    // 验证source_types参数格式（可选）
+    if (sourceTypes) {
+      const validTypes = ["twitter", "biz", "blog"];
+      const types = sourceTypes.split(',').map(type => type.trim()).filter(type => type);
+      const invalidTypes = types.filter(type => !validTypes.includes(type));
+      
+      if (invalidTypes.length > 0) {
+        return res.status(400).json({ 
+          error: "无效的source_types值",
+          message: `支持的类型有: ${validTypes.join(', ')}。无效的类型: ${invalidTypes.join(', ')}` 
+        });
+      }
+    }
+
+    const result = await searchByIOC(cleanedIoc, pageNumber, pageSize, sourceTypes);
 
     res.status(200).json({
       success: true,
