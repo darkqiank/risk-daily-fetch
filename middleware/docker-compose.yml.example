@@ -37,17 +37,4 @@ services:
             - ${HOST_IP}:${APP_PORT_HTTP}:5432
         restart: always
         volumes:
-            - ./pg_data:/var/lib/postgresql/data
-
-    meilisearch:
-        image: getmeili/meilisearch:v1.13
-        container_name: meilisearch
-        networks:
-          - middleware-network
-        environment:
-          - MEILI_MASTER_KEY=${MEILI_MASTER_KEY}
-        volumes:
-          - ./meili_data:/meili_data
-        ports:
-          - "7700:7700"
-        restart: unless-stopped
+            - ./pg/data:/var/lib/postgresql/data
