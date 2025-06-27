@@ -1,0 +1,14 @@
+networks:
+    middleware-network:
+        external: true
+        
+services:
+    prefect-server:
+        image: prefecthq/prefect:3.4.1-python3.12-conda
+        environment:
+            - PREFECT_API_URL=${PREFECT_API_URL}
+            - PREFECT_API_DATABASE_CONNECTION_URL="postgresql+asyncpg://${DB_ROOT_USER}:${DB_ROOT_PASSWORD}@postgresql:5432/prefect"
+        network_mode: "host"
+        command: ["prefect", "server", "start", "--host", "0.0.0.0"]
+        volumes:
+            - ./prefect-data:/root/.prefect
