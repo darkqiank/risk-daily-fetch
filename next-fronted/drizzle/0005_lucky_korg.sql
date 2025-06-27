@@ -1,0 +1,1 @@
+CREATE INDEX IF NOT EXISTS "idx_content_detail_fulltext_search" ON "content_detail" USING gin (to_tsvector('simple', COALESCE("content", '') || ' ' || COALESCE("url", '') || ' ' || COALESCE("source", '')));

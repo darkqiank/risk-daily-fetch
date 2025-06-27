@@ -36,6 +36,13 @@
       "when": 1749452303094,
       "tag": "0004_abnormal_master_mold",
       "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1750991674492,
+      "tag": "0005_lucky_korg",
+      "breakpoints": true
     }
   ]
 }

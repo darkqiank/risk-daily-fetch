@@ -1,6 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { batchInsertContentDetail, DetailFilters, getPaginatedData } from "@/db/schema/content_detail";
-import searchClient, { extractHighlightSnippets } from "@/db/search";
+import { batchInsertContentDetail, DetailFilters, getPaginatedData, fullTextSearch } from "@/db/schema/content_detail";
 import { authenticate } from "@/components/auth";
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
@@ -25,35 +24,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
       const filters: DetailFilters = {};
 
-      let searchHits: Array<{ id: string; snippet: string }> = [];
-
-      if (typeof query === "string" && query.trim()) {
-        const searchResult = await searchClient
-          .index("meilisearch_index_content_detail")
-          .search(query, {
-            attributesToHighlight: ["*"],
-            highlightPreTag: "__hl__",
-            highlightPostTag: "__/hl__",
-            limit: 1000,
-          });
-
-        searchHits = searchResult.hits.map((item: any) => ({
-          id: item.id,
-          snippet: extractHighlightSnippets(
-            [
-              item._formatted?.url ?? "",
-              item._formatted?.source ?? "",
-              item._formatted?.content ?? "",
-            ]
-              .filter(Boolean) // 自动过滤空字符串
-              .join(" ... "), // 用空格连接非空内容
-          ),
-        }));
-
-        filters.ids = searchHits.map((item) => item.id);
-      }
-
-
+      // 应用过滤条件
       if (typeof date === "string") {
         filters.date = date;
       }
@@ -84,19 +55,12 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
       let res_data: { data: any[] } = { data: [] };
 
+      // 如果有查询参数，使用全文搜索
+      if (typeof query === "string" && query.trim()) {
+        res_data = await fullTextSearch(query.trim(), filters, pn, ps);
+      } else {
+        // 否则使用常规分页查询
       res_data = await getPaginatedData(filters, pn, ps);
-
-      // 合并高亮信息
-      if (searchHits.length > 0) {
-        const hitMap = new Map(searchHits.map((hit) => [hit.id, hit]));
-
-        res_data = {
-          ...res_data,
-          data: res_data.data.map((item: any) => ({
-            ...item,
-            snippet: hitMap.get(item.id)?.snippet || null, // 改为数组
-          })),
-        };
       }
 
       res.status(200).json(res_data);

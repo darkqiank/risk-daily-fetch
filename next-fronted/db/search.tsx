@@ -1,88 +1,93 @@
-import { MeiliSearch } from "meilisearch";
+// PostgreSQL 全文搜索工具函数
+// 替代原来的 MeiliSearch 功能
 
-const meili_host: any = process.env.MEILI_HOST;
-const meili_key: any = process.env.MEILI_KEY;
-
-const searchClient = new MeiliSearch({
-  host: meili_host,
-  apiKey: meili_key,
-});
-
-export default searchClient;
-
-// 优化后的高亮处理函数
-// const extractHighlightSnippets = (hit: any) => {
-//   const rawContent = hit._formatted?.content || hit.content || "";
-
-//   // 清理换行符和多余空格
-//   const cleanContent = rawContent
-//     .replace(/[\n\r]/g, " ")
-//     .replace(/\s+/g, " ")
-//     .trim();
-
-//   // 匹配所有高亮片段
-//   const highlightRegex = /__hl__(.*?)__\/hl__/g;
-//   const highlights = [];
-//   let match;
-
-//   // 遍历所有高亮匹配项
-//   while ((match = highlightRegex.exec(cleanContent)) !== null) {
-//     const start = Math.max(0, match.index - 20); // 关键词前20字符
-//     const end = match.index + match[0].length + 20; // 关键词后20字符
-
-//     // 截取上下文片段
-//     const snippet = cleanContent
-//       .substring(start, end)
-//       .replace(
-//         /__hl__/g,
-//         '<em class="bg-yellow-200 font-bold not-italic">',
-//       ) // 转换高亮标签
-//       .replace(/__\/hl__/g, "</em>");
-
-//     highlights.push(snippet);
-//     // 当收集到3个片段时立即停止
-//     if (highlights.length >= 3) {
-//       break;
-//     }
-//   }
-
-//   return highlights.join(" ... ");
-// };
-
-// searchHits = searchResult.hits.map((item: any) => ({
-//   id: item.id,
-//   snippet: extractHighlightSnippets(item),
-// }));
-
+// 用于处理PostgreSQL ts_headline生成的高亮片段
 export const extractHighlightSnippets = (content: any) => {
-  const cleanContent = content
-    .replace(/[\n\r]/g, " ")
-    .replace(/\s+/g, " ")
-    .trim();
+  if (!content) return '';
+  
+  // PostgreSQL的ts_headline使用<b>和</b>作为默认高亮标签
+  // 将其替换为我们需要的样式
+  return content
+    .replace(/<b>/g, '<em class="bg-yellow-200 font-bold not-italic">')
+    .replace(/<\/b>/g, '</em>');
+};
 
-  const highlightRegex = /__hl__(.*?)__\/hl__/g;
-  const snippets = [];
-  let match;
+// 清理查询字符串，支持中文
+export const cleanSearchQuery = (query: string): string => {
+  return query
+    .trim()
+    .replace(/[^\w\s\u4e00-\u9fa5]/g, ' ') // 保留中文字符
+    .replace(/\s+/g, ' ');
+};
 
-  // 遍历所有高亮匹配项，并记录每个片段及其打分（这里简单使用高亮文本长度作为得分）
-  while ((match = highlightRegex.exec(cleanContent)) !== null) {
-    const highlightedText = match[1];
-    const score = highlightedText.length; // 可以用更复杂的评分逻辑
-    const start = Math.max(0, match.index - 20); // 关键词前20字符
-    const end = match.index + match[0].length + 20; // 关键词后20字符
-    const snippet = cleanContent
-      .substring(start, end)
-      .replace(/__hl__/g, '<em class="bg-yellow-200 font-bold not-italic">')
-      .replace(/__\/hl__/g, "</em>");
+// 构建PostgreSQL tsquery
+export const buildTsQuery = (query: string): string => {
+  const cleanQuery = cleanSearchQuery(query);
+  
+  if (!cleanQuery) return '';
+  
+  return cleanQuery
+    .split(' ')
+    .filter(term => term.length > 0)
+    .map(term => term + ':*') // 添加前缀匹配
+    .join(' & ');
+};
 
-    snippets.push({ snippet, score });
+// 高亮文本中的关键词（用于前端显示）
+export const highlightText = (text: string, keywords: string[]): string => {
+  if (!text || !keywords.length) return text;
+  
+  let highlightedText = text;
+  
+  keywords.forEach(keyword => {
+    if (keyword.trim()) {
+      const regex = new RegExp(`(${keyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+      highlightedText = highlightedText.replace(regex, '<em class="bg-yellow-200 font-bold not-italic">$1</em>');
+    }
+  });
+  
+  return highlightedText;
+};
+
+// 生成搜索摘要片段
+export const generateSearchSnippet = (content: string, query: string, maxLength: number = 200): string => {
+  if (!content || !query) return '';
+  
+  const keywords = cleanSearchQuery(query).split(' ').filter(Boolean);
+  
+  // 查找第一个关键词的位置
+  let firstMatchIndex = -1;
+  for (const keyword of keywords) {
+    const index = content.toLowerCase().indexOf(keyword.toLowerCase());
+    if (index !== -1) {
+      firstMatchIndex = index;
+      break;
+    }
   }
+  
+  if (firstMatchIndex === -1) {
+    // 没有找到关键词，返回开头部分
+    return content.substring(0, maxLength) + '...';
+  }
+  
+  // 以第一个关键词为中心，提取前后文本
+  const start = Math.max(0, firstMatchIndex - 50);
+  const end = Math.min(content.length, firstMatchIndex + maxLength - 50);
+  
+  let snippet = content.substring(start, end);
+  
+  // 添加省略号
+  if (start > 0) snippet = '...' + snippet;
+  if (end < content.length) snippet = snippet + '...';
 
-  // 按得分降序排序
-  snippets.sort((a, b) => b.score - a.score);
+  // 高亮关键词
+  return highlightText(snippet, keywords);
+};
 
-  // 取出得分最高的三个片段，并使用" ... "连接
-  const topSnippets = snippets.slice(0, 3).map((item) => item.snippet);
-
-  return topSnippets.join(" ... ");
+export default {
+  extractHighlightSnippets,
+  cleanSearchQuery,
+  buildTsQuery,
+  highlightText,
+  generateSearchSnippet,
 };
