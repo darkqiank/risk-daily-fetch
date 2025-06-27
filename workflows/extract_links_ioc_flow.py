@@ -24,7 +24,7 @@ def generate_ioc_flow_id() -> str:
     flow_name = flow_run.flow_name
     parameters = flow_run.parameters
     name = parameters["blog_name"]
-    return f"{flow_name}_{name}_{int(time.time()*1000)}_{str(uuid.uuid4())[:8]}"
+    return f"{name}_{int(time.time()*1000)}_{str(uuid.uuid4())[:8]}"
 
 # 解析网页内容
 @flow(flow_run_name=generate_ioc_flow_id, log_prints=True)
@@ -35,7 +35,7 @@ async def parse_content(blog_name: str, link: str, use_proxy: bool = False, use_
         return Failed(message=f"{e}")
 
 # 提交到 IOCGPT
-@task(flow_run_name=generate_ioc_flow_id, log_prints=True)
+@flow(flow_run_name=generate_ioc_flow_id, log_prints=True)
 async def submit_to_iocgpt(blog_name: str, content: str):
     try:
         return await u_spider.submit_to_iocgpt(content)
@@ -43,7 +43,7 @@ async def submit_to_iocgpt(blog_name: str, content: str):
         return Failed(message=f"{e}")
 
 # 大模型解读内容
-@task(flow_run_name=generate_ioc_flow_id, log_prints=True)
+@flow(flow_run_name=generate_ioc_flow_id, log_prints=True)
 async def llm_read(blog_name: str, content: str):
     try:
         return await u_spider.llm_read(content)

@@ -6,11 +6,12 @@ from prefect.logging import get_logger
 from prefect.runtime import flow_run
 import time
 import uuid
+import json
 sys.path.append(str(Path(__file__).parent.parent))
 
 from spider.base.blog_link_spider import BlogLinkSpider
 from prefect import flow
-from prefect.states import Failed
+from prefect.states import State, Failed, Completed
 import asyncio
 
 
@@ -22,7 +23,7 @@ def generate_flow_id() -> str:
     flow_name = flow_run.flow_name
     parameters = flow_run.parameters
     name = parameters["blog_name"]
-    return f"{flow_name}_{name}_{int(time.time()*1000)}_{str(uuid.uuid4())[:8]}"
+    return f"{name}_{int(time.time()*1000)}_{str(uuid.uuid4())[:8]}"
 
 # 获取博客链接
 @flow(flow_run_name=generate_flow_id)
@@ -124,12 +125,14 @@ async def fetch_all_blogs_links_flow():
         for failed in failed_blogs:
             print(f"  - {failed}")
     
-    return {
+    run_result = {
         "total": total_blogs,
         "success": success_count,
         "failed": len(failed_blogs),
         "failed_blogs": failed_blogs
     }
+    return run_result
+
 
 
 if __name__ == "__main__":

@@ -1,0 +1,53 @@
+networks:
+    middleware-network:
+        external: true
+
+services:
+    postgresql:
+        container_name: postgresql16
+        deploy:
+            resources:
+                limits:
+                    cpus: ${CPUS}
+                    memory: ${MEMORY_LIMIT}
+        environment:
+            - POSTGRES_USER=${DB_ROOT_USER}
+            - POSTGRES_PASSWORD=${DB_ROOT_PASSWORD}
+        healthcheck:
+            interval: 30s
+            retries: 5
+            start_period: 20s
+            test:
+                - CMD
+                - pg_isready
+                - -h
+                - 127.0.0.1
+                - -p
+                - "5432"
+                - -q
+                - -U
+                - ${DB_ROOT_USER}
+            timeout: 5s
+        image: postgres:16.3-bookworm
+        labels:
+            createdBy: Apps
+        networks:
+            - middleware-network
+        ports:
+            - ${HOST_IP}:${APP_PORT_HTTP}:5432
+        restart: always
+        volumes:
+            - ./pg_data:/var/lib/postgresql/data
+
+    meilisearch:
+        image: getmeili/meilisearch:v1.13
+        container_name: meilisearch
+        networks:
+          - middleware-network
+        environment:
+          - MEILI_MASTER_KEY=${MEILI_MASTER_KEY}
+        volumes:
+          - ./meili_data:/meili_data
+        ports:
+          - "7700:7700"
+        restart: unless-stopped

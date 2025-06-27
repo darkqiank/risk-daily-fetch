@@ -23,22 +23,23 @@ class BlogLinkSpider:
             'X-AUTH-KEY': os.getenv("DB_AUTH_KEY"),
             'Content-Type': 'application/json'
         }
-        try:
-            async with aiohttp.ClientSession() as session:
-                async with session.post(
-                    url, 
-                    headers=headers,
-                    json=data, 
-                    timeout=30
-                ) as response:
-                    response.raise_for_status()
-                    return await response.json()
-        except Exception as e:
-            raise Exception(f"保存数据失败: {str(e)}， 爬取数据数: {len(data)}")
+        
+        async with aiohttp.ClientSession() as session:
+            async with session.post(
+                url, 
+                headers=headers,
+                json=data, 
+                timeout=30
+            ) as response:
+                response.raise_for_status()
+                return await response.json()
 
 
     async def save_links(self, blog_name: str, links: List[str]):
-        return await self._save_to_db({blog_name: links})
+        try:
+            return await self._save_to_db({blog_name: links})
+        except Exception as e:
+            raise Exception(f"保存数据失败: {str(e)}， 爬取数据数: {len(links)}")
 
 
     async def parse_links(self, blog_name: str, use_proxy: bool = False):
