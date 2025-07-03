@@ -1,6 +1,6 @@
 networks:
     middleware-network:
-        external: true
+        driver: bridge
 
 services:
     postgresql:
@@ -38,3 +38,4 @@ services:
         restart: always
         volumes:
             - ./pg/data:/var/lib/postgresql/data
+            - ./init.sql:/docker-entrypoint-initdb.d/init.sql
