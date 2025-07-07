@@ -157,6 +157,11 @@ const FlowRuns: React.FC = () => {
         filterBody.flow_runs.state.name = {
           any_: [selectedState]
         };
+      } else {
+        // 默认排除 Scheduled 状态
+        filterBody.flow_runs.state.name = {
+          not_any_: ['Scheduled']
+        };
       }
 
       // 添加时间筛选
@@ -259,8 +264,8 @@ const FlowRuns: React.FC = () => {
     setMessageModalVisible(true);
   };
 
-  // 解析CompletedWithFaild状态的消息
-  const parseCompletedWithFaildMessage = (messageText: string) => {
+  // 解析CompletedWithFailed状态的消息
+  const parseCompletedWithFailedMessage = (messageText: string) => {
     try {
       const parsed = JSON.parse(messageText);
       const success = parsed.success || 0;
@@ -290,14 +295,14 @@ const FlowRuns: React.FC = () => {
       'Cached': { color: 'green', icon: <CheckCircleOutlined />, text: '已缓存' },
       'RolledBack': { color: 'green', icon: <CheckCircleOutlined />, text: '已回滚' },
       // 自定义状态
-      'CompletedWithFaild': { color: 'green', icon: <ExclamationCircleOutlined />, text: '部分完成' },
+      'CompletedWithFailed': { color: 'green', icon: <ExclamationCircleOutlined />, text: '部分完成' },
     };
 
     const config = stateConfig[stateName] || { color: 'default', icon: <ClockCircleOutlined />, text: stateName };
     
-    // 特殊处理 CompletedWithFaild 状态
-    if (stateName === 'CompletedWithFaild' && messageText) {
-      const { success, failed } = parseCompletedWithFaildMessage(messageText);
+    // 特殊处理 CompletedWithFailed 状态
+    if (stateName === 'CompletedWithFailed' && messageText) {
+      const { success, failed } = parseCompletedWithFailedMessage(messageText);
       
       return (
         <Space size={4}>
@@ -347,7 +352,7 @@ const FlowRuns: React.FC = () => {
   const getStateOptions = () => {
     return [
       'Completed',
-      'CompletedWithFaild',
+      'CompletedWithFailed',
       'Running', 
       'Failed',
       'Scheduled',

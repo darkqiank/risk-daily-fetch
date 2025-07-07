@@ -263,7 +263,7 @@ url_mapping_dict = {
 current_dir = os.path.dirname(os.path.abspath(__file__))
     
 # 本地文件路径
-local_suffix_list_path = os.path.join(current_dir, "tasks", "public_suffix_list.dat")
+local_suffix_list_path = os.path.join(current_dir, "public_suffix_list.dat")
 file_url = f"file://{local_suffix_list_path}"
 
 # 初始化TLDExtract，指定本地文件和缓存
@@ -282,7 +282,9 @@ def convert_to_timestamp(date_string):
         timestamp = int(dt_obj.timestamp())
         return timestamp
     except Exception as e:
-        return None
+        print(f"Error converting date string to timestamp: {e}")
+        # 返回当前时间戳
+        return int(datetime.now().timestamp())
 
 
 def hash_text(text: str) -> str:

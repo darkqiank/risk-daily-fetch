@@ -4,11 +4,11 @@ def get_links(_content):
     base_netloc = "https://www.huntress.com"
     soup = BeautifulSoup(_content, 'html.parser')
     
-    # Find all blog article links in the main content area
+    # Find all blog post links in the main content area
     links = []
-    for article in soup.select('div.filter-box'):
+    for article in soup.select('.filter-box'):
         link = article.find('a', class_='blog-index-card-link')
-        if link and link.has_attr('href'):
+        if link and 'href' in link.attrs:
             href = link['href']
             if not href.startswith('http'):
                 href = base_netloc + href

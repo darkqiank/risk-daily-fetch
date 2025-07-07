@@ -2,7 +2,7 @@
 import os
 import sys
 from pathlib import Path
-from prefect.logging import get_logger
+from prefect.logging import get_logger, get_run_logger
 from prefect.runtime import flow_run
 import time
 import uuid
@@ -13,20 +13,21 @@ from spider.base.blog_link_spider import BlogLinkSpider
 from prefect import flow
 from prefect.states import State, Failed, Completed
 import asyncio
-
+from prefect import serve, flow
 
 logger = get_logger()
 blog_link_spider = BlogLinkSpider(logger=logger)
+
 
 # 生成 flow 的 id
 def generate_flow_id() -> str:
     flow_name = flow_run.flow_name
     parameters = flow_run.parameters
-    name = parameters["blog_name"]
-    return f"{name}_{int(time.time()*1000)}_{str(uuid.uuid4())[:8]}"
+    name = parameters.get("blog_name", "default")
+    return f"{flow_name}_{name}_{int(time.time()*1000)}_{str(uuid.uuid4())[:8]}"
 
 # 获取博客链接
-@flow(flow_run_name=generate_flow_id)
+@flow(flow_run_name=generate_flow_id, retries=3, retry_delay_seconds=2.78)
 async def fetch_blog_links_flow(blog_name: str, use_proxy: bool = False):
     try:
         result = await blog_link_spider.parse_links(blog_name, use_proxy=use_proxy)
@@ -36,7 +37,7 @@ async def fetch_blog_links_flow(blog_name: str, use_proxy: bool = False):
     
 
 # 获取旧版博客链接
-@flow(flow_run_name=generate_flow_id)
+@flow(flow_run_name=generate_flow_id, retries=3, retry_delay_seconds=2.78)
 async def fetch_old_blog_links_flow(blog_name: str, blog_language: str, use_proxy: bool = False):
     try:
         result = await blog_link_spider.parse_links_old(blog_name, blog_language, use_proxy=use_proxy)
@@ -47,6 +48,7 @@ async def fetch_old_blog_links_flow(blog_name: str, blog_language: str, use_prox
 
 @flow(name="fetch_all_blogs_links_flow")
 async def fetch_all_blogs_links_flow():
+    blog_link_spider.logger = get_run_logger()
     # 从spider.blog 目录中获取博客名
     blog_names = []
     # 获取当前文件的目录
@@ -91,7 +93,7 @@ async def fetch_all_blogs_links_flow():
 
     # 获取中文博客链接
     for blog_name in old_cn_blog_names:
-        result = await fetch_old_blog_links_flow(blog_name, "cn", use_proxy=True, return_state=True)
+        result = await fetch_old_blog_links_flow(blog_name, "cn", use_proxy=False, return_state=True)
         if result.is_failed():
             print(f"中文博客 {blog_name} 处理失败: {result.message}")
             failed_blogs.append(f"cn/{blog_name}: {result.message}")
@@ -131,9 +133,13 @@ async def fetch_all_blogs_links_flow():
         "failed": len(failed_blogs),
         "failed_blogs": failed_blogs
     }
-    return run_result
+    if len(failed_blogs)>0:
+        return Completed(name="CompletedWithFailed",message=json.dumps(run_result, ensure_ascii=False));
+    else:
+        return run_result;
 
 
 
 if __name__ == "__main__":
     asyncio.run(fetch_all_blogs_links_flow())
+    # 本地process部署

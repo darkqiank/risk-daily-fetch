@@ -37,6 +37,7 @@ class BlogLinkSpider:
 
     async def save_links(self, blog_name: str, links: List[str]):
         try:
+            self.logger.info(f"保存数据: {blog_name} 链接数: {len(links)}")
             return await self._save_to_db({blog_name: links})
         except Exception as e:
             raise Exception(f"保存数据失败: {str(e)}， 爬取数据数: {len(links)}")
@@ -55,6 +56,7 @@ class BlogLinkSpider:
             links = module.get_links(raw_content)
             # 去重
             links = list(set(links))
+            self.logger.info(f"爬取数据: {blog_name} 链接数: {len(links)}")
             await self.save_links(blog_name, links)
             return links
         except Exception as e:
@@ -69,6 +71,7 @@ class BlogLinkSpider:
             module = importlib.import_module(module_name)
 
             links = module.get_links(use_proxy=use_proxy)
+            self.logger.info(f"爬取数据: {blog_name} 链接数: {len(links)}")
             await self.save_links(blog_name, links)
             return links
         except Exception as e:

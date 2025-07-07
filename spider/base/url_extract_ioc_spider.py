@@ -1,17 +1,34 @@
 import importlib
 import os
+from typing import Any, Dict, List
 import aiohttp
 import sys
 from pathlib import Path
 import logging
+import asyncio
+import asyncpg
+import ast
+import json
+from datetime import datetime, timedelta
 
 # Add the project root directory to Python path
 sys.path.append(str(Path(__file__).parent.parent))
 
+from spider.iocgpt.ioc_format import standardize_iocs
+
+
+# 时间转换函数
+def convert_to_china_time(utc_time_str):
+    utc_time = datetime.strptime(utc_time_str, "%Y-%m-%dT%H:%M:%S.%f+00:00")
+    return utc_time + timedelta(hours=8)
 
 class UrlExtractIOCSpider:
-    def __init__(self, logger: logging.Logger):
+    def __init__(self, logger: logging.Logger, db_pool: asyncpg.Pool = None):
         self.logger = logger
+        self.db_pool = db_pool
+
+    async def init_db_pool(self, dsn: str):
+        self.db_pool = await asyncpg.create_pool(dsn, min_size=1, max_size=5)
 
     async def parse_content(self, blog_name: str, link: str, use_proxy: bool = False, use_cache: bool = False):
         # 动态导入模块
@@ -31,26 +48,69 @@ class UrlExtractIOCSpider:
         except Exception as e:
             raise ValueError(f"{link} 链接内容抓取失败: {e}")
     
-
     async def submit_to_iocgpt(self, content: str):
         """
-        通过接口提交到 IOCGPT
+        通过大模型提取ioc
         """
         try:
-            """提交获取文章内容的IOC任务"""
-            api = os.getenv("IOC_SUBMIT_API")
-            key = os.getenv("IOC_SUBMIT_KEY")
-            headers = {"Authorization": f"Bearer {key}"}
-            data = {
-                "urls": [content]
-            }
+            ioc_url = os.getenv("IOC_URL")
+            ioc_api_key = os.getenv("IOC_API_KEY")
             async with aiohttp.ClientSession() as session:
-                async with session.post(api, headers=headers, json=data) as response:
-                    return await response.json()
+                async with session.post(
+                    ioc_url,
+                    headers={"Authorization": f"Bearer {ioc_api_key}"},
+                    json={"messages": [{'role': 'user', 'content': content}]},
+                ) as response:
+                    response.raise_for_status()
+                    res_json = await response.json()
+                    self.logger.info(f"大模型提取ioc结果: {res_json}")
+                    return res_json
         except Exception as e:
             self.logger.error(f"提交到 IOCGPT 失败: {str(e)}")
             raise ValueError(f"提交到 IOCGPT 失败: {str(e)}")
     
+
+    async def save_iocs_to_db(self, data: List[Dict[str, Any]]):
+        """
+        通过异步保存到数据库
+        """
+        upsert_query = """
+        INSERT INTO threat_intelligence (url, content, inserted_at, source, extraction_result)
+        VALUES ($1, $2, $3, $4, $5)
+        ON CONFLICT (url) 
+        DO UPDATE SET
+            content = EXCLUDED.content,
+            inserted_at = EXCLUDED.inserted_at,
+            source = EXCLUDED.source,
+            extraction_result = EXCLUDED.extraction_result;
+        """
+        if not self.db_pool:
+            raise ValueError(f"未配置数据库")
+        
+        async with self.db_pool.acquire() as connection:
+            async with connection.transaction():
+                for record in data:
+                    try:
+                        china_time = convert_to_china_time(record["inserted_at"])
+                        extraction_json = json.dumps(record["extraction_result"], ensure_ascii=False)
+                        await connection.execute(upsert_query,
+                            record["url"],
+                            record["content"],
+                            china_time,
+                            record["source"],
+                            extraction_json
+                        )
+                    except Exception as e:
+                        self.logger.error(f"Error inserting record: {e}")
+                        raise  # 重新抛出异常，让事务回滚
+    
+    async def send_iocs_to_kafka(self, data: List[Dict[str, Any]]):
+        """
+        发送 IOC 到 Kafka
+        """
+        iocs = standardize_iocs(data)
+        pass
+
 
     async def llm_read(self, content: str):
         """
@@ -73,4 +133,31 @@ class UrlExtractIOCSpider:
         except Exception as e:
             self.logger.error(f"提交到 IOCGPT 失败: {str(e)}")
             raise ValueError(f"提交到 IOCGPT 失败: {str(e)}")
+    
         
+    async def save_content_details_to_db(self, data: List[Dict[str, Any]]):
+        """
+        保存内容详情
+        """
+        import aiohttp
+        end_point = os.getenv("DB_ENDPOINT")
+        url = f'{end_point}/api/detail'
+        print(url)
+        headers = {
+            'X-AUTH-KEY': os.getenv("DB_AUTH_KEY"),
+            'Content-Type': 'application/json'
+        }
+        try:
+            # 保存数据
+            async with aiohttp.ClientSession() as session:
+                async with session.post(
+                    url, 
+                    headers=headers,
+                    json=data, 
+                    timeout=30
+                ) as response:
+                    response.raise_for_status()
+                    return await response.json()
+        except Exception as e:
+            self.logger.error(f"保存数据失败: {str(e)}")
+            raise Exception(f"保存数据失败: {str(e)}")

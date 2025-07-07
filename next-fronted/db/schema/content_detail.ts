@@ -21,7 +21,7 @@ export const contentDetail = pgTable("content_detail", {
 }, (table) => ({
   // GIN索引用于全文搜索优化（使用jieba中文分词）
   fullTextSearchIdx: index("idx_content_detail_fulltext_search")
-    .using("gin", sql`to_tsvector(${SEARCH_CONFIG}, COALESCE(${table.content}, '') || ' ' || COALESCE(${table.url}, '') || ' ' || COALESCE(${table.source}, ''))`),
+    .using("gin", sql`to_tsvector('simple', COALESCE(${table.content}, '') || ' ' || COALESCE(${table.url}, '') || ' ' || COALESCE(${table.source}, ''))`),
 }));
 
 export interface DetailFilters {

@@ -3,9 +3,9 @@ import sys
 from datetime import datetime
 
 # 添加外部模块路径
-# sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
-from .utils import domain_mapping_dict, ip_mapping_dict, url_mapping_dict
-from .utils import convert_to_timestamp, create_group_mapping, create_family_mapping, create_alexa_mapping, check_and_extract_domain, is_public_ip
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
+from spider.iocgpt.utils import domain_mapping_dict, ip_mapping_dict, url_mapping_dict
+from spider.iocgpt.utils import convert_to_timestamp, create_group_mapping, create_family_mapping, create_alexa_mapping, check_and_extract_domain, is_public_ip
 
 current_dir = os.path.dirname(__file__)
 group_mapping = create_group_mapping(os.path.join(current_dir, "apt_info_20241028.csv"))
@@ -17,7 +17,7 @@ def clean_key(key):
         return None
     return key.replace(" ", "").lower()
 
-def standardize_iocs(iocs, url):
+def standardize_iocs(iocs, url=None):
     """ IOC 标准化处理逻辑 """
     standardized = []
     for ioc in iocs.get('iocs', []):
