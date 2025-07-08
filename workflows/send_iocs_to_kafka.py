@@ -33,7 +33,7 @@ def gen_key(context: TaskRunContext, inputs: dict) -> str:
     info_list= inputs.get("info_list", [])
     task_name = context.task.name
     if info_list:
-        return f"{task_name}-{hash_data(info_list)}"
+        return f"{task_name}-{hash_data(str(info_list))}"
     else:
         return None
 
