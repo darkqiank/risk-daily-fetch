@@ -87,11 +87,9 @@ def universal_cache_key(context: TaskRunContext, inputs: dict) -> str:
     retry_delay_seconds=5,
     log_prints=True)
 async def parse_content(blog_name: str, link: str, use_proxy: bool = False, use_cache: bool = True):
-    try:
-        u_spider = await get_spider_instance()
-        return await u_spider.parse_content(blog_name, link, use_proxy, use_cache)
-    except Exception as e:
-        return Failed(message=f"{e}")
+    u_spider = await get_spider_instance()
+    return await u_spider.parse_content(blog_name, link, use_proxy, use_cache)
+
 
 # 提交到 IOCGPT
 @task(    
@@ -104,20 +102,21 @@ async def parse_content(blog_name: str, link: str, use_proxy: bool = False, use_
     retry_delay_seconds=10,
     log_prints=True)
 async def submit_to_iocgpt(blog_name: str, content: str, use_cache: bool = True):
-    try:
-        u_spider = await get_spider_instance()
-        return await u_spider.submit_to_iocgpt(content)
-    except Exception as e:
-        return Failed(message=f"{e}")
+    u_spider = await get_spider_instance()
+    return await u_spider.submit_to_iocgpt(content)
 
-# 保存 IOC 到数据库
-@task(task_run_name=generate_ioc_task_id, log_prints=True)
+
+# 保存 IOC 到数据库, 有缓存，如果缓存了则不重复写入
+@task(
+    cache_expiration=timedelta(hours=24),
+    cache_policy= TASK_SOURCE + INPUTS,
+    persist_result=True,
+    result_storage=local_block,
+    task_run_name=generate_ioc_task_id, log_prints=True)
 async def save_iocs_to_db(blog_name: str, data: list):
-    try:
-        u_spider = await get_spider_instance()
-        return await u_spider.save_iocs_to_db(data)
-    except Exception as e:
-        return Failed(message=f"{e}")
+    u_spider = await get_spider_instance()
+    return await u_spider.save_iocs_to_db(data)
+
 
 # 大模型解读内容
 @task(
@@ -129,20 +128,20 @@ async def save_iocs_to_db(blog_name: str, data: list):
     retry_delay_seconds=10,
     task_run_name=generate_ioc_task_id, log_prints=True)
 async def llm_read(blog_name: str, content: str, use_cache: bool = True):
-    try:
-        u_spider = await get_spider_instance()
-        return await u_spider.llm_read(content)
-    except Exception as e:
-        return Failed(message=f"{e}")
+    u_spider = await get_spider_instance()
+    return await u_spider.llm_read(content)
     
+
 # 保存内容详情
-@task(task_run_name=generate_ioc_task_id, log_prints=True)
+@task(  cache_expiration=timedelta(hours=24),
+        cache_policy= TASK_SOURCE + INPUTS,
+        persist_result=True,
+        result_storage=local_block,
+        task_run_name=generate_ioc_task_id, log_prints=True)
 async def save_content_details_to_db(blog_name: str, data: list):
-    try:
-        u_spider = await get_spider_instance()
-        return await u_spider.save_content_details_to_db(data)
-    except Exception as e:
-        return Failed(message=f"{e}")
+    u_spider = await get_spider_instance()
+    return await u_spider.save_content_details_to_db(data)
+
 
 # 提取 IOC 的 完整flow
 @flow(flow_run_name=generate_ioc_flow_id, log_prints=True)

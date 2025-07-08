@@ -89,7 +89,6 @@ async def fetch_all_blogs_links_flow():
             res_links = await result.result()
             print(f"博客 {blog_name} 处理成功，获取到 {len(res_links)} 个链接")
             success_count += 1
-        break
 
     # 获取中文博客链接
     for blog_name in old_cn_blog_names:
@@ -101,7 +100,6 @@ async def fetch_all_blogs_links_flow():
             res_links = await result.result()
             print(f"中文博客 {blog_name} 处理成功，获取到 {len(res_links)} 个链接")
             success_count += 1
-        break
 
     # 获取英文博客链接
     for blog_name in old_en_blog_names:
@@ -113,7 +111,6 @@ async def fetch_all_blogs_links_flow():
             res_links = await result.result()
             print(f"英文博客 {blog_name} 处理成功，获取到 {len(res_links)} 个链接")
             success_count += 1
-        break
 
     # 输出总结
     total_blogs = len(blog_names) + len(old_cn_blog_names) + len(old_en_blog_names)
