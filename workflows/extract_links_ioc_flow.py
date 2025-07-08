@@ -157,6 +157,9 @@ async def extract_ioc_flow(blog_name: str, link: str, use_proxy: bool = False, u
     logger.info(f"解析内容成功: {content_res.get("title")}")
 
     _content = content_res.get("content")
+    if _content is None:
+        logger.error(f"解析内容为空: {link}")
+        raise ValueError(f"解析内容为空: {link}")
 
     content_detail = {
         "url": link,

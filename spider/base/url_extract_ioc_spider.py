@@ -43,6 +43,13 @@ class UrlExtractIOCSpider:
         
         try:
             raw_content = await module.a_fetch_url(link, use_proxy=use_proxy)
+            if raw_content is None:
+                use_proxy = not use_proxy
+                self.logger.info(f"切换代理模式: {use_proxy}")
+                raw_content = await module.a_fetch_url(link, use_proxy=use_proxy)
+                if raw_content is None:
+                    self.logger.error(f"切换代理模式后，链接内容抓取失败: {link}")
+                    raise ValueError(f"切换后二次抓取失败")
             content = module.get_content(raw_content)
             return content
         except Exception as e:
