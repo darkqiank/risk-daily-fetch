@@ -13,7 +13,6 @@ from datetime import timedelta
 import time
 import uuid
 from collections import defaultdict
-from pykafka.exceptions import ProduceError
 
 # Add the project root directory to Python path
 sys.path.append(str(Path(__file__).parent.parent))
@@ -105,7 +104,7 @@ def send_to_kafka(info_list, kafka_client):
             for msg in messages:
                 producer.produce(msg)
             send_count += len(messages)
-        except ProduceError as e:
+        except Exception as e:
             logger.error(f"Kafka 发送失败 ({topic_key}): {e}")
             continue
 
