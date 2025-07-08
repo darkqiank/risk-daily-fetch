@@ -148,12 +148,12 @@ async def save_content_details_to_db(blog_name: str, data: list):
 async def extract_ioc_flow(blog_name: str, link: str, use_proxy: bool = False, use_cache: bool = True):
     failed_tasks = []
     # 解析网页内容
-    content_state = await parse_content(blog_name, link, use_proxy, use_cache, return_state=True)
-    if content_state.is_failed():
-        logger.error(f"解析内容失败: {content_state.message}")
-        return content_state
+    try:
+        content_res = await parse_content(blog_name, link, use_proxy, use_cache)
+    except Exception as e:
+        logger.error(f"解析内容失败: {e}")
+        raise e
     
-    content_res = await content_state.result()
     logger.info(f"解析内容成功: {content_res.get("title")}")
 
     _content = content_res.get("content")
@@ -167,23 +167,20 @@ async def extract_ioc_flow(blog_name: str, link: str, use_proxy: bool = False, u
     }
 
     # 大模型解读内容
-    llm_future = await llm_read(blog_name, _content, use_cache=use_cache, return_state=True)
-    if llm_future.is_failed():
-        logger.error(f"大模型解读内容失败: {llm_future.message}")
-        failed_tasks.append(llm_future)
-    else:
-        llm_res = await llm_future.result()
+    try:
+        llm_res = await llm_read(blog_name, _content, use_cache=use_cache)
         logger.info(f"大模型解读内容成功: {llm_res}")
         content_detail["detail"] = llm_res
+    except Exception as e:
+        logger.error(f"大模型解读内容失败: {e}")
+        raise e
     
     # 保存内容详情
-    content_detail_state = await save_content_details_to_db(blog_name, [content_detail], return_state=True)
-    if content_detail_state.is_failed():
-        logger.error(f"保存内容详情失败: {content_detail_state.message}")
-        failed_tasks.append(content_detail_state)
-    else:
-        content_detail_res = await content_detail_state.result()
-        logger.info(f"保存内容详情成功: {content_detail_res}")
+    try:
+        await save_content_details_to_db(blog_name, [content_detail])
+    except Exception as e:
+        logger.error(f"保存内容详情失败: {e}")
+        raise e
 
     # 提交到 IOCGPT
     threaten_result = {
@@ -191,27 +188,26 @@ async def extract_ioc_flow(blog_name: str, link: str, use_proxy: bool = False, u
         "content": _content,
         "source": link
     }
-    ioc_state = await submit_to_iocgpt(blog_name, _content, use_cache=use_cache, return_state=True)
-    if ioc_state.is_failed():
-        logger.error(f"提交到 IOCGPT 失败: {ioc_state.message}")
-        failed_tasks.append(ioc_state)
-    else:
-        ioc_data = await ioc_state.result()
+
+    try:
+        ioc_data = await submit_to_iocgpt(blog_name, _content, use_cache=use_cache)
         threaten_result["inserted_at"] = datetime.now(timezone.utc).isoformat()
         threaten_result["extraction_result"] = ioc_data
         logger.info(f"提交到 IOCGPT 成功: {ioc_data}")
-        # 保存 IOC 到数据库
-        save_ioc_state = await save_iocs_to_db(blog_name, [threaten_result], return_state=True)
-        if save_ioc_state.is_failed():
-            logger.error(f"保存 IOC 到数据库失败: {save_ioc_state.message}")
-            failed_tasks.append(save_ioc_state)
-        else:
-            logger.info(f"保存 IOC 到数据库成功")
+    except Exception as e:
+        logger.error(f"提交到 IOCGPT 失败: {e}")
+        raise e
+
     
-    if failed_tasks:
-        return Failed(message=f"提取 IOC 失败: {failed_tasks}")
-    else:
-        return True
+    # 保存 IOC 到数据库
+    try:
+        await save_iocs_to_db(blog_name, [threaten_result])
+    except Exception as e:
+        logger.error(f"保存 IOC 到数据库失败: {e}")
+        raise e
+    
+    return True
+
 
 # 批量提取链接IOC
 @flow(flow_run_name=generate_ioc_flow_id, log_prints=True)
@@ -250,11 +246,8 @@ async def extract_links_ioc_flow(max_concurrent: int = 3):
             blog_url = blog_link.get("url")
             
             try:
-                res = await extract_ioc_flow(blog_name, blog_url, use_proxy=True, use_cache=True, return_state=True)
-                if res.is_failed():
-                    return {"success": False, "link": blog_link}
-                else:
-                    return {"success": True, "link": blog_link}
+                res = await extract_ioc_flow(blog_name, blog_url, use_proxy=True, use_cache=True)
+                return {"success": True, "link": blog_link}
             except Exception as e:
                 logger.error(f"处理异常: {blog_name} - {str(e)}")
                 return {"success": False, "link": blog_link}
@@ -328,24 +321,22 @@ async def read_ym_data_flow():
         }
 
         # 大模型解读内容
-        llm_future = await llm_read("天际友盟", _content, use_cache=True, return_state=True)
-        if llm_future.is_failed():
-            logger.error(f"大模型解读内容失败: {llm_future.message}")
-            failed_tasks.append(llm_future)
-        else:
-            llm_res = await llm_future.result()
+        try:
+            llm_res = await llm_read("天际友盟", _content, use_cache=True)
             logger.info(f"大模型解读内容成功: {llm_res}")
             content_detail["detail"] = llm_res
+        except Exception as e:
+            logger.error(f"大模型解读内容失败: {e}")
+            failed_tasks.append({"id": ym_item.get("id"), "title": ym_item.get("title"), "message": e})
 
         # 保存内容详情
-        content_detail_state = await save_content_details_to_db("天际友盟", [content_detail], return_state=True)
-        if content_detail_state.is_failed():
-            logger.error(f"保存内容详情失败: {content_detail_state.message}")
-            failed_tasks.append({"id": ym_item.get("id"), "title": ym_item.get("title"), "message": content_detail_state.message})
-        else:
+        try:
+            await save_content_details_to_db("天际友盟", [content_detail])
             success_count += 1
-            content_detail_res = await content_detail_state.result()
-            logger.info(f"保存内容详情成功: {content_detail_res}")
+            logger.info(f"保存内容详情成功")
+        except Exception as e:
+            logger.error(f"保存内容详情失败: {e}")
+            failed_tasks.append({"id": ym_item.get("id"), "title": ym_item.get("title"), "message": e})
         
         await asyncio.sleep(1)
 
@@ -390,13 +381,13 @@ async def read_twitter_data_flow():
         source = twitter_link.get("source")
         _url = twitter_link.get("url")
         if _url.startswith("https://") or _url.startswith("http://"):
-            content_state = await parse_content(source, _url, use_proxy=True, use_cache=True, return_state=True)
-            if content_state.is_failed():
-                logger.error(f"解析内容失败: {content_state.message}")
-                failed_tasks.append(f"{source} - {content_state.message}")
+            try:
+                content_res = await parse_content(source, _url, use_proxy=True, use_cache=True)
+                _content = content_res.get("content")
+            except Exception as e:
+                logger.error(f"解析内容失败: {e}")
+                failed_tasks.append(f"{source} - {e}")
                 continue
-            else:
-                _content = content_state.result()
         else:
             _content = _url
             
@@ -407,26 +398,25 @@ async def read_twitter_data_flow():
         }
 
         # 提取iocgpt
-        ioc_state = await submit_to_iocgpt(source, _content, use_cache=True, return_state=True)
-        if ioc_state.is_failed():
-            logger.error(f"提交到 IOCGPT 失败: {ioc_state.message}")
-            failed_tasks.append(f"{source} - {ioc_state.message}")
-            continue
-        else:
-            ioc_data = await ioc_state.result()
+        try:
+            ioc_data = await submit_to_iocgpt(source, _content, use_cache=True)
             twitter_result["inserted_at"] = datetime.now(timezone.utc).isoformat()
             twitter_result["extraction_result"] = ioc_data
             logger.info(f"提交到 IOCGPT 成功: {ioc_data}")
-        
-        # 保存 IOC 到数据库
-        save_ioc_state = await save_iocs_to_db(source, [twitter_result], return_state=True)
-        if save_ioc_state.is_failed():
-            logger.error(f"保存 IOC 到数据库失败: {save_ioc_state.message}")
-            failed_tasks.append(f"{source} - {save_ioc_state.message}")
+        except Exception as e:
+            logger.error(f"提交到 IOCGPT 失败: {e}")
+            failed_tasks.append(f"{source} - {e}")
             continue
-        else:
+
+        # 保存 IOC 到数据库
+        try:
+            await save_iocs_to_db(source, [twitter_result])
             success_count += 1
             logger.info(f"保存 IOC 到数据库成功")
+        except Exception as e:
+            logger.error(f"保存 IOC 到数据库失败: {e}")
+            failed_tasks.append(f"{source} - {e}")
+            continue
         
         await asyncio.sleep(1)
     
