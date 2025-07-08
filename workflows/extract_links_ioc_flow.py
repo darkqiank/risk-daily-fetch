@@ -327,7 +327,8 @@ async def read_ym_data_flow():
             "content": _content,
             "contentHash": hash_data(f'{ym_detail.get("title")} {ym_detail.get("description")}'),
         }
-            # 大模型解读内容
+
+        # 大模型解读内容
         llm_future = await llm_read("天际友盟", _content, use_cache=True, return_state=True)
         if llm_future.is_failed():
             logger.error(f"大模型解读内容失败: {llm_future.message}")
@@ -361,6 +362,86 @@ async def read_ym_data_flow():
     else:
         return run_result;
 
+
+# 大模型读取twitter数据
+@flow(flow_run_name=generate_ioc_flow_id, log_prints=True)
+async def read_twitter_data_flow():
+    logger=get_run_logger()
+    u_spider = await get_spider_instance()
+    u_spider.logger = logger
+
+    twitter_feed_url = os.getenv("TWITTER_FEED_URL")
+    async def get_twitter_links() -> List[Dict[str, Any]]:
+        """
+        获取twitter链接
+        """
+        import aiohttp
+        async with aiohttp.ClientSession() as session:
+            async with session.get(twitter_feed_url, timeout=30) as response:
+                res = await response.json()
+                return res.get("url", [])
+    
+    twitter_links = await get_twitter_links()
+    logger.info(f"获取到 {len(twitter_links)} 个链接")
+
+    failed_tasks = []
+    success_count = 0
+
+    for twitter_link in twitter_links:
+        source = twitter_link.get("source")
+        _url = twitter_link.get("url")
+        if _url.startswith("https://") or _url.startswith("http://"):
+            content_state = await parse_content(source, _url, use_proxy=True, use_cache=True, return_state=True)
+            if content_state.is_failed():
+                logger.error(f"解析内容失败: {content_state.message}")
+                failed_tasks.append(f"{source} - {content_state.message}")
+                continue
+            else:
+                _content = content_state.result()
+        else:
+            _content = _url
+            
+        twitter_result = {
+            "url": hash_data(_content),
+            "content": _content,
+            "source": source,
+        }
+
+        # 提取iocgpt
+        ioc_state = await submit_to_iocgpt(source, _content, use_cache=True, return_state=True)
+        if ioc_state.is_failed():
+            logger.error(f"提交到 IOCGPT 失败: {ioc_state.message}")
+            failed_tasks.append(f"{source} - {ioc_state.message}")
+            continue
+        else:
+            ioc_data = await ioc_state.result()
+            twitter_result["inserted_at"] = datetime.now(timezone.utc).isoformat()
+            twitter_result["extraction_result"] = ioc_data
+            logger.info(f"提交到 IOCGPT 成功: {ioc_data}")
+        
+        # 保存 IOC 到数据库
+        save_ioc_state = await save_iocs_to_db(source, [twitter_result], return_state=True)
+        if save_ioc_state.is_failed():
+            logger.error(f"保存 IOC 到数据库失败: {save_ioc_state.message}")
+            failed_tasks.append(f"{source} - {save_ioc_state.message}")
+            continue
+        else:
+            success_count += 1
+            logger.info(f"保存 IOC 到数据库成功")
+        
+        await asyncio.sleep(1)
+    
+    run_result = {
+        "total": len(twitter_links),
+        "success": success_count,
+        "failed": len(failed_tasks),
+        "failed_links": failed_tasks
+    }
+
+    if len(failed_tasks)>0:
+        return Completed(name="CompletedWithFailed",message=json.dumps(run_result, ensure_ascii=False));
+    else:
+        return run_result;
     
 
 
