@@ -12,6 +12,8 @@ import dotenv
 from datetime import timedelta
 import time
 import uuid
+from collections import defaultdict
+from pykafka.exceptions import ProduceError
 
 # Add the project root directory to Python path
 sys.path.append(str(Path(__file__).parent.parent))
@@ -49,10 +51,12 @@ def gen_key(context: TaskRunContext, inputs: dict) -> str:
 )
 def send_to_kafka(info_list, kafka_client):
     """
-    根据 info_list 中的数据类型发送到对应 Kafka topic，同时避免多余字段干扰。
+    将 info_list 中数据按类型发送到 Kafka 各自 topic，统一使用 producer 批量发送。
     """
     logger = get_run_logger()
-    logger.info("Kafka发送开始")
+    logger.info("Kafka 批量发送开始")
+
+    # 主题映射
     topic_mapping = {
         'ip': kafka_client.topics[b'ipReputation'],
         'domain': kafka_client.topics[b'domainReputation'],
@@ -60,43 +64,52 @@ def send_to_kafka(info_list, kafka_client):
         'url': kafka_client.topics[b'urlReputation']
     }
 
-    send_count = 0
+    # 分类存储待发送数据
+    type_to_messages = defaultdict(list)
+
     for info in info_list:
-        # 如果不需要发送，直接跳过不发送
         if not info.get("send2kafka", True):
             continue
 
-        # 清理无关字段
-        info.pop("send2kafka", None)
-        if 'tags' in info:
-            info.pop('tags')
-        if 'family' in info:
-            info.pop('family')
-
-        # 判断数据类型
+        info = {k: v for k, v in info.items() if k not in ['send2kafka', 'tags', 'family']}
         data_type = info.get('data_type')
+
         if data_type == 'file':
-            kafka_topic = topic_mapping.get('file')
+            topic_key = 'file'
         elif 'ip' in info:
-            kafka_topic = topic_mapping.get('ip')
+            topic_key = 'ip'
         elif 'domain' in info:
-            kafka_topic = topic_mapping.get('domain')
+            topic_key = 'domain'
         elif 'url' in info:
-            kafka_topic = topic_mapping.get('url')
+            topic_key = 'url'
         else:
-            logger.error(f"未知数据类型或结构: {info}, 跳过该条数据。")
+            logger.error(f"未知数据类型或结构: {info}, 跳过。")
             continue
 
-        with kafka_topic.get_producer() as producer:
-            try:
-                python_to_json = json.dumps(info, ensure_ascii=False)
-                producer.produce(python_to_json.encode())
-            except Exception as e:
-                logger.error(f"Kafka发送异常: {e}")
-                continue
-        send_count += 1
+        try:
+            json_data = json.dumps(info, ensure_ascii=False).encode()
+            type_to_messages[topic_key].append(json_data)
+        except Exception as e:
+            logger.warning(f"转换为 JSON 失败: {e}，跳过此条")
 
-    logger.info(f"Kafka发送结束，发送了 {send_count} 条数据")
+    send_count = 0
+    # 分类型发送
+    for topic_key, messages in type_to_messages.items():
+        topic = topic_mapping.get(topic_key)
+        if not topic:
+            logger.warning(f"未找到 topic: {topic_key}")
+            continue
+
+        try:
+            producer = topic.get_sync_producer()
+            for msg in messages:
+                producer.produce(msg)
+            send_count += len(messages)
+        except ProduceError as e:
+            logger.error(f"Kafka 发送失败 ({topic_key}): {e}")
+            continue
+
+    logger.info(f"Kafka 批量发送结束，共发送 {send_count} 条数据")
     return send_count
 
 @flow(name="send_iocs_to_kafka", log_prints=True)
@@ -132,5 +145,5 @@ async def send_iocs_to_kafka():
 if __name__ == "__main__":
     # asyncio.run(send_iocs_to_kafka())
     send_iocs_to_kafka_deployment = send_iocs_to_kafka.to_deployment(name="发送威胁数据到Kafka", 
-                                                                     interval=timedelta(hours=1))
+                                                                     interval=timedelta(hours=3))
     serve(send_iocs_to_kafka_deployment)
