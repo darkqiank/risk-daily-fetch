@@ -150,16 +150,23 @@ async def extract_ioc_flow(blog_name: str, link: str, use_proxy: bool = False, u
     # 解析网页内容
     logger.info(f"开始解析内容: {link}")
     try:
-        _content = await parse_content(blog_name, link, use_proxy, use_cache)
+        content_res = await parse_content(blog_name, link, use_proxy, use_cache)
     except Exception as e:
         logger.error(f"解析内容失败: {e}")
         raise e
-
-    if _content is None or _content == "" or isinstance(_content, str) == False:
+    
+    if content_res is None:
         logger.error(f"解析内容为空: {link}")
         raise ValueError(f"解析内容为空: {link}")
+    
+    if isinstance(content_res, str):
+        _content = content_res
     else:
-        logger.info(f"解析内容成功: {_content[:20]}...")
+        _content = content_res.get("content")
+    
+    if _content is None or _content == "":
+        logger.error(f"解析内容为空: {link}")
+        raise ValueError(f"解析内容为空: {link}")
 
     content_detail = {
         "url": link,
