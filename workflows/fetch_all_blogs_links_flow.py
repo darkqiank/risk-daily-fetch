@@ -77,43 +77,43 @@ async def fetch_all_blogs_links_flow():
     for blog_name in blog_names:
         try:
             res_links = await fetch_blog_links_flow(blog_name, use_proxy=True)
-            print(f"博客 {blog_name} 处理成功，获取到 {len(res_links)} 个链接")
+            logger.info(f"博客 {blog_name} 处理成功，获取到 {len(res_links)} 个链接")
             success_count += 1
         except Exception as e:
-            print(f"博客 {blog_name} 处理失败: {e}")
+            logger.error(f"博客 {blog_name} 处理失败: {e}")
             failed_blogs.append(f"{blog_name}: {e}")
 
     # 获取中文博客链接
     for blog_name in old_cn_blog_names:
         try:
             res_links = await fetch_old_blog_links_flow(blog_name, "cn", use_proxy=False)
-            print(f"中文博客 {blog_name} 处理成功，获取到 {len(res_links)} 个链接")
+            logger.info(f"中文博客 {blog_name} 处理成功，获取到 {len(res_links)} 个链接")
             success_count += 1
         except Exception as e:
-            print(f"中文博客 {blog_name} 处理失败: {e}")
+            logger.error(f"中文博客 {blog_name} 处理失败: {e}")
             failed_blogs.append(f"cn/{blog_name}: {e}")
 
     # 获取英文博客链接
     for blog_name in old_en_blog_names:
         try:
             res_links = await fetch_old_blog_links_flow(blog_name, "en", use_proxy=True)
-            print(f"英文博客 {blog_name} 处理成功，获取到 {len(res_links)} 个链接")
+            logger.info(f"英文博客 {blog_name} 处理成功，获取到 {len(res_links)} 个链接")
             success_count += 1
         except Exception as e:
-            print(f"英文博客 {blog_name} 处理失败: {e}")
+            logger.error(f"英文博客 {blog_name} 处理失败: {e}")
             failed_blogs.append(f"en/{blog_name}: {e}")
 
     # 输出总结
     total_blogs = len(blog_names) + len(old_cn_blog_names) + len(old_en_blog_names)
-    print(f"\n=== 执行总结 ===")
-    print(f"总共处理博客: {total_blogs}")
-    print(f"成功处理: {success_count}")
-    print(f"失败处理: {len(failed_blogs)}")
+    logger.info(f"\n=== 执行总结 ===")
+    logger.info(f"总共处理博客: {total_blogs}")
+    logger.info(f"成功处理: {success_count}")
+    logger.info(f"失败处理: {len(failed_blogs)}")
     
     if failed_blogs:
-        print(f"\n失败的博客:")
+        logger.info(f"\n失败的博客:")
         for failed in failed_blogs:
-            print(f"  - {failed}")
+            logger.info(f"  - {failed}")
     
     run_result = {
         "total": total_blogs,

@@ -155,7 +155,7 @@ async def extract_ioc_flow(blog_name: str, link: str, use_proxy: bool = False, u
         logger.error(f"解析内容失败: {e}")
         raise e
 
-    if _content is None or _content == "":
+    if _content is None or _content == "" or isinstance(_content, str) == False:
         logger.error(f"解析内容为空: {link}")
         raise ValueError(f"解析内容为空: {link}")
     else:

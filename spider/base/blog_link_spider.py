@@ -10,7 +10,7 @@ sys.path.append(str(Path(__file__).parent.parent))
 
 
 class BlogLinkSpider:
-    def __init__(self, logger: logging.Logger):
+    def __init__(self, logger = logging.getLogger(__name__)):
         self.logger = logger
 
 
