@@ -50,8 +50,11 @@ class UrlExtractIOCSpider:
                 if raw_content is None:
                     self.logger.error(f"切换代理模式后，链接内容抓取失败: {link}")
                     raise ValueError(f"切换后二次抓取失败")
-            content = module.get_content(raw_content)
-            return content
+            content_res = module.get_content(raw_content)
+            if content_res is None:
+                self.logger.error(f"解析内容为空: {link}")
+                raise ValueError(f"解析内容为空")
+            return content_res.get("content")
         except Exception as e:
             raise ValueError(f"{link} 链接内容抓取失败: {e}")
     

@@ -27,7 +27,6 @@ from workflows.cache import local_block
 
 
 dotenv.load_dotenv()
-logger = get_logger()
 
 # 全局变量用于存储spider实例
 _spider_instance = None
@@ -37,7 +36,7 @@ async def get_spider_instance():
     global _spider_instance
     if _spider_instance is None:
         dsn = os.getenv("RISK_DATABASE_URL")
-        _spider_instance = UrlExtractIOCSpider(logger=logger)
+        _spider_instance = UrlExtractIOCSpider()
         await _spider_instance.init_db_pool(dsn)
     return _spider_instance
 
@@ -147,19 +146,20 @@ async def save_content_details_to_db(blog_name: str, data: list):
 @flow(flow_run_name=generate_ioc_flow_id, log_prints=True)
 async def extract_ioc_flow(blog_name: str, link: str, use_proxy: bool = False, use_cache: bool = True):
     failed_tasks = []
+    logger = get_run_logger()
     # 解析网页内容
+    logger.info(f"开始解析内容: {link}")
     try:
-        content_res = await parse_content(blog_name, link, use_proxy, use_cache)
+        _content = await parse_content(blog_name, link, use_proxy, use_cache)
     except Exception as e:
         logger.error(f"解析内容失败: {e}")
         raise e
-    
-    logger.info(f"解析内容成功: {content_res.get("title")}")
 
-    _content = content_res.get("content")
-    if _content is None:
+    if _content is None or _content == "":
         logger.error(f"解析内容为空: {link}")
         raise ValueError(f"解析内容为空: {link}")
+    else:
+        logger.info(f"解析内容成功: {_content[:20]}...")
 
     content_detail = {
         "url": link,
@@ -221,8 +221,9 @@ async def extract_links_ioc_flow(max_concurrent: int = 3):
     Args:
         max_concurrent: 最大并发数，默认3
     """
+    logger = get_run_logger()
     u_spider = await get_spider_instance()
-    u_spider.logger = get_run_logger()
+    u_spider.logger = logger
 
     import aiohttp
     # 获取链接
