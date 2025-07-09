@@ -16,6 +16,7 @@ sys.path.append(str(Path(__file__).parent.parent))
 
 from spider.iocgpt.ioc_format import standardize_iocs
 
+default_logger = logging.getLogger(__name__)
 
 # 时间转换函数
 def convert_to_china_time(utc_time_str):
@@ -23,7 +24,7 @@ def convert_to_china_time(utc_time_str):
     return utc_time + timedelta(hours=8)
 
 class UrlExtractIOCSpider:
-    def __init__(self, logger: logging.Logger, db_pool: asyncpg.Pool = None):
+    def __init__(self, logger = default_logger, db_pool: asyncpg.Pool = None):
         self.logger = logger
         self.db_pool = db_pool
 
