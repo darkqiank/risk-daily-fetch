@@ -394,7 +394,10 @@ async def read_twitter_data_flow():
         if _url.startswith("https://") or _url.startswith("http://"):
             try:
                 content_res = await parse_content(source, _url, use_proxy=True, use_cache=True)
-                _content = content_res.get("content")
+                if isinstance(content_res, str):
+                    _content = content_res
+                else:
+                    _content = content_res.get("content")
             except Exception as e:
                 logger.error(f"解析内容失败: {e}")
                 failed_tasks.append(f"{source} - {e}")
