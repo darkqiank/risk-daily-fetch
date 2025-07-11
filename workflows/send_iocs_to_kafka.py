@@ -130,11 +130,11 @@ async def send_iocs_to_kafka():
     total_send_count = 0
     for threat in threats:
         insert_time_str = threat.get("insertedAt")
-        insert_time = int(datetime.strptime(insert_time_str, "%Y-%m-%d %H:%M:%S.%f%z").timestamp() if insert_time_str else datetime.now().timestamp())
+        insert_time = int(datetime.strptime(insert_time_str[:19], "%Y-%m-%d %H:%M:%S").timestamp() if insert_time_str else datetime.now().timestamp())
         ioc_data = threat.get("extractionResult", {}).get("data")
         if not ioc_data:
             continue
-        iocs = standardize_iocs(ioc_data, threat.get("link"))
+        iocs = standardize_iocs(ioc_data, threat.get("link"), insert_time)
         logger.info(f"标准化后的IOC数据: {iocs}")
         send_count = send_to_kafka(iocs, kafka_client)
         total_send_count += send_count
