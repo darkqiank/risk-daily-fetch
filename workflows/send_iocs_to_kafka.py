@@ -9,7 +9,7 @@ import sys
 from pathlib import Path
 import asyncio
 import dotenv
-from datetime import timedelta
+from datetime import timedelta, datetime
 import time
 import uuid
 from collections import defaultdict
@@ -129,6 +129,8 @@ async def send_iocs_to_kafka():
 
     total_send_count = 0
     for threat in threats:
+        insert_time_str = threat.get("insertedAt")
+        insert_time = int(datetime.strptime(insert_time_str, "%Y-%m-%d %H:%M:%S.%f%z").timestamp() if insert_time_str else datetime.now().timestamp())
         ioc_data = threat.get("extractionResult", {}).get("data")
         if not ioc_data:
             continue

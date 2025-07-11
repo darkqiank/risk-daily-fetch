@@ -284,7 +284,8 @@ def convert_to_timestamp(date_string):
     except Exception as e:
         print(f"Error converting date string to timestamp: {e}")
         # 返回当前时间戳
-        return int(datetime.now().timestamp())
+        # return int(datetime.now().timestamp())
+        return None
 
 
 def hash_text(text: str) -> str:

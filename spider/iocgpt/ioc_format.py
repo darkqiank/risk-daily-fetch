@@ -17,7 +17,7 @@ def clean_key(key):
         return None
     return key.replace(" ", "").lower()
 
-def standardize_iocs(iocs, url=None):
+def standardize_iocs(iocs, url=None, insert_time=int(datetime.now().timestamp())):
     """ IOC 标准化处理逻辑 """
     standardized = []
     for ioc in iocs.get('iocs', []):
@@ -52,6 +52,8 @@ def standardize_iocs(iocs, url=None):
             attack_time = convert_to_timestamp(ioc.get('攻击时间'))
             if attack_time:
                 el["attack_time"] = attack_time
+            else:
+                el["attack_time"] = insert_time
             el["threaten_source"] = "90"
             el["source"] = 112
 
@@ -86,6 +88,8 @@ def standardize_iocs(iocs, url=None):
             attack_time = convert_to_timestamp(ioc.get('攻击时间'))
             if attack_time:
                 el["attack_time"] = attack_time
+            else:
+                el["attack_time"] = insert_time
             el["threaten_source"] = "90"
             el["source"] = 112
 
@@ -117,6 +121,8 @@ def standardize_iocs(iocs, url=None):
             attack_time = convert_to_timestamp(ioc.get('攻击时间'))
             if attack_time:
                 el["attack_time"] = attack_time
+            else:
+                el["attack_time"] = insert_time
             el["is_online"] = True
             el["is_valid"] = True
             el["threaten_type"] = 1
@@ -130,7 +136,8 @@ def standardize_iocs(iocs, url=None):
                 el["threaten_type"] = threaten_type
 
             event_tag = []
-            event = {"modified": datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
+            # event = {"modified": datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
+            event = {"modified": datetime.fromtimestamp(insert_time).strftime("%Y-%m-%d %H:%M:%S")}
             if url:
                 event["reference"] = url
             event_tag.append(event)
