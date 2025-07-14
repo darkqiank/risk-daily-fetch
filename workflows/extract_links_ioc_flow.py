@@ -201,7 +201,7 @@ async def extract_ioc_flow(blog_name: str, link: str, use_proxy: bool = False, u
 
     try:
         ioc_data = await submit_to_iocgpt(blog_name, _content, use_cache=use_cache)
-        threaten_result["inserted_at"] = datetime.now(timezone.utc).isoformat()
+        # threaten_result["inserted_at"] = datetime.now(timezone.utc).isoformat()
         threaten_result["extraction_result"] = ioc_data
         logger.info(f"提交到 IOCGPT 成功: {ioc_data}")
     except Exception as e:
@@ -414,7 +414,7 @@ async def read_twitter_data_flow():
         # 提取iocgpt
         try:
             ioc_data = await submit_to_iocgpt(source, _content, use_cache=True)
-            twitter_result["inserted_at"] = datetime.now(timezone.utc).isoformat()
+            # twitter_result["inserted_at"] = datetime.now(timezone.utc).isoformat()
             twitter_result["extraction_result"] = ioc_data
             logger.info(f"提交到 IOCGPT 成功: {ioc_data}")
         except Exception as e:

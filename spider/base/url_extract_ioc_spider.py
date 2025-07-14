@@ -9,7 +9,7 @@ import asyncio
 import asyncpg
 import ast
 import json
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 
 # Add the project root directory to Python path
 sys.path.append(str(Path(__file__).parent.parent))
@@ -102,7 +102,8 @@ class UrlExtractIOCSpider:
             async with connection.transaction():
                 for record in data:
                     try:
-                        china_time = convert_to_china_time(record["inserted_at"])
+                        china_time = convert_to_china_time(record["inserted_at"]) if record.get("inserted_at") \
+                            else datetime.now(timezone.utc).isoformat()
                         extraction_json = json.dumps(record["extraction_result"], ensure_ascii=False)
                         await connection.execute(upsert_query,
                             record["url"],
