@@ -103,7 +103,7 @@ class UrlExtractIOCSpider:
                 for record in data:
                     try:
                         china_time = convert_to_china_time(record["inserted_at"]) if record.get("inserted_at") \
-                            else datetime.now(timezone.utc).isoformat()
+                            else datetime.now(timezone.utc) + timedelta(hours=8)
                         extraction_json = json.dumps(record["extraction_result"], ensure_ascii=False)
                         await connection.execute(upsert_query,
                             record["url"],
