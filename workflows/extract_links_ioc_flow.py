@@ -265,10 +265,11 @@ async def extract_links_ioc_flow(max_concurrent: int = 3):
         url = biz.get('url')
         https_url = re.sub(r'^http://', 'https://', url)
         nickname = biz.get('nickname')
-        blog_links.append({
-            "blog_name": f'微信公众号-{nickname}',
-            "url": https_url
-        })
+        if nickname != "央视财经":
+            blog_links.append({
+                "blog_name": f'微信公众号-{nickname}',
+                "url": https_url
+            })
     logger.info(f"添加微信公众号后，获取到 {len(blog_links)} 个链接")
 
     

@@ -29,6 +29,8 @@ export const getPaginatedData = async (
 
   let sql_list = [];
 
+  sql_list.push(sql`${wechatBiz.nickname} != '央视财经'`);
+
   if (filters.date) {
     sql_list.push(sql`DATE(${wechatBiz.pubTime}) = ${filters.date}::date`);
   }
