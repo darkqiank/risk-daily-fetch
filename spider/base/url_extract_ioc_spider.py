@@ -21,7 +21,12 @@ default_logger = logging.getLogger(__name__)
 # 时间转换函数
 def convert_to_china_time(utc_time_str):
     utc_time = datetime.strptime(utc_time_str, "%Y-%m-%dT%H:%M:%S.%f+00:00")
-    return utc_time + timedelta(hours=8)
+    # Make it timezone-aware as UTC first, then convert to China time
+    utc_time = utc_time.replace(tzinfo=timezone.utc)
+    china_tz = timezone(timedelta(hours=8))
+    china_time = utc_time.astimezone(china_tz)
+    # Return timezone-naive datetime for timestamp field
+    return china_time.replace(tzinfo=None)
 
 class UrlExtractIOCSpider:
     def __init__(self, logger = default_logger, db_pool: asyncpg.Pool = None):
@@ -102,8 +107,14 @@ class UrlExtractIOCSpider:
             async with connection.transaction():
                 for record in data:
                     try:
-                        china_time = convert_to_china_time(record["inserted_at"]) if record.get("inserted_at") \
-                            else datetime.now(timezone.utc) + timedelta(hours=8)
+                        if record.get("inserted_at"):
+                            china_time = convert_to_china_time(record["inserted_at"])
+                        else:
+                            # Get current China time as timezone-naive datetime
+                            utc_now = datetime.now(timezone.utc)
+                            china_tz = timezone(timedelta(hours=8))
+                            china_time = utc_now.astimezone(china_tz).replace(tzinfo=None)
+                        
                         extraction_json = json.dumps(record["extraction_result"], ensure_ascii=False)
                         await connection.execute(upsert_query,
                             record["url"],
