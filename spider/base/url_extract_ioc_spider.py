@@ -155,8 +155,8 @@ class UrlExtractIOCSpider:
                     self.logger.info(f"大模型解读内容: {content}")
                     return content
         except Exception as e:
-            self.logger.error(f"提交到 IOCGPT 失败: {str(e)}")
-            raise ValueError(f"提交到 IOCGPT 失败: {str(e)}")
+            self.logger.error(f"提交到 大模型解读 失败: {str(e)}")
+            raise ValueError(f"提交到 大模型解读 失败: {str(e)}")
     
         
     async def save_content_details_to_db(self, data: List[Dict[str, Any]]):

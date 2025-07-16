@@ -148,6 +148,8 @@ async def save_content_details_to_db(blog_name: str, data: list):
 async def extract_ioc_flow(blog_name: str, link: str, use_proxy: bool = False, use_cache: bool = True):
     failed_tasks = []
     logger = get_run_logger()
+
+    #########################################################
     # 解析网页内容
     logger.info(f"开始解析内容: {link}")
     try:
@@ -169,29 +171,7 @@ async def extract_ioc_flow(blog_name: str, link: str, use_proxy: bool = False, u
         logger.error(f"解析内容为空: {link}")
         raise ValueError(f"解析内容为空: {link}")
 
-    content_detail = {
-        "url": link,
-        "content": _content,
-        "contentHash": hash_data(_content),
-        "sourceType": "blog",
-        "source": blog_name
-    }
-
-    # 大模型解读内容
-    try:
-        llm_res = await llm_read(blog_name, _content, use_cache=use_cache)
-        logger.info(f"大模型解读内容成功: {llm_res}")
-        content_detail["detail"] = llm_res
-    except Exception as e:
-        logger.error(f"大模型解读内容失败: {e}")
-        raise e
-    
-    # 保存内容详情
-    try:
-        await save_content_details_to_db(blog_name, [content_detail])
-    except Exception as e:
-        logger.error(f"保存内容详情失败: {e}")
-        raise e
+    #########################################################
 
     # 提交到 IOCGPT
     threaten_result = {
@@ -215,6 +195,32 @@ async def extract_ioc_flow(blog_name: str, link: str, use_proxy: bool = False, u
         await save_iocs_to_db(blog_name, [threaten_result])
     except Exception as e:
         logger.error(f"保存 IOC 到数据库失败: {e}")
+        raise e
+    
+    #########################################################
+
+    content_detail = {
+        "url": link,
+        "content": _content,
+        "contentHash": hash_data(_content),
+        "sourceType": "blog",
+        "source": blog_name
+    }
+
+    # 大模型解读内容
+    try:
+        llm_res = await llm_read(blog_name, _content, use_cache=use_cache)
+        logger.info(f"大模型解读内容成功: {llm_res}")
+        content_detail["detail"] = llm_res
+    except Exception as e:
+        logger.error(f"大模型解读内容失败: {e}")
+        raise e
+    
+    # 保存内容详情
+    try:
+        await save_content_details_to_db(blog_name, [content_detail])
+    except Exception as e:
+        logger.error(f"保存内容详情失败: {e}")
         raise e
     
     return True
