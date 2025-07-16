@@ -98,7 +98,7 @@ async def parse_content(blog_name: str, link: str, use_proxy: bool = False, use_
     persist_result=True,
     result_storage=local_block,
     task_run_name=generate_ioc_task_id, 
-    retries=3,
+    retries=1,
     retry_delay_seconds=10,
     log_prints=True)
 async def submit_to_iocgpt(blog_name: str, content: str, use_cache: bool = True):
@@ -124,7 +124,7 @@ async def save_iocs_to_db(blog_name: str, data: list):
     cache_key_fn=universal_cache_key,
     persist_result=True,
     result_storage=local_block,
-    retries=3,
+    retries=1,
     retry_delay_seconds=10,
     task_run_name=generate_ioc_task_id, log_prints=True)
 async def llm_read(blog_name: str, content: str, use_cache: bool = True):
