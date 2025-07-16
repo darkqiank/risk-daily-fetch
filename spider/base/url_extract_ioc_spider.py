@@ -76,6 +76,7 @@ class UrlExtractIOCSpider:
                     ioc_url,
                     headers={"Authorization": f"Bearer {ioc_api_key}"},
                     json={"messages": [{'role': 'user', 'content': content}]},
+                    timeout=500
                 ) as response:
                     response.raise_for_status()
                     res_json = await response.json()

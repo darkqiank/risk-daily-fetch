@@ -17,6 +17,7 @@ import os
 from datetime import datetime, timezone
 from datetime import timedelta
 import json
+import re
 
 # Add the project root directory to Python path
 sys.path.append(str(Path(__file__).parent.parent))
@@ -246,6 +247,30 @@ async def extract_links_ioc_flow(max_concurrent: int = 3):
     
     blog_links = await get_blog_links()
     logger.info(f"获取到 {len(blog_links)} 个链接，最大并发数: {max_concurrent}")
+
+    # 获取微信公众链接
+    wechat_feed_url = os.getenv("WECHAT_FEED_URL")
+    async def get_wechat_links() -> List[Dict[str, Any]]:
+        """
+        获取微信公众链接
+        """
+        import aiohttp
+        async with aiohttp.ClientSession() as session:
+            async with session.get(wechat_feed_url, timeout=30) as response:
+                res = await response.json()
+                return res.get("data", [])
+    
+    bizs = await get_wechat_links()
+    for biz in bizs:
+        url = biz.get('url')
+        https_url = re.sub(r'^http://', 'https://', url)
+        nickname = biz.get('nickname')
+        blog_links.append({
+            "blog_name": f'微信公众号-{nickname}',
+            "url": https_url
+        })
+    logger.info(f"添加微信公众号后，获取到 {len(blog_links)} 个链接")
+
     
     # 创建信号量来控制并发
     semaphore = asyncio.Semaphore(max_concurrent)
