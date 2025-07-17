@@ -50,3 +50,6 @@ pykafka
 asyncpg
 fast-readability
 prefect==3.4.1
+jieba
+gensim
+tiktoken

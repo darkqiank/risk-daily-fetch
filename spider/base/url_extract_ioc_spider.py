@@ -10,11 +10,13 @@ import asyncpg
 import ast
 import json
 from datetime import datetime, timedelta, timezone
+import tiktoken
 
 # Add the project root directory to Python path
 sys.path.append(str(Path(__file__).parent.parent))
 
 from spider.iocgpt.ioc_format import standardize_iocs
+from spider.iocgpt.compress_tokens import TextCompressor
 
 default_logger = logging.getLogger(__name__)
 
@@ -32,9 +34,28 @@ class UrlExtractIOCSpider:
     def __init__(self, logger = default_logger, db_pool: asyncpg.Pool = None):
         self.logger = logger
         self.db_pool = db_pool
+        self.text_compressor = TextCompressor(       
+            compression_ratio=0.8,  # 压缩80%
+            similarity_threshold=0.6)
 
     async def init_db_pool(self, dsn: str):
         self.db_pool = await asyncpg.create_pool(dsn, min_size=1, max_size=5)
+
+    def compress_text_by_token(self, text: str, token_threshold: int = 6000):
+        # 先计算token
+        token_count = len(tiktoken.encoding_for_model("gpt-4o").encode(text))
+        # self.logger.info(f"原始token数量：{token_count}")
+        print(f"原始token数量：{token_count}")
+        if token_count > token_threshold:
+            # 根据token数量压缩
+            compression_ratio = 1 -  token_threshold / token_count
+            print(f"压缩比例：{compression_ratio}")
+            compressed_text, stats = self.text_compressor.compress_text(text, target_compression=compression_ratio)
+            # self.logger.info(f"压缩信息：{stats}")
+            print(f"压缩信息：{stats}")
+            return compressed_text
+        else:
+            return text
 
     async def parse_content(self, blog_name: str, link: str, use_proxy: bool = False, use_cache: bool = False):
         # 动态导入模块
@@ -143,6 +164,7 @@ class UrlExtractIOCSpider:
         try:
             llm_read_url = os.getenv("LLM_READ_URL")
             llm_read_api_key = os.getenv("LLM_READ_API_KEY")
+            content = self.compress_text_by_token(content, token_threshold=12000)
             async with aiohttp.ClientSession() as session:
                 async with session.post(
                     llm_read_url,
@@ -151,9 +173,9 @@ class UrlExtractIOCSpider:
                 ) as response:
                     response.raise_for_status()
                     res_json = await response.json()
-                    content = res_json["choices"][0]["message"]["content"]
-                    self.logger.info(f"大模型解读内容: {content}")
-                    return content
+                    res_content = res_json["choices"][0]["message"]["content"]
+                    self.logger.info(f"大模型解读内容: {res_content}")
+                    return res_content
         except Exception as e:
             self.logger.error(f"提交到 大模型解读 失败: {str(e)}")
             raise ValueError(f"提交到 大模型解读 失败: {str(e)}")
