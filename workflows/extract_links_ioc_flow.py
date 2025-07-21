@@ -108,7 +108,7 @@ async def submit_to_iocgpt(blog_name: str, content: str, use_cache: bool = True)
 
 # 保存 IOC 到数据库, 有缓存，如果缓存了则不重复写入
 @task(
-    cache_expiration=timedelta(hours=24),
+    cache_expiration=timedelta(days=3),
     cache_policy= TASK_SOURCE + INPUTS,
     persist_result=True,
     result_storage=local_block,
@@ -133,7 +133,7 @@ async def llm_read(blog_name: str, content: str, use_cache: bool = True):
     
 
 # 保存内容详情
-@task(  cache_expiration=timedelta(hours=24),
+@task(  cache_expiration=timedelta(days=3),
         cache_policy= TASK_SOURCE + INPUTS,
         persist_result=True,
         result_storage=local_block,
