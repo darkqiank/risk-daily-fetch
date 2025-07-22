@@ -1,7 +1,7 @@
 import sys
 from pathlib import Path
 import importlib
-from template import TEMPLATES, FETCH_TEMPLATES
+from template import SOURCE_TEMPLATES, TEMPLATES, FETCH_TEMPLATES
 import os
 import re
 from typing import Union
@@ -11,7 +11,9 @@ import json
 from urllib.parse import urlparse
 
 
-def create_module(module_name, url, base_netloc=None, output_dir=".generated_code", fetch="default", overwrite=False):
+def create_module(module_name, url, base_netloc=None, output_dir=".generated_code", fetch="default", 
+                  source_type="html",
+                  overwrite=False):
     """创建指定名称的模块
 
     参数:
@@ -37,6 +39,8 @@ def create_module(module_name, url, base_netloc=None, output_dir=".generated_cod
             formatted_content = content.format(base_url_repr=repr(url), base_netloc_repr=repr(base_netloc))
         elif filename == "fetch_url.py":
             formatted_content = content.format(fetch_url_repr=FETCH_TEMPLATES[fetch])
+        elif filename == "get_links.py":
+            formatted_content = content.format(source_type_repr=SOURCE_TEMPLATES[source_type])
         else:
             formatted_content = content
         with open(file_path, "w", encoding="utf-8") as f:

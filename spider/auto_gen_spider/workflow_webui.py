@@ -136,7 +136,8 @@ with st.sidebar:
         tmp_blog_name = st.text_input("模块名称", value=st.session_state.auto_blog_name, key="new_blog_name")
         
         # 其他设置
-        fetch_method = st.selectbox("抓取方法", ["curl_cffi", "httpx", "playwright"], key="new_fetch_method")
+        fetch_method = st.selectbox("抓取方法", ["curl_cffi", "httpx", "playwright", "pdf"], key="new_fetch_method")
+        source_type = st.selectbox("内容类型", ["html", "rss"], key="new_source_type")
         
         # 创建按钮
         submit_button = st.button("创建模块", key="create_module_button", use_container_width=True)
@@ -154,6 +155,7 @@ with st.sidebar:
                         st.session_state.blog_url, 
                         base_netloc=st.session_state.base_netloc,
                         fetch=fetch_method,
+                        source_type=source_type,
                         overwrite=True
                     )
                     st.session_state.module_loaded = True

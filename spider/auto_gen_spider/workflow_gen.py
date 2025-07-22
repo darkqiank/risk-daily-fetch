@@ -73,7 +73,7 @@ def gen_parse_article_code(content: str, content_type="html") -> Union[str, None
         1. 使用BeautifulSoup解析或者正则代码提取
         2. 包装在一个函数中，函数名称为get_content, 输入参数为str格式的_content
         3. 正文中的文本内容、表格内容，均用回车符进行拼接，保证ioc等内容不粘连
-        4. 要考虑不同文章可能结构不一样，保证代码的通用性
+        4. 要考虑不同文章可能结构不一样，减少页面结构依赖，保证代码的通用性和鲁棒性，考虑到各种情况，比如自动构建的class名称可能会变化
         5. 返回字典格式：article = {{...}}
         6. 你的返回只包含代码不要有额外信息
         HTML内容片段：
@@ -112,8 +112,8 @@ def load_code_from_temp(filename):
     return None
 
 
-def init_module(module_name, url, base_netloc=None, output_dir=TEMP_DIR, fetch="curl_cffi", overwrite=False):
-    module_path, module =  create_module(module_name, url, base_netloc, output_dir, fetch, overwrite)   
+def init_module(module_name, url, base_netloc=None, output_dir=TEMP_DIR, fetch="curl_cffi", source_type="html", overwrite=False):
+    module_path, module =  create_module(module_name, url, base_netloc, output_dir, fetch, source_type, overwrite)   
     return module_path, module
 
 
