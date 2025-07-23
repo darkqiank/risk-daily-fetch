@@ -80,7 +80,7 @@ def fetch_url(url, headers=None, timeout=10, use_proxy=False):
     return asyncio.run(a_fetch_url(url, headers, timeout, use_proxy))
 """,
 
-    "browseless": """import os
+    "browserless": """import os
 import aiohttp
 import asyncio
 
@@ -90,14 +90,16 @@ API_ENDPOINT = os.getenv("BROWSERLESS_URL", "").strip()
 async def a_fetch_url(url, headers=None, timeout=10, use_proxy=False):
     payload = {
         "url": url,
-        "waitForTimeout": timeout,
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36", 
+        "setJavaScriptEnabled": True,
+        "waitForTimeout": timeout*1000
     }
     try:
         async with aiohttp.ClientSession() as session:
             async with session.post(
                 f'{API_ENDPOINT}/content?token={API_KEY}', 
                 json=payload, 
-                timeout=timeout
+                timeout=60
             ) as response:
                 response.raise_for_status()
                 return await response.text()

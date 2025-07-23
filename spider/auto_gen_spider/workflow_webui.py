@@ -136,7 +136,7 @@ with st.sidebar:
         tmp_blog_name = st.text_input("模块名称", value=st.session_state.auto_blog_name, key="new_blog_name")
         
         # 其他设置
-        fetch_method = st.selectbox("抓取方法", ["curl_cffi", "httpx", "playwright", "pdf"], key="new_fetch_method")
+        fetch_method = st.selectbox("抓取方法", ["curl_cffi", "httpx", "playwright", "pdf", "browserless"], key="new_fetch_method")
         source_type = st.selectbox("内容类型", ["html", "rss"], key="new_source_type")
         
         # 创建按钮
