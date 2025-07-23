@@ -11,12 +11,18 @@ async def a_fetch_url(url, headers=None, timeout=10, use_proxy=False):
         "url": url,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36", 
         "setJavaScriptEnabled": True,
-        "waitForTimeout": timeout*1000
+        "gotoOptions": {
+            "timeout": timeout*1000,
+            "waitUntil": "networkidle2"
+        },
+        "waitForTimeout": 1000,
+        "emulateMediaType": "print",
+        "bestAttempt": True
     }
     try:
         async with aiohttp.ClientSession() as session:
             async with session.post(
-                f'{API_ENDPOINT}/content?token={API_KEY}', 
+                f'{API_ENDPOINT}/content?token={API_KEY}&blockAds=true', 
                 json=payload, 
                 timeout=60
             ) as response:
