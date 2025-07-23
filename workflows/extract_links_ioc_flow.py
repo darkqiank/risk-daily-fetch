@@ -203,7 +203,7 @@ async def extract_ioc_flow(blog_name: str, link: str, use_proxy: bool = False, u
         "url": link,
         "content": _content,
         "contentHash": hash_data(_content),
-        "sourceType": "blog",
+        "sourceType": "blog" if "微信公众号" not in blog_name else "biz",
         "source": blog_name
     }
 
