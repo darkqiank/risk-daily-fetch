@@ -144,7 +144,7 @@ async def save_content_details_to_db(blog_name: str, data: list):
 
 
 # 提取 IOC 的 完整flow
-@flow(flow_run_name=generate_ioc_flow_id, log_prints=True)
+@flow(flow_run_name=generate_ioc_flow_id, log_prints=True, timeout_seconds=10*60)
 async def extract_ioc_flow(blog_name: str, link: str, use_proxy: bool = False, use_cache: bool = True):
     failed_tasks = []
     logger = get_run_logger()
