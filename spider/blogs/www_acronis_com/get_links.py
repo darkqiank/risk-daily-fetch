@@ -9,5 +9,5 @@ def get_links(_content):
     for entry in feed.entries:
         links.append(entry.link)
     print(links)
-    return links[:10]
+    return links
 

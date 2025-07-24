@@ -28,7 +28,7 @@ def get_links(use_proxy=False):
         links.append(f"https://www.theregister.com{item['href']}")
 
     print(links)
-    return links
+    return links[:20]
 
 if __name__ == '__main__':
     links = get_links()

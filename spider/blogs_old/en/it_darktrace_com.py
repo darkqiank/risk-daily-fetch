@@ -32,6 +32,6 @@ def get_links(use_proxy=False):
             links.append(link)
 
     print(links)
-    return links
+    return links[:20]
 
 

@@ -29,6 +29,6 @@ def get_links(use_proxy=False):
         if link not in links:
             links.append(link)
     print(len(links))
-    return links
+    return links[:20]
 
 

@@ -2,7 +2,7 @@ from .get_links import get_links
 from .get_content import get_content
 from .fetch_url import fetch_url, a_fetch_url
 
-BASE_URL = 'https://reliaquest.com/api/blog.json?'
-BASE_NETLOC = 'https://reliaquest.com'
+BASE_URL = 'https://censys.com/resources/blog'
+BASE_NETLOC = 'https://censys.com'
 
 __all__ = ['get_links', 'get_content', 'fetch_url','a_fetch_url', 'BASE_URL']

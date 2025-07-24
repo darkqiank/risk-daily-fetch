@@ -30,4 +30,4 @@ def get_links(use_proxy=False):
         links.append(f"https://www.antiy.com/{a['href']}")
 
     print(links)
-    return links
+    return links[:20]
