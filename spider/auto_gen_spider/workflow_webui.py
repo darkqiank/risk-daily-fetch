@@ -66,6 +66,8 @@ def init_session_state():
         st.session_state.auto_base_netloc = ""
     if "auto_blog_name" not in st.session_state:
         st.session_state.auto_blog_name = ""
+    if "if_compress" not in st.session_state:
+        st.session_state.if_compress = True
 
 
 # 获取已有模块列表
@@ -271,13 +273,15 @@ else:
             
             st.write(f"**内容类型:** {st.session_state.dir_content_type}")
             
+            compress_toggle = st.toggle("压缩HTML", value=st.session_state.if_compress, key="compress_toggle_1")
+            st.session_state.if_compress = compress_toggle
             button_col1, button_col2 = st.columns(2)
             with button_col1:
                 if st.button("生成代码", key="gen_dir_code", use_container_width=True):
                     if st.session_state.dir_content:
                         with st.spinner("正在生成代码..."):
                             try:
-                                _c_content = compress_html(st.session_state.dir_content) if st.session_state.dir_content_type == "html" else st.session_state.dir_content
+                                _c_content = compress_html(st.session_state.dir_content) if st.session_state.dir_content_type == "html" and st.session_state.if_compress else st.session_state.dir_content
                                 print("orgin_length", len(st.session_state.dir_content))
                                 print("_c_content_length", len(_c_content))
                                 dir_code = gen_parse_directory_code(

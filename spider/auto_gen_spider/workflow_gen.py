@@ -40,13 +40,17 @@ def gen_parse_directory_code(base_netloc: str, content: str, content_type="html"
 
     if content_type == "html":
         """生成提取博客列表的代码"""
-        prompt = f"""请生成Python代码用于解析以下HTML，从中提取正文文章链接列表：
-        - 包装在一个函数中，函数名称为get_links, 输入参数为str格式的_content
-        - 常量base_netloc为{base_netloc}
-        - 只提取正文中博客文章列表中的链接（通常按时间顺序排列），不要提取边栏、推荐、标签等部分的文章链接和多媒体链接
-        - 函数返回格式：links = [...] 的Python列表, 判断link是否是http开头，若不是则使用base_netloc进行拼接
-        - 你的返回只包含代码不要有额外信息
-        HTML内容片段：
+        prompt = f"""请根据以下 HTML 片段生成 Python 函数 `get_links`，用于提取正文中按时间顺序排列的博客文章链接：
+
+要求如下：
+    - 函数定义：`def get_links(_content: str) -> list:`
+    - 设置常量：`base_netloc = {base_netloc}`
+    - 仅提取正文中博客文章列表的链接，忽略侧边栏、推荐、标签、多媒体等内容区域的链接
+    - 返回值为列表变量 `links = [...]`
+    - 链接必须以 `http` 开头；若不是，则用 `urljoin(base_netloc, link)` 拼接为完整 URL
+    - 只返回函数的完整 Python 代码，不附带任何解释说明
+
+HTML内容片段：
         {content}..."""
     else:
         prompt = f"""请生成Python代码用于解析以下JSON数据，从中提取正文文章链接列表：
@@ -153,7 +157,7 @@ def gen_links_code_flow(blog_name: str):
     return links
 
 
-def gen_article_code_flow(article_urls: List[str], blog_name: str, delay=5):
+def gen_article_code_flow(article_urls: List[str], blog_name: str, delay=5, if_compress=True):
     """
     提取单篇文章内容：
     1. 获取文章HTML
@@ -171,7 +175,7 @@ def gen_article_code_flow(article_urls: List[str], blog_name: str, delay=5):
         _c = module.fetch_url(url)
         # 获取内容类型
         _c_type = detect_content_type(_c)
-        if _c and _c_type == "html":
+        if _c and _c_type == "html" and if_compress:
             _compress_c = compress_html(_c)
             return _c, _c_type, _compress_c
         return _c, _c_type, _c
