@@ -184,7 +184,8 @@ async def extract_ioc_flow(blog_name: str, link: str, use_proxy: bool = False, u
         ioc_data = await submit_to_iocgpt(blog_name, _content, use_cache=use_cache)
         # threaten_result["inserted_at"] = datetime.now(timezone.utc).isoformat()
         threaten_result["extraction_result"] = ioc_data
-        logger.info(f"提交到 IOCGPT 成功: {ioc_data}")
+        iocs = ioc_data.get('data', {}).get('iocs', [])
+        logger.info(f"提交到 IOCGPT 成功: {link} {len(iocs)}个ioc")
     except Exception as e:
         logger.error(f"提交到 IOCGPT 失败: {e}")
         raise e
