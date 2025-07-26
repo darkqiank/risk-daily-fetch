@@ -101,7 +101,8 @@ class UrlExtractIOCSpider:
                 ) as response:
                     response.raise_for_status()
                     res_json = await response.json()
-                    self.logger.info(f"大模型提取ioc结果: {res_json}")
+                    res_str = f'{res_json}'
+                    self.logger.info(f"大模型提取ioc结果: {res_str[:50]}")
                     return res_json
         except Exception as e:
             self.logger.error(f"提交到 IOCGPT 失败: {str(e)}")
