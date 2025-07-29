@@ -1,0 +1,38 @@
+wechat_accounts:
+  - name: 360威胁情报中心
+    urls:
+      - url: https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzUyMjk4NzExMA==&action=getalbum&album_id=1955835290309230595&scene=126
+        title: APT
+  
+  - name: 国家互联网应急中心CNCERT
+    urls:
+      - url: https://mp.weixin.qq.com/mp/homepage?__biz=MzIwNDk0MDgxMw==&hid=1&sn=1055bd385756335b7cf4dfd4aeb69c07&scene=18
+        title: CNCERT/CC周报及月报
+  
+  - name: 火绒安全
+    urls:
+      - url: https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI3NjYzMDM1Mg==&action=getalbum&album_id=1531045003051974660&scene=126
+        title: 火绒安全周报
+      - url: https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI3NjYzMDM1Mg==&action=getalbum&album_id=1531078190885027843&scene=126
+        title: 漏洞预警
+      - url: https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI3NjYzMDM1Mg==&action=getalbum&album_id=1531066438562660357&scene=126
+        title: 病毒分析报告
+      - url: https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI3NjYzMDM1Mg==&action=getalbum&album_id=2532787232655622145&scene=126
+        title: 月报
+      
+  - name: 奇安信威胁情报中心
+    urls:
+      - url: https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI2MDc2MDA4OA==&action=getalbum&album_id=1539799351089283075&scene=126
+        title: APT
+      - url: https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI2MDc2MDA4OA==&action=getalbum&album_id=1533540987225096195&scene=126
+        title: 每周威胁情报
+      
+  - name: 腾讯威胁情报中心
+    urls:
+      - url: https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI5ODk3OTM1Ng==&action=getalbum&album_id=4085054708413366274
+        title: 情报周报
+
+  - name: 网络安全研究宅基地
+    urls:
+      - url: https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzUyMDEyNTkwNA==&action=getalbum&album_id=1375769135073951745&scene=126
+        title: 猎影实验室
